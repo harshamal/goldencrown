@@ -18,43 +18,26 @@
     <meta name="twitter:description" content="Connecting Sri Lankan talent with global jobs and visa support. Start your journey today!">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>Crown Global Services - Overseas Job Opportunities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            font-family: 'Inter', sans-serif;
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .hero-slide, .testimonial-slide {
-            display: none;
-        }
-
-            .hero-slide.active, .testimonial-slide.active {
-                display: block;
-            }
-
-        footer {
-            margin-top: auto;
+            font-family: 'Poppins', sans-serif;
         }
 
         .modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
+            z-index: 50;
             align-items: center;
+            justify-content: center;
         }
 
             .modal.active {
@@ -62,12 +45,12 @@
             }
 
         .animate-slide-up {
-            animation: slideUp 1s ease-out;
+            animation: slideUp 0.8s ease-out;
         }
 
         @keyframes slideUp {
             from {
-                transform: translateY(50px);
+                transform: translateY(20px);
                 opacity: 0;
             }
 
@@ -78,8 +61,65 @@
         }
 
         .glow {
-            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
         }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .ripple {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .ripple::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 9999px;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+            }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+            .testimonial-slide.active {
+                display: block;
+                opacity: 1;
+            }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #E5E7EB;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            .dot.active {
+                background: #F97316;
+            }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -99,234 +139,241 @@
         }
     </script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-900">
     <!-- Header -->
-    <header class="bg-blue-500 text-white py-4 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Crown Global Services</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li>
-                    <li><a href="/about" class="hover:text-orange-500 transition-colors">About Us</a></li>
-                    <li><a href="/services" class="hover:text-orange-500 transition-colors">Services</a></li>
-                    <li><a href="#shop" class="hover:text-orange-500 transition-colors">Shop</a></li>
-                    <li><a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a></li>
-                    <li><a href="/careers" class="hover:text-orange-500 transition-colors">Careers</a></li>
-                    <li><a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a></li>
-                </ul>
+   
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://hdblob1.blob.core.windows.net/crownglobal/logonew.jpg" alt="Crown Global Services Logo" style="width:200px; height:80px;">
+
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-orange-500 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-orange-500 transition-colors">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-orange-500 transition-colors">Services</a>
+                <a href="#shop" class="text-gray-600 hover:text-orange-500 transition-colors">Shop</a>
+                <a href="faq.html" class="text-gray-600 hover:text-orange-500 transition-colors">FAQ</a>
+                <a href="careers.html" class="text-gray-600 hover:text-orange-500 transition-colors">Careers</a>
+                <a href="contact.html" class="text-gray-600 hover:text-orange-500 transition-colors">Contact</a>
             </nav>
-            <!-- Language Switcher -->
-            <select id="language-switcher" class="bg-white text-blue-500 px-2 py-1 rounded focus:outline-none">
+            <select id="language-switcher" class="bg-teal-500 text-white px-3 py-1 rounded-md focus:outline-none">
                 <option value="en">English</option>
                 <option value="si">Sinhala</option>
             </select>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <nav class="flex flex-col space-y-4 px-4 py-6">
+                <a href="index.html" class="text-gray-600 hover:text-orange-500">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-orange-500">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-orange-500">Services</a>
+                <a href="#shop" class="text-gray-600 hover:text-orange-500">Shop</a>
+                <a href="faq.html" class="text-gray-600 hover:text-orange-500">FAQ</a>
+                <a href="careers.html" class="text-gray-600 hover:text-orange-500">Careers</a>
+                <a href="contact.html" class="text-gray-600 hover:text-orange-500">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section with Slideshow -->
-    <section class="relative h-96">
-        <div class="hero-slide absolute inset-0 bg-cover bg-center active" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
-            <div class="container mx-auto px-4 h-full flex items-center justify-center text-center bg-black bg-opacity-50">
-                <div class="animate-slide-up">
-                    <h2 class="text-4xl font-bold text-white mb-4">Your Gateway to Global Jobs</h2>
-                    <p class="text-lg text-white mb-6">Connecting Sri Lankan talent with overseas opportunities.</p>
-                    <a href="#contact" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Get Started Now</a>
-                </div>
+    <!-- Hero Section -->
+    <section class="relative h-screen parallax" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-800/70 to-teal-500/70"></div>
+        <div class="container mx-auto px-4 h-full flex items-center justify-center text-center relative z-10">
+            <div class="animate-slide-up">
+                <h2 class="title text-5xl md:text-6xl font-bold text-white mb-4">Unlock Global Opportunities</h2>
+                <p id="hero-subtitle" class="text-xl text-white mb-8">Empowering Sri Lankan talent with overseas jobs and visa support.</p>
+                <a href="#contact" class="ripple bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Start Your Journey</a>
             </div>
         </div>
-        <div class="hero-slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542650742-d3150fb66298?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
-            <div class="container mx-auto px-4 h-full flex items-center justify-center text-center bg-black bg-opacity-50">
-                <div class="animate-slide-up">
-                    <h2 class="text-4xl font-bold text-white mb-4">Expert Visa Consultation</h2>
-                    <p class="text-lg text-white mb-6">Seamless support for your international journey.</p>
-                    <a href="#shop" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Book Your Consultation</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 id="services-title" class="text-4xl font-bold text-center text-blue-800 mb-12 animate-slide-up">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Job Placement Services" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Job Placement</h3>
+                    <p class="text-gray-600">Matching Sri Lankan workers with global employers in hospitality, construction, and more.</p>
+                </div>
+                <div class="service bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa Consultation" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Visa Consultation</h3>
+                    <p class="text-gray-600">Expert guidance for seamless visa applications to work abroad.</p>
+                </div>
+                <div class="service bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Career Support" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Career Support</h3>
+                    <p class="text-gray-600">Training and resources to excel in international job markets.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section id="services" class="py-16 bg-gradient-to-b from-gray-100 to-white">
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Our Services</h2>
+            <h2 class="text-4xl font-bold text-center text-blue-800 mb-12 animate-slide-up">Explore Oppurtunities</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Job Placement Services for Sri Lankan Workers" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Job Placement</h3>
-                    <p class="text-gray-600">Matching skilled and unskilled Sri Lankan workers with top global employers in industries like hospitality, construction, and healthcare.</p>
+                <div class="package bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all" style="height:600px;">
+                    <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/487083077_673624275604783_5584768344214381767_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rvjMus4-uOUQ7kNvwEytoSu&_nc_oc=AdkVnBXNF6RdVHgnHTq_5Zrja1TDukVqBuewovnZ5akRULe-gGnkgH0H-FWAvCHNKOD6dy2vsB-YeFc3jsPj4rLz&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=5-aT08mlgPC0grD-GYMydw&oh=00_AfI_JHJVAuv9qqgIA05_MaPIZlhCF6Vv2xYLUiBRphZ-gA&oe=683D37BC" alt="Basic Consultation Package" class="w-auto h-auto object-cover rounded-t-xl mb-4">
+                    <!--<h3 class="title text-2xl font-bold text-gray-800 mb-2">Basic Consultation</h3>
+        <p class="text-gray-600 mb-4">Initial consultation for job placement and visa guidance.</p>
+        <p class="text-orange-500 font-bold mb-4">$50</p>-->
+                    <button onclick="openModal('Basic Consultation')" class="ripple bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 glow">Book Now</button>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa Consultation for Overseas Employment" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Visa Consultation</h3>
-                    <p class="text-gray-600">Expert guidance on visa applications for a smooth transition to international job opportunities.</p>
+                <div class="package bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"; style="height:600px;">
+                    <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/480968834_673623455604865_1519404715577102351_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yeMKqndOvikQ7kNvwFlOiGR&_nc_oc=Adk-Mfd2IMQPFzd0nr6shPxZSCbJL3IcInCFZU6syMb95vrEODxSn7DW9Eb8Bzg-cU9ARzeZLPaQWybdo5oXKVRm&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=7OjaYgWIca-hJpW8SSvrqQ&oh=00_AfJfPWY3ZcR99T25azck_uNby-mlcXWeAo0wU3JlhY6D3w&oe=683D2CE1" alt="Basic Consultation Package" class="w-auto h-auto object-cover rounded-t-xl mb-4">
+                    <button onclick="openModal('Basic Consultation')" class="ripple bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 glow">Book Now</button>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Career Support and Training for Global Jobs" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Career Support</h3>
-                    <p class="text-gray-600">Training and resources to prepare Sri Lankan talent for success in international job markets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shop/E-Commerce Section -->
-    <section id="shop" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Explore Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Basic Consultation Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Basic Consultation</h3>
-                    <p class="text-gray-600 mb-4">Initial consultation for job placement and visa guidance.</p>
-                    <p class="text-orange-500 font-bold mb-4">$50</p>
-                    <button onclick="openBookingModal('Basic Consultation')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Premium Job Placement Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Package</h3>
-                    <p class="text-gray-600 mb-4">Full job placement and visa support with career training.</p>
+                <div class="package bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Premium Job Placement Package" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                    <h3 class="title text-2xl font-bold text-gray-800 mb-2">Premium Package</h3>
+                    <p class="text-gray-600 mb-4">Full job placement and visa support with training.</p>
                     <p class="text-orange-500 font-bold mb-4">$150</p>
-                    <button onclick="openBookingModal('Premium Package')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
+                    <button onclick="openModal('Premium Package')" class="ripple bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 glow">Book Now</button>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa-Only Support Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Visa-Only Support</h3>
-                    <p class="text-gray-600 mb-4">Dedicated visa application assistance for overseas jobs.</p>
+                <div class="package bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa-Only Support Package" class="w-full h-48 object-cover rounded-t-xl mb-4">
+                    <h3 class="title text-2xl font-bold text-gray-800 mb-2">Visa-Only Support</h3>
+                    <p class="text-gray-600 mb-4">Dedicated visa application assistance.</p>
                     <p class="text-orange-500 font-bold mb-4">$80</p>
-                    <button onclick="openBookingModal('Visa-Only Support')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
+                    <button onclick="openModal('Visa-Only Support')" class="ripple bg-teal-500 text-white px-6 py-3 rounded-full hover:bg-teal-600 glow">Book Now</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="py-16 bg-gradient-to-b from-white to-gray-100">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Get in Touch</h2>
-            <form action="https://formspree.io/f/mzzrnvqa" method="POST" id="contact-form" class="max-w-lg mx-auto space-y-4">
-                <div>
-                    <label for="name" class="block text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Name">
-                </div>
-                <div>
-                    <label for="email" class="block text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Email">
-                </div>
-                <div>
-                    <label for="phone" class="block text-gray-700">Phone</label>
-                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Phone Number">
-                </div>
-                <div>
-                    <label for="message" class="block text-gray-700">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Message"></textarea>
-                </div>
-                <button type="submit" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Send Message</button>
-            </form>
-            <p id="form-message" class="text-center text-green-500 mt-4 hidden">Message sent successfully!</p>
-        </div>
-    </section>
-
-    <!-- Testimonials Slider -->
-    <section id="testimonials" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Success Stories</h2>
-            <div class="relative">
+            <h2 class="text-4xl font-bold text-center text-blue-800 mb-12 animate-slide-up">Success Stories</h2>
+            <div class="testimonial-slider">
                 <div class="testimonial-slide active">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Dubai" class="w-16 h-16 rounded-full mx-auto mb-4">
-                        <p class="text-gray-600 italic">"Crown Global Services helped me secure a hospitality job in Dubai. Their support was incredible!"</p>
-                        <p class="mt-4 font-bold text-gray-800">– Amal Perera</p>
+                    <div class="bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto text-center">
+                        <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/484947258_654334377533773_3652184860611477468_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Cn4W2r9snd8Q7kNvwHvcBNk&_nc_oc=AdmNoninfsfcHU2sQBv3sGG36ygiMjn99eGT7jT8867ZNIcNo90W19T-NDFKILQWAGQNY2L_Vn0ro4s5BOwRqUc7&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=haWDadDziIr8IHA6jQ2_Fg&oh=00_AfLFY8IgLE9HlOH5Vr7y-0OuEYVyK78iZcUHnv1W5Dcsig&oe=683D1976" alt="Amal Perera">
+                        <!--<p class="text-gray-600 italic mb-4">"Secured a hospitality job in Dubai. Crown Global’s support was incredible!"</p>
+                        <p class="font-bold text-gray-800">– Amal Perera, Dubai</p>-->
                     </div>
                 </div>
                 <div class="testimonial-slide">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Canada" class="w-16 h-16 rounded-full mx-auto mb-4">
-                        <p class="text-gray-600 italic">"The visa consultation process was seamless, and I’m now working as a nurse in Canada!"</p>
-                        <p class="mt-4 font-bold text-gray-800">– Nimali Silva</p>
+                    <div class="bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto text-center">
+                        <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/485325552_654334314200446_4378149913691412531_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VBWGdHPGxlkQ7kNvwHXJ0co&_nc_oc=Adn4dYIRwJPFdf6dCINFyl4jdu399962xp63NFw-Ou3BEvlRhDqERxR9cndrMpVaISJKmgWqCJcV_ViaUMBeFjAA&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=padRMecMoeyxrg9MlTu_5Q&oh=00_AfLnXcGM00FiV1RY6UCYLqAA5Mp4EmwsdJa0Wl15QEdazw&oe=683D1B6E" alt="Nimali Silva">
+                        <!--<p class="text-gray-600 italic mb-4">"Visa Granted, now thriving as a nurse in Canada!"</p>-->
+                        <!--<p class="font-bold text-gray-800">– T LAKSHAN MASAKORALA, France</p>-->
                     </div>
                 </div>
                 <div class="testimonial-slide">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Australia" class="w-16 h-16 rounded-full mx-auto mb-4">
-                        <p class="text-gray-600 italic">"Thanks to Crown Global, I landed a construction job in Australia. Highly recommend!"</p>
-                        <p class="mt-4 font-bold text-gray-800">– Kasun Fernando</p>
+                    <div class="bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto text-center">
+                        <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/481060650_641495685484309_5566541403463350638_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=I44OLyFjGAcQ7kNvwGzu7ha&_nc_oc=AdlRIxe2W7vo73S1mhqDnXO8AP5w61oYOGEFxpJekAlnwGw_DFQNtfwC7NbbruItHnJ67Oyb65eg3xzxoKIXODxw&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=SJtnuxAJc018B1vv1sTATg&oh=00_AfJcLhVqYfHR2Y0xuhtTqB3lKfF_wrMtu25OR8LuY9XtMA&oe=683D2888">
+                        <p class="text-gray-600 italic mb-4">"Landed a construction job in Australia. Highly recommend!"</p>
+                        <p class="font-bold text-gray-800">– Kasun Fernando, Australia</p>
                     </div>
                 </div>
                 <div class="testimonial-slide">
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
-                        <img src="https://images.unsplash.com/photo-1506794778202-7931692b3a2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from UK" class="w-16 h-16 rounded-full mx-auto mb-4">
-                        <p class="text-gray-600 italic">"Their career training prepared me for a tech role in the UK. Amazing service!"</p>
-                        <p class="mt-4 font-bold text-gray-800">– Dilani Wijesinghe</p>
+                    <div class="bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto text-center">
+                        <img src="https://scontent.fcmb2-2.fna.fbcdn.net/v/t39.30808-6/481239485_641484928818718_76738932683503169_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6P9sv87um2IQ7kNvwEqqpKF&_nc_oc=AdkqAyvajHwLtDQNgx751l91maB-mPJ6lyGIfa4yfAz0-q_bBfxZMq5MGprPKuKoxSOnzfxbBQrZoGJShdte-4yj&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=STAY8kR4u3P8XWVWZ0JFrg&oh=00_AfLcVwlysbGTaq63LNfmyhbpLXJPl1xxWJUNEoI4C-SeJg&oe=683D09B1">
+                        <p class="text-gray-600 italic mb-4">"Prepared me for a tech role in the UK. Amazing service!"</p>
+                        <p class="font-bold text-gray-800">– Dilani Wijesinghe, UK</p>
                     </div>
                 </div>
-                <div class="flex justify-center space-x-4 mt-8">
-                    <button onclick="prevTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Previous</button>
-                    <button onclick="nextTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Next</button>
+                <div class="flex justify-center space-x-3 mt-6">
+                    <span class="dot active" onclick="showTestimonial(0)"></span>
+                    <span class="dot" onclick="showTestimonial(1)"></span>
+                    <span class="dot" onclick="showTestimonial(2)"></span>
+                    <span class="dot" onclick="showTestimonial(3)"></span>
                 </div>
             </div>
         </div>
-        <!-- Schema Markup for Reviews -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Review",
-                "itemReviewed": {
-                    "@type": "Organization",
-                    "name": "Crown Global Services"
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "author": {
-                    "@type": "Person",
-                    "name": "Amal Perera"
-                },
-                "reviewBody": "Crown Global Services helped me secure a hospitality job in Dubai. Their support was incredible!"
-            }
-        </script>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-blue-800 mb-12 animate-slide-up">Get in Touch</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <form action="https://formspree.io/f/mzzrnvqa" method="POST" id="contact-form" class="max-w-lg mx-auto md:w-1/2 space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" aria-label="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" aria-label="Your Email">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-medium">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" aria-label="Your Phone Number">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all" aria-label="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="ripple bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 glow text-lg">Send Message</button>
+                </form>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Contact Details</h3>
+                        <p class="text-gray-600 mb-2"><strong>Email:</strong> <a href="mailto:shichikatren@gmail.com" class="text-teal-500 hover:underline">shichikatren@gmail.com</a></p>
+                        <p class="text-gray-600 mb-2"><strong>Phone:</strong> +94 (76) 765 3944</p>
+                        <p class="text-gray-600"><strong>Address:</strong> No. 123, Main Street, Colombo, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+            <p id="form-message" class="text-center text-green-500 mt-6 hidden">Message sent successfully!</p>
+        </div>
     </section>
 
     <!-- Booking Modal -->
-    <div id="booking-modal" class="modal">
-        <div class="bg-white p-8 rounded-lg max-w-md w-full">
-            <h2 class="text-2xl font-bold text-blue-500 mb-4">Book a Consultation</h2>
-            <p id="booking-service" class="text-gray-600 mb-4"></p>
-            <form id="booking-form" class="space-y-4">
+    <div id="myModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="bg-white p-8 rounded-xl max-w-md w-full relative" role="document">
+            <span class="absolute top-4 right-4 text-gray-600 cursor-pointer text-2xl" onclick="closeModal()" aria-label="Close Modal">×</span>
+            <h2 id="modal-title" class="text-2xl font-bold text-blue-800 mb-4">Book a Consultation</h2>
+            <form id="modalForm" action="https://formspree.io/f/mzzrnvqa" method="POST" class="space-y-4">
                 <div>
-                    <label for="booking-name" class="block text-gray-700">Name</label>
-                    <input type="text" id="booking-name" name="booking-name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Name for Booking">
+                    <label for="nameInput" class="block text-gray-700 font-medium">Name</label>
+                    <input type="text" id="nameInput" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Your Name for Booking">
                 </div>
                 <div>
-                    <label for="booking-date" class="block text-gray-700">Preferred Date</label>
-                    <input type="date" id="booking-date" name="booking-date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Preferred Booking Date">
+                    <label for="emailInput" class="block text-gray-700 font-medium">Email</label>
+                    <input type="email" id="emailInput" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Your Email for Booking">
+                </div>
+                <div>
+                    <label for="serviceInput" class="block text-gray-700 font-medium">Service</label>
+                    <input type="text" id="serviceInput" name="service" readonly class="w-full px-4 py-2 border rounded-lg bg-gray-100" aria-label="Selected Service">
                 </div>
                 <div class="flex justify-end space-x-4">
-                    <button type="button" onclick="closeBookingModal()" class="bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">Cancel</button>
-                    <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 glow">Submit</button>
+                    <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">Cancel</button>
+                    <button type="submit" class="ripple bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 glow">Book Now</button>
                 </div>
             </form>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Crown Global Services</h3>
+                    <h3 class="text-2xl font-bold mb-4">Crown Global Services</h3>
                     <p class="text-gray-400">Connecting Sri Lankan talent with global opportunities.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
                     <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-orange-500">shichikatren@gmail.com</a></p>
                     <p class="text-gray-400">Phone: +94 (76) 765 3944</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-orange-500">Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-orange-500">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-orange-500">LinkedIn</a>
                     </div>
                 </div>
@@ -335,112 +382,155 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Interactivity -->
+    <!-- JavaScript -->
     <script>
         // Multilingual Support
         const translations = {
             en: {
-                hero1: "Your Gateway to Global Jobs",
-                hero2: "Expert Visa Consultation",
-                hero1_sub: "Connecting Sri Lankan talent with overseas opportunities.",
-                hero2_sub: "Seamless support for your international journey.",
+                hero: "Unlock Global Opportunities",
+                hero_sub: "Empowering Sri Lankan talent with overseas jobs and visa support.",
                 services: "Our Services",
-                shop: "Explore Our Services",
-                contact: "Get in Touch",
+                shop: "Explore Our Packages",
                 testimonials: "Success Stories",
-                book: "Book a Consultation"
+                contact: "Get in Touch",
+                book: "Book a Consultation",
+                job_placement: "Job Placement",
+                visa_consultation: "Visa Consultation",
+                career_support: "Career Support",
+                basic_consultation: "Basic Consultation",
+                premium_package: "Premium Package",
+                visa_only: "Visa-Only Support"
             },
             si: {
-                hero1: "ගෝලීය රැකියා සඳහා ඔබේ ද්වාරය",
-                hero2: "විශේෂඥ වීසා උපදේශන",
-                hero1_sub: "ශ්‍රී ලාංකික ඉන්ද්‍රජාලිකයන් ගෝලීය රැකියා සමඟ සම්බන්ධ කිරීම.",
-                hero2_sub: "ඔබේ ජාත්‍යන්තර ගමනට සුමට සහාය.",
+                hero: "ගෝලීය අවස්ථා විවෘත කරන්න",
+                hero_sub: "ශ්‍රී ලාංකික ඉන්ද්‍රගුරුකම් සඳහා විදේශ රැකියා හා වීසා සහාය.",
                 services: "අපගේ සේවා",
-                shop: "අපගේ සේවා ගවේෂණය කරන්න",
-                contact: "සම්බන්ධ වන්න",
+                shop: "අපගේ පැකේජ ගවේෂණය කරන්න",
                 testimonials: "සාර්ථක කතා",
-                book: "උපදේශනයක් වෙන්කරවා ගන්න"
+                contact: "සම්බන්ධ වන්න",
+                book: "උපදේශනයක් වෙන්කරවා ගන්න",
+                job_placement: "රැකියා පිහිටුවීම",
+                visa_consultation: "වීසා උපදේශන",
+                career_support: "වෘත්තීය සහාය",
+                basic_consultation: "මූලික උපදේශන",
+                premium_package: "ප්‍රිමියම් පැකේජය",
+                visa_only: "වීසා-පමණි සහාය"
             }
         };
 
         const languageSwitcher = document.getElementById('language-switcher');
         function updateLanguage(lang) {
-            document.querySelectorAll('.hero-slide')[0].querySelector('h2').textContent = translations[lang].hero1;
-            document.querySelectorAll('.hero-slide')[0].querySelector('p').textContent = translations[lang].hero1_sub;
-            document.querySelectorAll('.hero-slide')[1].querySelector('h2').textContent = translations[lang].hero2;
-            document.querySelectorAll('.hero-slide')[1].querySelector('p').textContent = translations[lang].hero2_sub;
-            document.querySelector('#services h2').textContent = translations[lang].services;
-            document.querySelector('#shop h2').textContent = translations[lang].shop;
-            document.querySelector('#contact h2').textContent = translations[lang].contact;
-            document.querySelector('#testimonials h2').textContent = translations[lang].testimonials;
-            document.querySelector('#booking-modal h2').textContent = translations[lang].book;
+            try {
+                document.querySelector('.title').textContent = translations[lang].hero;
+                document.querySelector('#hero-subtitle').textContent = translations[lang].hero_sub;
+                document.querySelector('#services-title').textContent = translations[lang].services;
+                document.querySelector('#shop h2').textContent = translations[lang].shop;
+                document.querySelector('#testimonials h2').textContent = translations[lang].testimonials;
+                document.querySelector('#contact h2').textContent = translations[lang].contact;
+                document.querySelector('#modal-title').textContent = translations[lang].book;
+                // Update service names
+                const serviceTitles = document.querySelectorAll('#services .service h3');
+                serviceTitles[0].textContent = translations[lang].job_placement;
+                serviceTitles[1].textContent = translations[lang].visa_consultation;
+                serviceTitles[2].textContent = translations[lang].career_support;
+                // Update shop titles
+                const packageTitles = document.querySelectorAll('#shop .package .title');
+                packageTitles[0].textContent = translations[lang].basic_consultation;
+                packageTitles[1].textContent = translations[lang].premium_package;
+                packageTitles[2].textContent = translations[lang].visa_only;
+            } catch (error) {
+                console.error('Language update failed:', error);
+            }
         }
 
-        languageSwitcher.addEventListener('change', function() {
-            updateLanguage(this.value);
+        languageSwitcher.addEventListener('change', () => updateLanguage(languageSwitcher.value));
+        updateLanguage('en');
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-
-        // Hero Slideshow
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        let currentHeroSlide = 0;
-
-        function showHeroSlide(index) {
-            heroSlides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextHeroSlide() {
-            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-            showHeroSlide(currentHeroSlide);
-        }
-
-        setInterval(nextHeroSlide, 5000);
-        showHeroSlide(currentHeroSlide);
 
         // Testimonial Slider
         const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot');
         let currentTestimonial = 0;
 
         function showTestimonial(index) {
             testimonialSlides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
+                slide.classList.remove('active');
+                dots[i].classList.remove('active');
+                gsap.to(slide, { opacity: 0, duration: 0.5 });
+            });
+            testimonialSlides[index].classList.add('active');
+            dots[index].classList.add('active');
+            gsap.to(testimonialSlides[index], { opacity: 1, duration: 0.5 });
+            currentTestimonial = index;
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(i);
+            });
+        });
+
+        // Auto-cycle testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Initialize first testimonial
+        showTestimonial(0);
+
+        // Booking Modal
+        const modal = document.getElementById('myModal');
+        const serviceInput = document.getElementById('serviceInput');
+
+        function openModal(service) {
+            serviceInput.value = service;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            gsap.from('.modal .bg-white', { scale: 0.8, opacity: 0, duration: 0.4 });
+        }
+
+        function closeModal() {
+            gsap.to('.modal .bg-white', {
+                scale: 0.8,
+                opacity: 0,
+                duration: 0.4,
+                onComplete: () => {
+                    modal.classList.remove('active');
+                    modal.setAttribute('aria-hidden', 'true');
+                }
             });
         }
 
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
-            showTestimonial(currentTestimonial);
-        }
-
-        function prevTestimonial() {
-            currentTestimonial = (currentTestimonial - 1 + testimonialSlides.length) % testimonialSlides.length;
-            showTestimonial(currentTestimonial);
-        }
-
-        setInterval(nextTestimonial, 7000); // Auto-rotate testimonials every 7 seconds
-        showTestimonial(currentTestimonial);
-
-        // Booking Modal
-        const bookingModal = document.getElementById('booking-modal');
-        const bookingService = document.getElementById('booking-service');
-        function openBookingModal(service) {
-            bookingService.textContent = `Booking: ${service}`;
-            bookingModal.classList.add('active');
-        }
-
-        function closeBookingModal() {
-            bookingModal.classList.remove('active');
-        }
-
-        document.getElementById('booking-form').addEventListener('submit', function(e) {
+        document.getElementById('modalForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Booking submitted! This is a placeholder - integrate with Calendly/Bookly.');
-            closeBookingModal();
+            const form = e.target;
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    alert(`Booking submitted for ${serviceInput.value}!`);
+                    form.reset();
+                    closeModal();
+                } else {
+                    alert('Error submitting booking. Please try again.');
+                }
+            } catch (error) {
+                alert('Network error. Please try again.');
+            }
         });
 
         // Formspree AJAX Submission
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = e.target;
             const formMessage = document.getElementById('form-message');
@@ -454,6 +544,7 @@
                     formMessage.classList.remove('hidden');
                     formMessage.textContent = 'Message sent successfully!';
                     form.reset();
+                    gsap.from(formMessage, { opacity: 0, y: 10, duration: 0.4 });
                     setTimeout(() => formMessage.classList.add('hidden'), 3000);
                 } else {
                     formMessage.classList.remove('hidden');
@@ -466,4 +557,26 @@
                 formMessage.textContent = 'Network error. Please try again.';
             }
         });
+
+        // Scroll Animations
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.from(entry.target.children, {
+                        y: 30,
+                        opacity: 0,
+                        stagger: 0.2,
+                        duration: 1.0
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.1 });
+        document.querySelectorAll('#services, #shop, #testimonials, #contact').forEach(section => {
+            observer.observe(section);
+        });
     </script>
+</body>
+</html>
