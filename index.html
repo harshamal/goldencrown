@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crown Global Services connects skilled and unskilled Sri Lankan talent with rewarding overseas job opportunities. Book your consultation for job placement and visa support today!">
+    <meta name="keywords" content="Sri Lanka job placement, overseas jobs, visa consultation, international employment, Crown Global Services">
+    <meta name="author" content="Crown Global Services">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Crown Global Services - Overseas Job Opportunities">
+    <meta property="og:description" content="Connecting Sri Lankan talent with global jobs and visa support. Start your journey today!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:url" content="https://crownglobalservices.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crown Global Services - Overseas Job Opportunities">
+    <meta name="twitter:description" content="Connecting Sri Lankan talent with global jobs and visa support. Start your journey today!">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <title>Crown Global Services - Overseas Job Opportunities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-slide, .testimonial-slide {
+            display: none;
+        }
+
+            .hero-slide.active, .testimonial-slide.active {
+                display: block;
+            }
+
+        footer {
+            margin-top: auto;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .modal.active {
+                display: flex;
+            }
+
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .glow {
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+    </style>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Crown Global Services",
+            "url": "https://crownglobalservices.com",
+            "logo": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+94-76-765-3944",
+                "contactType": "Customer Service",
+                "email": "shichikatren@gmail.com"
+            },
+            "description": "Crown Global Services connects skilled and unskilled Sri Lankan talent with rewarding overseas job opportunities."
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Crown Global Services</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/" class="hover:text-orange-500 transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                    <li><a href="/services" class="hover:text-orange-500 transition-colors">Services</a></li>
+                    <li><a href="#shop" class="hover:text-orange-500 transition-colors">Shop</a></li>
+                    <li><a href="/faq" class="hover:text-orange-500 transition-colors">FAQ</a></li>
+                    <li><a href="/careers" class="hover:text-orange-500 transition-colors">Careers</a></li>
+                    <li><a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Language Switcher -->
+            <select id="language-switcher" class="bg-white text-blue-500 px-2 py-1 rounded focus:outline-none">
+                <option value="en">English</option>
+                <option value="si">Sinhala</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="relative h-96">
+        <div class="hero-slide absolute inset-0 bg-cover bg-center active" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center text-center bg-black bg-opacity-50">
+                <div class="animate-slide-up">
+                    <h2 class="text-4xl font-bold text-white mb-4">Your Gateway to Global Jobs</h2>
+                    <p class="text-lg text-white mb-6">Connecting Sri Lankan talent with overseas opportunities.</p>
+                    <a href="#contact" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542650742-d3150fb66298?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+            <div class="container mx-auto px-4 h-full flex items-center justify-center text-center bg-black bg-opacity-50">
+                <div class="animate-slide-up">
+                    <h2 class="text-4xl font-bold text-white mb-4">Expert Visa Consultation</h2>
+                    <p class="text-lg text-white mb-6">Seamless support for your international journey.</p>
+                    <a href="#shop" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Book Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16 bg-gradient-to-b from-gray-100 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Job Placement Services for Sri Lankan Workers" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Job Placement</h3>
+                    <p class="text-gray-600">Matching skilled and unskilled Sri Lankan workers with top global employers in industries like hospitality, construction, and healthcare.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa Consultation for Overseas Employment" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Visa Consultation</h3>
+                    <p class="text-gray-600">Expert guidance on visa applications for a smooth transition to international job opportunities.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Career Support and Training for Global Jobs" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Career Support</h3>
+                    <p class="text-gray-600">Training and resources to prepare Sri Lankan talent for success in international job markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop/E-Commerce Section -->
+    <section id="shop" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Explore Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Basic Consultation Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Basic Consultation</h3>
+                    <p class="text-gray-600 mb-4">Initial consultation for job placement and visa guidance.</p>
+                    <p class="text-orange-500 font-bold mb-4">$50</p>
+                    <button onclick="openBookingModal('Basic Consultation')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Premium Job Placement Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Package</h3>
+                    <p class="text-gray-600 mb-4">Full job placement and visa support with career training.</p>
+                    <p class="text-orange-500 font-bold mb-4">$150</p>
+                    <button onclick="openBookingModal('Premium Package')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Visa-Only Support Package" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Visa-Only Support</h3>
+                    <p class="text-gray-600 mb-4">Dedicated visa application assistance for overseas jobs.</p>
+                    <p class="text-orange-500 font-bold mb-4">$80</p>
+                    <button onclick="openBookingModal('Visa-Only Support')" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-16 bg-gradient-to-b from-white to-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Get in Touch</h2>
+            <form action="https://formspree.io/f/mzzrnvqa" method="POST" id="contact-form" class="max-w-lg mx-auto space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Name">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Email">
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-700">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Phone Number">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Message"></textarea>
+                </div>
+                <button type="submit" class="bg-orange-500 text-white px-8 py-4 rounded-full hover:bg-orange-600 transition-transform transform hover:scale-105 glow text-lg">Send Message</button>
+            </form>
+            <p id="form-message" class="text-center text-green-500 mt-4 hidden">Message sent successfully!</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8 animate-slide-up">Success Stories</h2>
+            <div class="relative">
+                <div class="testimonial-slide active">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Dubai" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <p class="text-gray-600 italic">"Crown Global Services helped me secure a hospitality job in Dubai. Their support was incredible!"</p>
+                        <p class="mt-4 font-bold text-gray-800">– Amal Perera</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Canada" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <p class="text-gray-600 italic">"The visa consultation process was seamless, and I’m now working as a nurse in Canada!"</p>
+                        <p class="mt-4 font-bold text-gray-800">– Nimali Silva</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from Australia" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <p class="text-gray-600 italic">"Thanks to Crown Global, I landed a construction job in Australia. Highly recommend!"</p>
+                        <p class="mt-4 font-bold text-gray-800">– Kasun Fernando</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md mx-auto max-w-lg">
+                        <img src="https://images.unsplash.com/photo-1506794778202-7931692b3a2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client Testimonial from UK" class="w-16 h-16 rounded-full mx-auto mb-4">
+                        <p class="text-gray-600 italic">"Their career training prepared me for a tech role in the UK. Amazing service!"</p>
+                        <p class="mt-4 font-bold text-gray-800">– Dilani Wijesinghe</p>
+                    </div>
+                </div>
+                <div class="flex justify-center space-x-4 mt-8">
+                    <button onclick="prevTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Previous</button>
+                    <button onclick="nextTestimonial()" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Next</button>
+                </div>
+            </div>
+        </div>
+        <!-- Schema Markup for Reviews -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Organization",
+                    "name": "Crown Global Services"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Amal Perera"
+                },
+                "reviewBody": "Crown Global Services helped me secure a hospitality job in Dubai. Their support was incredible!"
+            }
+        </script>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="bg-white p-8 rounded-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold text-blue-500 mb-4">Book a Consultation</h2>
+            <p id="booking-service" class="text-gray-600 mb-4"></p>
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label for="booking-name" class="block text-gray-700">Name</label>
+                    <input type="text" id="booking-name" name="booking-name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Your Name for Booking">
+                </div>
+                <div>
+                    <label for="booking-date" class="block text-gray-700">Preferred Date</label>
+                    <input type="date" id="booking-date" name="booking-date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Preferred Booking Date">
+                </div>
+                <div class="flex justify-end space-x-4">
+                    <button type="button" onclick="closeBookingModal()" class="bg-gray-500 text-white px-4 py-2 rounded-full hover:bg-gray-600">Cancel</button>
+                    <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 glow">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Crown Global Services</h3>
+                    <p class="text-gray-400">Connecting Sri Lankan talent with global opportunities.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-orange-500">shichikatren@gmail.com</a></p>
+                    <p class="text-gray-400">Phone: +94 (76) 765 3944</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-500">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-8">© 2025 Crown Global Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Multilingual Support
+        const translations = {
+            en: {
+                hero1: "Your Gateway to Global Jobs",
+                hero2: "Expert Visa Consultation",
+                hero1_sub: "Connecting Sri Lankan talent with overseas opportunities.",
+                hero2_sub: "Seamless support for your international journey.",
+                services: "Our Services",
+                shop: "Explore Our Services",
+                contact: "Get in Touch",
+                testimonials: "Success Stories",
+                book: "Book a Consultation"
+            },
+            si: {
+                hero1: "ගෝලීය රැකියා සඳහා ඔබේ ද්වාරය",
+                hero2: "විශේෂඥ වීසා උපදේශන",
+                hero1_sub: "ශ්‍රී ලාංකික ඉන්ද්‍රජාලිකයන් ගෝලීය රැකියා සමඟ සම්බන්ධ කිරීම.",
+                hero2_sub: "ඔබේ ජාත්‍යන්තර ගමනට සුමට සහාය.",
+                services: "අපගේ සේවා",
+                shop: "අපගේ සේවා ගවේෂණය කරන්න",
+                contact: "සම්බන්ධ වන්න",
+                testimonials: "සාර්ථක කතා",
+                book: "උපදේශනයක් වෙන්කරවා ගන්න"
+            }
+        };
+
+        const languageSwitcher = document.getElementById('language-switcher');
+        function updateLanguage(lang) {
+            document.querySelectorAll('.hero-slide')[0].querySelector('h2').textContent = translations[lang].hero1;
+            document.querySelectorAll('.hero-slide')[0].querySelector('p').textContent = translations[lang].hero1_sub;
+            document.querySelectorAll('.hero-slide')[1].querySelector('h2').textContent = translations[lang].hero2;
+            document.querySelectorAll('.hero-slide')[1].querySelector('p').textContent = translations[lang].hero2_sub;
+            document.querySelector('#services h2').textContent = translations[lang].services;
+            document.querySelector('#shop h2').textContent = translations[lang].shop;
+            document.querySelector('#contact h2').textContent = translations[lang].contact;
+            document.querySelector('#testimonials h2').textContent = translations[lang].testimonials;
+            document.querySelector('#booking-modal h2').textContent = translations[lang].book;
+        }
+
+        languageSwitcher.addEventListener('change', function() {
+            updateLanguage(this.value);
+        });
+
+        // Hero Slideshow
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        let currentHeroSlide = 0;
+
+        function showHeroSlide(index) {
+            heroSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextHeroSlide() {
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        setInterval(nextHeroSlide, 5000);
+        showHeroSlide(currentHeroSlide);
+
+        // Testimonial Slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonialSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonialSlides.length) % testimonialSlides.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        setInterval(nextTestimonial, 7000); // Auto-rotate testimonials every 7 seconds
+        showTestimonial(currentTestimonial);
+
+        // Booking Modal
+        const bookingModal = document.getElementById('booking-modal');
+        const bookingService = document.getElementById('booking-service');
+        function openBookingModal(service) {
+            bookingService.textContent = `Booking: ${service}`;
+            bookingModal.classList.add('active');
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.remove('active');
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Booking submitted! This is a placeholder - integrate with Calendly/Bookly.');
+            closeBookingModal();
+        });
+
+        // Formspree AJAX Submission
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formMessage = document.getElementById('form-message');
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    formMessage.classList.remove('hidden');
+                    formMessage.textContent = 'Message sent successfully!';
+                    form.reset();
+                    setTimeout(() => formMessage.classList.add('hidden'), 3000);
+                } else {
+                    formMessage.classList.remove('hidden');
+                    formMessage.classList.add('text-red-500');
+                    formMessage.textContent = 'Error sending message. Please try again.';
+                }
+            } catch (error) {
+                formMessage.classList.remove('hidden');
+                formMessage.classList.add('text-red-500');
+                formMessage.textContent = 'Network error. Please try again.';
+            }
+        });
+    </script>
