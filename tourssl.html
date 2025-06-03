@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Embark on an unforgettable journey through Sri Lanka with Crown Global Services. Explore ancient heritage, pristine beaches, thrilling safaris, and vibrant culture.">
-    <meta name="keywords" content="Sri Lanka tours, cultural heritage, beach holidays, wildlife safaris, adventure travel, Crown Global Services">
+    <meta name="description" content="Discover Sri Lanka’s wonders with Crown Global Services. Explore ancient heritage, pristine beaches, thrilling safaris, tea estates, and vibrant festivals through our curated tours.">
+    <meta name="keywords" content="Sri Lanka tours, cultural heritage, beach holidays, wildlife safaris, tea estates, adventure travel, Crown Global Services">
     <meta name="author" content="Crown Global Services">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Explore Sri Lanka - Crown Global Services">
-    <meta property="og:description" content="Experience the wonders of Sri Lanka with curated tours, from ancient temples to thrilling wildlife adventures.">
+    <meta property="og:description" content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <meta property="og:url" content="https://crownglobalservices.com/tourssl.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Explore Sri Lanka - Crown Global Services">
-    <meta name="twitter:description" content="Experience the wonders of Sri Lanka with curated tours, from ancient temples to thrilling wildlife adventures.">
+    <meta name="twitter:description" content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>Explore Sri Lanka - Crown Global Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -30,18 +30,31 @@
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Playfair Display', serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
         }
 
-        .header-gradient {
-            background: linear-gradient(90deg, #ffffff 0%, #e0f2fe 100%);
-            transition: all 0.3s ease;
+        .header {
+            position: relative;
+            background:  linear-gradient(360deg, rgba(50, 80, 120, 0.4) 0%, rgba(180, 120, 220, 0.4) 100%);
+            color: black;
+            transition: all 0.4s ease;
+            z-index: 50;
+            backdrop-filter: blur(1px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .header-scrolled {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background:linear-gradient(90deg, rgba(50, 80, 120, 0.4) 0%, rgba(60, 120, 220, 0.4) 100%);
+            color: black;
+            backdrop-filter: blur(1px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .nav-link {
@@ -89,7 +102,7 @@
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
             background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
 
         #mobile-menu.open {
@@ -110,11 +123,13 @@
         }
 
         .mobile-nav-link:hover {
-            transform: translateX(8px);
+            transform: translateX(10px);
             color: #f59e0b;
         }
 
         .hero-section {
+            top: 0;
+            left: 0;
             position: relative;
             height: 100vh;
             display: flex;
@@ -132,7 +147,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: 1;
         }
 
         .hero-overlay {
@@ -141,22 +156,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 3;
         }
 
         .animate-slide-up {
-            animation: slideUp 1s ease-out;
+            animation: slideUp 1.2s ease-out;
         }
 
         @keyframes slideUp {
             from {
-                transform: translateY(50px);
+                transform: translateY(60px);
                 opacity: 0;
             }
             to {
@@ -166,7 +181,7 @@
         }
 
         .glow {
-            box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+            box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
         }
 
         .parallax {
@@ -200,20 +215,21 @@
         .tour-card {
             position: relative;
             overflow: hidden;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            perspective: 1000px;
         }
 
         .tour-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-12px) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .tour-card img {
-            transition: transform 0.4s ease;
+            transition: transform 0.5s ease;
         }
 
         .tour-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .tour-card-overlay {
@@ -222,9 +238,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(4, 120, 87, 0.7);
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.5s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -235,22 +251,28 @@
         }
 
         .testimonial-slider {
-            position: relative;
             overflow: hidden;
+            width: 100%;
         }
+
+        .testimonial-slider .grid {
+            display: flex;
+            width: max-content;
+        }
+
 
         .testimonial-card {
             transition: transform 0.4s ease;
         }
 
         .testimonial-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         #map {
-            height: 500px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 600px;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .carousel-container {
@@ -260,7 +282,7 @@
 
         .carousel-track {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .carousel-item {
@@ -271,7 +293,7 @@
 
         .carousel-item img {
             width: 100%;
-            height: 600px;
+            height: 700px;
             object-fit: cover;
         }
 
@@ -281,7 +303,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -293,12 +315,13 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 1rem;
+            padding: 1.2rem;
             border: none;
             cursor: pointer;
             transition: background 0.3s ease;
+            border-radius: 50%;
         }
 
         .carousel-btn:hover {
@@ -306,11 +329,11 @@
         }
 
         .carousel-btn.prev {
-            left: 1rem;
+            left: 1.5rem;
         }
 
         .carousel-btn.next {
-            right: 1rem;
+            right: 1.5rem;
         }
 
         .video-container {
@@ -318,8 +341,8 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .video-container iframe {
@@ -329,6 +352,15 @@
             width: 100%;
             height: 100%;
         }
+
+        .culture-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .culture-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -337,45 +369,45 @@
             "@type": "TravelAgency",
             "name": "Crown Global Services",
             "url": "https://crownglobalservices.com",
-            "description": "Discover Sri Lanka’s cultural heritage, beaches, and wildlife through immersive tours with Crown Global Services.",
+            "description": "Experience Sri Lanka’s cultural heritage, pristine beaches, wildlife safaris, and tea estates through immersive tours with Crown Global Services.",
             "offers": {
                 "@type": "Offer",
                 "name": "Sri Lanka Tours",
-                "description": "Curated travel experiences including cultural tours, beach holidays, wildlife safaris, and adventure travel in Sri Lanka."
+                "description": "Curated travel experiences including cultural tours, beach holidays, wildlife safaris, tea estate visits, and adventure travel in Sri Lanka."
             }
         }
     </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
-    <header class="header-gradient shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="header  sticky top-0 z-50">
+        <div class=" mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <a href="index.html">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/logonew.jpg" alt="Crown Global Services logo" class="w-48 h-14 hover:scale-105 transition-transform duration-300">
+                <a href="index.html" class="logo-container">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/crlogo.png" alt="Crown Global Services logo" class="w-auto h-12 hover:scale-110 transition-transform duration-500"> 
                 </a>
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="index.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors active-link" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-contact">Contact</a>
+            <nav class="hidden md:flex space-x-12" style="font">
+                <a href="index.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors active-link" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-white text-lg hover:text-amber-300 transition-colors" id="nav-contact">Contact</a>
             </nav>
             <div class="flex items-center">
-                <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-72 h-screen hidden">
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-80 h-screen hidden">
             <div class="flex justify-end p-4">
                 <button id="mobile-menu-close" class="text-gray-800 focus:outline-none close-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
@@ -394,181 +426,248 @@
 
     <!-- Hero Section with Video Background -->
     <section class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d">
             <source src="https://videos.pexels.com/video-files/2187246/2187246-uhd_2560_1440_30fps.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">Unveil the Soul of Sri Lanka</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Embark on a journey through ancient temples, turquoise shores, and untamed jungles with our immersive tours.</p>
-            <a href="tours.html" class="ripple bg-amber-500 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-amber-600 transition-transform transform hover:scale-105 glow">Start Your Adventure</a>
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 animate-slide-up">Discover Sri Lanka’s Magic</h1>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto">Journey through ancient ruins, emerald hills, and turquoise shores with our expertly curated adventures.</p>
+            <a href="tours.html" class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Begin Your Journey</a>
         </div>
     </section>
 
     <!-- Destination Carousel -->
-    <section id="destination-carousel" class="py-20 bg-gray-100">
+    <section id="destination-carousel" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Iconic Destinations</h2>
-            <div class="carousel-container">
-                <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d" alt="Sigiriya">
-                        <div class="carousel-overlay">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Legendary Destinations</h2>
+            <div class="carousel-container relative overflow-hidden h-max">
+                <div class="carousel-track flex transition-transform duration-700 ease-in-out space-x-6">
+                    <!-- Sigiriya -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sigiriya Rock Fortress">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Sigiriya Rock Fortress</h3>
-                                <p class="text-lg max-w-md mx-auto">Climb the ancient rock fortress, a UNESCO World Heritage Site, and marvel at its frescoes and panoramic views.</p>
+                                <h3 class="text-4xl font-bold mb-3">Sigiriya Rock Fortress</h3>
+                                <p class="text-xl max-w-lg mx-auto">Ascend this UNESCO World Heritage Site, adorned with ancient frescoes and offering breathtaking views.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Mirissa Beach">
-                        <div class="carousel-overlay">
+                    <!-- Mirissa Beach -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://media.timeout.com/images/106252539/image.jpg" alt="Mirissa Beach">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Mirissa Beach</h3>
-                                <p class="text-lg max-w-md mx-auto">Bask in the sun, surf the waves, and witness breathtaking sunsets on this idyllic southern coast.</p>
+                                <h3 class="text-4xl font-bold mb-3">Mirissa Beach</h3>
+                                <p class="text-xl max-w-lg mx-auto">Surf, swim, and savor sunsets on this vibrant southern coast, a haven for beach lovers.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Yala National Park">
-                        <div class="carousel-overlay">
+                    <!-- Yala National Park -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg" alt="Yala National Park">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Yala National Park</h3>
-                                <p class="text-lg max-w-md mx-auto">Experience thrilling safaris and encounter leopards, elephants, and vibrant birdlife.</p>
+                                <h3 class="text-4xl font-bold mb-3">Yala National Park</h3>
+                                <p class="text-xl max-w-lg mx-auto">Embark on thrilling safaris to spot leopards, elephants, and exotic wildlife.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d" alt="Sigiriya">
-                        <div class="carousel-overlay">
+                    <!-- Kandy -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://www.andbeyond.com/wp-content/uploads/sites/5/kandy-3.jpg" alt="Kandy">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Sigiriya Rock Fortress</h3>
-                                <p class="text-lg max-w-md mx-auto">Climb the ancient rock fortress, a UNESCO World Heritage Site, and marvel at its frescoes and panoramic views.</p>
+                                <h3 class="text-4xl font-bold mb-3">Kandy</h3>
+                                <p class="text-xl max-w-lg mx-auto">Visit the sacred Temple of the Tooth and experience the vibrant Esala Perahera festival.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Mirissa Beach">
-                        <div class="carousel-overlay">
+                    <!-- Ella -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840" alt="Ella">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Mirissa Beach</h3>
-                                <p class="text-lg max-w-md mx-auto">Bask in the sun, surf the waves, and witness breathtaking sunsets on this idyllic southern coast.</p>
+                                <h3 class="text-4xl font-bold mb-3">Ella</h3>
+                                <p class="text-xl max-w-lg mx-auto">Hike through tea plantations and marvel at the scenic Nine Arch Bridge.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Yala National Park">
-                        <div class="carousel-overlay">
+                    <!-- Nuwara Eliya -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://media-cdn.tripadvisor.com/media/photo-s/2d/58/77/95/grand-hotel-nuwara-eliya.jpg" alt="Nuwara Eliya">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Yala National Park</h3>
-                                <p class="text-lg max-w-md mx-auto">Experience thrilling safaris and encounter leopards, elephants, and vibrant birdlife.</p>
+                                <h3 class="text-4xl font-bold mb-3">Nuwara Eliya</h3>
+                                <p class="text-xl max-w-lg mx-auto">Stroll through cool tea country, colonial bungalows, and botanical gardens in Little England.</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d" alt="Sigiriya">
-                        <div class="carousel-overlay">
+                    <!-- Anuradhapura -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://travelrebels.com/wp-content/uploads/2024/04/mihintale-viewpoint-1675x1116-1-800x533.jpg" alt="Anuradhapura">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Sigiriya Rock Fortress</h3>
-                                <p class="text-lg max-w-md mx-auto">Climb the ancient rock fortress, a UNESCO World Heritage Site, and marvel at its frescoes and panoramic views.</p>
+                                <h3 class="text-4xl font-bold mb-3">Anuradhapura</h3>
+                                <p class="text-xl max-w-lg mx-auto">Explore ancient stupas, sacred Bo tree shrines, and millennia-old monastic ruins.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Mirissa Beach">
-                        <div class="carousel-overlay">
+                    <!-- Dambulla Cave Temple -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg" alt="Dambulla Cave Temple">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Mirissa Beach</h3>
-                                <p class="text-lg max-w-md mx-auto">Bask in the sun, surf the waves, and witness breathtaking sunsets on this idyllic southern coast.</p>
+                                <h3 class="text-4xl font-bold mb-3">Dambulla Cave Temple</h3>
+                                <p class="text-xl max-w-lg mx-auto">Marvel at colorful frescoes and Buddha statues inside sacred rock caves.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Yala National Park">
-                        <div class="carousel-overlay">
+                    <!-- Polonnaruwa -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://www.lankatourexperts.com/wp-content/uploads/2018/12/Polonnaruwa-Ancient-City-Sri-Lanka-Economy-Tours.png.webp" alt="Polonnaruwa">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
-                                <h3 class="text-3xl font-bold mb-2">Yala National Park</h3>
-                                <p class="text-lg max-w-md mx-auto">Experience thrilling safaris and encounter leopards, elephants, and vibrant birdlife.</p>
+                                <h3 class="text-4xl font-bold mb-3">Polonnaruwa</h3>
+                                <p class="text-xl max-w-lg mx-auto">Walk through ancient royal palaces, temples, and beautifully carved statues from Sri Lanka’s medieval capital.</p>
                             </div>
                         </div>
                     </div>
-
-                     <div class="carousel-item">
-                         <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Yala National Park">
-                         <div class="carousel-overlay">
-                             <div>
-                                 <h3 class="text-3xl font-bold mb-2">Yala National Park</h3>
-                                 <p class="text-lg max-w-md mx-auto">Experience thrilling safaris and encounter leopards, elephants, and vibrant birdlife.</p>
-                             </div>
-                         </div>
-                     </div>
+                    <!-- Trincomalee -->
+                    <div class="carousel-item relative min-w-[100%]">
+                        <img class="w-full h-[600px] object-cover" src="https://us.lakpura.com/cdn/shop/files/LKI9500075-01-E_b9676f68-bb02-4827-ad28-9de134e5b198.jpg?v=1653459755&width=3200" alt="Trincomalee">
+                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                            <div>
+                                <h3 class="text-4xl font-bold mb-3">Trincomalee</h3>
+                                <p class="text-xl max-w-lg mx-auto">Relax on unspoiled beaches or dive into marine wonders off the northeast coast.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-btn prev">&larr;</button>
-                <button class="carousel-btn next">&rarr;</button>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-btn prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white text-2xl px-4 py-2 rounded-full z-10 hover:bg-gray-700">←</button>
+                <button class="carousel-btn next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white text-2xl px-4 py-2 rounded-full z-10 hover:bg-gray-700">→</button>
             </div>
         </div>
     </section>
+
 
     <!-- Tour Experiences Section -->
-    <section id="tour-experiences" class="py-20 bg-white">
+    <section id="tour-experiences" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Curated Experiences</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="tour-card rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178" alt="Cultural Journey" class="w-full h-64 object-cover">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Unforgettable Experiences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg" alt="Cultural Odyssey" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <a href="tours.html" class="text-white font-medium text-lg bg-amber-500 px-6 py-2 rounded-full hover:bg-amber-600">Explore Now</a>
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cultural Odyssey</h3>
-                        <p class="text-gray-600 mb-4">Discover ancient cities, sacred temples, and vibrant festivals that tell the story of Sri Lanka’s rich heritage.</p>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Cultural Odyssey</h3>
+                        <p class="text-gray-600 mb-4">Explore ancient cities, sacred temples, and colorful festivals that weave Sri Lanka’s rich heritage.</p>
                     </div>
                 </div>
-                <div class="tour-card rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1509233725247-49e657c54213" alt="Beach Escape" class="w-full h-64 object-cover">
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg" alt="Coastal Escape" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <a href="tours.html" class="text-white font-medium text-lg bg-amber-500 px-6 py-2 rounded-full hover:bg-amber-600">Explore Now</a>
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Coastal Escape</h3>
-                        <p class="text-gray-600 mb-4">Unwind on pristine beaches, snorkel in crystal waters, and savor fresh seafood by the ocean.</p>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Coastal Escape</h3>
+                        <p class="text-gray-600 mb-4">Relax on pristine beaches, dive into coral reefs, and enjoy oceanfront dining.</p>
                     </div>
                 </div>
-                <div class="tour-card rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1610973350894-0f1b8c56e1a3" alt="Wildlife Safari" class="w-full h-64 object-cover">
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://acuvrfkwen.cloudimg.io/width/1500/q35.foil1/https://voyageinstyle.net/wp-content/uploads/2020/01/kaudulla-safari-elephants-scaled.jpg" alt="Wildlife Safari" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <a href="tours.html" class="text-white font-medium text-lg bg-amber-500 px-6 py-2 rounded-full hover:bg-amber-600">Explore Now</a>
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Wildlife Safari</h3>
-                        <p class="text-gray-600 mb-4">Venture into lush jungles and national parks to witness Sri Lanka’s incredible biodiversity.</p>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Wildlife Safari</h3>
+                        <p class="text-gray-600 mb-4">Venture into national parks to encounter elephants, leopards, and diverse birdlife.</p>
+                    </div>
+                </div>
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg" alt="Tea Trail" class="w-full h-72 object-cover">
+                    <div class="tour-card-overlay">
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Tea Trail Adventure</h3>
+                        <p class="text-gray-600 mb-4">Wander through lush tea estates in Nuwara Eliya and learn the art of tea-making.</p>
+                    </div>
+                </div>
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://srilankatravelpages.com/my_content/uploads/2023/02/Trekking-and-Hiking-in-Sri-Lanka.jpg" alt="Adventure Trek" class="w-full h-72 object-cover">
+                    <div class="tour-card-overlay">
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Highland Trek</h3>
+                        <p class="text-gray-600 mb-4">Hike Adam’s Peak or Knuckles Range for stunning views and spiritual serenity.</p>
+                    </div>
+                </div>
+                <div class="tour-card rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://www.lakpura.com/images/LK94007896-01-E.JPG" alt="Culinary Journey" class="w-full h-72 object-cover">
+                    <div class="tour-card-overlay">
+                        <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Now</a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Culinary Journey</h3>
+                        <p class="text-gray-600 mb-4">Savor authentic Sri Lankan cuisine through cooking classes and local food tours.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Storytelling Section with Parallax -->
-    <section id="storytelling" class="py-20 bg-gray-900 text-white parallax" style="background-image: url('https://images.unsplash.com/photo-1517486430290-35657bdcef51');">
+   <!-- Cultural Highlights Section with Parallax & Slider -->
+    <section id="cultural-highlights" class="py-24 bg-gray-900 text-white parallax" style="background-image: url('https://images.unsplash.com/photo-1573848857173-3e773f9b7e1f'); background-attachment: fixed;">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">The Heart of Sri Lanka</h2>
-            <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg mb-6">Sri Lanka is more than a destination—it’s a tapestry of stories woven through centuries. From the ancient kings of Anuradhapura to the vibrant festivals of Kandy, every corner of this island pulses with life.</p>
-                <p class="text-lg mb-6">Join us to explore tea-covered hills, encounter gentle giants in the wild, and share meals with locals whose warmth is unforgettable. Let Crown Global Services craft your story in Sri Lanka.</p>
-                <a href="tours.html" class="ripple bg-amber-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-amber-600 transition-transform transform hover:scale-105 glow">Write Your Story</a>
+            <h2 class="text-5xl font-bold text-center mb-16">Sri Lanka’s Soulful Heritage</h2>
+             <div class="testimonial-slider">
+            <!-- Horizontal Scrollable Cards -->
+
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Esala Perahera</h3>
+                        <p class="text-gray-400 mb-4">Witness the grand Kandy festival, where elephants parade with sacred relics in a vibrant spectacle.</p>
+                    </div>
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Ayurvedic Wellness</h3>
+                        <p class="text-gray-400 mb-4">Rejuvenate with ancient healing practices at wellness retreats across the island.</p>
+                    </div>
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Traditional Crafts</h3>
+                        <p class="text-gray-400 mb-4">Learn batik, mask-making, or pottery from skilled artisans in rural villages.</p>
+                    </div>
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Sri Lankan Cuisine</h3>
+                        <p class="text-gray-400 mb-4">Savor spicy curries, string hoppers, and kottu roti in bustling local eateries.</p>
+                    </div>
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Kandyan Dance</h3>
+                        <p class="text-gray-400 mb-4">Marvel at traditional dance performances rich in rhythm and ritual attire.</p>
+                    </div>
+                    <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-bold mb-3">Temple Architecture</h3>
+                        <p class="text-gray-400 mb-4">Explore ancient dagobas and rock-carved temples that echo timeless devotion.</p>
+                    </div>
+                </div>
+             </div>
+            <div class="text-center mt-12">
+                <a href="tours.html" class="ripple bg-amber-500 text-white px-10 py-4 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Explore Culture</a>
             </div>
         </div>
     </section>
+
 
     <!-- Interactive Map Section -->
-    <section id="map-section" class="py-20 bg-white">
+    <section id="map-section" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Explore the Island</h2>
-            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">Navigate Sri Lanka’s treasures with our interactive map, highlighting must-visit destinations.</p>
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Journey Across Sri Lanka</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore our interactive map to discover iconic landmarks and hidden gems.</p>
             <div id="map"></div>
         </div>
     </section>
@@ -578,11 +677,12 @@
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">See Sri Lanka in Motion</h2>
             <div class="video-container">
-<iframe width="315" height="560" src="https://www.youtube.com/embed/6znNBTe3QQs" title="Most Beautiful Places in Sri Lanka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <iframe width="315" height="560" src="https://www.youtube.com/embed/6znNBTe3QQs" title="Most Beautiful Places in Sri Lanka" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
         </div>
     </section>
 
     <!-- Testimonials Slider -->
+        <!-- Testimonials Slider -->
     <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Traveler Stories</h2>
@@ -600,42 +700,65 @@
                         <p class="text-gray-600 italic mb-4">"Seeing leopards in Yala was unforgettable. Highly recommend!"</p>
                         <p class="text-gray-800 font-semibold">– Amara Wijesinghe, Adventurer</p>
                     </div>
+                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
+                         <p class="text-gray-600 italic mb-4">"Climbing Sigiriya was a dream come true. The guides brought history to life!"</p>
+                         <p class="text-gray-800 font-semibold">– Sarah Lim, Explorer</p>
+                     </div>
+                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
+                         <p class="text-gray-600 italic mb-4">"Mirissa’s beaches were paradise. The tour was perfectly planned!"</p>
+                         <p class="text-gray-800 font-semibold">– David Patel, Traveler</p>
+                     </div>
+                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
+                         <p class="text-gray-600 italic mb-4">"Seeing leopards in Yala was unforgettable. Highly recommend!"</p>
+                         <p class="text-gray-800 font-semibold">– Amara Wijesinghe, Adventurer</p>
+                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- CTA Section -->
-    <section id="cta" class="py-20 bg-amber-500 text-white text-center">
+    <section id="cta" class="py-24 bg-amber-500 text-white text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-6">Your Sri Lankan Adventure Awaits</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Book now and let Crown Global Services guide you through the wonders of Sri Lanka.</p>
-            <a href="contact.html" class="ripple bg-emerald-600 text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-emerald-700 transition-transform transform hover:scale-105 glow">Book Your Tour</a>
+            <h2 class="text-5xl font-bold mb-6">Embark on Your Adventure</h2>
+            <p class="text-2xl mb-10 max-w-xl mx-auto">Let Crown Global Services guide you through Sri Lanka’s timeless wonders.</p>
+            <a href="contact.html" class="cta-button ripple bg-emerald-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-emerald-700 transition-transform transform hover:scale-110 glow">Book Now</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Crown Global Services</h3>
-                    <p class="text-gray-400">Crafting unforgettable journeys through Sri Lanka’s vibrant landscapes and rich heritage.</p>
+                    <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
+                    <p class="text-gray-400">Crafting unforgettable journeys through Sri Lanka’s vibrant landscapes, rich heritage, and warm hospitality.</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
-                    <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-500">shichikatren@gmail.com</a></p>
-                    <p class="text-gray-400">Phone: +94 (76) 765 3944</p>
+                    <h3 class="text-3xl font-bold mb-6">Explore</h3>
+                    <ul class=" <space-y-2">
+                        <li><a href="tours.html" class="text-gray-400 hover:text-amber-400">Tours</a></li>
+                        <li><a href="tourssl.html" class="text-gray-400 hover:text-amber-400">Explore Sri Lanka</a></a>
+</li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400">About Us</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                    <h3 class="text-3xl font-bold mb-6">Contact Us</a>
+</h3>
+                    <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-400">shichikatren@gmail.com</a></p>
+                        <p class="text-gray-400">Phone: +94 (76) 765 3944</p>
+                </div>
+                <div>
+                    <div><h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-500">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-amber-500">LinkedIn</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-400 mt-8">© 2025 Crown Global Services. All rights reserved.</p>
+            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
         </div>
     </footer>
 
@@ -658,20 +781,46 @@
         // Header Scroll Effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 20) {
                 header.classList.add('header-scrolled');
             } else {
                 header.classList.remove('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
             }
+        });
+
+        // Logo Animation
+        gsap.from('.logo-container img', {
+            opacity: 0,
+            scale: 0.5,
+            duration: 1.5,
+            ease: 'back.out(1.7)'
         });
 
         // Hero Animation
         document.addEventListener('DOMContentLoaded', () => {
-            gsap.from('.hero-content', {
+            gsap.from('.hero-content h1', {
+                opacity: 0,
+                y: 120,
+                duration: 1.8,
+                ease: 'power4.out'
+            });
+            gsap.from('.hero-content p', {
                 opacity: 0,
                 y: 100,
-                duration: 1.5,
-                ease: 'power3.out'
+                duration: 1.8,
+                delay: 0.3,
+                ease: 'power4.out'
+            });
+            gsap.from('.hero-content a', {
+                opacity: 0,
+                y: 100,
+                duration: 1.8,
+                delay: 0.6,
+                ease: 'power4.out'
             });
         });
 
@@ -680,10 +829,10 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     gsap.from(entry.target.children, {
-                        y: 50,
+                        y: 60,
                         opacity: 0,
-                        stagger: 0.2,
-                        duration: 1.2,
+                        stagger: 0.03,
+                        duration: 1.4,
                         ease: 'power3.out'
                     });
                     observer.unobserve(entry.target);
@@ -691,8 +840,8 @@
             });
         };
 
-        const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.1 });
-        document.querySelectorAll('#destination-carousel, #tour-experiences, #storytelling, #map-section, #video-showcase, #testimonials, #cta').forEach(section => {
+        const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.15 });
+        document.querySelectorAll('#destination-carousel, #tour-experiences, #cultural-highlights, #map-section, #video-showcase, #testimonials, #cta').forEach(section => {
             observer.observe(section);
         });
 
@@ -720,26 +869,39 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % carouselItems.length;
             updateCarousel();
-        }, 5000);
+        }, 6000);
 
         // Interactive Map
         const map = L.map('map').setView([7.8731, 80.7718], 8);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
             const destinations = [
-         { name: "Sigiriya", coords: [7.957, 80.760], popup: "Sigiriya Rock Fortress: UNESCO World Heritage Site with ancient frescoes." },
-         { name: "Mirissa", coords: [5.9447, 80.4591], popup: "Mirissa Beach: Sun, surf, and stunning sunsets on the southern coast." },
-         { name: "Yale", coords: [6.3754, 81.5106], popup: "Yala National Park: Home to leopards, elephants, and diverse wildlife." },
-         { name: "Kandy", coords: [7.2906, 80.6337], popup: "Kandy: Sacred Temple of the Tooth and vibrant Esala Perahera festival." },
-         { name: "Ella", coords: [6.8667, 81.0466], popup: "Ella: Scenic tea plantations and the iconic Nine Arch Bridge." },
-         { name: "Nuwara Eliya", coords: [6.9497, 80.7891], popup: "Nuwara Eliya: Lush tea estates and colonial charm in the highlands." },
-         { name: "Galle", coords: [6.0258], coords: [6.0258, 80.2170], popup: "Galle Fort: Historic Dutch fortress and UNESCO site by the sea." },
-         { name: "Adam’s Peak", coords: [6.8604, 80.4993], popup: "Adam’s Peak: Sacred pilgrimage site with sunrise views." },
-         { name: "Anuradhapura", coords: [8.3114, 80.4037], popup: "Anuradhapura: Ancient capital with sacred ruins and stupas." },
-         { name: "Polonnaruwa", coords: [7.9403, 81.0188], popup: "Polonnaruwa: Medieval capital with stunning archaeological sites." },
-     ];
+  { name: "Sigiriya", coords: [7.957, 80.760], popup: "Sigiriya Rock Fortress: UNESCO World Heritage Site with ancient frescoes." },
+  { name: "Mirissa", coords: [5.9447, 80.4591], popup: "Mirissa Beach: Sun, surf, and stunning sunsets on the southern coast." },
+  { name: "Yala", coords: [6.3754, 81.5106], popup: "Yala National Park: Home to leopards, elephants, and diverse wildlife." },
+  { name: "Kandy", coords: [7.2906, 80.6337], popup: "Kandy: Sacred Temple of the Tooth and vibrant Esala Perahera festival." },
+  { name: "Ella", coords: [6.8667, 81.0466], popup: "Ella: Scenic tea plantations and the iconic Nine Arch Bridge." },
+  { name: "Nuwara Eliya", coords: [6.9497, 80.7891], popup: "Nuwara Eliya: Lush tea estates and colonial charm in the highlands." },
+  { name: "Galle", coords: [6.0258, 80.2170], popup: "Galle Fort: Historic Dutch fortress and UNESCO site by the sea." },
+  { name: "Adam’s Peak", coords: [6.8097, 80.4993], popup: "Adam’s Peak: Sacred pilgrimage site with breathtaking sunrise treks." },
+  { name: "Anuradhapura", coords: [8.3114, 80.4037], popup: "Anuradhapura: Ancient capital with sacred ruins and stupas." },
+  { name: "Polonnaruwa", coords: [7.9403, 81.0188], popup: "Polonnaruwa: Medieval capital with stunning archaeological sites." },
+  
+  // 🌊 Additional Destinations
+  { name: "Trincomalee", coords: [8.5874, 81.2152], popup: "Trincomalee: Pristine beaches and the ancient Koneswaram Temple." },
+  { name: "Arugam Bay", coords: [6.8390, 81.8363], popup: "Arugam Bay: Surfer's paradise with relaxed vibes and coastal beauty." },
+  { name: "Jaffna", coords: [9.6685, 80.0074], popup: "Jaffna: Tamil culture, historic temples, and northern charm." },
+  { name: "Bentota", coords: [6.4228, 79.9973], popup: "Bentota: Luxury beachside resorts and thrilling water sports." },
+  { name: "Kalpitiya", coords: [8.2400, 79.7667], popup: "Kalpitiya: Dolphin watching, kitesurfing, and serene lagoons." },
+  { name: "Dambulla", coords: [7.8568, 80.6492], popup: "Dambulla: Cave temple complex with Buddhist murals and statues." },
+  { name: "Haputale", coords: [6.7650, 80.9519], popup: "Haputale: Misty mountain views and tea trails above the clouds." },
+  { name: "Pinnawala", coords: [7.3014, 80.3847], popup: "Pinnawala: Elephant orphanage and river bathing experience." },
+  { name: "Negombo", coords: [7.2083, 79.8358], popup: "Negombo: Coastal city with Dutch canals and lively fish markets." },
+  { name: "Matara", coords: [5.9485, 80.5353], popup: "Matara: Southern coastal town with historic forts and beaches." }
+];
+
 
         destinations.forEach(dest => {
             L.marker(dest.coords).addTo(map)
@@ -747,16 +909,22 @@
                 .openPopup();
         });
 
-        // Testimonial Slider Animation
-        gsap.to('.testimonial-slider .grid', {
-            xPercent: -33.33,
-            duration: 20,
-            repeat: -1,
+        gsap.to("#cultural-highlights .flex", {
+           xPercent: -50, // move half since we duplicated
+            duration: 10,
             ease: 'linear',
-            onRepeat: () => {
-                gsap.set('.testimonial-slider .grid', { xPercent: 0 });
-            }
+            repeat: -1, // infinite loop
         });
+
+
+        // Testimonial Slider Animation
+       gsap.to('.testimonial-slider .grid', {
+          xPercent: -50, // move half since we duplicated
+          duration: 20,
+          ease: 'linear',
+          repeat: -1, // infinite loop
+        });
+
     </script>
 </body>
 </html>
