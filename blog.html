@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore travel tips, job insights, and education advice from Crown Global Services' blog. Stay informed and inspired for your global journey.">
+    <meta name="keywords" content="travel tips, job advice, study abroad, Crown Global Services, blog, Pitakotte">
+    <meta name="author" content="Crown Global Services">
+    <meta property="og:title" content="Crown Global Services Blog - Travel & Career Insights">
+    <meta property="og:description" content="Read the latest articles on travel, career opportunities, and education from Crown Global Services.">
+    <meta property="og:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
+    <meta property="og:url" content="https://crownglobalservices.com/blog.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crown Global Services Blog - Travel & Career Insights">
+    <meta name="twitter:description" content="Read the latest articles on travel, career opportunities, and education from Crown Global Services.">
+    <meta name="twitter:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
+    <title>Crown Global Services Blog - Travel & Career Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            background-color:gray !important;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            background: transparent;
+            color: white;
+            transition: all 0.4s ease;
+            z-index: 50;
+            backdrop-filter: blur(0px);
+            border-radius: 22px;
+        }
+
+        .header-scrolled {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 4px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+            .nav-link:hover::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(1);
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+        .active-link {
+            color: #047857;
+            font-weight: 600;
+        }
+
+            .active-link::after {
+                transform: scaleX(1) !important;
+                background-color: #047857 !important;
+            }
+
+        .blog-post-card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            perspective: 1000px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+            .blog-post-card:hover {
+                transform: translateY(-12px) rotateY(3deg) scale(1.05);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="header z-50">
+        <div class="flex justify-between items-center px-6 py-4">
+            <div>
+                <a href="index.html">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/crownlogo.png" alt="Crown Global Services logo" class="w-48 h-auto hover:scale-105 transition-transform duration-300">
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-white hover:text-amber-300" style="font-size: small !important" id="nav-contact">Contact</a>
+                <div class="flex flex-col text-sm text-white space-y-1">
+                    <a href="mailto:crownglobal@sltnet.lk" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod;">
+                        <i class="fas fa-envelope text-yellow-500"></i>
+                        <span>crownglobal@sltnet.lk</span>
+                    </a>
+                    <a href="tel:+94112505108" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod;">
+                        <i class="fas fa-phone-alt text-yellow-500"></i>
+                        <span>+94 11 250 5108</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex items-center">
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-80 h-screen hidden">
+            <div class="flex justify-end p-4">
+                <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 px-6 py-4">
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
+                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Education</a>
+                <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Contact</a>
+                <a href="blog.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link" id="mobile-nav-blog">Blog</a>
+                <div class="flex flex-col text-sm text-gray-800">
+                    <a href="mailto:crownglobal@sltnet.lk" class="hover:text-amber-500">crownglobal@sltnet.lk</a>
+                    <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Blog Posts -->
+            <div class="md:col-span-2">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-8">Latest Articles</h1>
+                <div class="space-y-12">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-post-card rounded-xl shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Top Travel Destinations" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-2">Top 10 Travel Destinations for 2025</h2>
+                            <p class="text-gray-600 mb-4">
+                                Looking to feed your wanderlust in 2025? We've rounded up the top ten destinations that promise adventure, culture, and unforgettable experiences. Whether you're seeking tranquil beaches, vibrant cityscapes, or nature's untouched beautythis list has something for every traveler.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                <strong>1. Bali, Indonesia:</strong> A timeless favorite with its lush jungles, beaches, and spiritual serenity.<br>
+                                <strong>2. Lisbon, Portugal:</strong> Colorful streets, delicious cuisine, and a thriving art scene.<br>
+                                <strong>3. Kyoto, Japan:</strong> Where ancient temples meet cherry blossoms in perfect harmony.<br>
+                                <strong>4. Cape Town, South Africa:</strong> Spectacular coastlines and dramatic mountains.<br>
+                                <strong>5. Vancouver, Canada:</strong> A hub for outdoor lovers and foodies alike.<br>
+                                <strong>6. Petra, Jordan:</strong> A journey through history with sandstone cities.<br>
+                                <strong>7. Queenstown, New Zealand:</strong> Adventure capital with jaw-dropping landscapes.<br>
+                                <strong>8. Amalfi Coast, Italy:</strong> Cliffside towns, azure waters, and limoncello dreams.<br>
+                                <strong>9. Patagonia, Chile:</strong> Hikes that touch the soul in dramatic wilderness.<br>
+                                <strong>10. Sri Lanka:</strong> Rich in culture, wildlife, and warm hospitality.
+                            </p>
+                            <p class="text-gray-600">
+                                Wherever you go in 2025, travel with curiosity and an open heartand let the world surprise you.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="blog-post-card rounded-xl shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Choosing Study Programs" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-2">How to Choose the Right Study Abroad Program</h2>
+                            <p class="text-gray-600 mb-4">
+                                Studying abroad is more than academicsit's a personal journey that shapes your future. With thousands of programs worldwide, how do you choose the one that's right for you?
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                Start with your goals: Are you seeking career growth, cultural exposure, or academic prestige? Research the country's education system, cost of living, post-study work rights, and visa flexibility. Consider your language skills, lifestyle preferences, and long-term plans.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                Speak to alumni, attend education fairs, and look for accredited institutions with strong student support. Remember, the right program doesn't just fit your resumeit fits your life.
+                            </p>
+                            <p class="text-gray-600">
+                                This decision is the start of a new chapter. Choose with courage, confidence, and clarity.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="blog-post-card rounded-xl shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Navigating Job Markets" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-2">Navigating Global Job Markets</h2>
+                            <p class="text-gray-600 mb-4">
+                                The global job market is evolving rapidlywith digital transformation, remote work, and emerging industries changing how and where we work. Whether you're aiming for tech in Canada, engineering in Germany, or hospitality in Australia, understanding the landscape is key.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                Begin by researching labor demand in your field across target countries. Understand what skills are most in demand, whether it's data analytics, healthcare, renewable energy, or AI. Then, tailor your CV to international standards, craft a compelling LinkedIn profile, and prepare for cross-cultural interviews.
+                            </p>
+                            <p class="text-gray-600">
+                                Success in international careers isn't just about being qualifiedit's about being informed, adaptive, and globally minded. Stay updated, stay flexible, and don't hesitate to seek professional guidance along the way.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-1">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">Categories</h3>
+                <ul class="space-y-4">
+                    <li><span class="text-amber-500">Travel Tips</span></li>
+                    <li><span class="text-amber-500">Career Advice</span></li>
+                    <li><span class="text-amber-500">Study Abroad</span></li>
+                    <li><span class="text-amber-500">Sri Lanka Travel</span></li>
+                </ul>
+
+                <h3 class="text-3xl font-bold text-gray-800 mt-10 mb-6">Recent Posts</h3>
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xl font-semibold text-gray-800">Top 10 Travel Destinations for 2025</span>
+                        <p class="text-gray-600 text-sm">June 01, 2025</p>
+                    </div>
+                    <div>
+                        <span class="text-xl font-semibold text-gray-800">How to Choose the Right Study Abroad Program</span>
+                        <p class="text-gray-600 text-sm">May 28, 2025</p>
+                    </div>
+                    <div>
+                        <span class="text-xl font-semibold text-gray-800">Navigating Global Job Markets</span>
+                        <p class="text-gray-600 text-sm">May 20, 2025</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="text-gray-400 hover:text-amber-400">Tours</a></li>
+                        <li><a href="tourssl.html" class="text-gray-400 hover:text-amber-400">Explore Sri Lanka</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:crownglobal@sltnet.lk" class="hover:text-amber-400">crownglobal@sltnet.lk</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+            } else {
+                header.classList.remove('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            }
+        });
+
+        // Animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.5, ease: 'back.out(1.7)' });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('main h1', { opacity: 0, y: 60, duration: 1.2, ease: 'power3.out' });
+            gsap.from('.blog-post-card', { opacity: 0, y: 50, stagger: 0.2, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.blog-post-card', start: 'top 80%' } });
+        });
+    </script>
+</body>
+</html>

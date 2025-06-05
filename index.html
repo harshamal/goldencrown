@@ -9,14 +9,14 @@
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Crown Global Services - Your Global Journey Begins Here">
     <meta property="og:description" content="Discover travel, recruitment, and education services with Crown Global Services. Based in Pitakotte, Sri Lanka, we guide you to a world of opportunities.">
-    <meta property="og:image" content="https://crownglobal.blob.core.windows.net/meta/1b097e28-eb74-4a6f-8e98-ee0790c10dcb.png">
+    <meta property="og:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
     <meta property="og:url" content="https://crownglobalservices.com">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Crown Global Services - Your Global Journey Begins Here">
     <meta name="twitter:description" content="Discover travel, recruitment, and education services with Crown Global Services. Based in Pitakotte, Sri Lanka, we guide you to a world of opportunities.">
-    <meta name="twitter:image" content="https://crownglobal.blob.core.windows.net/meta/1b097e28-eb74-4a6f-8e98-ee0790c10dcb.png">
+    <meta name="twitter:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
     <title>Crown Global Services - Your Global Journey Begins</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -139,18 +139,29 @@
             height: 100%;
             object-fit: cover;
             z-index: 1;
-            transform: scale(1.1);
+            transform: scale(1.3);
         }
 
-        .hero-parallax {
+        .hero-parallax-layer {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-size: cover;
+            background-position: center;
             z-index: 2;
+        }
+
+        .layer-1 {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             opacity: 0.3;
+        }
+
+        .layer-2 {
+            background-image: url('https://images.unsplash.com/photo-1614850715649-1d0106293bd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            opacity: 0.5;
+            transform: scale(1.1);
         }
 
         .hero-overlay {
@@ -193,8 +204,9 @@
             overflow: hidden;
             transition: transform 0.5s ease, box-shadow 0.5s ease;
             perspective: 1000px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
             .service-card:hover, .value-card:hover, .testimonial-card:hover, .team-card:hover, .destination-card:hover {
@@ -388,6 +400,26 @@
             height: 100%;
             z-index: 0;
         }
+
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(4, 120, 87, 0.2));
+            z-index: 1;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -475,8 +507,8 @@
 
     <!-- Journey Path SVG -->
     <!--<div class="journey-path">
-        <svg viewBox="0 0 100 10000">
-            <path d="M50 30 V9900" stroke="#f59e0b" stroke-width="4" stroke-dasharray="10 10" fill="none" />
+        <svg viewBox="0 0 100 12000">
+            <path d="M50 30 V11900" stroke="#f59e0b" stroke-width="4" stroke-dasharray="10 10" fill="none" />
             <circle cx="50" cy="300" r="8" fill="#047857" class="milestone" />
             <circle cx="50" cy="1200" r="8" fill="#047857" class="milestone" />
             <circle cx="50" cy="2400" r="8" fill="#047857" class="milestone" />
@@ -485,68 +517,94 @@
             <circle cx="50" cy="6000" r="8" fill="#047857" class="milestone" />
             <circle cx="50" cy="7200" r="8" fill="#047857" class="milestone" />
             <circle cx="50" cy="8400" r="8" fill="#047857" class="milestone" />
+            <circle cx="50" cy="9600" r="8" fill="#047857" class="milestone" />
+            <circle cx="50" cy="10800" r="8" fill="#047857" class="milestone" />
         </svg>
     </div>-->
-
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
+    <section class="hero-section">
         <div id="particles-hero" class="particles"></div>
-        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3">
-            <source src="https://crownglobal.blob.core.windows.net/meta/backvid.mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://crownglobal.blob.core.windows.net/meta/crownhome.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class=" px-6">
+            <!--<h1 class="text-6xl md:text-8xl font-bold mb-6 animate-slide-up leading-tight">Embark on Your Global Journey</h1>
+            <p class="text-2xl md:text-3xl mb-8 animate-slide-up delay-200 max-w-2xl mx-auto">Discover transformative travel, career, and education experiences with Crown Global Services.</p>-->
+            <button id="explore-btn" class="bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition-transform transform hover:scale-110 glow delay-400">Explore Now</button>
+        </div>
     </section>
 
     <!-- Vision Section -->
     <section id="vision" class="py-32 bg-white relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Vision</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">To inspire and empower every individual to explore the world, achieve their career aspirations, and unlock their potential through education.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <img src="https://images.pexels.com/photos/163185/old-retro-antique-vintage-163185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Vision" class="w-full h-96 object-cover rounded-xl shadow-lg" loading="lazy">
-                <div>
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">A World Without Boundaries</h3>
-                    <p class="text-gray-600 mb-6">At Crown Global, we envision a world where opportunities know no limits. Our SLBFE-licensed services (License No: 3065) ensure trust, quality, and personalized care in every journey.</p>
-                    <a href="about.html" class="text-amber-500 font-semibold hover:text-amber-600">Learn More</a>
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-16">Explore the world, the Crown way</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+                <div class="bg-gradient-to-r from-blue-100 to-blue-50 p-8 rounded-3xl shadow-2xl text-center ">
+                    <div class="text-5xl font-extrabold text-blue-600 counter" data-target="1200">0</div>
+                    <p class="mt-3 text-lg font-medium text-gray-700">Tours Completed</p>
                 </div>
+
+                <div class="bg-gradient-to-r from-blue-100 to-blue-50 p-8 rounded-3xl shadow-2xl text-center ">
+                    <div class="counter text-5xl font-bold text-green-600" data-target="12000">0</div>
+                    <p class="mt-3 text-lg font-medium text-gray-700">Global Clients</p>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-100 to-blue-50 p-8 rounded-3xl shadow-2xl text-center ">
+                    <div class="counter text-5xl font-bold text-purple-600" data-target="500">0</div>
+                    <p class="mt-3 text-lg font-medium text-gray-700">Student Placements</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <video autoplay muted loop playsinline class="w-full max-w-4xl rounded-xl shadow-lg">
+                    <source src="https://crownglobal.blob.core.windows.net/meta/infovid.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
 
-    <!-- Featured Destinations Section -->
-    <!--<section id="destinations" class="py-32 bg-gray-100 relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Featured Destinations</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore breathtaking places with our curated tours.</p>
-            <div class="swiper-container destinations-swiper">
+
+    <!-- Tours Section -->
+    <section id="tours" class="py-32 bg-gray-100 relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Unforgettable Tours</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Experience the world’s wonders with our curated travel packages.</p>
+            <div class="swiper-container tours-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="destination-card rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://images.pexels.com/photos/342113/pexels-photo-342113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Paris" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Paris, France</h3>
-                                <p class="text-gray-600 mb-4">Romance and culture await in the City of Light.</p>
-                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Tour</a>
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Europe Adventure" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Europe Adventure</h3>
+                                <p class="text-gray-200 mb-4">Explore the charm of Europe</p>
+                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="destination-card rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://images.pexels.com/photos/16508233/pexels-photo-16508233/free-photo-of-tangalle-beach-sri-lanka-drone-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sri Lanka" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Sri Lanka</h3>
-                                <p class="text-gray-600 mb-4">Discover beaches, heritage, and vibrant culture.</p>
-                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Tour</a>
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Maldives Getaway" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Maldives Getaway</h3>
+                                <p class="text-gray-200 mb-4">Relax in paradise with turquoise waters.</p>
+                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="destination-card rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Maldives" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Maldives</h3>
-                                <p class="text-gray-600 mb-4">Paradise islands for ultimate relaxation.</p>
-                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Tour</a>
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/32367449/pexels-photo-32367449/free-photo-of-leopard-resting-in-a-tree-in-south-africa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="African Safari" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">African Safari</h3>
+                                <p class="text-gray-200 mb-4">Witness wildlife in their natural habitat.</p>
+                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
                             </div>
                         </div>
                     </div>
@@ -556,134 +614,261 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>-->
+    </section>
 
-    <!-- Our Services Section -->
-    <section id="our-services" class="py-32 bg-white relative">
-        <div id="particles-services" class="particles"></div>
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Services</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Your path to a brighter future starts here.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.pexels.com/photos/2359/sand-desert-statue-pyramid.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tours" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Unforgettable Tours</h3>
-                    <p class="text-gray-600 mb-4">Experience the world’s wonders with curated travel packages.</p>
-                    <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tours</a>
+    <!-- Explore Sri Lanka Section -->
+    <section id="explore-sri-lanka" class="py-32 bg-white relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Explore Sri Lanka</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Discover the magic of Sri Lanka’s culture and heritage.</p>
+            <div class="swiper-container explore-sri-lanka-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg" alt="Cultural Heritage" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Cultural Heritage</h3>
+                                <p class="text-gray-200 mb-4">Visit ancient temples and historical sites.</p>
+                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg" alt="Beach Retreat" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Beach Retreat</h3>
+                                <p class="text-gray-200 mb-4">Relax on pristine beaches like Mirissa.</p>
+                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg" alt="Hill Country" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Hill Country</h3>
+                                <p class="text-gray-200 mb-4">Experience the scenic beauty of Ella.</p>
+                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.pexels.com/photos/2365974/pexels-photo-2365974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Explore Sri Lanka" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Explore Sri Lanka</h3>
-                    <p class="text-gray-600 mb-4">Discover the magic of Sri Lanka’s culture and heritage.</p>
-                    <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
-                </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.pexels.com/photos/3201478/pexels-photo-3201478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Recruitment" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Global Careers</h3>
-                    <p class="text-gray-600 mb-4">Find rewarding jobs abroad with our SLBFE-licensed services.</p>
-                    <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Find Jobs</a>
-                </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Education" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Study Abroad</h3>
-                    <p class="text-gray-600 mb-4">Pursue your dreams with expert education consultancy.</p>
-                    <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Start Studying</a>
-                </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="About Us" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Our Story</h3>
-                    <p class="text-gray-600 mb-4">Learn about our mission to transform lives.</p>
-                    <a href="about.html" class="text-amber-500 font-semibold hover:text-amber-600">About Us</a>
-                </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Contact" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Get in Touch</h3>
-                    <p class="text-gray-600 mb-4">Reach out for personalized support.</p>
-                    <a href="contact.html" class="text-amber-500 font-semibold hover:text-amber-600">Contact Us</a>
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Career Spotlight Section -->
-    <section id="careers" class="py-32 bg-gray-100 relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Career Spotlight</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Unlock global job opportunities with our trusted recruitment services.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="value-card rounded-xl shadow-lg p-6 text-center">
-                    <i class="fas fa-briefcase text-4xl text-amber-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Engineering Roles</h3>
-                    <p class="text-gray-600">High-demand positions in UAE and Qatar.</p>
-                    <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
+    <!-- Recruitment Section -->
+    <section id="recruitment" class="py-32 bg-gray-100 relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Global Careers</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Find rewarding jobs abroad with our SLBFE-licensed services.</p>
+            <div class="swiper-container recruitment-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Engineering Roles" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Engineering Roles</h3>
+                                <p class="text-gray-200 mb-4">High-demand positions in UAE and Qatar.</p>
+                                <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Healthcare Jobs" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Healthcare Jobs</h3>
+                                <p class="text-gray-200 mb-4">Nursing and medical roles in Canada.</p>
+                                <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Construction" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Construction</h3>
+                                <p class="text-gray-200 mb-4">Skilled labor opportunities in Israel.</p>
+                                <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="value-card rounded-xl shadow-lg p-6 text-center">
-                    <i class="fas fa-user-md text-4xl text-amber-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Healthcare Jobs</h3>
-                    <p class="text-gray-600">Nursing and medical roles in Canada.</p>
-                    <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
-                </div>
-                <div class="value-card rounded-xl shadow-lg p-6 text-center">
-                    <i class="fas fa-hard-hat text-4xl text-amber-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Construction</h3>
-                    <p class="text-gray-600">Skilled labor opportunities in Israel.</p>
-                    <a href="recruitment.html" class="text-amber-500 font-semibold hover:text-amber-600">Apply Now</a>
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Education Pathways Section -->
-    <section id="education" class="py-32 bg-white relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Education Pathways</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Pursue your academic dreams with our expert guidance.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Undergraduate Programs</h3>
-                    <p class="text-gray-600 mb-4">Access top universities in Australia, UK, and Canada.</p>
-                    <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Programs</a>
+    <!-- Education Section -->
+    <section id="education-services" class="py-32 bg-white relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Study Abroad</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Pursue your dreams with expert education consultancy.</p>
+            <div class="swiper-container education-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Undergraduate Programs" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Undergraduate Programs</h3>
+                                <p class="text-gray-200 mb-4">Top universities in Australia and UK.</p>
+                                <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Programs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Postgraduate Studies" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Postgraduate Studies</h3>
+                                <p class="text-gray-200 mb-4">Master’s and PhD programs worldwide.</p>
+                                <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Programs</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/159581/dictionary-reference-book-learning-meaning-159581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Scholarships" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Scholarships</h3>
+                                <p class="text-gray-200 mb-4">Financial aid for international students.</p>
+                                <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Options</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Postgraduate Studies</h3>
-                    <p class="text-gray-600 mb-4">Advance your career with master’s and PhD programs.</p>
-                    <a href="education.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Programs</a>
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Our Team Section -->
-    <section id="team" class="py-32 bg-gray-100 relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Meet Our Team</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Passionate experts dedicated to your success.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="team-card rounded-xl shadow-lg p-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sanjaya Perera</h3>
-                    <p class="text-gray-600">Travel Consultant</p>
+    <!-- About Us Section -->
+    <section id="about-us" class="py-32 bg-gray-100 relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Our Story</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Learn about our mission to transform lives.</p>
+            <div class="swiper-container about-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Mission" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Our Mission</h3>
+                                <p class="text-gray-200 mb-4">Empowering global opportunities for all.</p>
+                                <a href="about.html" class="text-amber-500 font-semibold hover:text-amber-600">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Values" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Our Values</h3>
+                                <p class="text-gray-200 mb-4">Trust, excellence, and personalization.</p>
+                                <a href="about.html" class="text-amber-500 font-semibold hover:text-amber-600">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Impact" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Our Impact</h3>
+                                <p class="text-gray-200 mb-4">Transforming lives since 2014.</p>
+                                <a href="about.html" class="text-amber-500 font-semibold hover:text-amber-600">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-card rounded-xl shadow-lg p-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Nimali Wijesinghe</h3>
-                    <p class="text-gray-600">Recruitment Specialist</p>
-                </div>
-                <div class="team-card rounded-xl shadow-lg p-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Kavinda Silva</h3>
-                    <p class="text-gray-600">Education Advisor</p>
-                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="py-32 bg-white relative">
+        <div class="section-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Get in Touch</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Reach out for personalized support.</p>
+            <div class="swiper-container contact-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/8867434/pexels-photo-8867434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Contact Support" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Contact Support</h3>
+                                <p class="text-gray-200 mb-4">Our team is here to assist you 24/7.</p>
+                                <a href="contact.html" class="text-amber-500 font-semibold hover:text-amber-600">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/2239999/pexels-photo-2239999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Visit Us" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Visit Us</h3>
+                                <p class="text-gray-200 mb-4">Drop by our office in Pitakotte.</p>
+                                <a href="contact.html" class="text-amber-500 font-semibold hover:text-amber-600">Get Directions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <div class="card-overlay"></div>
+                            <img src="https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Schedule a Call" class="w-full h-64 object-cover" loading="lazy">
+                            <div class="p-6 relative z-10">
+                                <h3 class="text-xl font-bold text-white mb-2">Schedule a Call</h3>
+                                <p class="text-gray-200 mb-4">Book a consultation with our experts.</p>
+                                <a href="contact.html" class="text-amber-500 font-semibold hover:text-amber-600">Schedule Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Social Proof Section -->
     <section id="testimonials" class="py-32 bg-white relative">
         <div id="particles-testimonials" class="particles"></div>
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Voices of Our Travelers</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Hear from those who’ve transformed their lives with us.</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Voices of Our Travelers</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Hear from those who’ve transformed their lives with us.</p>
             <div class="swiper-container testimonials-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -725,47 +910,26 @@
     <!-- Blog Teaser Section -->
     <section id="blog" class="py-32 bg-gray-100 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Travel Tips & Insights</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Stay inspired with our latest articles.</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Travel Tips & Insights</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Stay inspired with our latest articles.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="service-card rounded-xl shadow-lg p-6">
                     <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Top 10 Travel Destinations for 2025</h3>
                     <p class="text-gray-600 mb-4">Discover the must-visit places this year.</p>
-                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
+                    <a href="blob.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
                 </div>
                 <div class="service-card rounded-xl shadow-lg p-6">
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">How to Choose the Right Study Abroad Program</h3>
                     <p class="text-gray-600 mb-4">Tips for finding your perfect academic path.</p>
-                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
+                    <a href="blob.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
                 </div>
                 <div class="service-card rounded-xl shadow-lg p-6">
                     <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Navigating Global Job Markets</h3>
                     <p class="text-gray-600 mb-4">Expert advice for landing international roles.</p>
-                    <a href="#" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Map Section -->
-    <section id="map" class="py-32 bg-white relative">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Global Reach</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Serving clients across continents with trusted connections.</p>
-            <div class="map-container">
-                <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet">
-                    <!-- Simplified world map paths -->
-                    <path d="M100,200 Q150,150 200,200 T300,200 T400,250 T500,200 T600,150 T700,200 T800,250 T900,200" class="country" data-country="Asia" />
-                    <path d="M200,300 Q250,350 300,300 T400,350 T500,300" class="country" data-country="Europe" />
-                    <path d="M600,350 Q650,400 700,350 T800,400" class="country" data-country="North America" />
-                    <path d="M100,350 Q150,400 200,350 T300,400" class="country" data-country="Africa" />
-                    <path d="M800,300 Q850,350 900,300" class="country" data-country="Australia" />
-                </svg>
-                <div class="absolute top-4 right-4 bg-white p-4 rounded-xl shadow-lg">
-                    <p id="map-info" class="text-gray-800 font-semibold">Hover over a region</p>
+                    <a href="blob.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
                 </div>
             </div>
         </div>
@@ -774,8 +938,8 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-32 bg-gray-100 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Frequently Asked Questions</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Find answers to common queries.</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Frequently Asked Questions</h2>
+            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Find answers to common queries.</p>
             <div class="max-w-3xl mx-auto">
                 <div class="faq-item">
                     <div class="faq-question">
@@ -812,9 +976,9 @@
     <section id="newsletter" class="py-32 bg-amber-500 text-white relative">
         <div id="particles-newsletter" class="particles"></div>
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-6" style="color:black">Stay Connected</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Subscribe for travel tips, job alerts, and education updates.</p>
-            <form action="https://formspree.io/f/mzzrnvqa" method="POST" class="max-w-md mx-auto flex gap-4">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6" style="color:black">Stay Connected</h2>
+            <p class="text-2xl md:text-3xl mb-10 max-w-xl mx-auto" style="color:black">Subscribe for travel tips, job alerts, and education updates.</p>
+            <form action="https://formspree.io/f/mjkrkjya" method="POST" class="max-w-md mx-auto flex gap-4">
                 <input type="email" name="Email" placeholder="Enter your email" class="w-full p-4 rounded-full text-gray-900" required>
                 <button type="submit" class="bg-emerald-600 text-white px-8 py-4 rounded-full hover:bg-emerald-700">Subscribe</button>
             </form>
@@ -824,8 +988,8 @@
     <!-- CTA Section -->
     <section id="cta" class="py-32 bg-white text-center relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-gray-800 mb-6">Your Journey Awaits</h2>
-            <p class="text-2xl text-gray-600 mb-10 max-w-xl mx-auto">Let Crown Global Services guide you to a world of possibilities.</p>
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">Your Journey Awaits</h2>
+            <p class="text-2xl md:text-3xl text-gray-600 mb-10 max-w-xl mx-auto">Let Crown Global Services guide you to a world of possibilities.</p>
             <button id="cta-btn" class="bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Start Now</button>
         </div>
     </section>
@@ -870,7 +1034,7 @@
             <button class="popup-close">×</button>
             <h3 class="text-2xl font-bold">Begin Your Journey</h3>
             <p>Let us help you explore travel, career, or education opportunities.</p>
-            <form action="https://formspree.io/f/mzzrnvqa" method="POST">
+            <form action="https://formspree.io/f/mjkrkjya" method="POST">
                 <label for="inquiry-name">Full Name</label>
                 <input type="text" id="inquiry-name" name="Name" placeholder="Enter your name" required>
                 <label for="inquiry-email">Email</label>
@@ -891,6 +1055,37 @@
     </div>
 
     <script>
+        // Counter animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll('.counter');
+
+            const animateCount = (el, target) => {
+                const duration = 1800;
+                const start = 0;
+                const startTime = performance.now();
+
+                const step = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    el.textContent = Math.floor(progress * target).toLocaleString();
+                    if (progress < 1) requestAnimationFrame(step);
+                };
+
+                requestAnimationFrame(step);
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = +el.getAttribute('data-target');
+                        animateCount(el, target);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        });
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
@@ -932,22 +1127,15 @@
             // Hero Animations
             gsap.from('.hero-content h1', { opacity: 0, y: 120, duration: 1.8, ease: 'power4.out' });
             gsap.from('.hero-content p', { opacity: 0, y: 100, duration: 1.8, delay: 0.3, ease: 'power4.out' });
-            gsap.from('.hero-content button, .hero-content a', { opacity: 0, y: 100, duration: 1.8, delay: 0.6, ease: 'power4.out', stagger: 0.2 });
+            gsap.from('.hero-content button', { opacity: 0, y: 100, duration: 1.8, delay: 0.6, ease: 'power4.out' });
 
             // Journey Path Animation
-            gsap.from('.journey-path path', { drawSVG: 0, duration: 3, ease: 'power2.out', scrollTrigger: { trigger: '#hero', start: 'top top' } });
-            gsap.from('.milestone', { scale: 0, duration: 0.5, stagger: 0.3, ease: 'back.out(1.7)', scrollTrigger: { trigger: '#hero', start: 'top top' } });
+            gsap.from('.journey-path path', { drawSVG: 0, duration: 3, ease: 'power2.out', scrollTrigger: { trigger: '.hero-section', start: 'top top' } });
+            gsap.from('.milestone', { scale: 0, duration: 0.5, stagger: 0.3, ease: 'back.out(1.7)', scrollTrigger: { trigger: '.hero-section', start: 'top top' } });
 
             // Parallax Effect
-            gsap.to('.hero-parallax', {
-                y: 100,
-                scrollTrigger: {
-                    trigger: '.hero-section',
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: true
-                }
-            });
+            gsap.to('.layer-1', { y: 100, scrollTrigger: { trigger: '.hero-section', start: 'top top', end: 'bottom top', scrub: true } });
+            gsap.to('.layer-2', { y: 50, scrollTrigger: { trigger: '.hero-section', start: 'top top', end: 'bottom top', scrub: true } });
         });
 
         // Section Animations
@@ -986,7 +1174,72 @@
         });
 
         // Swiper Sliders
-        const destinationsSwiper = new Swiper('.destinations-swiper', {
+        const toursSwiper = new Swiper('.tours-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        const exploreSriLankaSwiper = new Swiper('.explore-sri-lanka-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        const recruitmentSwiper = new Swiper('.recruitment-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        const educationSwiper = new Swiper('.education-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        const aboutSwiper = new Swiper('.about-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+        const contactSwiper = new Swiper('.contact-swiper', {
             slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
@@ -1012,81 +1265,84 @@
             }
         });
 
-        // Particles.js
+        // Particles.js Initialization
         particlesJS('particles-hero', {
             particles: {
-                number: { value: 50, density: { enable: true, value_area: 800 } },
+                number: { value: 80, density: { enable: true, value_area: 800 } },
                 color: { value: '#f59e0b' },
                 shape: { type: 'circle' },
                 opacity: { value: 0.5, random: true },
                 size: { value: 3, random: true },
-                line_linked: { enable: false },
-                move: { enable: true, speed: 2, direction: 'none', random: true, out_mode: 'out' }
+                line_linked: { enable: true, distance: 150, color: '#f59e0b', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 3 }
             },
             interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
+            }
+        });
+
+        particlesJS('particles-testimonials', {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: '#047857' },
+                shape: { type: 'triangle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 4, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 2 }
             },
-            retina_detect: true
+            interactivity: {
+                events: { onhover: { enable: true, mode: 'bubble' }, onclick: { enable: true, mode: 'repulse' } }
+            }
         });
 
-        particlesJS('particles-services', { /* Similar config */ });
-        particlesJS('particles-testimonials', { /* Similar config */ });
-        particlesJS('particles-newsletter', { /* Similar config */ });
-
-        // Popup Functionality
-        const popup = document.getElementById('inquiry-popup');
-        const closeButton = document.querySelector('.popup-close');
-
-        function openPopup() {
-            popup.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            gsap.from('.popup-content', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.7)' });
-        }
-
-        function closePopup() {
-            popup.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.getElementById('explore-btn').addEventListener('click', openPopup);
-        document.getElementById('cta-btn').addEventListener('click', openPopup);
-
-        closeButton.addEventListener('click', closePopup);
-        popup.addEventListener('click', (e) => {
-            if (e.target === popup) closePopup();
+        particlesJS('particles-newsletter', {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'star' },
+                opacity: { value: 0.7, random: true },
+                size: { value: 2, random: true },
+                line_linked: { enable: true, distance: 100, color: '#ffffff', opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 4 }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } }
+            }
         });
 
-        // CTA Button Pulse Animation
-        gsap.to('#cta-btn', {
-            scale: 1.05,
-            duration: 1,
-            repeat: -1,
-            yoyo: true,
-            ease: 'power1.inOut'
+        // Inquiry Popup
+        const exploreBtn = document.getElementById('explore-btn');
+        const ctaBtn = document.getElementById('cta-btn');
+        const inquiryPopup = document.getElementById('inquiry-popup');
+        const popupClose = document.querySelector('.popup-close');
+
+        exploreBtn.addEventListener('click', () => {
+            inquiryPopup.classList.add('active');
         });
 
-        // Map Interactivity
-        document.querySelectorAll('.country').forEach(country => {
-            country.addEventListener('mouseover', () => {
-                document.getElementById('map-info').textContent = country.getAttribute('data-country');
-            });
-            country.addEventListener('mouseout', () => {
-                document.getElementById('map-info').textContent = 'Hover over a region';
-            });
+        ctaBtn.addEventListener('click', () => {
+            inquiryPopup.classList.add('active');
+        });
+
+        popupClose.addEventListener('click', () => {
+            inquiryPopup.classList.remove('active');
+        });
+
+        inquiryPopup.addEventListener('click', (e) => {
+            if (e.target === inquiryPopup) {
+                inquiryPopup.classList.remove('active');
+            }
         });
 
         // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
                 answer.classList.toggle('active');
-                const icon = question.querySelector('i');
+                const icon = item.querySelector('i');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
             });
         });
     </script>
-</body>
-</html>
