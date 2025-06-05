@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, #ffffff 0%, #e0f2fe 100%);
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 4px;
+        }
+
+            .nav-link:hover::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b; /* Vibrant amber hover underline */
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(0);
+                transform-origin: bottom left;
+                transition: transform 0.3s ease;
+            }
+
+        .active-link {
+            color: #047857; /* Emerald green for active link */
+            font-weight: 600;
+        }
+
+            .active-link::after {
+                transform: scaleX(1) !important;
+                background-color: #047857 !important;
+            }
+
+        #language-switcher {
+            transition: all 0.3s ease;
+            background-color: #047857;
+            border: none;
+            border-radius: 9999px;
+        }
+
+            #language-switcher:hover {
+                background-color: #065f46; /* Darker emerald on hover */
+                transform: scale(1.05);
+            }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+            #mobile-menu.open {
+                transform: translateX(0);
+            }
+
+        .close-btn {
+            transition: transform 0.3s ease;
+        }
+
+            .close-btn:hover {
+                transform: rotate(90deg);
+                color: #f59e0b;
+            }
+
+        .mobile-nav-link {
+            transition: all 0.3s ease;
+        }
+
+            .mobile-nav-link:hover {
+                transform: translateX(8px);
+                color: #f59e0b;
+            }
+    </style>
+</head>
+<body>
+    <header class="header-gradient shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/logonew.jpg" alt="Crown Global Services logo" class="w-48 h-14 hover:scale-105 transition-transform duration-300">
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="tours.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="nav-contact">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <select id="language-switcher" class="text-white px-4 py-2 rounded-full focus:outline-none text-sm font-medium">
+                    <option value="en">English</option>
+                    <option value="si">Sinhala</option>
+                </select>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-72 h-screen">
+            <div class="flex justify-end p-4">
+                <button id="mobile-menu-close" class="text-gray-800 focus:outline-none close-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 px-6 py-4">
+                <a href="tours.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-tours">Tours</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-recruitment">Recruitment</a>
+                <a href="education.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-education">Education</a>
+                <a href="about.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-about">About Us</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-800 text-lg hover:text-amber-500 transition-colors" id="mobile-nav-contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Apply active-link class based on current page
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPath) {
+                link.classList.add('active-link');
+            }
+        });
+
+        // Language switcher (placeholder functionality)
+        const languageSwitcher = document.getElementById('language-switcher');
+        languageSwitcher.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            console.log(`Language switched to: ${lang}`);
+            // Add actual language switch logic here
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

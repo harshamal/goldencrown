@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@azure/storage-blob": "^12.17.0"
+  },
+  "name": "goldencrown",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshamal/goldencrown.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshamal/goldencrown/issues"
+  },
+  "homepage": "https://github.com/harshamal/goldencrown#readme",
+  "description": ""
+}

@@ -1,0 +1,809 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Crown Global Services, a trusted SLBFE-licensed agency (License No: 3065) offering travel, recruitment, and education services. Discover our story, values, team, and commitment to excellence.">
+    <meta name="keywords" content="Crown Global Services, about us, travel agency, recruitment agency, SLBFE licensed, Sri Lanka, global services, our story, team, values">
+    <meta name="author" content="Crown Global Services">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Us - Crown Global Services">
+    <meta property="og:description" content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:url" content="https://crownglobalservices.com/about.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Crown Global Services">
+    <meta name="twitter:description" content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <title>About Us - Crown Global Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            height: 15%;
+            background: transparent;
+            color: white;
+            transition: all 0.4s ease;
+            z-index: 50;
+            backdrop-filter: blur(0px);
+            border-radius: 22px;
+        }
+
+        .header-scrolled {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 4px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+            .nav-link:hover::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(1);
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+        .active-link {
+            color: #047857;
+            font-weight: 600;
+        }
+
+            .active-link::after {
+                transform: scaleX(1) !important;
+                background-color: #047857 !important;
+            }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+        }
+
+            #mobile-menu.open {
+                transform: translateX(0);
+            }
+
+        .mobile-nav-link {
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+            .mobile-nav-link:hover {
+                transform: translateX(10px);
+                color: #f59e0b;
+            }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1.2s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .glow {
+            box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
+        }
+
+        .value-card, .team-card, .timeline-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            perspective: 100px;
+        }
+
+            .value-card:hover, .team-card:hover, .timeline-card:hover {
+                transform: translateY(-12px) rotateY(5deg);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+            .popup-overlay.active {
+                display: flex;
+                opacity: 1;
+            }
+
+        .popup-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+            .popup-close:hover {
+                color: #f59e0b;
+            }
+
+        .popup-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .popup-content input,
+        .popup-content textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+            .popup-content input:focus,
+            .popup-content textarea:focus {
+                border-color: #047857;
+                outline: none;
+            }
+
+        .popup-content button[type="submit"] {
+            background: #047857;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            .popup-content button[type="submit"]:hover {
+                background: #f59e0b;
+            }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #047857;
+            transition: color 0.3s ease;
+        }
+
+            .swiper-button-prev:hover, .swiper-button-next:hover {
+                color: #f59e0b;
+            }
+
+        .swiper-pagination-bullet-active {
+            background: #047857;
+        }
+
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #047857;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: #f59e0b;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .director-img {
+            border: 4px solid #f59e0b;
+        }
+    </style>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Crown Global Services",
+            "url": "https://crownglobalservices.com",
+            "logo": "https://crownglobal.blob.core.windows.net/meta/crownlogo.png",
+            "description": "Crown Global Services is a trusted SLBFE-licensed agency (License No: 3065) offering travel, recruitment, and education services worldwide.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "LK"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+94-76-765-3944",
+                "contactType": "Customer Service",
+                "email": "shichikatren@gmail.com"
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="header z-50">
+        <div class="flex justify-between items-center px-6 py-4">
+            <div>
+                <a href="index.html">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/crownlogo.png" alt="Crown Global Services logo" class="w-48 h-auto hover:scale-105 transition-transform duration-300">
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-white hover:text-amber-300 active-link" style="font-size:small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-contact">Contact</a>
+                <div class="flex flex-col text-sm text-white space-y-1">
+                    <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod">
+                        <i class="fas fa-envelope text-yellow-500"></i>
+                        <span>shichikatren@gmail.com</span>
+                    </a>
+                    <a href="tel:+94767653944" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod">
+                        <i class="fas fa-phone-alt text-yellow-500"></i>
+                        <span>+94 (76) 765 3944</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="flex items-center">
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-80 h-screen hidden">
+            <div class="flex justify-end p-4">
+                <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 px-6 py-4">
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-tours">Tours</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-recruitment">Recruitment</a>
+                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-education">Education</a>
+                <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link" id="mobile-nav-about">About Us</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-contact">Contact</a>
+                <div class="flex flex-col text-sm text-gray-800">
+                    <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-500">shichikatren@gmail.com</a>
+                    <a href="tel:+94767653944" class="hover:text-amber-500">+94 (76) 765 3944</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://crownglobal.blob.core.windows.net/meta/vid_crown.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Story</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From humble beginnings to a global leader, our journey is one of passion and purpose.</p>
+            <div class="relative">
+                <div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500 hidden md:block"></div>
+                <div class="space-y-12 ml-0 md:ml-8">
+                    <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">2015: Founded</h3>
+                        <p class="text-gray-600">Crown Global Services was established in Sri Lanka with a vision to connect people with global opportunities.</p>
+                    </div>
+                    <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">2017: SLBFE License</h3>
+                        <p class="text-gray-600">Received SLBFE License No: 3065, solidifying our commitment to ethical recruitment.</p>
+                    </div>
+                    <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">2020: Expanded Services</h3>
+                        <p class="text-gray-600">Launched travel and education divisions, offering holistic global solutions.</p>
+                    </div>
+                    <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">2025: Global Impact</h3>
+                        <p class="text-gray-600">Serving thousands of clients across travel, recruitment, and education worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message from Managing Director -->
+    <section id="director-message" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Message from Our Managing Director</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/hasvin.png" alt="Managing Director" class="w-full h-full object-cover rounded-xl director-img">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-gray-600 italic text-lg mb-6">"At Crown Global Services, this is more than just work for us, it’s a calling. Every journey we support, every door we help open, is about more than travel or employment, it's about transforming lives. We believe deeply in people their hopes, their dreams, and their potential. Whether you're seeking a new beginning abroad, a career that gives you purpose, or an education that changes everything, know this we're here for you. With honesty, compassion, and a relentless commitment to your success, we’ll walk beside you not just as a service provider, but as partners in your journey."</p>
+                    <h4 class="text-2xl font-bold text-gray-800">Dr. Hasvin Dissanayake</h4>
+                    <p class="text-gray-500">Managing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Vision & Mission</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Guiding principles that drive our commitment to excellence.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                    <p class="text-gray-600">To be the global leader in connecting people with transformative travel, career, and educational opportunities.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600">To deliver trusted, ethical, and personalized services that empower individuals to achieve their global aspirations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="core-values" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Core Values</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">The principles that define who we are and how we serve.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="value-card bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-heart text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Integrity</h3>
+                    <p class="text-gray-600">We uphold honesty and ethical standards in all we do.</p>
+                </div>
+                <div class="value-card bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-star text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Excellence</h3>
+                    <p class="text-gray-600">We strive for unparalleled quality in every service.</p>
+                </div>
+                <div class="value-card bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-users text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Community</h3>
+                    <p class="text-gray-600">We foster connections and support local communities.</p>
+                </div>
+                <div class="value-card bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-hand-holding-heart text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Empathy</h3>
+                    <p class="text-gray-600">We care deeply about our clients’ dreams and needs.</p>
+                </div>
+                <div class="value-card bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-globe text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Global Reach</h3>
+                    <p class="text-gray-600">We connect you to opportunities worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Achievements Section -->
+    <section id="achievements" class="py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-8">Our Achievements</h2>
+            <p class="text-center text-xl max-w-4xl mx-auto mb-12">Celebrating a decade of impact and excellence.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="counter" data-target="1200">0</div>
+                    <p class="text-gray-400">Clients Served</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter" data-target="300">0</div>
+                    <p class="text-gray-400">Jobs Placed</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter" data-target="500">0</div>
+                    <p class="text-gray-400">Student Placement</p>
+                </div>
+                <div class="text-center">
+                    <div class="counter" data-target="10">0</div>
+                    <p class="text-gray-400">Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Meet Our Team</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">The passionate individuals behind your global journey.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="team-card bg-gray-50 rounded-xl shadow-lg p-6 mx-4">
+                            <div class="bg-gray-200 h-48 w-full rounded-t-xl mb-4"></div>
+                            <h4 class="text-lg font-bold text-gray-800">Anika Wijesinghe</h4>
+                            <p class="text-sm text-gray-500">Travel Consultant</p>
+                            <p class="text-gray-600 text-sm mt-2">Expert in crafting bespoke travel experiences.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card bg-gray-50 rounded-xl shadow-lg p-6 mx-4">
+                            <div class="bg-gray-200 h-48 w-full rounded-t-xl mb-4"></div>
+                            <h4 class="text-lg font-bold text-gray-800">Rohan Fernando</h4>
+                            <p class="text-sm text-gray-500">Recruitment Manager</p>
+                            <p class="text-gray-600 text-sm mt-2">Specialist in global job placements.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card bg-gray-50 rounded-xl shadow-lg p-6 mx-4">
+                            <div class="bg-gray-200 h-48 w-full rounded-t-xl mb-4"></div>
+                            <h4 class="text-lg font-bold text-gray-800">Sanjana Perera</h4>
+                            <p class="text-sm text-gray-500">Education Advisor</p>
+                            <p class="text-gray-600 text-sm mt-2">Guides students to top global institutions.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card bg-gray-50 rounded-xl shadow-lg p-6 mx-4">
+                            <div class="bg-gray-200 h-48 w-full rounded-t-xl mb-4"></div>
+                            <h4 class="text-lg font-bold text-gray-800">Kamal Silva</h4>
+                            <p class="text-sm text-gray-500">Operations Director</p>
+                            <p class="text-gray-600 text-sm mt-2">Ensures seamless service delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact Section -->
+    <section id="community-impact" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Community Impact</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Giving back to the communities we serve.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-graduation-cap text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Education Scholarships</h3>
+                    <p class="text-gray-600">Supporting underprivileged youth with access to education.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-tree text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Environmental Initiatives</h3>
+                    <p class="text-gray-600">Promoting sustainability through tree planting and eco-tourism.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <i class="fas fa-hands-helping text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Community Empowerment</h3>
+                    <p class="text-gray-600">Skill development programs for local communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 bg-amber-500 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6">Join Our Global Family</h2>
+            <p class="text-2xl mb-10 max-w-xl mx-auto">Let’s create your next adventure, career, or educational journey together.</p>
+            <a href="contact.html" class="cta-button ripple bg-emerald-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-emerald-700 transition-transform transform hover:scale-110 glow">Join Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="text-gray-400 hover:text-amber-400">Tours</a></li>
+                        <li><a href="tourssl.html" class="text-gray-400 hover:text-amber-400">Explore Sri Lanka</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+                    <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-400">shichikatren@gmail.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94767653944">+94 (76) 765 3944</a></p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Inquiry Popup -->
+    <div id="contact-inquiry-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close">×</button>
+            <h3 class="text-2xl font-bold">Connect With Us</h3>
+            <p>Let us assist you with your travel, career, or education needs.</p>
+            <form action="https://formspree.io/f/mzzrnvqa" method="POST">
+                <label for="inquiry-name">Full Name</label>
+                <input type="text" id="inquiry-name" name="Name" placeholder="Enter your name" required>
+                <label for="inquiry-email">Email</label>
+                <input type="email" id="inquiry-email" name="Email" placeholder="Enter your email" required>
+                <label for="inquiry-phone">Phone Number</label>
+                <input type="tel" id="inquiry-phone" name="Phone" placeholder="Enter your phone number">
+                <label for="inquiry-message">Message</label>
+                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we help you?" required></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+            } else {
+                header.classList.remove('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            }
+        });
+
+        // Animations
+        gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.5, ease: 'back.out(1.7)' });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.hero-content h1', { opacity: 0, y: 120, duration: 1.8, ease: 'power4.out' });
+            gsap.from('.hero-content p', { opacity: 0, y: 100, duration: 1.8, delay: 0.3, ease: 'power4.out' });
+            gsap.from('.hero-content button', { opacity: 0, y: 100, duration: 1.8, delay: 0.6, ease: 'power4.out' });
+        });
+
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.from(entry.target.children, {
+                        y: 60,
+                        opacity: 0,
+                        stagger: 0.03,
+                        duration: 1.4,
+                        ease: 'power3.out'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.15 });
+        document.querySelectorAll('#our-story, #director-message, #vision-mission, #core-values, #achievements, #our-team, #community-impact, #cta').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Swiper Slider for Team
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 200;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            const counterObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCount();
+                    counterObserver.unobserve(counter);
+                }
+            }, { threshold: 0.5 });
+            counterObserver.observe(counter);
+        });
+
+        // Popup Functionality
+        const popup = document.getElementById('contact-inquiry-popup');
+        const closeButton = document.querySelector('.popup-close');
+
+        function openPopup() {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            gsap.from('.popup-content', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.7)' });
+        }
+
+        function closePopup() {
+            popup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('connect-btn').addEventListener('click', openPopup);
+        document.getElementById('cta-btn').addEventListener('click', openPopup);
+
+        closeButton.addEventListener('click', closePopup);
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
+
+        // CTA Button Pulse Animation
+        gsap.to('#cta-btn', {
+            scale: 1.05,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+        });
+    </script>
+</body>
+</html>

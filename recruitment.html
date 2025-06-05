@@ -1,0 +1,934 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crown Global Services, a trusted SLBFE-licensed recruitment agency (License No: 3065), offers end-to-end overseas employment services. Secure your dream job in Israel, UAE, Maldives, and more with our expert support.">
+    <meta name="keywords" content="overseas employment, job placement, recruitment agency, Sri Lanka jobs, international jobs, visa support, SLBFE licensed, Crown Global Services, global careers">
+    <meta name="author" content="Crown Global Services">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Recruitment - Crown Global Services">
+    <meta property="og:description" content="Secure your dream job abroad with Crown Global Services. Licensed by SLBFE, we offer trusted recruitment services for placements in Israel, UAE, Maldives, and more.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:url" content="https://crownglobalservices.com/recruitment.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recruitment - Crown Global Services">
+    <meta name="twitter:description" content="Secure your dream job abroad with Crown Global Services. Licensed by SLBFE, we offer trusted recruitment services for placements in Israel, UAE, Maldives, and more.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <title>Recruitment - Crown Global Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            height: 15%;
+            background: transparent;
+            color: white;
+            transition: all 0.4s ease;
+            z-index: 50;
+            backdrop-filter: blur(0px);
+            border-radius: 22px;
+        }
+
+        .header-scrolled {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 4px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+            .nav-link:hover::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(1);
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #f59e0b;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+        .active-link {
+            color: #047857;
+            font-weight: 600;
+        }
+
+            .active-link::after {
+                transform: scaleX(1) !important;
+                background-color: #047857 !important;
+            }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+        }
+
+            #mobile-menu.open {
+                transform: translateX(0);
+            }
+
+        .mobile-nav-link {
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+            .mobile-nav-link:hover {
+                transform: translateX(10px);
+                color: #f59e0b;
+            }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1.2s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .glow {
+            box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
+        }
+
+        .job-card, .step-card, .testimonial-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            perspective: 100px;
+        }
+
+            .job-card:hover, .step-card:hover, .testimonial-card:hover {
+                transform: translateY(-12px) rotateY(5deg);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+        .job-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 120, 87, 0.7);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .job-card:hover .job-card-overlay {
+            opacity: 1;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            background: #047857;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+            .popup-overlay.active {
+                display: flex;
+                opacity: 1;
+            }
+
+        .popup-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+            .popup-close:hover {
+                color: #f59e0b;
+            }
+
+        .popup-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .popup-content input,
+        .popup-content select,
+        .popup-content textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+            .popup-content input:focus,
+            .popup-content select:focus,
+            .popup-content textarea:focus {
+                border-color: #047857;
+                outline: none;
+            }
+
+        .popup-content button[type="submit"] {
+            background: #047857;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            .popup-content button[type="submit"]:hover {
+                background: #f59e0b;
+            }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+            .filter-btn.active {
+                background: #047857;
+                color: white;
+            }
+
+        .testimonial-card {
+            background: white;
+            border-left: 4px solid #f59e0b;
+            min-height: 200px;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: #047857;
+            transition: color 0.3s ease;
+        }
+
+            .swiper-button-prev:hover, .swiper-button-next:hover {
+                color: #f59e0b;
+            }
+
+        .swiper-pagination-bullet-active {
+            background: #047857;
+        }
+    </style>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "EmploymentAgency",
+            "name": "Crown Global Services",
+            "url": "https://crownglobalservices.com",
+            "description": "Trusted overseas employment agency in Sri Lanka, offering end-to-end recruitment services with placements in Israel, UAE, Maldives, and more. Licensed by SLBFE (License No: 3065).",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "LK"
+            },
+            "review": [
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Saman Perera"},
+                    "reviewBody": "Crown Global Services helped me secure a nursing job in the UAE. Their support was exceptional!",
+                    "reviewRating": {"@type": "Rating", "ratingValue": "5}
+                },
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Nimali Fernando"},
+                    "reviewBody": "The pre-departure training and visa support made my move to Maldives so smooth. Highly recommend!",
+                    "reviewRating": {"@type": "Rating", "ratingValue": 5}
+                },
+                {
+                    "@type": "Review",
+                    "author": {"@type": "Person", "name": "Kumara Silva"},
+                    "reviewBody": "I got a construction job in Israel thanks to Crown’s thorough and support screening.",
+                    "reviewRating": {"@type": "Rating", "ratingValue": 5}
+                }
+            ]
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="header z-50">
+        <div class="flex justify-between items-center px-6 py-4">
+            <div class="">
+                <a href="index.html">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/crownlogo.png" alt="Crown Global Services logo" class="w-48 h-auto hover:scale-105 transition-transform duration-300">
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-amber-300" id="nav-home" style="font-size:small !important">Home</a>
+                <a href="tours.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-white hover:text-amber-300 active-link" style="font-size:small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-contact">Contact</a>
+                <div class="flex flex-col text-sm text-white space-y-1">
+                    <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod">
+                        <i class="fas fa-envelope text-yellow-500"></i>
+                        <span>shichikatren@gmail.com</span>
+                    </a>
+                    <a href="tel:+94767653944" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod">
+                        <i class="fas fa-phone-alt text-yellow-500"></i>
+                        <span>+94 (76) 765 3944</span>
+                    </a>
+                </div>
+
+
+
+            </nav>
+            <div class="flex items-center">
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-80 h-screen hidden">
+            <div class="flex justify-end p-4">
+                <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 px-6 py-4">
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link" id="mobile-nav-tours">Tours</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-recruitment">Recruitment</a>
+                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-education">Education</a>
+                <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-about">About Us</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-contact">Contact</a>
+                <div class="flex flex-col text-sm text-black-800">
+                    <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-500">shichikatren@gmail.com</a>
+                    <a href="tel:+94767653944" class="hover:text-amber-500">+94 (76) 765 3944</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="https://videos.pexels.com/video-files/8964796/8964796-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="text-5xl md:text-8xl font-bold mb-6">Launch Your Global Career</h1>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto">Partner with our SLBFE-licensed agency for trusted, end-to-end recruitment services worldwide.</p>
+            <button id="apply-now-btn" class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- Current Job Openings Section -->
+    <section id="job-openings" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Current Job Openings</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore exciting career opportunities abroad with Crown Global Services.</p>
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white active" data-filter="all">All</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="israel">Israel</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="uae">UAE</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="maldives">Maldives</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="hospitality">Hospitality</button>
+            </div>
+
+            <!-- Job Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-6 bg-gray-50">
+                <!-- Job Card -->
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="israel healthcare">
+                    <div class="h-4 bg-amber-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Registered Nurse</h3>
+                        <p class="text-gray-600 mb-4">Join leading hospitals in Israel with attractive salaries and benefits.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Registered Nurse - Israel">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="uae hospitality">
+                    <div class="h-4 bg-yellow-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Hotel Manager</h3>
+                        <p class="text-gray-600 mb-4">Lead luxury hotels in the UAE with comprehensive support and training.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Hotel Manager - UAE">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="maldives hospitality">
+                    <div class="h-4 bg-blue-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Resort Staff</h3>
+                        <p class="text-gray-600 mb-4">Work in paradise at top resorts in the Maldives with great perks.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Resort Staff - Maldives">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="israel construction">
+                    <div class="h-4 bg-orange-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Construction Worker</h3>
+                        <p class="text-gray-600 mb-4">Build your career in Israel with competitive wages and visa support.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Construction Worker - Israel">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="uae healthcare">
+                    <div class="h-4 bg-teal-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Medical Technician</h3>
+                        <p class="text-gray-600 mb-4">Join advanced medical facilities in the UAE with full relocation support.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Medical Technician - UAE">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="maldives hospitality">
+                    <div class="h-4 bg-pink-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chef</h3>
+                        <p class="text-gray-600 mb-4">Showcase your culinary skills at luxury resorts in the Maldives.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Chef - Maldives">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="israel healthcare">
+                    <div class="h-4 bg-sky-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Physiotherapist</h3>
+                        <p class="text-gray-600 mb-4">Provide expert care in top clinics in Israel with excellent benefits.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Physiotherapist - Israel">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="uae hospitality">
+                    <div class="h-4 bg-purple-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Front Desk Manager</h3>
+                        <p class="text-gray-600 mb-4">Manage guest experiences at premier hotels in the UAE.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Front Desk Manager - UAE">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="maldives hospitality">
+                    <div class="h-4 bg-rose-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Spa Therapist</h3>
+                        <p class="text-gray-600 mb-4">Deliver relaxation at world-class resorts in the Maldives.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Spa Therapist - Maldives">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="israel construction">
+                    <div class="h-4 bg-orange-300"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Electrician</h3>
+                        <p class="text-gray-600 mb-4">Work on major projects in Israel with competitive pay.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Electrician - Israel">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="uae healthcare">
+                    <div class="h-4 bg-lime-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Pharmacist</h3>
+                        <p class="text-gray-600 mb-4">Join leading pharmacies in the UAE with full support.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Pharmacist - UAE">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300" data-category="maldives hospitality">
+                    <div class="h-4 bg-teal-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Bartender</h3>
+                        <p class="text-gray-600 mb-4">Craft cocktails at luxury resorts in the Maldives.</p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300" data-job="Bartender - Maldives">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Step-by-Step Support Section -->
+    <section id="step-by-step" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Step-by-Step Support</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From job assessment to post-arrival support, we guide you every step of the way.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Job Vacancy Assessment</h3>
+                    <p class="text-gray-600">We evaluate job offers to ensure they meet legal and ethical standards.</p>
+                </div>
+                <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Candidate Screening</h3>
+                    <p class="text-gray-600">Thorough interviews and skill evaluations to find the perfect fit.</p>
+                </div>
+                <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Visa & Documentation</h3>
+                    <p class="text-gray-600">Full assistance with visas, medical checks, and legal paperwork.</p>
+                </div>
+                <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
+                    <div class="step-number">4</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Pre-Departure Training</h3>
+                    <p class="text-gray-600">Prepare with workplace culture and basic language skills training.</p>
+                </div>
+                <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
+                    <div class="step-number">5</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">Post-Arrival Support</h3>
+                    <p class="text-gray-600">Continued assistance for a smooth workplace integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Crown Section -->
+    <section id="why-choose" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Why Choose Crown</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Trusted expertise for your global career journey.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-certificate text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">SLBFE Licensed</h3>
+                    <p class="text-gray-600">Registered with SLBFE (License No: 3065) for trusted services.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-globe text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Global Opportunities</h3>
+                    <p class="text-gray-600">Placements in Israel, UAE, Maldives, and beyond.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-handshake text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">End-to-End Support</h3>
+                    <p class="text-gray-600">From documentation to post-arrival assistance.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-money-bill-wave text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Competitive Salaries</h3>
+                    <p class="text-gray-600">Attractive pay packages with legal benefits.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-graduation-cap text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Training Programs</h3>
+                    <p class="text-gray-600">Language and cultural readiness preparation.</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <i class="fas fa-user-shield text-4xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ongoing Support</h3>
+                    <p class="text-gray-600">Continuous care after placement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Slider) -->
+    <section id="testimonials" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">What Our Clients Say</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Hear from those who’ve launched their global careers with us.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
+                            <p class="text-gray-600 italic mb-4">"Crown Global Services secured my nursing job in the UAE. Exceptional support throughout!"</p>
+                            <h4 class="text-lg font-bold text-gray-800">Saman Perera</h4>
+                            <p class="text-sm text-gray-500">Nurse, UAE</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
+                            <p class="text-gray-600 italic mb-4">"Their pre-departure training made my move to the Maldives seamless. Highly recommend!"</p>
+                            <h4 class="text-lg font-bold text-gray-800">Nimali Fernando</h4>
+                            <p class="text-sm text-gray-500">Resort Staff, Maldives</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg mx-8 p-4">
+                            <p class="text-gray-600 italic mb-4">"I landed a construction role in Israel thanks to Crown’s thorough screening."</p>
+                            <h4 class="text-lg font-bold text-gray-800">Kumara Silva</h4>
+                            <p class="text-sm text-gray-500">Construction Worker, Israel</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
+                            <p class="text-gray-600 italic mb-4">"Crown’s seamless process helped me become a chef in the Maldives!"</p>
+                            <h4 class="text-lg font-bold text-gray-800">Anil Wijesinghe</h4>
+                            <p class="text-sm text-gray-500">00Chef, Maldives</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
+                            <p class="text-gray-600 italic mb-4">"Crown guided me to a medical technician role in the UAE. Outstanding service!"</p>
+                            <h4 class="text-lg font-bold text-gray-800">Priya Sharma</h4>
+                            <p class="text-sm text-gray-500">Medical Technician, UAE</p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-24 bg-amber-500 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold mb-6">Ready to Launch Your Global Career?</h2>
+            <p class="text-2xl mb-10 max-w-xl mx-auto">Let Crown Global Services guide you to your dream job.</p>
+            <button id="cta-btn" class="ripple bg-emerald-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-emerald-700 transition-transform transform hover:scale-110 glow">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
+                    <p class="text-gray-400">Empowering global careers and unforgettable journeys worldwide.</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl bold mb-6">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tours.html" class="text-gray-400 hover:text-amber-400">Tours</a></li>
+                        <li><a href="tourssl.html" class="text-gray-400 hover:text-amber-400">Explore Sri Lanka</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+                    <p class="text-gray-400">Email: <a href="mailto:shichikatren@gmail.com" class="hover:text-amber-400">shichikatren@gmail.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94767653944">+94 (76) 765 3944</a></p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=10008847316497476" target="_blank" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Job Application Popup -->
+    <div id="job-application-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close">×</button>
+            <h3 id="job-title" class="text-2xl font-bold">Job Application</h3>
+            <p id="job-description">Submit your details to start your global career with us.</p>
+            <form action="https://formspree.io/f/mzzrnvqa" method="POST">
+                <input type="hidden" name="Job" id="job-name">
+                <label for="job-name-input">Full Name</label>
+                <input type="text" id="job-name-input" name="Name" placeholder="Enter your name" required>
+                <label for="job-email">Email</label>
+                <input type="email" id="job-email" name="Email" placeholder="Enter your email" required>
+                <label for="job-phone">Phone Number</label>
+                <input type="tel" id="job-phone" name="Phone" placeholder="Enter your phone number" required>
+                <label for="job-country">Preferred Country</label>
+                <select id="job-country" name="Preferred Country">
+                    <option value="Israel">Israel</option>
+                    <option value="UAE">UAE</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="job-position">Preferred Job Position</label>
+                <input type="text" id="job-position" name="Job Position" placeholder="E.g., Nurse, Chef">
+                <label for="job-experience">Years of Experience</label>
+                <input type="number" id="job-experience" name="Experience" min="0" placeholder="Years of experience">
+                <label for="job-additional-info">Additional Information</label>
+                <textarea id="job-additional-info" name="Additional Information" rows="4" placeholder="Summarize your qualifications or add questions"></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+            } else {
+                header.classList.remove('header-scrolled');
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            }
+        });
+
+        // Animations
+        gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.5, ease: 'back.out(1.7)' });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.hero-content h1', { opacity: 0, y: 120, duration: 1.8, ease: 'power4.out' });
+            gsap.from('.hero-content p', { opacity: 0, y: 100, duration: 1.8, delay: 0.3, ease: 'power4.out' });
+            gsap.from('.hero-content button', { opacity: 0, y: 100, duration: 1.8, delay: 0.6, ease: 'power4.out' });
+        });
+
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.from(entry.target.children, {
+                        y: 60,
+                        opacity: 0,
+                        stagger: 0.03,
+                        duration: 1.4,
+                        ease: 'power3.out'
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.15 });
+        document.querySelectorAll('#job-openings, #step-by-step, #why-choose, #testimonials, #cta').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const jobCards = document.querySelectorAll('.job-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                jobCards.forEach(card => {
+                    const categories = card.dataset.category.split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'block';
+                        gsap.from(card, { opacity: 0, y: 20, duration: 0.5 });
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Swiper Slider for Testimonials
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        // Popup Functionality
+        const popup = document.getElementById('job-application-popup');
+        const closeButton = document.querySelector('.popup-close');
+
+        function openPopup(job = '') {
+            document.getElementById('job-title').textContent = job ? `Apply for ${job}` : 'Job Application';
+            document.getElementById('job-name').value = job;
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            gsap.from('.popup-content', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(1.7)' });
+        }
+
+        function closePopup() {
+            popup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('apply-now-btn').addEventListener('click', () => openPopup());
+        document.getElementById('cta-btn').addEventListener('click', () => openPopup());
+        document.querySelectorAll('.apply-btn').forEach(btn => {
+            btn.addEventListener('click', () => openPopup(btn.dataset.job));
+        });
+
+        closeButton.addEventListener('click', closePopup);
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
+
+        // CTA Button Pulse Animation
+        gsap.to('#cta-btn', {
+            scale: 1.05,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power1.inOut'
+        });
+    </script>
+</body>
+</html>
