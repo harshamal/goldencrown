@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -33,126 +34,6 @@
 
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
-        }
-
-        .header {
-            position: fixed;
-            top: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 92%;
-            height: 15%;
-            background: transparent;
-            color: white;
-            transition: all 0.4s ease;
-            z-index: 50;
-            backdrop-filter: blur(0px);
-            border-radius: 22px;
-        }
-
-        .header-scrolled {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
-            padding-bottom: 4px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-            .nav-link:hover::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #f59e0b;
-                transform: scaleX(1);
-            }
-
-            .nav-link::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #f59e0b;
-                transform: scaleX(0);
-                transition: transform 0.3s ease;
-            }
-
-        .active-link {
-            color: #047857;
-            font-weight: 600;
-        }
-
-            .active-link::after {
-                transform: scaleX(1) !important;
-                background-color: #047857 !important;
-            }
-
-        #mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(12px);
-        }
-
-            #mobile-menu.open {
-                transform: translateX(0);
-            }
-
-        .mobile-nav-link {
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-            .mobile-nav-link:hover {
-                transform: translateX(10px);
-                color: #f59e0b;
-            }
-
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
         }
 
         .animate-slide-up {
@@ -277,29 +158,30 @@
         <div class="flex justify-between items-center px-6 py-4">
             <div>
                 <a href="index.html">
-                    <img class="nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/finallogo.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300" style="width: 220px; height: 90px; margin: 0px;">
-
+                    <img class="logo nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-white hover:text-amber-300" style="font-size:small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-white hover:text-amber-300 active-link" style="font-size:small !important" id="nav-contact">Contact</a>
-                <div class="flex flex-col text-sm text-white space-y-1">
-                    <a href="mailto:crownglobal@sltnet.lk" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod;">
-                        <i class="fas fa-envelope text-yellow-500"></i>
-                        <span>crownglobal@sltnet.lk</span>
-                    </a>
-                    <a href="tel:+94112505108" class="hover:text-amber-300 flex items-center space-x-2" style="color:darkgoldenrod;">
-                        <i class="fas fa-phone-alt text-yellow-500"></i>
-                        <span>+94 11 250 5108</span>
-                    </a>
-                </div>
+            <nav class="hidden md:flex items-center space-x-8 nav">
+                <a href="index.html" class="nav-link text-black hover:text-amber-300" style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-amber-300 active-link" style="font-size: small !important" id="nav-contact">Contact</a>
+
             </nav>
+            <div class="hidden md:flex flex-col text-sm mail space-y-4">
+                <a href="mailto:crownglobals@sltnet.lk" class="hover:text-amber-800 flex items-center space-x-4">
+                    <i class="fas fa-envelope text-yellow-800"></i>
+                    <span>crownglobals@sltnet.lk</span>
+                </a>
+                <a href="tel:+94112505108" class="hover:text-amber-300 flex items-center space-x-4">
+                    <i class="fas fa-phone-alt text-yellow-500"></i>
+                    <span>+94 11 250 5108</span>
+                </a>
+            </div>
+
             <div class="flex items-center">
                 <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -317,19 +199,20 @@
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover-text-amber-500" id="mobile-nav-home">Home</a>
-                <a href="tours.html" class="mobile-nav-link text-gray-800 hover-text-amber-500">Tours</a>
-                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover-text-amber-500">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover-text-amber-500">Recruitment</a>
-                <a href="education.html" class="mobile-nav-link text-gray-800 hover-text-amber-500">Education</a>
-                <a href="about.html" class="mobile-nav-link text-gray-800 hover-text-amber-500">About Us</a>
-                <a href="contact.html" class="mobile-nav-link text-gray-800 hover-text-amber-500 active-link">Contact</a>
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
+                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Education</a>
+                <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
+                <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Contact</a>
                 <div class="flex flex-col text-sm text-gray-800">
-                    <a href="mailto:crownglobal@sltnet.lk" class="hover-text-amber-500">crownglobal@sltnet.lk</a>
-                    <a href="tel:+94112505108" class="hover-text-amber-500">+94 11 250 5108</a>
+                    <a href="mailto:crownglobals@sltnet.lk" class="hover:text-amber-500">crownglobals@sltnet.lk</a>
+                    <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
                 </div>
             </nav>
         </div>
+        <div class="tail"></div>
     </header>
 
     <!-- Hero Section -->
@@ -575,15 +458,32 @@
             const header = document.querySelector('header');
             if (window.scrollY > 20) {
                 header.classList.add('header-scrolled');
+                header.classList.remove('header');
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('text-white');
-                    link.classList.add('text-gray-800');
+                    link.classList.remove('text-gray-800');
+                    link.classList.add('text-black');
+                });
+                document.querySelectorAll('.logo').forEach(link => {
+                    link.classList.remove('w-42');
+                    link.classList.add('w-24');
+                    link.classList.remove('h-42');
+                    link.classList.add('h-24');
                 });
             } else {
                 header.classList.remove('header-scrolled');
+                header.classList.add('header');
                 document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.add('text-white');
+                    link.classList.add('text-black');
+                    link.classList.remove('text-white');
                     link.classList.remove('text-gray-800');
+                });
+                document.querySelectorAll('.logo').forEach(link => {
+                    link.classList.remove('w-24');
+                    link.classList.add('w-42');
+                    link.classList.remove('h-24');
+                    link.classList.add('h-42');
+
                 });
             }
         });
