@@ -80,7 +80,7 @@
             overflow: hidden;
             transition: transform 0.5s ease, box-shadow 0.5s ease;
             perspective: 1000px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #1e435e;
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -201,6 +201,7 @@
         }
 
         .journey-path {
+            display:none;
             position: fixed;
             top: 0;
             left: 50px;
@@ -539,13 +540,13 @@
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-amber-300 active-link" style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-amber-300" style="font-size: small !important" id="nav-contact">Contact</a>
+                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod active-link" style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-contact">Contact</a>
 
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
@@ -553,7 +554,7 @@
                     <i class="fas fa-envelope text-yellow-800"></i>
                     <span>crownglobals@sltnet.lk</span>
                 </a>
-                <a href="tel:+94112505108" class="hover:text-amber-300 flex items-center space-x-4">
+                <a href="tel:+94112505108" class="hover:text-darkgoldenrod flex items-center space-x-4">
                     <i class="fas fa-phone-alt text-yellow-500"></i>
                     <span>+94 11 250 5108</span>
                 </a>
@@ -591,19 +592,7 @@
         </div>
         <div class="tail"></div>
     </header>
-    <!-- Journey Path SVG -->
-    <div class="journey-path">
-        <svg viewBox="0 0 100 12000">
-            <path d="M50 30 V11900" stroke="#f59e0b" stroke-width="4" stroke-dasharray="10 10" fill="none" />
-            <circle cx="50" cy="300" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="1200" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="2400" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="3600" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="4800" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="6000" r="8" fill="#047857" class="milestone" />
-            <circle cx="50" cy="7200" r="8" fill="#047857" class="milestone" />
-        </svg>
-    </div>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div id="particles-hero" class="particles"></div>
@@ -736,9 +725,7 @@
     <section id="global-opportunities" class="relative py-32 overflow-hidden text-white bg-gray-100">
         <div id="particles-travel" class="particles"></div>
         <div class="section-overlay z-10"></div>
-        <!-- Animated Globe Background -->
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.nicepng.com/png/detail/874-8743951_global-png.png')] bg-center bg-contain bg-no-repeat"></div>
-
+       
         <div class="relative z-10 container mx-auto px-6">
             <!-- Header -->
             <div class="text-center mb-20">
@@ -748,74 +735,142 @@
                 </p>
             </div>
 
-            <!-- Careers Section -->
-            <div class="mb-24">
-                <h3 class="text-3xl font-semibold text-center text-amber-400 mb-12">Global Careers</h3>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <!-- Card -->
-                    <div class="card">
-                        <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg" alt="Engineering Roles" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Engineering Roles</h4>
-                            <p class="card-text">High-demand positions in UAE and Qatar.</p>
-                            <a href="recruitment.html" class="card-btn">Apply Now</a>
+            <!-- Tailwind CDN -->
+            <script src="https://cdn.tailwindcss.com"></script>
+
+            <!-- Tabs Container -->
+            <div class="w-full max-w-6xl mx-auto mt-16 mb-24">
+                <!-- Tab Buttons -->
+                <div class="flex justify-center mb-10">
+                    <button id="careersTab"
+                            class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white active-tab">
+                        Global Careers
+                    </button>
+                    <button id="educationTab"
+                            class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white">
+                        Study Abroad
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="careersContent" class="">
+                    <div class="grid md:grid-cols-3 gap-10">
+                        <!-- Card -->
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg"
+                                 alt="Engineering Roles" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Engineering Roles</h4>
+                                <p class="text-white mb-4">High-demand positions in UAE and Qatar.</p>
+                                <a href="recruitment.html"
+                                    class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Apply
+                                    Now
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Healthcare Jobs" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Healthcare Jobs</h4>
+                                <p class="text-white mb-4">Nursing and medical roles in Canada.</p>
+                                <a href="recruitment.html"
+                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Apply
+                                    Now
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Construction" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Construction</h4>
+                                <p class="text-white mb-4">Skilled labor opportunities in Israel.</p>
+                                <a href="recruitment.html"
+                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Apply
+                                    Now
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare Jobs" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Healthcare Jobs</h4>
-                            <p class="card-text">Nursing and medical roles in Canada.</p>
-                            <a href="recruitment.html" class="card-btn">Apply Now</a>
+                <!-- Education Tab -->
+                <div id="educationContent" class="hidden">
+                    <div class="grid md:grid-cols-3 gap-10">
+
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                 alt="Undergraduate Programs" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Undergraduate Programs</h4>
+                                <p class="text-white mb-4">Top universities in Australia and UK.</p>
+                                <a href="education.html"
+                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Explore
+                                    Programs
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Construction</h4>
-                            <p class="card-text">Skilled labor opportunities in Israel.</p>
-                            <a href="recruitment.html" class="card-btn">Apply Now</a>
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1713229182244-d617b76349d2?q=80&w=870&auto=format&fit=crop"
+                                 alt="Postgraduate Studies" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Postgraduate Studies</h4>
+                                <p class="text-white mb-4">Master’s and PhD programs worldwide.</p>
+                                <a href="education.html"
+                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Explore
+                                    Programs
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
+                            <img src="https://images.pexels.com/photos/159581/dictionary-reference-book-learning-meaning-159581.jpeg"
+                                 alt="Scholarships" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold mb-2 text-white">Scholarships</h4>
+                                <p class="text-white mb-4">Financial aid for international students.</p>
+                                <a href="education.html"
+                                    class="text-amber-500 font-semibold hover:text-amber-600">
+                                    Explore
+                                    Options
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Education Section -->
-            <div>
-                <h3 class="text-3xl font-semibold text-center text-amber-400 mb-12">Study Abroad</h3>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Undergraduate Programs" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Undergraduate Programs</h4>
-                            <p class="card-text">Top universities in Australia and UK.</p>
-                            <a href="education.html" class="card-btn">Explore Programs</a>
-                        </div>
-                    </div>
+            <script>
+                const careersTab = document.getElementById('careersTab');
+                const educationTab = document.getElementById('educationTab');
+                const careersContent = document.getElementById('careersContent');
+                const educationContent = document.getElementById('educationContent');
 
-                    <div class="card">
-                        <img src="https://plus.unsplash.com/premium_photo-1713229182244-d617b76349d2?q=80&w=870&auto=format&fit=crop" alt="Postgraduate Studies" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Postgraduate Studies</h4>
-                            <p class="card-text">Master’s and PhD programs worldwide.</p>
-                            <a href="education.html" class="card-btn">Explore Programs</a>
-                        </div>
-                    </div>
+                careersTab.addEventListener('click', () => {
+                    careersTab.classList.add('bg-blue-700', 'text-white');
+                    educationTab.classList.remove('bg-blue-700', 'text-white');
+                    careersContent.classList.remove('hidden');
+                    educationContent.classList.add('hidden');
+                });
 
-                    <div class="card">
-                        <img src="https://images.pexels.com/photos/159581/dictionary-reference-book-learning-meaning-159581.jpeg" alt="Scholarships" class="card-img">
-                        <div class="card-body">
-                            <h4 class="card-title">Scholarships</h4>
-                            <p class="card-text">Financial aid for international students.</p>
-                            <a href="education.html" class="card-btn">Explore Options</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                educationTab.addEventListener('click', () => {
+                    educationTab.classList.add('bg-blue-700', 'text-white');
+                    careersTab.classList.remove('bg-blue-700', 'text-white');
+                    educationContent.classList.remove('hidden');
+                    careersContent.classList.add('hidden');
+                });
+            </script>
+
+</section>
 
     <!-- Styling -->
     <style>
@@ -836,7 +891,7 @@
 
         /* Card design */
         .card {
-            background: rgba(30,30,30,0.7);
+            background: #1e435e;
             border-radius: 1.5rem;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.4);
@@ -1186,28 +1241,15 @@
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.classList.remove('text-white');
                     link.classList.remove('text-gray-800');
-                    link.classList.add('text-black');
-                });
-                document.querySelectorAll('.logo').forEach(link => {
-                    link.classList.remove('w-42');
-                    link.classList.add('w-24');
-                    link.classList.remove('h-42');
-                    link.classList.add('h-24');
+                    link.classList.add('text-[#1e435e]');
                 });
             } else {
                 header.classList.remove('header-scrolled');
                 header.classList.add('header');
                 document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.add('text-black');
+                    link.classList.add('text-[#1e435e]');
                     link.classList.remove('text-white');
                     link.classList.remove('text-gray-800');
-                });
-                document.querySelectorAll('.logo').forEach(link => {
-                    link.classList.remove('w-24');
-                    link.classList.add('w-42');
-                    link.classList.remove('h-24');
-                    link.classList.add('h-42');
-
                 });
             }
         });

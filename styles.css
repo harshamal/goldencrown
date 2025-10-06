@@ -1,4 +1,13 @@
-
+:root {
+    --primary: #2a6eb9; /* Logo Blue */
+    --accent-amber: #d4a017; /* Logo Amber/Gold */
+    --accent-green: #047857; /* Emerald Green */
+    --white: #ffffff; /* White */
+    --light-gray: #e5e7eb; /* Light Gray */
+    --dark: #1e1e1e; /* Near Black */
+    --dark-amber: #d97706; /* Dark Amber */
+    --light-blue: #60a5fa; /* Light Blue */
+}
 .header {
     position: fixed;
     top: 0px;
@@ -6,16 +15,17 @@
     transform: translateX(-50%);
     width: 100%;
     background: transparent;
-    color: black;
+    color: var(--primary);
     transition: all 0.4s ease;
     z-index: 50;
     backdrop-filter: blur(0px);
-    height: 120px;
+    height: 140px;
     padding: 0px;
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 600;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
@@ -25,18 +35,23 @@
     scrollbar-width: none;
 }
 .logo {
-    width: 200px;
-    height: 200px;
-    margin: 0px;
-    padding: 0px;
+    transition: all 0.4s ease-in-out;
+    object-fit: contain;
+    width: 220px;
+    height: auto;
+}
+
+.header-scrolled .logo {
+    width: 150px;
+    height: auto;
 }
 .header-scrolled {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 92%;
-    height: 120px;
+    width: 93%;
+    height: 150px;
     background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
     background-size: 300% 300%;
     border-radius: 0 0 50px 50px;
@@ -47,12 +62,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1e3a8a;
+    color: #1e435e;
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 600;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif !important;
+    color: #1e435e;
+}
+.bg-emerald-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
+}
 /* Smooth gradient motion */
 @keyframes gradientMove {
     0% {
@@ -67,7 +90,6 @@
         background-position: 0% 50%;
     }
 }
-
 /* Existing fly-in */
 @keyframes flyIn {
     0% {
@@ -195,7 +217,7 @@
     font-size: 5.95rem !important;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: white;
+    color: #0f2c6cf7 !important; /* close to your logo blue */
 }
 
     .nav-link:hover::after {
@@ -222,13 +244,13 @@
     }
 
 .active-link {
-    color: #047857;
+    color: steelblue;
     font-weight: 600;
 }
 
     .active-link::after {
         transform: scaleX(1) !important;
-        background-color: #047857 !important;
+        background-color: darkgoldenrod !important;
     }
 
 #mobile-menu {
