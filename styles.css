@@ -37,12 +37,12 @@
 .logo {
     transition: all 0.4s ease-in-out;
     object-fit: contain;
-    width: 220px;
+    width: 190px;
     height: auto;
 }
 
 .header-scrolled .logo {
-    width: 150px;
+    width: 110px;
     height: auto;
 }
 .header-scrolled {
@@ -51,7 +51,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 93%;
-    height: 150px;
+    height: 110px;
     background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
     background-size: 300% 300%;
     border-radius: 0 0 50px 50px;
@@ -69,7 +69,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Merriweather', serif !important;
+    font-family: Arial, Helvetica, sans-serif;
     color: #1e435e;
 }
 .bg-emerald-600 {
@@ -334,4 +334,25 @@ h1, h2, h3, h4 {
 .hero-content {
     position: relative;
     z-index: 4;
+}
+
+.service-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 120, 87, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover .service-card-overlay {
+    opacity: 1;
+}
+.card-overlay {
+    pointer-events: none;
 }

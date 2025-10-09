@@ -606,10 +606,9 @@
         </div>
     </section>
 
-    <!-- Travel Adventures Section (Vision + Tours + Explore Sri Lanka) -->
+    <!-- Travel Adventures Section -->
     <section id="travel-adventures" class="py-32 bg-white relative">
         <div id="particles-travel" class="particles"></div>
-        <div class="section-overlay"></div>
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-16">Travel Adventures</h2>
             <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Explore the world and Sri Lanka’s wonders with our curated experiences.</p>
@@ -634,102 +633,126 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <!-- Tours Content -->
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Unforgettable Tours</h3>
-            <div class="swiper-container tours-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+            <!-- Tabs Container -->
+            <div class="w-full max-w-6xl mx-auto mt-16 mb-24">
+                <!-- Tab Buttons -->
+                <div class="flex justify-center mb-10">
+                    <button id="toursTab" class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white active-tab">
+                        Unforgettable Tours
+                    </button>
+                    <button id="exploreSriLankaTab" class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white">
+                        Explore Sri Lanka
+                    </button>
+                </div>
+                <!-- Tours Tab Content -->
+                <div id="toursContent" class="tab-content">
+                    <div class="grid md:grid-cols-3 gap-10">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Europe Adventure" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">Europe Adventure</h4>
                                 <p class="text-gray-200 mb-4">Explore the charm of Europe</p>
-                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Tour</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Maldives Getaway" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">Maldives Getaway</h4>
                                 <p class="text-gray-200 mb-4">Relax in paradise with turquoise waters.</p>
-                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Tour</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://images.pexels.com/photos/32367449/pexels-photo-32367449/free-photo-of-leopard-resting-in-a-tree-in-south-africa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="African Safari" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">African Safari</h4>
                                 <p class="text-gray-200 mb-4">Witness wildlife in their natural habitat.</p>
-                                <a href="tours.html" class="text-amber-500 font-semibold hover:text-amber-600">Discover Tour</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tours.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover Tour</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <!-- Explore Sri Lanka Content -->
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8 mt-16">Explore Sri Lanka</h3>
-            <div class="swiper-container explore-sri-lanka-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <!-- Explore Sri Lanka Tab Content -->
+                <div id="exploreSriLankaContent" class="tab-content hidden">
+                    <div class="grid md:grid-cols-3 gap-10">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg" alt="Cultural Heritage" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">Cultural Heritage</h4>
                                 <p class="text-gray-200 mb-4">Visit ancient temples and historical sites.</p>
-                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tourssl.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore Now</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg" alt="Beach Retreat" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">Beach Retreat</h4>
                                 <p class="text-gray-200 mb-4">Relax on pristine beaches like Mirissa.</p>
-                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tourssl.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore Now</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
                         <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
                             <div class="card-overlay"></div>
                             <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg" alt="Hill Country" class="w-full h-64 object-cover" loading="lazy">
                             <div class="p-6 relative z-10">
                                 <h4 class="text-xl font-bold text-white mb-2">Hill Country</h4>
                                 <p class="text-gray-200 mb-4">Experience the scenic beauty of Ella.</p>
-                                <a href="tourssl.html" class="text-amber-500 font-semibold hover:text-amber-600">Explore Now</a>
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="tourssl.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
+        <script>
+            // Tab Switching Logic
+            const toursTab = document.getElementById('toursTab');
+            const exploreSriLankaTab = document.getElementById('exploreSriLankaTab');
+            const toursContent = document.getElementById('toursContent');
+            const exploreSriLankaContent = document.getElementById('exploreSriLankaContent');
+
+            toursTab.addEventListener('click', () => {
+                toursTab.classList.add('bg-blue-700', 'text-white');
+                exploreSriLankaTab.classList.remove('bg-blue-700', 'text-white');
+                toursContent.classList.remove('hidden');
+                exploreSriLankaContent.classList.add('hidden');
+            });
+
+            exploreSriLankaTab.addEventListener('click', () => {
+                exploreSriLankaTab.classList.add('bg-blue-700', 'text-white');
+                toursTab.classList.remove('bg-blue-700', 'text-white');
+                exploreSriLankaContent.classList.remove('hidden');
+                toursContent.classList.add('hidden');
+            });
+        </script>
     </section>
 
 
     <!-- Global Opportunities Section -->
-    <section id="global-opportunities" class="relative py-32 overflow-hidden text-white bg-gray-300">
+    <section id="global-opportunities" class="relative py-32 overflow-hidden text-white bg-gray-100 relative">
         <div id="particles-travel" class="particles"></div>
-        <div class="section-overlay"></div>
         <div class="relative z-10 container mx-auto px-6">
             <!-- Header -->
             <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900" style="color:black">🌐 Global Opportunities</h2>
+                <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900" style="color:black">Global Opportunities</h2>
                 <p class="text-xl md:text-2xl text-gray-900 max-w-3xl mx-auto ">
                     Explore careers and education abroad, Connect with opportunities worldwide.
                 </p>
@@ -762,8 +785,9 @@
                             <div class="p-6">
                                 <h4 class="text-xl font-semibold mb-2 text-white">Engineering Roles</h4>
                                 <p class="text-white mb-4">High-demand positions in UAE and Qatar.</p>
-                                <a href="recruitment.html"
-                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="recruitment.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
                                     Apply
                                     Now
                                 </a>
@@ -776,8 +800,9 @@
                             <div class="p-6">
                                 <h4 class="text-xl font-semibold mb-2 text-white">Healthcare Jobs</h4>
                                 <p class="text-white mb-4">Nursing and medical roles in Canada.</p>
-                                <a href="recruitment.html"
-                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="recruitment.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
                                     Apply
                                     Now
                                 </a>
@@ -790,8 +815,9 @@
                             <div class="p-6">
                                 <h4 class="text-xl font-semibold mb-2 text-white">Construction</h4>
                                 <p class="text-white mb-4">Skilled labor opportunities in Israel.</p>
-                                <a href="recruitment.html"
-                                   class="text-amber-500 font-semibold hover:text-amber-600">
+                            </div>
+                            <div class="service-card-overlay">
+                                <a href="recruitment.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
                                     Apply
                                     Now
                                 </a>
@@ -869,7 +895,7 @@
                     careersContent.classList.add('hidden');
                 });
             </script>
-
+        </div>
     </section>
 
     <!-- Styling -->
@@ -1072,19 +1098,31 @@
                     <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h4 class="text-xl font-bold text-white mb-2">Top 10 Travel Destinations for 2025</h4>
                     <p class="text-white mb-4">Discover the must-visit places this year.</p>
-                    <a href="blog.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
+                    <div class="service-card-overlay">
+                        <a href="blog.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
+                            Read More
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card rounded-xl shadow-lg p-6">
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h4 class="text-xl font-bold text-white mb-2">How to Choose the Right Study Abroad Program</h4>
                     <p class="text-white mb-4">Tips for finding your perfect academic path.</p>
-                    <a href="blog.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
+                    <div class="service-card-overlay">
+                        <a href="blog.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
+                            Read More
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card rounded-xl shadow-lg p-6">
                     <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
                     <h4 class="text-xl font-bold text-white mb-2">Navigating Global Job Markets</h4>
                     <p class="text-white mb-4">Expert advice for landing international roles.</p>
-                    <a href="blog.html" class="text-amber-500 font-semibold hover:text-amber-600">Read More</a>
+                    <div class="service-card-overlay">
+                        <a href="blog.html" class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
+                            Read More
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- FAQ Content -->
