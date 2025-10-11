@@ -59,11 +59,11 @@
         .service-card, .destination-card, .testimonial-card, .faq-card, .student-testimonial-card, .student-video-card {
             position: relative;
             overflow: hidden;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transition: transform 3s ease, box-shadow 3s ease;
             perspective: 100px;
         }
 
-            .service-card:hover, .destination-card:hover, .testimonial-card:hover, .faq-card:hover, .student-testimonial-card:hover, .student-video-card:hover {
+            .service-card:hover, .destination-card:hover, .testimonial-card:hover, .faq-card:hover, .student-video-card:hover {
                 transform: translateY(-12px) rotateY(5deg);
                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             }
@@ -176,9 +176,15 @@
             background: white;
             border-left: 4px solid #f59e0b;
             min-height: 200px;
+            padding: 0px;
         }
-
-        .student-video-card {
+        .student-testimonial-card:hover {
+            border-left: 0px solid #f59e0b;
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            padding:0px;
+        }
+            .student-video-card {
             position: relative;
         }
 
@@ -549,20 +555,20 @@
             <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Discover the experiences of students who trusted us with their global education journey.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/studentimg%20(1).jpg" alt="Student Testimonial 1" class="w-full h-300px object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/1.jpg" alt="Student Testimonial 1" class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/studentimg%20(2).jpg" alt="Student Testimonial 2" class="w-full h-300px object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/2.jpg" alt="Student Testimonial 2" class="w-full h-full object-cover rounded-t-xl mb-4">
 
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/studentimg%20(3).jpg" alt="Student Testimonial 3" class="w-full h-300px object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/3.jpg" alt="Student Testimonial 3" class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/studentimg%20(4).jpg" alt="Student Testimonial 4" class="w-full h-300px object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/4.jpg" alt="Student Testimonial 4" class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/studentimg%20(5).jpg" alt="Student Testimonial 5" class="w-full h-300px object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/5.jpg" alt="Student Testimonial 5" class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
             </div>
         </div>
@@ -615,11 +621,11 @@
         </div>
     </section>
     <!-- CTA Section -->
-    <section id="cta" class="py-24 bg-amber-500 text-white text-center">
+    <section id="cta" class="py-24 bg-white text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Live Your Study Abroad Dream</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto">Let’s start your journey with personalized guidance and support.</p>
-            <button id="cta-btn" class="bg-emerald-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-emerald-700 transition-transform transform hover:scale-110 glow">Get Started</button>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let’s start your journey with personalized guidance and support.</p>
+            <button id="cta-btn" class="bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Get Started</button>
         </div>
     </section>
     <!-- Footer -->
