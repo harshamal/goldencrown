@@ -19,7 +19,7 @@
     transition: all 0.4s ease;
     z-index: 50;
     backdrop-filter: blur(0px);
-    height: 140px;
+    height: 170px;
     padding: 0px;
     font-size: 1.5rem;
     letter-spacing: 2px;
@@ -40,21 +40,24 @@
     width: 170px;
     height: auto;
 }
-
+.mobile {
+    background-color: #1e435e;
+    margin-left: 20px;
+}
 .header-scrolled .logo {
     width: 110px;
     height: auto;
 }
 .header-scrolled {
     position: fixed;
-    top: 0;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
-    width: 93%;
+    width: 88%;
     height: 110px;
     background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
     background-size: 300% 300%;
-    border-radius: 0 0 50px 50px;
+    border-radius: 50px 50px 50px 50px;
     z-index: 50;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -63,9 +66,10 @@
     align-items: center;
     justify-content: center;
     color: #1e435e;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
-    font-weight: 600;
+    font-weight: 900;
+    padding:0px !important;
 }
 
 h1, h2, h3, h4 {
@@ -183,7 +187,6 @@ h1, h2, h3, h4 {
         color: #0f172a !important;
         background: rgba(224, 242, 254, 0.7);
         transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(59, 130, 246, 0.3);
     }
 
         .mail:hover::after {
@@ -193,13 +196,12 @@ h1, h2, h3, h4 {
     /* Optional: Add subtle icon pulse for phone/mail icons */
     .mail i {
         font-size: 1.2rem;
-        color: #2563eb;
+        color: darkgoldenrod;
         transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .mail:hover i {
         transform: scale(1.2);
-        color: #0f172a;
     }
 
 

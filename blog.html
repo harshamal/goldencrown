@@ -208,7 +208,8 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16 mt-16">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
@@ -226,7 +227,7 @@
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
                     <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:crownglobal@sltnet.lk" class="hover:text-amber-400">crownglobal@sltnet.lk</a></p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:crownglobals@sltnet.lk" class="hover:text-amber-400">crownglobals@sltnet.lk</a></p>
                     <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
                 </div>
                 <div>
@@ -237,7 +238,7 @@
                     </div>
                 </div>
             </div>
-            <p class="text-center text-gray-400 mt-12">� 2025 Crown Global Services. All rights reserved.</p>
+            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
         </div>
     </footer>
 
@@ -248,31 +249,31 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-            mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('open');
+        mobileMenu.classList.toggle('hidden');
         });
 
         mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('open');
+        mobileMenu.classList.add('hidden');
         });
 
         // Header Scroll Effect
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('header-scrolled');
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('text-white');
-                    link.classList.add('text-gray-800');
-                });
-            } else {
-                header.classList.remove('header-scrolled');
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.add('text-white');
-                    link.classList.remove('text-gray-800');
-                });
-            }
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+        header.classList.add('header-scrolled');
+        document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('text-white');
+        link.classList.add('text-gray-800');
+        });
+        } else {
+        header.classList.remove('header-scrolled');
+        document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.add('text-white');
+        link.classList.remove('text-gray-800');
+        });
+        }
         });
 
         // Animations
@@ -280,8 +281,8 @@
         gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.5, ease: 'back.out(1.7)' });
 
         document.addEventListener('DOMContentLoaded', () => {
-            gsap.from('main h1', { opacity: 0, y: 60, duration: 1.2, ease: 'power3.out' });
-            gsap.from('.blog-post-card', { opacity: 0, y: 50, stagger: 0.2, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.blog-post-card', start: 'top 80%' } });
+        gsap.from('main h1', { opacity: 0, y: 60, duration: 1.2, ease: 'power3.out' });
+        gsap.from('.blog-post-card', { opacity: 0, y: 50, stagger: 0.2, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.blog-post-card', start: 'top 80%' } });
         });
     </script>
 </body>
