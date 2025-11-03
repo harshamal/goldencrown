@@ -1,4 +1,4 @@
-:root {
+Ôªø:root {
     --primary: #2a6eb9; /* Logo Blue */
     --accent-amber: #d4a017; /* Logo Amber/Gold */
     --accent-green: #047857; /* Emerald Green */
@@ -17,11 +17,8 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: transparent;
-    color: var(--primary);
     transition: all 0.4s ease;
     z-index: 50;
-    backdrop-filter: blur(0px);
     height: 170px;
     padding: 0px;
     font-size: 1.5rem;
@@ -53,14 +50,14 @@ body{
 }
 .header-scrolled {
     position: fixed;
-    top: 1%;
+    top: 4%;
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
     height: 110px;
     background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
     background-size: 300% 300%;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 20px;
     z-index: 50;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -128,7 +125,7 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Optional: Hover animation - makes it ìhoverî */
+/* Optional: Hover animation - makes it ‚Äúhover‚Äù */
 .header-scrolled:hover {
     transform: translateX(-50%) translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
@@ -331,12 +328,12 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 25%; /* only covers upper part */
+    height: 55%; /* only covers upper part */
     background: linear-gradient( to bottom, rgba(255, 255, 255, 0.85) 0%, /* soft white tint at top */
     rgba(255, 255, 255, 0.25) 60%, /* subtle fade */
     rgba(255, 255, 255, 0) 100% /* fully transparent below */
     );
-    backdrop-filter: blur(2px); /* adds subtle glass effect */
+    backdrop-filter: blur(0px); /* adds subtle glass effect */
     z-index: 3;
     pointer-events: none; /* ensures overlay doesn't block clicks */
     transition: all 0.4s ease-in-out;
