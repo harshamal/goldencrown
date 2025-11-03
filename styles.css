@@ -8,6 +8,9 @@
     --dark-amber: #d97706; /* Dark Amber */
     --light-blue: #60a5fa; /* Light Blue */
 }
+body{
+    overflow-x:hidden;
+}
 .header {
     position: fixed;
     top: 0px;
