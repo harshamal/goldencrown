@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover global and Sri Lankan adventures with Crown Global Services. Explore inbound and outbound tour packages, customized trips, air ticketing, hotel bookings, and corporate travel solutions.">
-    <meta name="keywords" content="Sri Lanka tours, international tours, customized travel, group tours, solo travel, air ticketing, hotel booking, corporate travel, Crown Global Services">
+    <meta name="description"
+        content="Discover global and Sri Lankan adventures with Crown Global Services. Explore inbound and outbound tour packages, customized trips, air ticketing, hotel bookings, and corporate travel solutions.">
+    <meta name="keywords"
+        content="Sri Lanka tours, international tours, customized travel, group tours, solo travel, air ticketing, hotel booking, corporate travel, Crown Global Services">
     <meta name="author" content="Crown Global Services">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Tours & Travel - Crown Global Services">
-    <meta property="og:description" content="Plan your dream vacation with our inbound and outbound tours, customized trips, air ticketing, and corporate travel solutions.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:description"
+        content="Plan your dream vacation with our inbound and outbound tours, customized trips, air ticketing, and corporate travel solutions.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <meta property="og:url" content="https://crownglobalservices.com/tours.html">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tours & Travel - Crown Global Services">
-    <meta name="twitter:description" content="Plan your dream vacation with our inbound and outbound tours, customized trips, air ticketing, and corporate travel solutions.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta name="twitter:description"
+        content="Plan your dream vacation with our inbound and outbound tours, customized trips, air ticketing, and corporate travel solutions.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>Tours & Travel - Crown Global Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="styles.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -30,7 +39,10 @@
             margin: 0;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
         }
 
@@ -63,18 +75,18 @@
             backdrop-filter: blur(8px);
         }
 
-            .tour-card:hover {
-                transform: translateY(-12px) rotateY(5deg);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            }
+        .tour-card:hover {
+            transform: translateY(-12px) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
-            .tour-card img {
-                transition: transform 0.5s ease;
-            }
+        .tour-card img {
+            transition: transform 0.5s ease;
+        }
 
-            .tour-card:hover img {
-                transform: scale(1.15);
-            }
+        .tour-card:hover img {
+            transform: scale(1.15);
+        }
 
         .tour-card-overlay {
             position: absolute;
@@ -109,10 +121,10 @@
             transition: opacity 0.3s ease;
         }
 
-            .popup-overlay.active {
-                display: flex;
-                opacity: 1;
-            }
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
 
         .popup-content {
             background: white;
@@ -142,9 +154,9 @@
             color: #333;
         }
 
-            .popup-close:hover {
-                color: #f59e0b;
-            }
+        .popup-close:hover {
+            color: #f59e0b;
+        }
 
         .popup-content form {
             display: flex;
@@ -163,12 +175,12 @@
             transition: border-color 0.3s ease;
         }
 
-            .popup-content input:focus,
-            .popup-content select:focus,
-            .popup-content textarea:focus {
-                border-color: #047857;
-                outline: none;
-            }
+        .popup-content input:focus,
+        .popup-content select:focus,
+        .popup-content textarea:focus {
+            border-color: #047857;
+            outline: none;
+        }
 
         .popup-content button[type="submit"] {
             background: #047857;
@@ -181,18 +193,18 @@
             transition: background 0.3s ease;
         }
 
-            .popup-content button[type="submit"]:hover {
-                background: #f59e0b;
-            }
+        .popup-content button[type="submit"]:hover {
+            background: #f59e0b;
+        }
 
         .filter-btn {
             transition: all 0.3s ease;
         }
 
-            .filter-btn.active {
-                background: blue;
-                color: white;
-            }
+        .filter-btn.active {
+            background: blue;
+            color: white;
+        }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -209,26 +221,37 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
 
 </head>
+
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
     <header class="header z-50">
         <div class="flex justify-between items-center px-6 py-4">
             <div>
                 <a href="index.html">
-                    <img class="logo nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
+                    <img class="logo nav-link text-white hover:text-amber-800"
+                        src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod " style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod active-link" style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-contact">Contact</a>
+                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod "
+                    style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod active-link"
+                    style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-contact">Contact</a>
 
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
@@ -245,7 +268,8 @@
             <div class="flex items-center">
                 <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -254,12 +278,14 @@
             <div class="flex justify-end p-4">
                 <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
+                    id="mobile-nav-home">Home</a>
                 <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Tours</a>
                 <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
                 <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
@@ -278,13 +304,17 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4" type="video/mp4">
+            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4"
+                type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="text-5xl md:text-8xl font-bold mb-6 text-white">Your World, Our Expertise</h1>
-            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white">Explore Sri Lanka and beyond with tailored tours, seamless travel solutions, and unforgettable adventures.</p>
-            <button id="plan-trip-btn" class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Plan Your Trip</button>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white">Explore Sri Lanka and beyond with tailored
+                tours, seamless travel solutions, and unforgettable adventures.</p>
+            <button id="plan-trip-btn"
+                class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Plan
+                Your Trip</button>
         </div>
     </section>
 
@@ -292,119 +322,189 @@
     <section id="tour-packages" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Explore Our Tour Packages</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From Sri Lankan wonders to global adventures, find the perfect journey for you.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From Sri Lankan wonders to global
+                adventures, find the perfect journey for you.</p>
             <!-- Filters -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white active" data-filter="all">All</button>
-                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="inbound">Inbound</button>
-                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="outbound">Outbound</button>
-                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="group">Group</button>
-                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white" data-filter="solo">Solo</button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white active"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                    data-filter="inbound">Inbound</button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                    data-filter="outbound">Outbound</button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                    data-filter="group">Group</button>
+                <button
+                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                    data-filter="solo">Solo</button>
             </div>
             <!-- Tour Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Add these inside the grid after the existing 6 tour-card divs -->
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound solo">
-                    <img src="https://images.pexels.com/photos/5328041/pexels-photo-5328041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hill Country Hike" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/5328041/pexels-photo-5328041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Hill Country Hike" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Hill Country Hike" data-description="Trek through scenic mountains and tea estates in a 6-day solo hiking adventure in Sri Lanka." data-type="Inbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Hill Country Hike"
+                            data-description="Trek through scenic mountains and tea estates in a 6-day solo hiking adventure in Sri Lanka."
+                            data-type="Inbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Hill Country Hike</h3>
-                        <p class="text-white mb-4">Trek through scenic mountains and tea estates in a 6-day solo hiking adventure in Sri Lanka.</p>
+                        <p class="text-white mb-4">Trek through scenic mountains and tea estates in a 6-day solo hiking
+                            adventure in Sri Lanka.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound solo">
-                    <img src="https://images.pexels.com/photos/1467300/pexels-photo-1467300.jpeg" alt="Dubai Solo Explorer" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/1467300/pexels-photo-1467300.jpeg"
+                        alt="Dubai Solo Explorer" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Dubai Solo Explorer" data-description="Shop, dine, and desert-safari your way through a 5-day solo city experience in Dubai." data-type="Outbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Dubai Solo Explorer"
+                            data-description="Shop, dine, and desert-safari your way through a 5-day solo city experience in Dubai."
+                            data-type="Outbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Dubai Solo Explorer</h3>
-                        <p class="text-white mb-4">Shop, dine, and desert-safari your way through a 5-day solo city experience in Dubai.</p>
+                        <p class="text-white mb-4">Shop, dine, and desert-safari your way through a 5-day solo city
+                            experience in Dubai.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound group">
-                    <img src="https://dynamic-media.tacdn.com/media/photo-o/2f/09/e5/3b/caption.jpg?w=1600&h=1000&s=1" alt="Adventure Lanka Group" class="w-full h-72 object-cover">
+                    <img src="https://dynamic-media.tacdn.com/media/photo-o/2f/09/e5/3b/caption.jpg?w=1600&h=1000&s=1"
+                        alt="Adventure Lanka Group" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Adventure Lanka Group" data-description="White-water rafting, zip-lining, and hiking in this 5-day adrenaline-packed group tour in Sri Lanka." data-type="Inbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Adventure Lanka Group"
+                            data-description="White-water rafting, zip-lining, and hiking in this 5-day adrenaline-packed group tour in Sri Lanka."
+                            data-type="Inbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Adventure Lanka Group</h3>
-                        <p class="text-white mb-4">White-water rafting, zip-lining, and hiking in this 5-day adrenaline-packed group tour in Sri Lanka.</p>
+                        <p class="text-white mb-4">White-water rafting, zip-lining, and hiking in this 5-day
+                            adrenaline-packed group tour in Sri Lanka.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound group">
-                    <img src="https://images.pexels.com/photos/2815210/pexels-photo-2815210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Great Wall Discovery" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/2815210/pexels-photo-2815210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Great Wall Discovery" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Great Wall Discovery" data-description="Walk the Great Wall and explore Beijing in a 7-day immersive group tour in China." data-type="Outbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Great Wall Discovery"
+                            data-description="Walk the Great Wall and explore Beijing in a 7-day immersive group tour in China."
+                            data-type="Outbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Great Wall Discovery</h3>
-                        <p class="text-white mb-4">Walk the Great Wall and explore Beijing in a 7-day immersive group tour in China.</p>
+                        <p class="text-white mb-4">Walk the Great Wall and explore Beijing in a 7-day immersive group
+                            tour in China.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound solo">
-                    <img src="https://images.pexels.com/photos/4769075/pexels-photo-4769075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Ella Nature Escape" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/4769075/pexels-photo-4769075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Ella Nature Escape" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Ella Nature Escape" data-description="Unwind in the lush hills of Ella with waterfalls, nature trails, and local cuisine." data-type="Inbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Ella Nature Escape"
+                            data-description="Unwind in the lush hills of Ella with waterfalls, nature trails, and local cuisine."
+                            data-type="Inbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Ella Nature Escape</h3>
-                        <p class="text-white mb-4">Unwind in the lush hills of Ella with waterfalls, nature trails, and local cuisine.</p>
+                        <p class="text-white mb-4">Unwind in the lush hills of Ella with waterfalls, nature trails, and
+                            local cuisine.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound solo">
-                    <img src="https://images.pexels.com/photos/2070485/pexels-photo-2070485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Thailand Discovery Solo" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/2070485/pexels-photo-2070485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Thailand Discovery Solo" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Thailand Discovery Solo" data-description="Enjoy temples, beaches, and vibrant markets in a 7-day solo trip across Thailand." data-type="Outbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Thailand Discovery Solo"
+                            data-description="Enjoy temples, beaches, and vibrant markets in a 7-day solo trip across Thailand."
+                            data-type="Outbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Thailand Discovery Solo</h3>
-                        <p class="text-white mb-4">Enjoy temples, beaches, and vibrant markets in a 7-day solo trip across Thailand.</p>
+                        <p class="text-white mb-4">Enjoy temples, beaches, and vibrant markets in a 7-day solo trip
+                            across Thailand.</p>
                     </div>
                 </div>
 
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound group">
-                    <img src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg" alt="Sri Lanka Heritage" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg"
+                        alt="Sri Lanka Heritage" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Sri Lanka Heritage" data-description="Discover ancient cities, temples, and festivals in a 7-day cultural journey through Sri Lanka." data-type="Inbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Sri Lanka Heritage"
+                            data-description="Discover ancient cities, temples, and festivals in a 7-day cultural journey through Sri Lanka."
+                            data-type="Inbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Sri Lanka Heritage</h3>
-                        <p class="text-white mb-4">Discover ancient cities, temples, and festivals in a 7-day cultural journey through Sri Lanka.</p>
+                        <p class="text-white mb-4">Discover ancient cities, temples, and festivals in a 7-day cultural
+                            journey through Sri Lanka.</p>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound group">
-                    <img src="https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="European Escape" class="w-full h-72 object-cover">
+                    <img src="https://images.pexels.com/photos/161815/santorini-oia-greece-water-161815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="European Escape" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="European Escape" data-description="Explore Paris, Rome, and Barcelona in a 10-day group adventure across Europe." data-type="Outbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="European Escape"
+                            data-description="Explore Paris, Rome, and Barcelona in a 10-day group adventure across Europe."
+                            data-type="Outbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">European Escape</h3>
-                        <p class="text-white mb-4">Explore Paris, Rome, and Barcelona in a 10-day group adventure across Europe.</p>
+                        <p class="text-white mb-4">Explore Paris, Rome, and Barcelona in a 10-day group adventure across
+                            Europe.</p>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound solo">
-                    <img src="https://media.timeout.com/images/106252539/image.jpg" alt="Coastal Bliss Solo" class="w-full h-72 object-cover">
+                    <img src="https://media.timeout.com/images/106252539/image.jpg" alt="Coastal Bliss Solo"
+                        class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Coastal Bliss Solo" data-description="Relax and explore Sri Lanka�s southern beaches on a 5-day solo adventure." data-type="Inbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Coastal Bliss Solo"
+                            data-description="Relax and explore Sri Lanka�s southern beaches on a 5-day solo adventure."
+                            data-type="Inbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Coastal Bliss Solo</h3>
-                        <p class="text-white mb-4">Relax and explore Sri Lanka�s southern beaches on a 5-day solo adventure.</p>
+                        <p class="text-white mb-4">Relax and explore Sri Lanka�s southern beaches on a 5-day solo
+                            adventure.</p>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound solo">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali Solo Retreat" class="w-full h-72 object-cover">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali Solo Retreat"
+                        class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Bali Solo Retreat" data-description="Rejuvenate with yoga and culture in a 6-day solo trip to Bali." data-type="Outbound Solo">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Bali Solo Retreat"
+                            data-description="Rejuvenate with yoga and culture in a 6-day solo trip to Bali."
+                            data-type="Outbound Solo">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Bali Solo Retreat</h3>
@@ -412,23 +512,35 @@
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="inbound group">
-                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg" alt="Wildlife Safari Group" class="w-full h-72 object-cover">
+                    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg"
+                        alt="Wildlife Safari Group" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Wildlife Safari Group" data-description="Spot leopards and elephants in Yala National Park on a 4-day group safari." data-type="Inbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Wildlife Safari Group"
+                            data-description="Spot leopards and elephants in Yala National Park on a 4-day group safari."
+                            data-type="Inbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Wildlife Safari Group</h3>
-                        <p class="text-white mb-4">Spot leopards and elephants in Yala National Park on a 4-day group safari.</p>
+                        <p class="text-white mb-4">Spot leopards and elephants in Yala National Park on a 4-day group
+                            safari.</p>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl" data-category="outbound group">
-                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Japan Cultural Group" class="w-full h-72 object-cover">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Japan Cultural Group"
+                        class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Japan Cultural Group" data-description="Experience Tokyo, Kyoto, and Osaka in an 8-day cultural group tour." data-type="Outbound Group">Inquire Now</button>
+                        <button
+                            class="inquire-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Japan Cultural Group"
+                            data-description="Experience Tokyo, Kyoto, and Osaka in an 8-day cultural group tour."
+                            data-type="Outbound Group">Inquire Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-white mb-3">Japan Cultural Group</h3>
-                        <p class="text-white mb-4">Experience Tokyo, Kyoto, and Osaka in an 8-day cultural group tour.</p>
+                        <p class="text-white mb-4">Experience Tokyo, Kyoto, and Osaka in an 8-day cultural group tour.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -439,17 +551,22 @@
     <section id="customized-trips" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Tailor Your Perfect Trip</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Create a bespoke travel experience with our group or solo customization options.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Create a bespoke travel experience with
+                our group or solo customization options.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Group Adventures</h3>
-                    <p class="text-gray-600 mb-6">Plan a memorable trip for your family, friends, or team with our tailored group itineraries.</p>
-                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600" data-type="Group">Customize Now</button>
+                    <p class="text-gray-600 mb-6">Plan a memorable trip for your family, friends, or team with our
+                        tailored group itineraries.</p>
+                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                        data-type="Group">Customize Now</button>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Solo Journeys</h3>
-                    <p class="text-gray-600 mb-6">Embark on a personal adventure designed just for you, with flexibility and expert guidance.</p>
-                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600" data-type="Solo">Customize Now</button>
+                    <p class="text-gray-600 mb-6">Embark on a personal adventure designed just for you, with flexibility
+                        and expert guidance.</p>
+                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                        data-type="Solo">Customize Now</button>
                 </div>
             </div>
         </div>
@@ -459,17 +576,22 @@
     <section id="travel-services" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Seamless Travel Solutions</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Book flights and accommodations effortlessly with our expert services.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Book flights and accommodations
+                effortlessly with our expert services.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="bg-gray-50 rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Air Ticketing</h3>
-                    <p class="text-gray-600 mb-6">Find the best flights to your destination with competitive prices and flexible options.</p>
-                    <button class="service-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600" data-service="Air Ticketing">Book Flights</button>
+                    <p class="text-gray-600 mb-6">Find the best flights to your destination with competitive prices and
+                        flexible options.</p>
+                    <button class="service-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                        data-service="Air Ticketing">Book Flights</button>
                 </div>
                 <div class="bg-gray-50 rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Hotel Booking</h3>
-                    <p class="text-gray-600 mb-6">Choose from a wide range of hotels, from luxury resorts to boutique stays.</p>
-                    <button class="service-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600" data-service="Hotel Booking">Book Hotels</button>
+                    <p class="text-gray-600 mb-6">Choose from a wide range of hotels, from luxury resorts to boutique
+                        stays.</p>
+                    <button class="service-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                        data-service="Hotel Booking">Book Hotels</button>
                 </div>
             </div>
         </div>
@@ -479,11 +601,13 @@
     <section id="corporate-travel" class="py-24 bg-gray-100 text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center mb-8">Corporate Travel Solutions</h2>
-            <p class="text-center text-xl max-w-4xl mx-auto mb-12" style="color:black">Streamline your business travel with our comprehensive services tailored for professionals.</p>
+            <p class="text-center text-xl max-w-4xl mx-auto mb-12" style="color:black">Streamline your business travel
+                with our comprehensive services tailored for professionals.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-xl p-6">
                     <h3 class="text-2xl font-bold mb-3">Business Trips</h3>
-                    <p class="text-gray-400">Organize seamless travel for meetings, conferences, and corporate events.</p>
+                    <p class="text-gray-400">Organize seamless travel for meetings, conferences, and corporate events.
+                    </p>
                 </div>
                 <div class="bg-white rounded-xl p-6">
                     <h3 class="text-2xl font-bold mb-3">Team Retreats</h3>
@@ -495,7 +619,9 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <button id="corporate-inquiry-btn" class="bg-amber-500 text-white px-10 py-4 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Inquire Now</button>
+                <button id="corporate-inquiry-btn"
+                    class="bg-amber-500 text-white px-10 py-4 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Inquire
+                    Now</button>
             </div>
         </div>
     </section>
@@ -504,8 +630,11 @@
     <section id="cta" class="py-24 text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Ready for Your Next Adventure?</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let us craft your perfect journey, anywhere in the world.</p>
-            <button id="cta-btn" class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-700 transition-transform transform hover:scale-110 glow">Get Started</button>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let us craft your perfect journey, anywhere
+                in the world.</p>
+            <button id="cta-btn"
+                class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-700 transition-transform transform hover:scale-110 glow">Get
+                Started</button>
         </div>
     </section>
 
@@ -516,7 +645,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
+                        excellence.</p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Explore</h3>
@@ -528,14 +658,18 @@
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
+                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
+                        Sri Lanka</p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
+                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
+                            5108</a></p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476"
+                            class="text-gray-400 hover:text-amber-400">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
@@ -570,9 +704,11 @@
                 <label for="inquiry-travel-date">Preferred Travel Date</label>
                 <input type="date" id="inquiry-travel-date" name="Travel Date">
                 <label for="inquiry-group-size">Group Size</label>
-                <input type="number" id="inquiry-group-size" name="Group Size" min="1" placeholder="Number of travelers">
+                <input type="number" id="inquiry-group-size" name="Group Size" min="1"
+                    placeholder="Number of travelers">
                 <label for="inquiry-additional-info">Additional Information</label>
-                <textarea id="inquiry-additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="inquiry-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -597,7 +733,8 @@
                 <label for="tour-group-size">Group Size</label>
                 <input type="number" id="tour-group-size" name="Group Size" min="1" placeholder="Number of travelers">
                 <label for="tour-additional-info">Additional Information</label>
-                <textarea id="tour-additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="tour-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -622,11 +759,13 @@
                 <label for="customize-travel-date">Preferred Travel Date</label>
                 <input type="date" id="customize-travel-date" name="Travel Date">
                 <label for="customize-group-size">Group Size</label>
-                <input type="number" id="customize-group-size" name="Group Size" min="1" placeholder="Number of travelers">
+                <input type="number" id="customize-group-size" name="Group Size" min="1"
+                    placeholder="Number of travelers">
                 <label for="customize-budget">Estimated Budget (USD)</label>
                 <input type="number" id="customize-budget" name="Budget" min="0" placeholder="Your budget per person">
                 <label for="customize-additional-info">Preferences & Interests</label>
-                <textarea id="customize-additional-info" name="Preferences" rows="4" placeholder="Tell us about your interests (e.g., culture, adventure, relaxation)"></textarea>
+                <textarea id="customize-additional-info" name="Preferences" rows="4"
+                    placeholder="Tell us about your interests (e.g., culture, adventure, relaxation)"></textarea>
                 <button type="submit">Submit Request</button>
             </form>
         </div>
@@ -649,7 +788,8 @@
                 <label for="service-travel-date">Preferred Travel Date</label>
                 <input type="date" id="service-travel-date" name="Travel Date">
                 <label for="service-additional-info">Additional Information</label>
-                <textarea id="service-additional-info" name="Additional Information" rows="4" placeholder="Any specific requirements?"></textarea>
+                <textarea id="service-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any specific requirements?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -677,9 +817,11 @@
                 <label for="corporate-travel-date">Preferred Travel Date</label>
                 <input type="date" id="corporate-travel-date" name="Travel Date">
                 <label for="corporate-group-size">Group Size</label>
-                <input type="number" id="corporate-group-size" name="Group Size" min="1" placeholder="Number of travelers">
+                <input type="number" id="corporate-group-size" name="Group Size" min="1"
+                    placeholder="Number of travelers">
                 <label for="corporate-additional-info">Additional Information</label>
-                <textarea id="corporate-additional-info" name="Additional Information" rows="4" placeholder="Tell us about your corporate needs"></textarea>
+                <textarea id="corporate-additional-info" name="Additional Information" rows="4"
+                    placeholder="Tell us about your corporate needs"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -852,4 +994,5 @@
         });
     </script>
 </body>
+
 </html>

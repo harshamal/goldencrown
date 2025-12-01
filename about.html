@@ -1,27 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Crown Global Services, a trusted SLBFE-licensed agency (License No: 3065) offering travel, recruitment, and education services. Discover our story, values, team, and commitment to excellence.">
-    <meta name="keywords" content="Crown Global Services, about us, travel agency, recruitment agency, SLBFE licensed, Sri Lanka, global services, our story, team, values">
+    <meta name="description"
+        content="Learn about Crown Global Services, a trusted SLBFE-licensed agency (License No: 3065) offering travel, recruitment, and education services. Discover our story, values, team, and commitment to excellence.">
+    <meta name="keywords"
+        content="Crown Global Services, about us, travel agency, recruitment agency, SLBFE licensed, Sri Lanka, global services, our story, team, values">
     <meta name="author" content="Crown Global Services">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="About Us - Crown Global Services">
-    <meta property="og:description" content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:description"
+        content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <meta property="og:url" content="https://crownglobalservices.com/about.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Us - Crown Global Services">
-    <meta name="twitter:description" content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta name="twitter:description"
+        content="Discover Crown Global Services' mission, values, and team. Trusted for travel, recruitment, and education services worldwide, licensed by SLBFE.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>About Us - Crown Global Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link href="styles.css" rel="stylesheet">
@@ -32,7 +43,10 @@
             margin: 0;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
         }
 
@@ -56,17 +70,21 @@
             box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
         }
 
-        .value-card, .team-card, .timeline-card {
+        .value-card,
+        .team-card,
+        .timeline-card {
             position: relative;
             overflow: hidden;
             transition: transform 0.5s ease, box-shadow 0.5s ease;
             perspective: 100px;
         }
 
-            .value-card:hover, .team-card:hover, .timeline-card:hover {
-                transform: translateY(-12px) rotateY(5deg);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            }
+        .value-card:hover,
+        .team-card:hover,
+        .timeline-card:hover {
+            transform: translateY(-12px) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
         .popup-overlay {
             position: fixed;
@@ -83,10 +101,10 @@
             transition: opacity 0.3s ease;
         }
 
-            .popup-overlay.active {
-                display: flex;
-                opacity: 1;
-            }
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
 
         .popup-content {
             background: white;
@@ -116,9 +134,9 @@
             color: #333;
         }
 
-            .popup-close:hover {
-                color: #f59e0b;
-            }
+        .popup-close:hover {
+            color: #f59e0b;
+        }
 
         .popup-content form {
             display: flex;
@@ -136,11 +154,11 @@
             transition: border-color 0.3s ease;
         }
 
-            .popup-content input:focus,
-            .popup-content textarea:focus {
-                border-color: #047857;
-                outline: none;
-            }
+        .popup-content input:focus,
+        .popup-content textarea:focus {
+            border-color: #047857;
+            outline: none;
+        }
 
         .popup-content button[type="submit"] {
             background: #047857;
@@ -153,18 +171,20 @@
             transition: background 0.3s ease;
         }
 
-            .popup-content button[type="submit"]:hover {
-                background: #f59e0b;
-            }
+        .popup-content button[type="submit"]:hover {
+            background: #f59e0b;
+        }
 
-        .swiper-button-prev, .swiper-button-next {
+        .swiper-button-prev,
+        .swiper-button-next {
             color: #047857;
             transition: color 0.3s ease;
         }
 
-            .swiper-button-prev:hover, .swiper-button-next:hover {
-                color: #f59e0b;
-            }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            color: #f59e0b;
+        }
 
         .swiper-pagination-bullet-active {
             background: #047857;
@@ -214,23 +234,33 @@
         }
     </script>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
     <header class="header z-50">
         <div class="flex justify-between items-center px-6 py-4">
             <div>
                 <a href="index.html">
-                    <img class="logo nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
+                    <img class="logo nav-link text-white hover:text-amber-800"
+                        src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod active-link" style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-contact">Contact</a>
+                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod active-link"
+                    style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-contact">Contact</a>
 
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
@@ -247,7 +277,8 @@
             <div class="flex items-center">
                 <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -256,12 +287,14 @@
             <div class="flex justify-end p-4">
                 <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
+                    id="mobile-nav-home">Home</a>
                 <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
                 <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
                 <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
@@ -269,7 +302,8 @@
                 <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">About Us</a>
                 <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Contact</a>
                 <div class="flex flex-col text-sm text-gray-800">
-                    <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-500">info@crownglobalservices.com</a>
+                    <a href="mailto:info@crownglobalservices.com"
+                        class="hover:text-amber-500">info@crownglobalservices.com</a>
                     <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
                 </div>
             </nav>
@@ -280,7 +314,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4" type="video/mp4">
+            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4"
+                type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
@@ -297,25 +332,30 @@
     <section id="our-story" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Story</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From humble beginnings to a global leader, our journey is one of passion and purpose.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From humble beginnings to a global
+                leader, our journey is one of passion and purpose.</p>
             <div class="relative">
                 <div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500 hidden md:block"></div>
                 <div class="space-y-12 ml-0 md:ml-8">
                     <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">2015: Founded</h3>
-                        <p class="text-gray-600">Crown Global Services was established in Sri Lanka with a vision to connect people with global opportunities.</p>
+                        <p class="text-gray-600">Crown Global Services was established in Sri Lanka with a vision to
+                            connect people with global opportunities.</p>
                     </div>
                     <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">2017: SLBFE License</h3>
-                        <p class="text-gray-600">Received SLBFE License No: 3065, solidifying our commitment to ethical recruitment.</p>
+                        <p class="text-gray-600">Received SLBFE License No: 3065, solidifying our commitment to ethical
+                            recruitment.</p>
                     </div>
                     <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">2020: Expanded Services</h3>
-                        <p class="text-gray-600">Launched travel and education divisions, offering holistic global solutions.</p>
+                        <p class="text-gray-600">Launched travel and education divisions, offering holistic global
+                            solutions.</p>
                     </div>
                     <div class="timeline-card bg-gray-50 rounded-xl p-6 shadow-lg relative">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">2025: Global Impact</h3>
-                        <p class="text-gray-600">Serving thousands of clients across travel, recruitment, and education worldwide.</p>
+                        <p class="text-gray-600">Serving thousands of clients across travel, recruitment, and education
+                            worldwide.</p>
                     </div>
                 </div>
             </div>
@@ -328,10 +368,17 @@
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Message from Our Managing Director</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://crownglobal.blob.core.windows.net/meta/hasvin.png" alt="Managing Director" class="w-full h-full object-cover rounded-xl director-img">
+                    <img src="https://crownglobal.blob.core.windows.net/meta/hasvin.png" alt="Managing Director"
+                        class="w-full h-full object-cover rounded-xl director-img">
                 </div>
                 <div class="md:w-1/2">
-                    <p class="text-gray-600 italic text-lg mb-6">"At Crown Global Services, this is more than just work for us, it’s a calling. Every journey we support, every door we help open, is about more than travel or employment, it's about transforming lives. We believe deeply in people their hopes, their dreams, and their potential. Whether you're seeking a new beginning abroad, a career that gives you purpose, or an education that changes everything, know this we're here for you. With honesty, compassion, and a relentless commitment to your success, we’ll walk beside you not just as a service provider, but as partners in your journey."</p>
+                    <p class="text-gray-600 italic text-lg mb-6">"At Crown Global Services, this is more than just work
+                        for us, it’s a calling. Every journey we support, every door we help open, is about more than
+                        travel or employment, it's about transforming lives. We believe deeply in people their hopes,
+                        their dreams, and their potential. Whether you're seeking a new beginning abroad, a career that
+                        gives you purpose, or an education that changes everything, know this we're here for you. With
+                        honesty, compassion, and a relentless commitment to your success, we’ll walk beside you not just
+                        as a service provider, but as partners in your journey."</p>
                     <h4 class="text-2xl font-bold text-gray-800">Dr. Hasvin Dissanayake</h4>
                     <p class="text-gray-500">Managing Director</p>
                 </div>
@@ -343,15 +390,18 @@
     <section id="vision-mission" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Vision & Mission</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Guiding principles that drive our commitment to excellence.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Guiding principles that drive our
+                commitment to excellence.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="bg-gray-50 rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Vision</h3>
-                    <p class="text-gray-600">To be the global leader in connecting people with transformative travel, career, and educational opportunities.</p>
+                    <p class="text-gray-600">To be the global leader in connecting people with transformative travel,
+                        career, and educational opportunities.</p>
                 </div>
                 <div class="bg-gray-50 rounded-xl shadow-lg p-8">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h3>
-                    <p class="text-gray-600">To deliver trusted, ethical, and personalized services that empower individuals to achieve their global aspirations.</p>
+                    <p class="text-gray-600">To deliver trusted, ethical, and personalized services that empower
+                        individuals to achieve their global aspirations.</p>
                 </div>
             </div>
         </div>
@@ -361,7 +411,8 @@
     <section id="core-values" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Core Values</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">The principles that define who we are and how we serve.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">The principles that define who we are
+                and how we serve.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="value-card bg-white rounded-xl shadow-lg p-6">
                     <i class="fas fa-heart text-4xl text-amber-500 mb-4"></i>
@@ -470,7 +521,8 @@
     <section id="community-impact" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Community Impact</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Giving back to the communities we serve.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Giving back to the communities we
+                serve.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <i class="fas fa-graduation-cap text-4xl text-amber-500 mb-4"></i>
@@ -495,8 +547,11 @@
     <section id="cta" class="py-24 bg-white text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Join Our Global Family</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let’s create your next adventure, career, or educational journey together.</p>
-            <a href="contact.html" class="cta-button ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Join Us</a>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let’s create your next adventure, career, or
+                educational journey together.</p>
+            <a href="contact.html"
+                class="cta-button ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Join
+                Us</a>
         </div>
     </section>
 
@@ -507,7 +562,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
+                        excellence.</p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Explore</h3>
@@ -519,14 +575,18 @@
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
+                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
+                        Sri Lanka</p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
+                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
+                            5108</a></p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476"
+                            class="text-gray-400 hover:text-amber-400">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
@@ -549,7 +609,8 @@
                 <label for="inquiry-phone">Phone Number</label>
                 <input type="tel" id="inquiry-phone" name="Phone" placeholder="Enter your phone number">
                 <label for="inquiry-message">Message</label>
-                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we help you?" required></textarea>
+                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we help you?"
+                    required></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -718,4 +779,5 @@
         });
     </script>
 </body>
+
 </html>

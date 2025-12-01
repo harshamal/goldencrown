@@ -1,27 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crown Global Services offers expert education consultancy for students and professionals aiming to study or migrate abroad. From career counseling to visa support, we guide you every step of the way.">
-    <meta name="keywords" content="Crown Global Services, study abroad, education consultancy, career counseling, visa support, IELTS preparation, study in Israel, study in UAE, SLBFE licensed">
+    <meta name="description"
+        content="Crown Global Services offers expert education consultancy for students and professionals aiming to study or migrate abroad. From career counseling to visa support, we guide you every step of the way.">
+    <meta name="keywords"
+        content="Crown Global Services, study abroad, education consultancy, career counseling, visa support, IELTS preparation, study in Israel, study in UAE, SLBFE licensed">
     <meta name="author" content="Crown Global Services">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Education Services - Crown Global Services">
-    <meta property="og:description" content="Study abroad with Crown Global Services. Expert consultancy for university applications, visa support, and career opportunities worldwide.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:description"
+        content="Study abroad with Crown Global Services. Expert consultancy for university applications, visa support, and career opportunities worldwide.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <meta property="og:url" content="https://crownglobalservices.com/education.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Education Services - Crown Global Services">
-    <meta name="twitter:description" content="Study abroad with Crown Global Services. Expert consultancy for university applications, visa support, and career opportunities worldwide.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta name="twitter:description"
+        content="Study abroad with Crown Global Services. Expert consultancy for university applications, visa support, and career opportunities worldwide.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>Education Services - Crown Global Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="styles.css" rel="stylesheet">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -32,7 +43,10 @@
             margin: 0;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
         }
 
@@ -56,17 +70,26 @@
             box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
         }
 
-        .service-card, .destination-card, .testimonial-card, .faq-card, .student-testimonial-card, .student-video-card {
+        .service-card,
+        .destination-card,
+        .testimonial-card,
+        .faq-card,
+        .student-testimonial-card,
+        .student-video-card {
             position: relative;
             overflow: hidden;
             transition: transform 3s ease, box-shadow 3s ease;
             perspective: 100px;
         }
 
-            .service-card:hover, .destination-card:hover, .testimonial-card:hover, .faq-card:hover, .student-video-card:hover {
-                transform: translateY(-12px) rotateY(5deg);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            }
+        .service-card:hover,
+        .destination-card:hover,
+        .testimonial-card:hover,
+        .faq-card:hover,
+        .student-video-card:hover {
+            transform: translateY(-12px) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
         .popup-overlay {
             position: fixed;
@@ -83,10 +106,10 @@
             transition: opacity 0.3s ease;
         }
 
-            .popup-overlay.active {
-                display: flex;
-                opacity: 1;
-            }
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
 
         .popup-content {
             background: white;
@@ -116,9 +139,9 @@
             color: #333;
         }
 
-            .popup-close:hover {
-                color: #f59e0b;
-            }
+        .popup-close:hover {
+            color: #f59e0b;
+        }
 
         .popup-content form {
             display: flex;
@@ -137,12 +160,12 @@
             transition: border-color 0.3s ease;
         }
 
-            .popup-content input:focus,
-            .popup-content select:focus,
-            .popup-content textarea:focus {
-                border-color: #047857;
-                outline: none;
-            }
+        .popup-content input:focus,
+        .popup-content select:focus,
+        .popup-content textarea:focus {
+            border-color: #047857;
+            outline: none;
+        }
 
         .popup-content button[type="submit"] {
             background: #047857;
@@ -155,36 +178,41 @@
             transition: background 0.3s ease;
         }
 
-            .popup-content button[type="submit"]:hover {
-                background: #f59e0b;
-            }
+        .popup-content button[type="submit"]:hover {
+            background: #f59e0b;
+        }
 
-        .swiper-button-prev, .swiper-button-next {
+        .swiper-button-prev,
+        .swiper-button-next {
             color: #047857;
             transition: color 0.3s ease;
         }
 
-            .swiper-button-prev:hover, .swiper-button-next:hover {
-                color: #f59e0b;
-            }
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            color: #f59e0b;
+        }
 
         .swiper-pagination-bullet-active {
             background: #047857;
         }
 
-        .testimonial-card, .student-testimonial-card {
+        .testimonial-card,
+        .student-testimonial-card {
             background: white;
             border-left: 4px solid #f59e0b;
             min-height: 200px;
             padding: 0px;
         }
+
         .student-testimonial-card:hover {
             border-left: 0px solid #f59e0b;
             transform: scale(1.1);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            padding:0px;
+            padding: 0px;
         }
-            .student-video-card {
+
+        .student-video-card {
             position: relative;
         }
 
@@ -201,10 +229,10 @@
             transition: opacity 0.3s ease;
         }
 
-            .video-overlay.hidden {
-                opacity: 0;
-                pointer-events: none;
-            }
+        .video-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
         .play-button {
             background: #f59e0b;
@@ -218,14 +246,14 @@
             transition: transform 0.3s ease;
         }
 
-            .play-button:hover {
-                transform: scale(1.1);
-            }
+        .play-button:hover {
+            transform: scale(1.1);
+        }
 
-            .play-button i {
-                color: white;
-                font-size: 2.5rem;
-            }
+        .play-button i {
+            color: white;
+            font-size: 2.5rem;
+        }
 
         .timeline-card::before {
             content: '';
@@ -247,9 +275,9 @@
             display: none;
         }
 
-            .faq-content.active {
-                display: block;
-            }
+        .faq-content.active {
+            display: block;
+        }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -275,23 +303,33 @@
         }
     </script>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
     <header class="header z-50">
         <div class="flex justify-between items-center px-6 py-4">
             <div>
                 <a href="index.html">
-                    <img class="logo nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
+                    <img class="logo nav-link text-white hover:text-amber-800"
+                        src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod active-link" style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-contact">Contact</a>
+                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod active-link"
+                    style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-contact">Contact</a>
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
                 <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-800 flex items-center space-x-4">
@@ -306,7 +344,8 @@
             <div class="flex items-center">
                 <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -315,20 +354,24 @@
             <div class="flex justify-end p-4">
                 <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
+                    id="mobile-nav-home">Home</a>
                 <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
                 <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
                 <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
-                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Education</a>
+                <a href="education.html"
+                    class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Education</a>
                 <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
                 <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Contact</a>
                 <div class="flex flex-col text-sm text-gray-800">
-                    <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-500">info@crownglobalservices.com</a>
+                    <a href="mailto:info@crownglobalservices.com"
+                        class="hover:text-amber-500">info@crownglobalservices.com</a>
                     <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
                 </div>
             </nav>
@@ -338,21 +381,26 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4" type="video/mp4">
+            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4"
+                type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="text-5xl md:text-8xl font-bold mb-6 text-white">Start Smart. Study Global.</h1>
-            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto">Expert consultancy to help you study or migrate abroad with confidence.</p>
-            <button id="connect-btn" class="bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Begin Your Journey</button>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto">Expert consultancy to help you study or migrate
+                abroad with confidence.</p>
+            <button id="connect-btn"
+                class="bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Begin
+                Your Journey</button>
         </div>
     </section>
     <!-- Our Services Section -->
     <section id="our-services" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Education Services</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Comprehensive support for your study abroad dreams.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Comprehensive support for your study
+                abroad dreams.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="service-card bg-gray-50 rounded-xl shadow-lg p-6">
                     <i class="fas fa-user-tie text-4xl text-amber-500 mb-4"></i>
@@ -398,14 +446,16 @@
     <section id="student-testimonial-videos" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Hear From Our Students</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Watch our students share their inspiring journeys with Crown Global Services.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Watch our students share their
+                inspiring journeys with Crown Global Services.</p>
             <div class="swiper-container student-video-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="student-video-card bg-white rounded-xl shadow-lg p-6 mx-4">
                             <div class="relative">
                                 <video controls class="w-full h-96">
-                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(1).mp4" type="video/mp4">
+                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(1).mp4"
+                                        type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-overlay">
@@ -422,7 +472,8 @@
                         <div class="student-video-card bg-white rounded-xl shadow-lg p-6 mx-4">
                             <div class="relative">
                                 <video controls class="w-full h-96">
-                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(2).mp4" type="video/mp4">
+                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(2).mp4"
+                                        type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-overlay">
@@ -439,7 +490,8 @@
                         <div class="student-video-card bg-white rounded-xl shadow-lg p-6 mx-4">
                             <div class="relative">
                                 <video controls class="w-full h-96">
-                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(3).mp4" type="video/mp4">
+                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(3).mp4"
+                                        type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-overlay">
@@ -456,7 +508,8 @@
                         <div class="student-video-card bg-white rounded-xl shadow-lg p-6 mx-4">
                             <div class="relative">
                                 <video controls class="w-full h-96">
-                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(4).mp4" type="video/mp4">
+                                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(4).mp4"
+                                        type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="video-overlay">
@@ -481,7 +534,8 @@
     <section id="study-destinations" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Study Destinations</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore top study destinations worldwide with Crown Global.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore top study destinations
+                worldwide with Crown Global.</p>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="destination-card bg-white rounded-xl shadow-lg p-6">
                     <i class="fas fa-globe-asia text-3xl text-amber-500 mb-4"></i>
@@ -520,7 +574,8 @@
     <section id="process-timeline" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Your Study Abroad Journey</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">A step-by-step guide to studying abroad with Crown Global.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">A step-by-step guide to studying abroad
+                with Crown Global.</p>
             <div class="relative">
                 <div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500 hidden md:block"></div>
                 <div class="space-y-12 ml-0 md:ml-8">
@@ -552,23 +607,29 @@
     <section id="student-testimonials" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Student Voices</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Discover the experiences of students who trusted us with their global education journey.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Discover the experiences of students
+                who trusted us with their global education journey.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/1.jpg" alt="Student Testimonial 1" class="w-full h-full object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/1.jpg" alt="Student Testimonial 1"
+                        class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/2.jpg" alt="Student Testimonial 2" class="w-full h-full object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/2.jpg" alt="Student Testimonial 2"
+                        class="w-full h-full object-cover rounded-t-xl mb-4">
 
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/3.jpg" alt="Student Testimonial 3" class="w-full h-full object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/3.jpg" alt="Student Testimonial 3"
+                        class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/4.jpg" alt="Student Testimonial 4" class="w-full h-full object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/4.jpg" alt="Student Testimonial 4"
+                        class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
                 <div class="student-testimonial-card bg-white rounded-xl shadow-lg p-6">
-                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/5.jpg" alt="Student Testimonial 5" class="w-full h-full object-cover rounded-t-xl mb-4">
+                    <img src="https://hdblob1.blob.core.windows.net/crownglobal/5.jpg" alt="Student Testimonial 5"
+                        class="w-full h-full object-cover rounded-t-xl mb-4">
                 </div>
             </div>
         </div>
@@ -579,7 +640,8 @@
     <section id="faqs" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Frequently Asked Questions</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Answers to common questions about studying abroad.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Answers to common questions about
+                studying abroad.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="faq-card bg-white rounded-xl shadow-lg p-6">
                     <div class="faq-toggle flex justify-between items-center">
@@ -587,7 +649,8 @@
                         <i class="fas fa-chevron-down text-amber-500"></i>
                     </div>
                     <div class="faq-content mt-4 text-gray-600">
-                        <p>We partner with top universities in Canada, Australia, UAE, and more. Contact us for a tailored list.</p>
+                        <p>We partner with top universities in Canada, Australia, UAE, and more. Contact us for a
+                            tailored list.</p>
                     </div>
                 </div>
                 <div class="faq-card bg-white rounded-xl shadow-lg p-6">
@@ -596,7 +659,8 @@
                         <i class="fas fa-chevron-down text-amber-500"></i>
                     </div>
                     <div class="faq-content mt-4 text-gray-600">
-                        <p>Visa processing times vary by country, typically 4-12 weeks. We streamline the process for you.</p>
+                        <p>Visa processing times vary by country, typically 4-12 weeks. We streamline the process for
+                            you.</p>
                     </div>
                 </div>
                 <div class="faq-card bg-white rounded-xl shadow-lg p-6">
@@ -605,7 +669,8 @@
                         <i class="fas fa-chevron-down text-amber-500"></i>
                     </div>
                     <div class="faq-content mt-4 text-gray-600">
-                        <p>We guide you to scholarship opportunities offered by universities and external organizations.</p>
+                        <p>We guide you to scholarship opportunities offered by universities and external organizations.
+                        </p>
                     </div>
                 </div>
                 <div class="faq-card bg-white rounded-xl shadow-lg p-6">
@@ -624,8 +689,11 @@
     <section id="cta" class="py-24 bg-white text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Live Your Study Abroad Dream</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let’s start your journey with personalized guidance and support.</p>
-            <button id="cta-btn" class="bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Get Started</button>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black">Let’s start your journey with personalized
+                guidance and support.</p>
+            <button id="cta-btn"
+                class="bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Get
+                Started</button>
         </div>
     </section>
     <!-- Footer -->
@@ -635,7 +703,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
+                        excellence.</p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Explore</h3>
@@ -647,14 +716,18 @@
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
+                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
+                        Sri Lanka</p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
+                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
+                            5108</a></p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476"
+                            class="text-gray-400 hover:text-amber-400">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
@@ -688,7 +761,8 @@
                     <option value="Other">Other</option>
                 </select>
                 <label for="inquiry-message">Message</label>
-                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we assist you?" required></textarea>
+                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we assist you?"
+                    required></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -880,4 +954,5 @@
         });
     </script>
 </body>
+
 </html>
