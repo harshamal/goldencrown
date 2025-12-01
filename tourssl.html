@@ -1,24 +1,33 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Sri Lanka’s wonders with Crown Global Services. Explore ancient heritage, pristine beaches, thrilling safaris, tea estates, and vibrant festivals through our curated tours.">
-    <meta name="keywords" content="Sri Lanka tours, cultural heritage, beach holidays, wildlife safaris, tea estates, adventure travel, Crown Global Services">
+    <meta name="description"
+        content="Discover Sri Lanka’s wonders with Crown Global Services. Explore ancient heritage, pristine beaches, thrilling safaris, tea estates, and vibrant festivals through our curated tours.">
+    <meta name="keywords"
+        content="Sri Lanka tours, cultural heritage, beach holidays, wildlife safaris, tea estates, adventure travel, Crown Global Services">
     <meta name="author" content="Crown Global Services">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Explore Sri Lanka - Crown Global Services">
-    <meta property="og:description" content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta property="og:description"
+        content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <meta property="og:url" content="https://crownglobalservices.com/tourssl.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Explore Sri Lanka - Crown Global Services">
-    <meta name="twitter:description" content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
+    <meta name="twitter:description"
+        content="Experience Sri Lanka’s ancient temples, turquoise shores, wildlife adventures, and vibrant culture with our expertly crafted tours.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80">
     <title>Explore Sri Lanka - Crown Global Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -31,7 +40,10 @@
             margin: 0;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Playfair Display', serif;
         }
 
@@ -69,15 +81,15 @@
             overflow: hidden;
         }
 
-            .ripple::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background: rgba(255, 255, 255, 0.3);
-                border-radius: 9999px;
-                transform: scale(0);
-                animation: ripple 0.6s linear;
-            }
+        .ripple::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 9999px;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+        }
 
         @keyframes ripple {
             to {
@@ -94,18 +106,18 @@
             background: #1e435e;
         }
 
-            .tour-card:hover {
-                transform: translateY(-12px) rotateY(5deg);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            }
+        .tour-card:hover {
+            transform: translateY(-12px) rotateY(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
-            .tour-card img {
-                transition: transform 0.5s ease;
-            }
+        .tour-card img {
+            transition: transform 0.5s ease;
+        }
 
-            .tour-card:hover img {
-                transform: scale(1.15);
-            }
+        .tour-card:hover img {
+            transform: scale(1.15);
+        }
 
         .tour-card-overlay {
             position: absolute;
@@ -130,18 +142,18 @@
             width: 100%;
         }
 
-            .testimonial-slider .grid {
-                display: flex;
-                width: max-content;
-            }
+        .testimonial-slider .grid {
+            display: flex;
+            width: max-content;
+        }
 
         .testimonial-card {
             transition: transform 0.4s ease;
         }
 
-            .testimonial-card:hover {
-                transform: scale(1.08);
-            }
+        .testimonial-card:hover {
+            transform: scale(1.08);
+        }
 
         #map {
             height: 600px;
@@ -165,11 +177,11 @@
             position: relative;
         }
 
-            .carousel-item img {
-                width: 100%;
-                height: 600px;
-                object-fit: cover;
-            }
+        .carousel-item img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
 
         .carousel-overlay {
             position: absolute;
@@ -199,17 +211,17 @@
             z-index: 10;
         }
 
-            .carousel-btn:hover {
-                background: #f59e0b;
-            }
+        .carousel-btn:hover {
+            background: #f59e0b;
+        }
 
-            .carousel-btn.prev {
-                left: 1.5rem;
-            }
+        .carousel-btn.prev {
+            left: 1.5rem;
+        }
 
-            .carousel-btn.next {
-                right: 1.5rem;
-            }
+        .carousel-btn.next {
+            right: 1.5rem;
+        }
 
         .video-container {
             position: relative;
@@ -220,22 +232,22 @@
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
-            .video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         .culture-card {
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-            .culture-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
+        .culture-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
         /* Popup Styles */
         .popup-overlay {
@@ -253,10 +265,10 @@
             transition: opacity 0.3s ease;
         }
 
-            .popup-overlay.active {
-                display: flex;
-                opacity: 1;
-            }
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
 
         .popup-content {
             background: white;
@@ -286,9 +298,9 @@
             color: #333;
         }
 
-            .popup-close:hover {
-                color: #f59e0b;
-            }
+        .popup-close:hover {
+            color: #f59e0b;
+        }
 
         .popup-content h3 {
             font-family: 'Playfair Display', serif;
@@ -323,12 +335,12 @@
             transition: border-color 0.3s ease;
         }
 
-            .popup-content input:focus,
-            .popup-content select:focus,
-            .popup-content textarea:focus {
-                border-color: #047857;
-                outline: none;
-            }
+        .popup-content input:focus,
+        .popup-content select:focus,
+        .popup-content textarea:focus {
+            border-color: #047857;
+            outline: none;
+        }
 
         .popup-content button[type="submit"] {
             background: #047857;
@@ -341,9 +353,9 @@
             transition: background 0.3s ease;
         }
 
-            .popup-content button[type="submit"]:hover {
-                background: #f59e0b;
-            }
+        .popup-content button[type="submit"]:hover {
+            background: #f59e0b;
+        }
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -360,26 +372,37 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
 
 </head>
+
 <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
     <header class="header z-50">
         <div class="flex justify-between items-center px-6 py-4">
             <div>
                 <a href="index.html">
-                    <img class="logo nav-link text-white hover:text-amber-800" src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png" alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
+                    <img class="logo nav-link text-white hover:text-amber-800"
+                        src="https://hdblob1.blob.core.windows.net/crownglobal/228afb95-7a1c-4e4d-b445-ee0372887a9b.png"
+                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod active-link" style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod" style="font-size: small !important" id="nav-contact">Contact</a>
+                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size:small !important" id="nav-home">Home</a>
+                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-tours">Tours</a>
+                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod active-link"
+                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-education">Education</a>
+                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod"
+                    style="font-size: small !important" id="nav-contact">Contact</a>
 
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
@@ -396,7 +419,8 @@
             <div class="flex items-center">
                 <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -405,20 +429,24 @@
             <div class="flex justify-end p-4">
                 <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                     </svg>
                 </button>
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500" id="mobile-nav-home">Home</a>
+                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
+                    id="mobile-nav-home">Home</a>
                 <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
-                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Explore Sri Lanka</a>
+                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Explore
+                    Sri Lanka</a>
                 <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
                 <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Education</a>
                 <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
                 <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Contact</a>
                 <div class="flex flex-col text-sm text-gray-800">
-                    <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-500">info@crownglobalservices.com</a>
+                    <a href="mailto:info@crownglobalservices.com"
+                        class="hover:text-amber-500">info@crownglobalservices.com</a>
                     <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
                 </div>
             </nav>
@@ -428,14 +456,19 @@
 
     <!-- Hero Section with Video Background -->
     <section class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d">
-            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline
+            poster="https://images.unsplash.com/photo-1519608487953-e999c86e1a9d">
+            <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4"
+                type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="text-5xl md:text-8xl font-bold mb-6 text-white">Discover Sri Lanka’s Magic</h1>
-            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white font-bold">Journey through ancient ruins, emerald hills, and turquoise shores with our expertly curated adventures.</p>
-            <button id="begin-journey-btn" class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Begin Your Journey</button>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white font-bold">Journey through ancient ruins,
+                emerald hills, and turquoise shores with our expertly curated adventures.</p>
+            <button id="begin-journey-btn"
+                class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Begin
+                Your Journey</button>
         </div>
     </section>
 
@@ -449,108 +482,150 @@
                 <div class="carousel-track flex transition-transform duration-700 ease-in-out">
                     <!-- Sigiriya -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sigiriya Rock Fortress">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Sigiriya Rock Fortress">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Sigiriya Rock Fortress</h3>
-                                <p class="text-xl max-w-lg mx-auto">Ascend this UNESCO World Heritage Site, adorned with ancient frescoes and offering breathtaking views.</p>
+                                <p class="text-xl max-w-lg mx-auto">Ascend this UNESCO World Heritage Site, adorned with
+                                    ancient frescoes and offering breathtaking views.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Mirissa Beach -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://media.timeout.com/images/106252539/image.jpg" alt="Mirissa Beach">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://media.timeout.com/images/106252539/image.jpg" alt="Mirissa Beach">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Mirissa Beach</h3>
-                                <p class="text-xl max-w-lg mx-auto">Surf, swim, and savor sunsets on this vibrant southern coast, a haven for beach lovers.</p>
+                                <p class="text-xl max-w-lg mx-auto">Surf, swim, and savor sunsets on this vibrant
+                                    southern coast, a haven for beach lovers.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Yala National Park -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg" alt="Yala National Park">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg"
+                            alt="Yala National Park">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Yala National Park</h3>
-                                <p class="text-xl max-w-lg mx-auto">Embark on thrilling safaris to spot leopards, elephants, and exotic wildlife.</p>
+                                <p class="text-xl max-w-lg mx-auto">Embark on thrilling safaris to spot leopards,
+                                    elephants, and exotic wildlife.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Kandy -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://www.andbeyond.com/wp-content/uploads/sites/5/kandy-3.jpg" alt="Kandy">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://www.andbeyond.com/wp-content/uploads/sites/5/kandy-3.jpg" alt="Kandy">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Kandy</h3>
-                                <p class="text-xl max-w-lg mx-auto">Visit the sacred Temple of the Tooth and experience the vibrant Esala Perahera festival.</p>
+                                <p class="text-xl max-w-lg mx-auto">Visit the sacred Temple of the Tooth and experience
+                                    the vibrant Esala Perahera festival.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Ella -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840" alt="Ella">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840"
+                            alt="Ella">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Ella</h3>
-                                <p class="text-xl max-w-lg mx-auto">Hike through tea plantations and marvel at the scenic Nine Arch Bridge.</p>
+                                <p class="text-xl max-w-lg mx-auto">Hike through tea plantations and marvel at the
+                                    scenic Nine Arch Bridge.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Nuwara Eliya -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://media-cdn.tripadvisor.com/media/photo-s/2d/58/77/95/grand-hotel-nuwara-eliya.jpg" alt="Nuwara Eliya">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://media-cdn.tripadvisor.com/media/photo-s/2d/58/77/95/grand-hotel-nuwara-eliya.jpg"
+                            alt="Nuwara Eliya">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Nuwara Eliya</h3>
-                                <p class="text-xl max-w-lg mx-auto">Stroll through cool tea country, colonial bungalows, and botanical gardens in Little England.</p>
+                                <p class="text-xl max-w-lg mx-auto">Stroll through cool tea country, colonial bungalows,
+                                    and botanical gardens in Little England.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Anuradhapura -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://travelrebels.com/wp-content/uploads/2024/04/mihintale-viewpoint-1675x1116-1-800x533.jpg" alt="Anuradhapura">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://travelrebels.com/wp-content/uploads/2024/04/mihintale-viewpoint-1675x1116-1-800x533.jpg"
+                            alt="Anuradhapura">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Anuradhapura</h3>
-                                <p class="text-xl max-w-lg mx-auto">Explore ancient stupas, sacred Bo tree shrines, and millennia-old monastic ruins.</p>
+                                <p class="text-xl max-w-lg mx-auto">Explore ancient stupas, sacred Bo tree shrines, and
+                                    millennia-old monastic ruins.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Dambulla Cave Temple -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg" alt="Dambulla Cave Temple">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg"
+                            alt="Dambulla Cave Temple">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Dambulla Cave Temple</h3>
-                                <p class="text-xl max-w-lg mx-auto">Marvel at colorful frescoes and Buddha statues inside sacred rock caves.</p>
+                                <p class="text-xl max-w-lg mx-auto">Marvel at colorful frescoes and Buddha statues
+                                    inside sacred rock caves.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Polonnaruwa -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://www.lankatourexperts.com/wp-content/uploads/2018/12/Polonnaruwa-Ancient-City-Sri-Lanka-Economy-Tours.png.webp" alt="Polonnaruwa">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://www.lankatourexperts.com/wp-content/uploads/2018/12/Polonnaruwa-Ancient-City-Sri-Lanka-Economy-Tours.png.webp"
+                            alt="Polonnaruwa">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Polonnaruwa</h3>
-                                <p class="text-xl max-w-lg mx-auto">Walk through ancient royal palaces, temples, and beautifully carved statues from Sri Lanka’s medieval capital.</p>
+                                <p class="text-xl max-w-lg mx-auto">Walk through ancient royal palaces, temples, and
+                                    beautifully carved statues from Sri Lanka’s medieval capital.</p>
                             </div>
                         </div>
                     </div>
                     <!-- Trincomalee -->
                     <div class="carousel-item relative flex-shrink-0 w-full">
-                        <img class="w-full h-[600px] object-cover" src="https://us.lakpura.com/cdn/shop/files/LKI9500075-01-E_b9676f68-bb02-4827-ad28-9de134e5b198.jpg?v=1653459755&width=3200" alt="Trincomalee">
-                        <div class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
+                        <img class="w-full h-[600px] object-cover"
+                            src="https://us.lakpura.com/cdn/shop/files/LKI9500075-01-E_b9676f68-bb02-4827-ad28-9de134e5b198.jpg?v=1653459755&width=3200"
+                            alt="Trincomalee">
+                        <div
+                            class="carousel-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white text-center">
                             <div>
                                 <h3 class="text-4xl font-bold mb-3">Trincomalee</h3>
-                                <p class="text-xl max-w-lg mx-auto">Relax on unspoiled beaches or dive into marine wonders off the northeast coast.</p>
+                                <p class="text-xl max-w-lg mx-auto">Relax on unspoiled beaches or dive into marine
+                                    wonders off the northeast coast.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Navigation Buttons -->
-                <button class="carousel-btn prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white text-xl px-3 py-2 rounded-full z-10 hover:bg-amber-500" aria-label="Previous Slide">←</button>
-                <button class="carousel-btn next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white text-xl px-3 py-2 rounded-full z-10 hover:bg-amber-500" aria-label="Next Slide">→</button>
+                <button
+                    class="carousel-btn prev absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white text-xl px-3 py-2 rounded-full z-10 hover:bg-amber-500"
+                    aria-label="Previous Slide">←</button>
+                <button
+                    class="carousel-btn next absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white text-xl px-3 py-2 rounded-full z-10 hover:bg-amber-500"
+                    aria-label="Next Slide">→</button>
             </div>
         </div>
         <style>
@@ -566,63 +641,99 @@
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Unforgettable Experiences</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg" alt="Cultural Odyssey" class="w-full h-72 object-cover">
+                    <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg"
+                        alt="Cultural Odyssey" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Cultural Odyssey" data-description="Explore ancient cities, sacred temples, and colorful festivals that weave Sri Lanka’s rich heritage.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Cultural Odyssey"
+                            data-description="Explore ancient cities, sacred temples, and colorful festivals that weave Sri Lanka’s rich heritage.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Cultural Odyssey</h3>
-                        <l class="text-white mb-4">Explore ancient cities, sacred temples, and colorful festivals that weave Sri Lanka’s rich heritage.</l>
+                        <l class="text-white mb-4">Explore ancient cities, sacred temples, and colorful festivals that
+                            weave Sri Lanka’s rich heritage.</l>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg" alt="Coastal Escape" class="w-full h-72 object-cover">
+                    <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg"
+                        alt="Coastal Escape" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Coastal Escape" data-description="Relax on pristine beaches, dive into coral reefs, and enjoy oceanfront dining.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Coastal Escape"
+                            data-description="Relax on pristine beaches, dive into coral reefs, and enjoy oceanfront dining.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Coastal Escape</h3>
-                        <l class="text-white mb-4">Relax on pristine beaches, dive into coral reefs, and enjoy oceanfront dining.</l>
+                        <l class="text-white mb-4">Relax on pristine beaches, dive into coral reefs, and enjoy
+                            oceanfront dining.</l>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://blog.cinnamonhotels.com/wp-content/uploads/2019/01/JPEG14453.jpg" alt="Wildlife Safari" class="w-full h-72 object-cover">
+                    <img src="https://blog.cinnamonhotels.com/wp-content/uploads/2019/01/JPEG14453.jpg"
+                        alt="Wildlife Safari" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Wildlife Safari" data-description="Venture into national parks to encounter elephants, leopards, and diverse birdlife.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Wildlife Safari"
+                            data-description="Venture into national parks to encounter elephants, leopards, and diverse birdlife.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Wildlife Safari</h3>
-                        <l class="text-white mb-4">Venture into national parks to encounter elephants, leopards, and diverse birdlife.</l>
+                        <l class="text-white mb-4">Venture into national parks to encounter elephants, leopards, and
+                            diverse birdlife.</l>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg" alt="Tea Trail" class="w-full h-72 object-cover">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg"
+                        alt="Tea Trail" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Tea Trail Adventure" data-description="Wander through lush tea estates in Nuwara Eliya and learn the art of tea-making.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Tea Trail Adventure"
+                            data-description="Wander through lush tea estates in Nuwara Eliya and learn the art of tea-making.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Tea Trail Adventure</h3>
-                        <l class="text-white mb-4">Wander through lush tea estates in Nuwara Eliya and learn the art of tea-making.</l>
+                        <l class="text-white mb-4">Wander through lush tea estates in Nuwara Eliya and learn the art of
+                            tea-making.</l>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://srilankatravelpages.com/my_content/uploads/2023/02/Trekking-and-Hiking-in-Sri-Lanka.jpg" alt="Adventure Trek" class="w-full h-72 object-cover">
+                    <img src="https://srilankatravelpages.com/my_content/uploads/2023/02/Trekking-and-Hiking-in-Sri-Lanka.jpg"
+                        alt="Adventure Trek" class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Highland Trek" data-description="Hike Adam’s Peak or Knuckles Range for stunning views and spiritual serenity.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Highland Trek"
+                            data-description="Hike Adam’s Peak or Knuckles Range for stunning views and spiritual serenity.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Highland Trek</h3>
-                        <l class="text-white mb-4">Hike Adam’s Peak or Knuckles Range for stunning views and spiritual serenity.</l>
+                        <l class="text-white mb-4">Hike Adam’s Peak or Knuckles Range for stunning views and spiritual
+                            serenity.</l>
                     </div>
                 </div>
                 <div class="tour-card rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://www.lakpura.com/images/LK94007896-01-E.JPG" alt="Culinary Journey" class="w-full h-72 object-cover">
+                    <img src="https://www.lakpura.com/images/LK94007896-01-E.JPG" alt="Culinary Journey"
+                        class="w-full h-72 object-cover">
                     <div class="tour-card-overlay">
-                        <button class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600" data-tour="Culinary Journey" data-description="Savor authentic Sri Lankan cuisine through cooking classes and local food tours.">Discover Now</button>
+                        <button
+                            class="discover-btn text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600"
+                            data-tour="Culinary Journey"
+                            data-description="Savor authentic Sri Lankan cuisine through cooking classes and local food tours.">Discover
+                            Now</button>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-3">Culinary Journey</h3>
-                        <l class="text-white mb-4">Savor authentic Sri Lankan cuisine through cooking classes and local food tours.</l>
+                        <l class="text-white mb-4">Savor authentic Sri Lankan cuisine through cooking classes and local
+                            food tours.</l>
                     </div>
                 </div>
             </div>
@@ -632,329 +743,733 @@
 
 
     <!-- Tour Packages Section -->
-    <section id="tour-packages" class="py-24 bg-gray-300 relative overflow-hidden">
+    <!-- Tour Packages Section -->
+    <!-- Tour Packages Section -->
+    <section id="tour-packages" class="relative min-h-screen bg-stone-50 text-stone-800 py-24 overflow-hidden">
         <style>
-            .brochure-container {
-                background: white !important;
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 6px;
             }
 
-            h5 {
-                color: blue;
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.05);
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(217, 119, 6, 0.3);
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(216, 165, 32, 0.6);
+            }
+
+            .tour-item.active {
+                background: rgba(255, 255, 255, 0.8);
+                border-color: rgba(217, 119, 6, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            }
+
+            .tour-item.active .tour-index {
+                color: goldenrod;
+            }
+
+            .tour-item.active .tour-title {
+                color: #1c1917;
+                font-weight: 600;
             }
         </style>
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-16 animate__animated animate__fadeInDown">
-                Discover Our Exclusive Tour Packages
-            </h2>
 
-            <!-- Tabs Navigation -->
-            <div class="flex justify-center space-x-4 mb-12">
-                <button class="tour-tab px-6 py-3 bg-white/80 rounded-lg shadow-md hover:bg-blue-100 transition-all duration-300 text-lg font-semibold text-gray-700 hover:text-emerald-600 data-[active]:bg-blue-600 data-[active]:text-white" data-tab="heritage">Heritage Journey</button>
-                <button class="tour-tab px-6 py-3 bg-white/80 rounded-lg shadow-md hover:bg-blue-100 transition-all duration-300 text-lg font-semibold text-gray-700 hover:text-emerald-600 data-[active]:bg-blue-600 data-[active]:text-white" data-tab="coastal">Coastal Adventure</button>
-                <button class="tour-tab px-6 py-3 bg-white/80 rounded-lg shadow-md hover:bg-blue-100 transition-all duration-300 text-lg font-semibold text-gray-700 hover:text-emerald-600 data-[active]:bg-blue-600 data-[active]:text-white" data-tab="cultural">Cultural Odyssey</button>
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
             </div>
+            <div class="absolute -right-32 -top-32 w-96 h-96 bg-amber-200/30 rounded-full blur-[100px]"></div>
+            <div class="absolute -left-32 bottom-0 w-96 h-96 bg-orange-100/40 rounded-full blur-[100px]"></div>
+        </div>
 
-            <!-- Tour Packages Content -->
-            <div class="tour-packages-content">
-                <!-- Heritage Journey -->
-                <div class="tour-package hidden" data-package="heritage">
-                    <div>
-                        <h3 class="text-3xl font-bold mb-4 flex justify-center space-x-4 mb-12">Sri Lanka Heritage Journey</h3>
-                        <p class="text-gray-600 mb-6 flex justify-center space-x-4 mb-12">An 8-day odyssey through ancient ruins, wildlife, and scenic landscapes.</p>
-                        <p class="flex justify-center space-x-4 mb-12"><button class="expand-package-btn bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all duration-300 transform hover:scale-105" data-package="heritage">Explore Itinerary</button></p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="md:col-span-4">
-                            <div class="brochure-container hidden bg-gradient-to-br from-emerald-50 to-white/95 rounded-2xl shadow-2xl p-8 border border-emerald-100 transform-style-3d perspective-1000">
-                                <div class="text-center mb-8">
-                                    <h4 class="text-3xl font-bold text-emerald-700 mb-4">Heritage Journey Itinerary</h4>
-                                    <p class="text-gray-700 text-lg mb-6">Embark on a cultural odyssey through Sri Lanka’s ancient ruins, wildlife, and scenic beauty.</p>
-                                </div>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <!-- Each Day Card -->
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 1: Pinnawala & Sigiriya Rock</h5>
-                                        <img src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Arrive at Bandaranaike International Airport, meet your guide, and visit the Pinnawala Elephant Orphanage. Travel to Sigiriya, check into your hotel, and visit the Sigiriya Rock Fortress.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 2: Polonnaruwa</h5>
-                                        <img src="https://www.lankatourexperts.com/wp-content/uploads/2018/12/Polonnaruwa-Ancient-City-Sri-Lanka-Economy-Tours.png.webp" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Breakfast at the hotel, travel to Polonnaruwa to visit cultural sites, including ancient palaces and temples. Afternoon jeep safari in Minneriya National Park to see elephants and wildlife.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 3: Golden Rock Temple & Temple of the Tooth</h5>
-                                        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Kandy via Dambulla, visit the Golden Rock Temple’s frescoes, and the Nalanda Gedige temple. In Kandy, visit the Temple of the Tooth and enjoy a cultural dance.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 4: Tea Factory & Ramboda Waterfall</h5>
-                                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/2d/58/77/95/grand-hotel-nuwara-eliya.jpg" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Nuwara Eliya, visit a tea factory and Ramboda Waterfall. Enjoy a city tour and visit Gregory Lake in the evening.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 5: Ella Gap & Ravana Waterfall</h5>
-                                        <img src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840" alt="Ella Gap & Ravana" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Yala, visit Ella Gap and Ravana Waterfall. Evening game drive in Yala National Park to spot wildlife.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 6: Rathnapura Gem Mine</h5>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCUfIJetoC0vlNGrVMYBjdR7AKVfTgV7aUFw&s" alt="Rathnapura Gem Mine" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Colombo via Rathnapura, visit the gem mines, and explore the Gem Museum.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 7: Colombo & Negombo</h5>
-                                        <img src="https://duqjpivknq39s.cloudfront.net/2019/03/800x750-3.jpg" alt="Colombo & Negombo" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">City tour in Colombo, then travel to Negombo for a beach vacation and seafood dining.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 8: Depart</h5>
-                                        <img src="https://talknerdy2me.org/wp-content/uploads/2012/05/departure-sign.jpg" alt="Depart" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Depart in good time for your flight home from the airport.</p>
-                                    </div>
-                                </div>
-                                <!-- Inquiry Form -->
-                                <div class="mt-10 p-6 bg-white rounded-xl shadow-md border border-emerald-200">
-                                    <h4 class="text-xl font-bold text-emerald-700 mb-4">Book This Package</h4>
-                                    <form action="https://formspree.io/f/mjkrkjya" method="POST" class="space-y-4">
-                                        <input type="hidden" name="Package" value="Heritage Journey">
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
-                                            <input type="text" name="Name" placeholder="Enter your name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
-                                            <input type="email" name="Email" placeholder="Enter your email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Phone Number</label>
-                                            <input type="tel" name="Phone" placeholder="Enter your phone number" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Travel Date</label>
-                                            <input type="date" name="Travel Date" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Group Size</label>
-                                            <input type="number" name="Group Size" min="1" placeholder="Number of travelers" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Additional Info</label>
-                                            <textarea name="Additional Information" rows="3" placeholder="Any special requests?" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-                                        </div>
-                                        <button type="submit" class="w-full bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-all duration-300">Submit Inquiry</button>
-                                    </form>
-                                </div>
-                            </div>
+        <div class="container mx-auto px-6 relative z-10 h-full">
+            <div class="flex flex-col lg:flex-row gap-12 h-full items-stretch">
+
+                <!-- Left Side: List -->
+                <div class="lg:w-1/3 flex flex-col h-[80vh]">
+                    <div class="mb-8 shrink-0">
+                        <div class="flex items-center gap-3 text-amber-800 mb-2">
+                            <div class="h-px w-8 bg-amber-800"></div>
+                            <span class="uppercase tracking-[0.3em] text-xs font-bold">Curated Journeys</span>
                         </div>
+                        <h2 class="text-4xl md:text-6xl font-serif leading-none text-stone-900">
+                            Explore <br /> <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-amber-800">Sri
+                                Lanka</span>
+                        </h2>
                     </div>
-                </div>
-                <!-- Coastal Adventure -->
-                <div class="tour-package hidden" data-package="coastal">
-                    <div>
-                        <h3 class="text-3xl font-bold text-emerald-700 mb-4 flex justify-center space-x-4 mb-12">Sri Lanka Coastal Adventure</h3>
-                        <p class="text-gray-600 mb-6 flex justify-center space-x-4 mb-12">A 7-day journey blending beaches, culture, and highland treks.</p>
-                        <p class="flex justify-center space-x-4 mb-12"><button class="expand-package-btn bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all duration-300 transform hover:scale-105" data-package="coastal">Explore Itinerary</button></p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="md:col-span-4">
-                            <div class="brochure-container hidden bg-gradient-to-br from-emerald-50 to-white/95 rounded-2xl shadow-2xl p-8 border border-emerald-100 transform-style-3d perspective-1000">
-                                <div class="text-center mb-8">
-                                    <h4 class="text-3xl font-bold text-emerald-700 mb-4">Coastal Adventure Itinerary</h4>
-                                    <p class="text-gray-700 text-lg mb-6">Experience pristine beaches, thrilling treks, and cultural landmarks along Sri Lanka’s coast.</p>
-                                </div>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <!-- Each Day Card -->
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 1: Colombo</h5>
-                                        <img src="https://media.istockphoto.com/id/2150515282/photo/lotus-tower-colombo-sri-lanka.jpg?s=612x612&w=0&k=20&c=6vjhhOkfdEk94dj8L6OLL2FwcLwnvcbAtii50Ti-pwc=" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Arrive at Bandaranaike International Airport, meet your guide, and transfer to a hotel in Colombo. Rest of the day at leisure to explore the city.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 2: Elephant Orphanage & Temple of the Tooth</h5>
-                                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/28/43/c9.jpg" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Kandy, visit the Pinnawala Elephant Orphanage, and explore the Temple of the Tooth with a cultural dance in the evening.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 3: Tea Factory & Ramboda Waterfall</h5>
-                                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/2d/58/77/95/grand-hotel-nuwara-eliya.jpg" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Nuwara Eliya, visit a tea factory and Ramboda Waterfall, and enjoy a city tour including Gregory Lake.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 4: Horton Plains & Kalani River</h5>
-                                        <img src="https://www.visitceylon.net/wp-content/uploads/2024/12/Horton-Plains-1-of-1.jpg" alt="Horton Plains & Kalani" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Early morning hike in Horton Plains, then travel to Kitulgala for a visit to the Kelani River, site of "Bridge on the River Kwai."</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 5: Beach Vacation</h5>
-                                        <img src="https://media.timeout.com/images/106252539/image.jpg" alt="Beach Vacation" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Travel to Weligama for a beach vacation, enjoy strolling on the golden beach and water activities.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 6: Enjoy Your Beach Vacation</h5>
-                                        <img src="https://media.timeout.com/images/105311228/750/562/image.jpg" alt="Beach Vacation" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Continue your beach stay with water skiing, wind surfing, or relaxing with tropical drinks.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 7: Depart</h5>
-                                        <img src="https://talknerdy2me.org/wp-content/uploads/2012/05/departure-sign.jpg" alt="Depart" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Tour Galle Dutch Fortress and Colombo, then transfer to the airport for departure.</p>
-                                    </div>
-                                </div>
-                                <!-- Inquiry Form -->
-                                <div class="mt-10 p-6 bg-white rounded-xl shadow-md border border-emerald-200">
-                                    <h4 class="text-xl font-bold text-emerald-700 mb-4">Book This Package</h4>
-                                    <form action="https://formspree.io/f/mjkrkjya" method="POST" class="space-y-4">
-                                        <input type="hidden" name="Package" value="Coastal Adventure">
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
-                                            <input type="text" name="Name" placeholder="Enter your name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
-                                            <input type="email" name="Email" placeholder="Enter your email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Phone Number</label>
-                                            <input type="tel" name="Phone" placeholder="Enter your phone number" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Travel Date</label>
-                                            <input type="date" name="Travel Date" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Group Size</label>
-                                            <input type="number" name="Group Size" min="1" placeholder="Number of travelers" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Additional Info</label>
-                                            <textarea name="Additional Information" rows="3" placeholder="Any special requests?" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-                                        </div>
-                                        <button type="submit" class="w-full bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-all duration-300">Submit Inquiry</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="flex-1 overflow-y-auto pr-4 space-y-3 custom-scrollbar" id="tour-list">
+                        <!-- List items will be injected here -->
                     </div>
                 </div>
 
-
-
-                <!-- Cultural Odyssey -->
-                <div class="tour-package hidden" data-package="cultural">
-                    <div>
-                        <h3 class="text-3xl font-bold text-emerald-700 mb-4 flex justify-center space-x-4 mb-12">Sri Lanka Cultural Odyssey</h3>
-                        <p class="text-gray-600 mb-6 flex justify-center space-x-4 mb-12">A 6-day dive into history, wildlife, and cultural treasures.</p>
-                        <p class="flex justify-center space-x-4 mb-12"><button class="expand-package-btn bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-all duration-300 transform hover:scale-105" data-package="cultural">Explore Itinerary</button></p>
+                <!-- Right Side: Details -->
+                <div class="lg:w-2/3 relative h-[80vh] bg-white/80 backdrop-blur-xl border border-stone-200/50 rounded-[2rem] overflow-hidden p-8 md:p-12 flex flex-col shadow-2xl shadow-stone-200/50"
+                    id="tour-detail-card">
+                    <div id="tour-content"
+                        class="relative z-10 h-full flex flex-col justify-between opacity-0 transition-opacity duration-500">
+                        <!-- Content injected by JS -->
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="md:col-span-4">
-                            <div class="brochure-container hidden bg-gradient-to-br from-emerald-50 to-white/95 rounded-2xl shadow-2xl p-8 border border-emerald-100 transform-style-3d perspective-1000">
-                                <div class="text-center mb-8">
-                                    <h4 class="text-3xl font-bold text-emerald-700 mb-4">Cultural Odyssey Itinerary</h4>
-                                    <p class="text-gray-700 text-lg mb-6">Dive into Sri Lanka’s rich history, ancient sites, and wildlife adventures.</p>
-                                </div>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <!-- Each Day Card -->
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 1: Negombo</h5>
-                                        <img src="https://content.r9cdn.net/rimg/dimg/16/71/1bacba85-city-46478-169110981a8.jpg?width=1366&height=768&xhint=1958&yhint=842&crop=true" alt="Negombo" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Arrive at Bandaranaike International Airport, meet your guide, and transfer to Negombo for a restful day.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 2: Pinnawala & Anuradhapura</h5>
-                                        <img src="https://travelrebels.com/wp-content/uploads/2024/04/mihintale-viewpoint-1675x1116-1-800x533.jpg" alt="Pinnawala & Anuradhapura" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Visit the Pinnawala Elephant Orphanage and explore the ancient city of Anuradhapura.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 3: Mihintale & Polonnaruwa</h5>
-                                        <img src="https://www.lankatourexperts.com/wp-content/uploads/2018/12/Polonnaruwa-Ancient-City-Sri-Lanka-Economy-Tours.png.webp" alt="Mihintale & Polonnaruwa" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Visit Mihintale’s pilgrimage site and the medieval capital of Polonnaruwa.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 4: Sigiriya & Minneriya National Park</h5>
-                                        <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/55/dd/5f.jpg" alt="Sigiriya & Minneriya" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Climb Sigiriya Rock Fortress and enjoy a safari in Minneriya National Park.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 5: Golden Rock Temple & Temple of the Tooth</h5>
-                                        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg" alt="Golden Rock & Temple" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">Explore Dambulla’s Golden Rock Temple and Kandy’s Temple of the Tooth.</p>
-                                    </div>
-                                    <div class="day-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 transform hover:-translate-y-2 hover:bg-emerald-50/50 border border-emerald-200">
-                                        <h5 class="text-xl font-semibold text-emerald-700 mb-2">Day 6: Depart</h5>
-                                        <img src="https://talknerdy2me.org/wp-content/uploads/2012/05/departure-sign.jpg" alt="Depart" class="w-full h-40 object-cover rounded-lg mb-2">
-                                        <p class="text-gray-600">City tour in Colombo and transfer to the airport for departure.</p>
-                                    </div>
-                                </div>
-                                <!-- Inquiry Form -->
-                                <div class="mt-10 p-6 bg-white rounded-xl shadow-md border border-emerald-200">
-                                    <h4 class="text-xl font-bold text-emerald-700 mb-4">Book This Package</h4>
-                                    <form action="https://formspree.io/f/mjkrkjya" method="POST" class="space-y-4">
-                                        <input type="hidden" name="Package" value="Cultural Odyssey">
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
-                                            <input type="text" name="Name" placeholder="Enter your name" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Email</label>
-                                            <input type="email" name="Email" placeholder="Enter your email" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Phone Number</label>
-                                            <input type="tel" name="Phone" placeholder="Enter your phone number" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Travel Date</label>
-                                            <input type="date" name="Travel Date" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Group Size</label>
-                                            <input type="number" name="Group Size" min="1" placeholder="Number of travelers" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                        </div>
-                                        <div>
-                                            <label class="block text-gray-700 text-sm font-medium mb-1">Additional Info</label>
-                                            <textarea name="Additional Information" rows="3" placeholder="Any special requests?" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
-                                        </div>
-                                        <button type="submit" class="w-full bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-all duration-300">Submit Inquiry</button>
-                                    </form>
-                                </div>
-                            </div>
+
+                    <!-- Background Image for Card -->
+                    <div class="absolute inset-0 z-0">
+                        <img id="tour-bg-image" src=""
+                            class="w-full h-full object-cover opacity-50 transition-transform duration-700 transform "
+                            alt="Tour Background">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Full Screen Tour Modal -->
+        <div id="tour-fullscreen-modal"
+            class="fixed inset-0 z-50 bg-black text-white opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col">
+            <!-- Background Image Layer -->
+            <div class="absolute inset-0 z-0">
+                <img id="fs-bg-image" src=""
+                    class="w-full h-full object-cover transition-transform duration-1000 transform scale-105"
+                    alt="Day Background">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+            </div>
+
+            <!-- Top Bar -->
+            <div class="relative z-20 flex justify-between items-center p-6 md:p-8">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-xl font-serif">
+                        CGS
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="text-amber-500 text-xs uppercase tracking-[0.3em] font-bold">Crown Global Services
+                        </div>
+                        <div id="fs-tour-title" class="text-white text-lg font-serif">Tour Title</div>
+                    </div>
+                </div>
+                <button onclick="closeFullscreenMode()"
+                    class="w-12 h-12 rounded-full border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors group">
+                    <i class="fas fa-times text-xl group-hover:rotate-90 transition-transform duration-300"></i>
+                </button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-24 max-w-7xl mx-auto w-full">
+                <div id="fs-content"
+                    class="space-y-6 md:space-y-8 transform translate-y-10 opacity-0 transition-all duration-700">
+                    <div class="flex items-center gap-4">
+                        <span id="fs-day-badge"
+                            class="px-5 py-2 rounded-full bg-amber-500 text-black font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(245,158,11,0.4)]">
+                            Day 01
+                        </span>
+                        <div class="h-px w-24 bg-gradient-to-r from-amber-500 to-transparent"></div>
+                    </div>
+
+                    <h2 id="fs-day-title"
+                        class="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg">
+                        The Awakening
+                    </h2>
+
+                    <p id="fs-day-desc"
+                        class="text-xl md:text-2xl text-stone-200 font-light leading-relaxed max-w-3xl drop-shadow-md border-l-4 border-amber-500 pl-6">
+                        Your spiritual odyssey begins. As you touch down, leave the modern world behind.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="relative z-20 p-6 md:p-12 flex items-end justify-between">
+                <!-- Progress Bar -->
+                <div class="absolute bottom-0 left-0 h-1 bg-white/10 w-full">
+                    <div id="fs-progress" class="h-full bg-amber-500 transition-all duration-500" style="width: 0%">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 text-stone-400 text-sm font-mono">
+                    <span id="fs-current-step">01</span>
+                    <span class="w-12 h-px bg-white/20"></span>
+                    <span id="fs-total-steps">06</span>
+                </div>
+
+                <div class="flex gap-4">
+                    <button onclick="prevFsDay()"
+                        class="w-14 h-14 rounded-full border border-white/20 hover:bg-amber-500 hover:border-amber-500 hover:text-black flex items-center justify-center text-white transition-all duration-300 group">
+                        <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                    </button>
+                    <button onclick="nextFsDay()"
+                        class="w-14 h-14 rounded-full border border-white/20 hover:bg-amber-500 hover:border-amber-500 hover:text-black flex items-center justify-center text-white transition-all duration-300 group">
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const tours = [
+                {
+                    id: 1,
+                    title: "Ramayamaya Trail",
+                    duration: "5 Nights / 6 Days",
+                    price: "$300 USD",
+                    description: "Step into the pages of an ancient epic. This isn't just a tour; it's a pilgrimage through time, tracing the footsteps of legends. Feel the spiritual energy of sacred sites where history and mythology blur into one profound experience.",
+                    highlights: "Munneswaram Temple, Sita Amman Temple, Ravana Falls, Divurampola.",
+                    image: "https://overatours.com/wp-content/uploads/2022/04/Munneswaram-Temple-4-2-1200x540.jpg",
+                    itinerary: [
+                        { day: "Day 1", title: "The Awakening", desc: "Stay overnight in Kandy covering up MANAWARI/MUNESWARM temples. Travel hrs 05.", image: "https://overatours.com/wp-content/uploads/2022/04/Munneswaram-Temple-4-2-1200x540.jpg" },
+                        { day: "Day 2", title: "Sacred Relics", desc: "Stay over in Kandy by road transport. Visit SECARED RELIC OF BUDDHA & SHIVAM temple. Travel hrs 04.", image: "https://www.andbeyond.com/wp-content/uploads/sites/5/Temple-Sacred-Tooth-Relic-kandy-sri-lanka.jpg" },
+                        { day: "Day 3", title: "Echoes of Sita", desc: "Stay over at MAHIYANGANA [former name WERAGANTOTA] airstrip and SITA KOTUWA at GURULUTOTA Mahiyangana. Travel hrs 3 and 30 mts.", image: "https://i.ytimg.com/vi/p7WpEtCbWt0/maxresdefault.jpg" },
+                        { day: "Day 4", title: "The Highland Sanctuary", desc: "Stay over at Nuwara Eliya covering up SRI HANUMAN BHAKTHA temple at Ramboda & SAVITHREE PADEEM at NuwarEliya. Travel time 5 hrs.", image: "https://cdn.lakpura.com/images/LK94009692-02-E.JPG" },
+                        { day: "Day 5", title: "Legends of Ella", desc: "Stay over at Ella covering up SITA AMMAN temple & DIVURAMPOLA temple at Welimada. And RAVANACAVES/RAVANFALLS in Ella. Travel time 4 hrs.", image: "https://www.lovesrilanka.org/wp-content/uploads/2020/04/LS_RavanaFalls_Desktop_1920x700.jpg" },
+                        { day: "Day 6", title: "The Final Blessing", desc: "Stayover in Colombo- visit  VIBHISHANA’s PALACE PALACE (NOW CALLED KEALANIYA TEMPLE). Departure to the airport saying bye to Pearl of Indian Ocean with lots of sweet memories. Travel time 6 hrs.", image: "https://cdn.lakpura.com/images/LK94009833-01-E.JPG" }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Mihipura Tour",
+                    duration: "5 Nights / 6 Days",
+                    price: "$750 USD",
+                    description: "A sensory explosion of Sri Lanka's finest. From the vibrant coral reefs to the misty peaks and wild jungles, this journey is designed to awaken every sense and leave you breathless with wonder.",
+                    highlights: "Hikkaduwa Coral Reef, Yala Safari, Galle Fort, Pinnawala Elephant Orphanage.",
+                    image: "https://media.timeout.com/images/106252539/image.jpg",
+                    itinerary: [
+                        { day: "Day 1", title: "Ocean's Embrace", desc: "After warm welcome by CGS Representative at the Colombo International Airport with a garland and then you will be transferred to the Hotel in Hikkaduwa via High Way. [Travel time 3 hrs]. After check in, relax and walk down to the world famous beach Hikkaduwa for sun bathing, glass bottom boat ride to see the coral garden. Evening site seeing. [Travel time 4 hrs].", image: "https://fernandotravels.com.au/_next/image?url=https%3A%2F%2Fcms.fernandotravels.com.au%2Fblog-point%2Fuploads%2F686b63eabef6a_Sri_Lankan_Beach.webp&w=3840&q=75" },
+                        { day: "Day 2", title: "Forts & Faith", desc: "After breakfast check-out and proceed to Tissamaharama. En-route visit Galle Dutch Fort, slattern at Hambantota. Evening visit Sri Skanda Temple and back to the Hotel. [Travel time 4 hrs].", image: "https://do6raq9h04ex.cloudfront.net/sites/8/2021/07/galle-fort-1050x700-1.jpg" },
+                        { day: "Day 3", title: "Wild & High", desc: "Early morning visit Yala wild life sanctuary. Back to Hotel, then proceed for Nuwara Eliya. En-route visit Ravana falls, Haggala Botanical Gardens. Check in to Hotel in Nuwara Eliya. [Travel time 6 hrs].", image: "https://www.bestoflanka.com/images/slider/dont-miss-when-in-sri-lanka/safari-in-yala-national-park/01.jpg" },
+                        {
+                            day: "Day 4", title: "The Cultural Heart", desc: "Heading for Kandy en-route visit famous tea producing factory Labukelle, visit Ramboda Falls. In the evening witness the cultural dance, visit the temple of tooth relic and bit of shopping. [Travel time 3 hrs].",
+                            image: "https://tripjive.com/wp-content/uploads/2024/10/Tea-plantations-near-Kandy-for-guided-tours-and-tastings.jpg"
+                        },
+                        { day: "Day 5", title: "Gentle Giants", desc: "Leaving for Colombo en-route visit the elephant orphanage in Pinnawela. Visit famous Bartaleeya (cashew nuts). Evening city tour of commercial capital of Sri Lanka visiting bazaar, shopping malls.", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/5b/ae/47/the-orphanage-was-founded.jpg?w=900&h=500&s=1" },
+                        {
+                            day: "Day 6", title: "Farewell", desc: "Departure to the Airport saying good bye to the Wonder of Asia with lots of sweet memories.",
+                            image: "https://lakpura.com/cdn/shop/files/LK950H0000-01-E_6184e3ee-35ea-4f21-87ba-e6e8b1ffef25.jpg?v=1690267687&width=3840"
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Grand Sri Lanka Circuit",
+                    duration: "7 Nights / 8 Days",
+                    price: "Inquire for Price",
+                    description: "The ultimate discovery. Uncover the hidden gems of the North, the ancient glory of the Cultural Triangle, and the untouched beauty of the East. This is Sri Lanka in its most authentic form.",
+                    highlights: "Jaffna Fort, Nallur Temple, Trincomalee Beaches, Sigiriya Rock, Temple of the Tooth.",
+                    image: "https://www.jetwinghotels.com/islandinsider/wp-content/uploads/2017/12/AdobeStock_93601309-1219x808.jpg",
+                    itinerary: [
+                        {
+                            day: "Day 1", title: "Ancient Capitals", desc: "On arrival you will be met and welcome by the representative of CGS and then transferred to hotel in Anuradhapura. After lunch city tour visiting the heritage sites of the 1st Kingdom of Sri Lanka. [Travel time 4 hrs].",
+                            image: "https://travelrebels.com/wp-content/uploads/2018/06/anuradhapura-sunset.jpg"
+                        },
+                        {
+                            day: "Day 2", title: "Northern Soul", desc: "Leave for Jaffna en-route site seeing. Evening site seeing and visit JAFFNA FORT, MANALKADU DESSERT, NILAVARI WELLS and Nallur KANDASWAMY Temple. [Travel time 4 hrs].",
+                            image: "https://thehaphazardtraveler.com/wp-content/uploads/2025/02/things-to-do-in-Jaffna-Sri-Lanka-Jaffna-travel-guide.jpg"
+                        },
+                        {
+                            day: "Day 3", title: "Eastern Shores", desc: "Leave for Trincomalee. Afternoon visit the famous eastern cost beach and evening visit the Fort Fredrick Dutch Fort. Visit KONESWARAM Temple and LOVERS LEAP. [Travel time 3 hrs].",
+                            image: "https://www.storyofsrilanka.com/images/slider/trincomalee-beach/01.jpg"
+                        },
+                        {
+                            day: "Day 4", title: "Medieval Marvels", desc: "Heading for Polonnaruwa the MEDIEVAL CAPITAL. Visit the heritage sites of the 2nd Kingdom of Sri Lanka. [Travel time 3 hrs].",
+                            image: "https://www.authenticindiatours.com/app/uploads/2022/04/UNESCO-World-Heritage-Site-Brahmanic-Monuments-Polonnaruwa-Sri-Lanka-1-1400x550-c-default.jpg"
+                        },
+                        {
+                            day: "Day 5", title: "The Lion Rock", desc: "Heading for Kandy en-route visit SIGIRIYA ROCK, GOLDEN CAVE TEMPLE in Dambulla, spice garden in Matale. In Kandy proceed on a city tour featuring the TEMPLE OF TOOTH RELIC. [Travel time 4 hrs].",
+                            image: "https://www.jetwinghotels.com/islandinsider/wp-content/uploads/2017/12/AdobeStock_93601309-1219x808.jpg"
+                        },
+                        {
+                            day: "Day 6", title: "Misty Mountains", desc: "Proceeding to Nuwara Eliya en route visit Ramboda Falls, Labukelle tea Factory. Arrive in Nuwara Eliya and proceed on city tour. [Travel time 3 hrs].",
+                            image: "https://pix10.agoda.net/hotelImages/304393/0/1c50907e5d84aafc0999cca5d4bab549.jpeg?ce=0&s=1024x768"
+                        },
+                        {
+                            day: "Day 7", title: "River Rush", desc: "Proceed to Kithulgala for white water rafting and rock pool sliding. En-route visit Devon falls, St. Clare's falls. Afternoon heading for Mount Lavinia. Evening Colombo city tour. [Travel time 5 hrs].",
+                            image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/ca/10/17.jpg"
+                        },
+                        {
+                            day: "Day 8", title: "Journey's End", desc: "Departure to the Airport saying bye to the Pearl of Indian Ocean with lots of sweet memories.",
+                            image: "https://lakpura.com/cdn/shop/files/LK950H0000-01-E_6184e3ee-35ea-4f21-87ba-e6e8b1ffef25.jpg?v=1690267687&width=3840"
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Geoffrey Bawa Architecture",
+                    duration: "5 Nights / 6 Days",
+                    price: "$900 USD",
+                    description: "A visual feast for the design lover. Immerse yourself in the genius of Geoffrey Bawa, the father of Tropical Modernism.",
+                    highlights: "Heritance Kandalama, Lunuganga Estate, Seema Malaka, Lighthouse Hotel.",
+                    image: "https://phantomhands.in/imager/media/geoffrey-bawa/32340/08_Geoffrey_Bawa_515cffaa34c7b727c9423a5db08aae1f.jpg",
+                    itinerary: [
+                        {
+                            day: "Day 1", title: "Tropical Welcome", desc: "After a warm welcome by CGS Representative, transferred to the BEACH HOTEL in Negombo. Evening visit of the city of Negombo and visit fishing village.",
+                            image: "https://www.lankatourexperts.com/wp-content/uploads/2023/11/Negombo-Beach-Sri-Lanka.webp"
+                        },
+                        {
+                            day: "Day 2", title: "Urban Oasis", desc: "Heading Colombo the commercial city of Sri Lanka en-route visit Gangarama Temple. Lunch at Blue water hotel waddwa, Proceeding to Bentota and stay over at Club VILLA Bentota.",
+                            image: "https://waybird.imgix.net/experiences/kodak_images/000/015/899/original/Admire_the_architecture_of_Geoffrey_Bawa.jpg"
+                        },
+                        {
+                            day: "Day 3", title: "Living Art", desc: "Leave for Galle and en-route visit turtle hatchery at Ahungalla, famous mask production at Ambalangoda and coral gardens at Hikkaduwa. Visit ancient Dutch Fort in Galle. Return to HERITANCE AHUNGALLA.",
+                            image: "https://nexttravelsrilanka.com/wp-content/uploads/2021/03/The-sky-view-of-the-coastal-area-of-Galle-The-Most-Surprising-Paradise-of-Southern-Sri-Lanka.jpg"
+                        },
+                        {
+                            day: "Day 4", title: "Hill Country Harmony", desc: "Leaving for Sigiriya en-route visiting famous BATALIYA and the ELEPHANT ORPHANAGE in Pinnawela. Reach Kandy. In the evening proceed on a city tour including visit the temple of tooth relic & cultural dance.",
+                            image: "https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=center,quality=60,width=1440,height=650,dpr=1/tour_img/0be00db1cc074635.jpeg"
+                        },
+                        {
+                            day: "Day 5", title: "Jungle Masterpiece", desc: "Leave for Kandalama and check-in at HERITANCE KANDALAMA. Visit SIGIRIYA ROCK FORTRESS. In the evening explore the Heritance Kandalama which is the living embodiment of Geoffrey Bawa's architectural vision.",
+                            image: "https://www.lwcholidays.com/app/uploads/2019/04/Heritance-Kandalama-Luxury-Holiday-SriLanka-7-960x582.jpg"
+                        },
+                        {
+                            day: "Day 6", title: "End of Design Legacy", desc: "Departure to the Airport saying good bye to the Pearl of Indian Ocean with lot of sweet memories.",
+                            image: "https://veronikasadventure.com/wp-content/uploads/2024/08/geoffrey-bawa-works-in-colombo.jpg"
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "21-Day Grand Honeymoon",
+                    duration: "21 Days",
+                    price: "$1500 USD",
+                    description: "The beginning of your forever deserves nothing less than perfection. Three weeks of unhurried luxury, intimate moments, and breathtaking backdrops.",
+                    highlights: "Private Beach Dinners, Yala Safari, Scenic Train Ride, Luxury Resorts.",
+                    image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/23/8d/90.jpg",
+                    itinerary: [
+                        {
+                            day: "Days 1-4", title: "Coastal Romance", desc: "Bentota (4 Nights). Relax on Bentota Beach, Visit the Brief Garden, Explore the Bentota Turtle Hatchery, Enjoy a Madu River boat safari.",
+                            image: "https://www.jetwinghotels.com/wp-content/uploads/2019/06/Bentota-hotels-banner-1920x656.jpg"
+                        },
+                        {
+                            day: "Days 5-9", title: "Eastern Seclusion", desc: "Pasikudah (5 Nights). Relax on the pristine Pasikudah Beach, Visit the Batticaloa Lagoon, Explore the Dutch Fort in Batticaloa, Enjoy water sports like snorkeling and kayaking.",
+                            image: "https://www.bestoflanka.com/images/slider/best-things-to-do-in-sri-lanka/beach-destinations-sri-lanka/beach-pasikuda-sri-lanka/01.jpg"
+                        },
+                        {
+                            day: "Days 10-11", title: "Whales & Waves", desc: "Mirissa (2 Nights). Whale and dolphin watching (seasonal), Visit the Galle Fort, Explore Mirissa Beach and enjoy water activities.",
+                            image: "https://www.authenticindiatours.com/app/uploads/2024/09/Whale-watching-safari-Mirissa-1400-1400x550-c-default.jpg"
+                        },
+                        {
+                            day: "Days 12-13", title: "Wild Love", desc: "Yala (2 Nights). Yala National Park safari to see leopards, elephants, and other wildlife. Visit the Tissamaharama Temple.",
+                            image: "https://www.lovesrilanka.org/wp-content/uploads/2020/07/Five-Experiences-Your-Family-Will-Love-800x520-1.jpg"
+                        },
+                        {
+                            day: "Days 14-15", title: "Royal Retreat", desc: "Kandy (2 Nights). Visit the Temple of the Tooth Relic, Explore the Royal Botanical Gardens in Peradeniya, Attend a cultural dance performance.",
+                            image: "https://cdn.forevervacation.com/uploads/digital/assets/royal-botanic-gardens.jpg"
+                        },
+                        {
+                            day: "Days 16-17", title: "Timeless Bond", desc: "Dambulla (2 Nights). Visit the Dambulla Cave Temple, Explore the Sigiriya Rock Fortress, Take a village tour.",
+                            image: "https://www.bestoflanka.com/images/slider/dont-miss-when-in-sri-lanka/visit-to-dambulla-cave-temple/01.jpg"
+                        },
+                        {
+                            day: "Days 18-19", title: "Historic Charm", desc: "Galle (2 Nights). Explore the Galle Fort, Visit the Dutch Reformed Church, Enjoy the beaches near Galle.",
+                            image: "https://srilankaexplorers.com/wp-content/uploads/2024/05/Galle_Fort.jpg"
+                        },
+                        {
+                            day: "Days 20-21", title: "Scenic Farewell", desc: "Nuwara Eliya & Ella (2 Nights). Take the scenic train ride from Nuwara Eliya to Ella, Visit Horton Plains National Park, Explore Ella Rock and Little Adam's Peak.",
+                            image: "https://cdn.forevervacation.com/uploads/tour/nuwara-eliya-highlights-waterfall-tea-and-picturesque-train-ride-4058.jpg"
+                        }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "14-Day Romantic Escape",
+                    duration: "14 Days",
+                    price: "$1000 USD",
+                    description: "Two weeks of pure magic. From the misty mountains to the azure sea, every day is a new chapter in your love story.",
+                    highlights: "Ella Nine Arch Bridge, Mirissa Whale Watching, Tea Plantations, Candlelit Dinners.",
+                    image: "https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg",
+                    itinerary: [
+                        {
+                            day: "Day 1", title: "Love in Colombo", desc: "Arrive at Bandaranaike International Airport (CMB). Private transfer to a boutique hotel in Colombo. Relax & unwind. Optional sunset walk at Galle Face Green.",
+                            image: "https://www.yamu.lk/wp-content/uploads/2022/02/movenpick-best.jpeg"
+                        },
+                        {
+                            day: "Day 2", title: "Scenic Drive to Kandy", desc: "Drive to Kandy (~3.5 hrs). Enroute: Stop at Pinnawala Elephant Orphanage. Evening: Visit Temple of the Tooth & cultural dance show.",
+                            image: "https://media1.thrillophilia.com/filestore/a8qiq7m8qkqkebaeh6mm35k52zqh_Kandy%20Lake%202.jpg"
+                        },
+                        {
+                            day: "Day 3", title: "Explore Kandy", desc: "Visit Royal Botanical Gardens (Peradeniya). Stroll around Kandy Lake hand-in-hand. Optional: Local market walk or Ayurvedic couples massage.",
+                            image: "https://veronikasadventure.com/wp-content/uploads/2024/02/kandy-royal-botanical-gardens-peradeniya-by-tuk-sri-lanka-2.jpg"
+                        },
+                        {
+                            day: "Day 4", title: "Journey to Nuwara Eliya", desc: "Scenic drive or train to Nuwara Eliya (~2.5 hrs). Visit tea plantations & factories en route. Evening: High tea by the fire, stroll through town.",
+                            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/58/77/95/grand-hotel-nuwara-eliya.jpg?w=900&h=500&s=1"
+                        },
+                        {
+                            day: "Day 5", title: "Explore Nuwara Eliya", desc: "Early morning: Optional Horton Plains & World's End trek. Visit Gregory Lake, Seetha Amman Temple. Horseback ride or boating on the lake.",
+                            image: "https://off2srilanka.com/wp-content/uploads/2025/01/Horton-Plains-national-park-Sri-Lanka.png"
+                        },
+                        {
+                            day: "Day 6", title: "The Love Train", desc: "Take the famous train ride to Ella (~6 hrs reserved 1st class). Enjoy stunning views of lush hills and tea valleys. Sunset view from Ella Gap.",
+                            image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/92/de/03.jpg"
+                        },
+                        {
+                            day: "Day 7", title: "Explore Ellas Beauty", desc: "Hike to Little Adams Peak. Visit the famous Nine Arches Bridge. Afternoon: Chill at Ravana Falls or get a couples massage.",
+                            image: "https://cdn.lakpura.com/images/LK94009721-03-E.JPG"
+                        },
+                        {
+                            day: "Days 8-11", title: "Romantic Beach Stay", desc: "Drive to the southern coast (~3.5 hrs). Relax at a luxury beach resort. Whale watching from Mirissa, Sunset boat ride, Beach picnic, Day trip to Galle Fort.",
+                            image: "https://images.pexels.com/photos/29813525/pexels-photo-29813525.jpeg?cs=srgb&dl=pexels-batagov-29813525.jpg&fm=jpg"
+                        },
+                        {
+                            day: "Day 12", title: "Drive to Colombo", desc: "Head back to Colombo (~3 hrs). Check-in to a stylish hotel. Evening at leisure or rooftop bar drinks.",
+                            image: "https://d34vm3j4h7f97z.cloudfront.net/original/4X/4/0/0/40098b6f4ba4e5697c4e95a1c80613c8e47f29fe.jpeg"
+                        },
+                        {
+                            day: "Day 13", title: "Colombo City Tour", desc: "Visit Independence Square, Gangaramaya Temple, Dutch Hospital Precinct, Pettah Market. Farewell dinner.",
+                            image: "https://www.ceylontraveldream.com/images/sri-lanka-day-tour-packages/sri-lanka-colombo-city-tour/sri-lanka-colombo-city-tour.jpg"
+                        },
+                        {
+                            day: "Day 14", title: "Departure", desc: "Private transfer to Bandaranaike Airport (CMB) for departure.",
+                            image: "https://images.pexels.com/photos/29813525/pexels-photo-29813525.jpeg?cs=srgb&dl=pexels-batagov-29813525.jpg&fm=jpg"
+                        }
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "7-Day Beach Honeymoon",
+                    duration: "6 Nights / 7 Days",
+                    price: "$500 USD",
+                    description: "Short, sweet, and incredibly romantic. A week of sun, sand, and sea, curated for couples who just want to relax and reconnect in paradise.",
+                    highlights: "Bentota Water Sports, Mirissa Whale Watching, Sunset Cruises, Beachfront Stays.",
+                    image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/8c/84/ad.jpg",
+                    itinerary: [
+                        {
+                            day: "Day 1", title: "Welcome to Paradise", desc: "Airport Pickup with flower garlands. Check-in at a beachside resort in Negombo. Enjoy a sunset walk along the beach. Romantic candlelight dinner.",
+                            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop"
+                        },
+                        { day: "Day 2", title: "Serenity Begins", desc: "Transfer to Bentota (approx. 2 hours). Check-in to a luxury beachfront resort. Afternoon: Coupleâ€™s spa session. Evening: Relax by the infinity pool.", image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 3", title: "Explore & Relax", desc: "Optional boat safari on the Madu River. Visit a turtle hatchery. Chill on Bentota Beach or try jet skiing. Sunset: Private beach picnic.", image: "https://images.unsplash.com/photo-1544252899-709723555806?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 4", title: "Head South", desc: "Scenic drive to Mirissa (approx. 3.5 hrs). Stop at Galle Fort. Check-in to a romantic boutique hotel. Evening: Rooftop drinks overlooking the ocean.", image: "https://images.unsplash.com/photo-1533644026600-9974558e804c?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 5", title: "Whale Watching", desc: "Early morning: Whale watching tour. Return to hotel for brunch. Afternoon: Swim and sunbathe at Secret Beach. Evening: Seafood BBQ.", image: "https://images.unsplash.com/photo-1588414734732-660b07304ddb?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 6", title: "Beach Hopping", desc: "Visit Weligama Beach for surfing or chill time. Optional visit to Coconut Tree Hill. Evening: Private catamaran sunset cruise with champagne.", image: "https://images.unsplash.com/photo-1590053955688-662402483392?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 7", title: "Departure", desc: "Drive back to Colombo (approx. 2.5â€“3 hrs). Optional quick stop at Dutch Hospital precinct. Transfer to Bandaranaike Airport.", image: "https://images.unsplash.com/photo-1578583246836-e8666324204b?q=80&w=1920&auto=format&fit=crop" }
+                    ]
+                },
+                {
+                    id: 8,
+                    title: "Ayurveda & Wellness Retreat",
+                    duration: "6 Nights / 7 Days",
+                    price: "$750 USD",
+                    description: "Reset. Recharge. Rejuvenate. This is not just a holiday; it's a healing journey. Ancient Ayurvedic wisdom meets modern luxury to restore your balance and inner peace.",
+                    highlights: "Daily Spa Treatments, Yoga Sessions, Organic Vegetarian Meals, Mindfulness.",
+                    image: "https://www.talesofceylon.com/wp-content/uploads/2020/10/shutterstock_1388470073-1-scaled.jpg",
+                    itinerary: [
+                        { day: "Day 1", title: "The Diagnosis", desc: "Arrival at Bandaranaike International Airport. Transfer to Ayurveda retreat. Initial consultation with Ayurvedic doctor. Light evening yoga.", image: "https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 2", title: "Detoxify", desc: "Morning yoga & breathing exercises. Ayurvedic massage (Abhyanga). Herbal steam bath. Afternoon: Optional guided meditation.", image: "https://images.unsplash.com/photo-1599447421405-0c3072a73efd?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 3", title: "Deep Cleanse", desc: "Sunrise yoga. Panchakarma treatment. Herbal tea break. Guided walk in nature. Evening foot massage.", image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 4", title: "Inner Stillness", desc: "Meditative yoga. Ayurvedic body scrub or facial. Free time to relax in gardens. Marma therapy or Acupuncture.", image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 5", title: "Spiritual Connection", desc: "Sunrise meditation. Full body synchronized Four Hands Massage. Attend Buddhist temple visit or blessing ceremony. Evening Yoga Nidra.", image: "https://images.unsplash.com/photo-1588256243857-434444534720?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 6", title: "New You", desc: "Personalized therapy. Final wellness consultation with Ayurvedic doctor. Enjoy tranquil time journaling, swimming, or meditating.", image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 7", title: "Radiant Departure", desc: "Light yoga or meditation. Final herbal meal. Transfer to Colombo airport.", image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1920&auto=format&fit=crop" }
+                    ]
+                },
+                {
+                    id: 9,
+                    title: "Cultural Triangle & East",
+                    duration: "8 Nights / 9 Days",
+                    price: "$1000 USD",
+                    description: "A journey of contrasts. From the dry zone's ancient ruins to the East Coast's turquoise waters. Explore the Golden Triangle of culture before surrendering to the beach life.",
+                    highlights: "Dambulla Cave Temple, Pigeon Island Snorkeling, Koneswaram Temple, Sigiriya.",
+                    image: "https://www.andbeyond.com/wp-content/uploads/sites/5/Dambulla-Cave-temple-Culturale-Triangle-sri-lanka.jpg",
+                    itinerary: [
+                        { day: "Day 1", title: "Arrival", desc: "Arrival at Bandaranaike International Airport. Transfer to Negombo (approx. 20 mins). Check-in to hotel. Relax at the beach or explore Negombo Fish Market.", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 2", title: "Cave Wonders", desc: "Drive to Dambulla (~3.5 hrs). En route visit Dambulla Cave Temple. Optional: Sigiriya Rock Fortress.", image: "https://images.unsplash.com/photo-1580214693952-09459d28233f?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 3", title: "Ruins to Reefs", desc: "Drive to Polonnaruwa (~1.5 hrs). Guided tour of the ancient city. Continue onward to Trincomalee (~2.5 hrs).", image: "https://images.unsplash.com/photo-1588599433728-4034d673d32d?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Days 4-8", title: "Vitamin Sea", desc: "Trincomalee (Beach Stay). Nilaveli Beach or Uppuveli Beach. Snorkeling at Pigeon Island. Visit Koneswaram Temple. Whale & dolphin watching.", image: "https://images.unsplash.com/photo-1590053955688-662402483392?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 9", title: "Back to Reality", desc: "Drive back to Colombo or airport (~6.5â€“7 hrs). Departure.", image: "https://images.unsplash.com/photo-1578583246836-e8666324204b?q=80&w=1920&auto=format&fit=crop" }
+                    ]
+                },
+                {
+                    id: 10,
+                    title: "Classic Sri Lanka",
+                    duration: "10 Days",
+                    price: "$1000 USD",
+                    description: "The 'Greatest Hits' of Sri Lanka. If you only do one tour, make it this one. It covers the culture, the hills, the wildlife, and the beach in one perfect loop.",
+                    highlights: "Kandy City Tour, Yala Jeep Safari, Madu River Boat Ride, Galle Fort.",
+                    image: "https://www.andbeyond.com/wp-content/uploads/sites/5/kandy-3.jpg",
+                    itinerary: [
+                        { day: "Day 1", title: "Hill Capital", desc: "Arrive at Airport. Drive to Kandy (~3.5 hours). En route stop: Pinnawala Elephant Orphanage. Evening: Temple of the Tooth.", image: "https://images.unsplash.com/photo-1588256243857-434444534720?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 2", title: "Tea Country", desc: "Scenic train ride or drive to Nuwara Eliya (~2.5â€“3 hrs). En route: Visit tea plantations and Ramboda Falls. Afternoon: Sightseeing in Nuwara Eliya.", image: "https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 3", title: "Into the Wild", desc: "Drive to Yala National Park (~4â€“5 hrs). Evening: Jeep Safari in Yala (best time to see leopards).", image: "https://images.unsplash.com/photo-1535083252457-6080fe29be45?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 4", title: "Beach Vibes", desc: "Drive to Mirissa (~3 hrs). Day Activities: Beach time, whale watching, or Parrot Rock. Evening: Return to Bentota (~3.5 hrs).", image: "https://images.unsplash.com/photo-1533644026600-9974558e804c?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Days 5-9", title: "The Golden Coast", desc: "Relax in Bentota (5 nights). Enjoy the beaches, water sports, river safari on the Madu Ganga, visit Turtle Hatcheries, Brief Garden, or Galle Fort.", image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1920&auto=format&fit=crop" },
+                        { day: "Day 10", title: "City Farewell", desc: "Drive to Colombo (~2 hrs). Explore: Galle Face Green, Gangaramaya Temple, Shopping. Departure.", image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1920&auto=format&fit=crop" }
+                    ]
+                }
+            ];
+
+            const tourList = document.getElementById('tour-list');
+            const tourContent = document.getElementById('tour-content');
+            const tourBgImage = document.getElementById('tour-bg-image');
+
+            // Full Screen Elements
+            const fsModal = document.getElementById('tour-fullscreen-modal');
+            const fsBgImage = document.getElementById('fs-bg-image');
+            const fsTourTitle = document.getElementById('fs-tour-title');
+            const fsDayBadge = document.getElementById('fs-day-badge');
+            const fsDayTitle = document.getElementById('fs-day-title');
+            const fsDayDesc = document.getElementById('fs-day-desc');
+            const fsCurrentStep = document.getElementById('fs-current-step');
+            const fsTotalSteps = document.getElementById('fs-total-steps');
+            const fsProgress = document.getElementById('fs-progress');
+            const fsContent = document.getElementById('fs-content');
+
+            let activeIndex = 0;
+            let activeDayIndex = -1; // -1 represents Overview
+            let fsActiveDayIndex = 0;
+
+            function renderList() {
+                tourList.innerHTML = '';
+                tours.forEach((tour, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `tour-item w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center justify-between border border-transparent hover:bg-white/50 hover:border-amber-500/30 ${index === activeIndex ? 'active' : ''}`;
+                    btn.onclick = () => setActiveTour(index);
+                    btn.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <span class="tour-index text-sm font-mono transition-colors ${index === activeIndex ? 'text-amber-600 font-bold' : 'text-stone-400'}">
+                            ${String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span class="tour-title text-lg font-serif transition-colors ${index === activeIndex ? 'text-black' : 'text-black'}">
+                            ${tour.title}
+                        </span>
+                    </div>
+                    ${index === activeIndex ? '<i class="fas fa-arrow-right text-amber-500"></i>' : ''}
+                `;
+                    tourList.appendChild(btn);
+                });
+            }
+
+            function setActiveTour(index) {
+                activeIndex = index;
+                activeDayIndex = -1; // Reset to Overview
+                renderList();
+                updateContent(tours[index]);
+            }
+
+            function nextDay() {
+                const tour = tours[activeIndex];
+                if (activeDayIndex < tour.itinerary.length - 1) {
+                    activeDayIndex++;
+                    updateContent(tour);
+                }
+            }
+
+            function prevDay() {
+                const tour = tours[activeIndex];
+                if (activeDayIndex > -1) {
+                    activeDayIndex--;
+                    updateContent(tour);
+                }
+            }
+
+            function updateContent(tour) {
+                // Fade out
+                tourContent.style.opacity = '0';
+                tourBgImage.style.transform = 'scale(1.1)';
+
+                setTimeout(() => {
+                    // Determine Content based on activeDayIndex
+                    let mainContent = '';
+                    let navControls = '';
+
+                    if (activeDayIndex === -1) {
+                        // OVERVIEW VIEW
+                        tourBgImage.src = tour.image;
+                        mainContent = `
+                        <div class="space-y-6 animate-slide-up">
+                            <div class="flex items-start justify-between">
+                                <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-50 border border-amber-200 text-amber-700 shadow-lg">
+                                    <i class="fas fa-map-marked-alt text-2xl"></i>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-stone-500 text-xs uppercase tracking-widest mb-1">Duration</div>
+                                    <div class="text-amber-600 font-mono text-lg font-bold">${tour.duration}</div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-4xl md:text-5xl font-serif text-black mb-2" style="color: black !important;">${tour.title}</h3>
+                                <p class="text-stone-500 uppercase tracking-widest text-sm font-medium">Starting from <span class="text-amber-600 font-bold">${tour.price}</span></p>
+                            </div>
+
+                            <p class="text-xl text-stone-600 leading-relaxed font-light">
+                                ${tour.description}
+                            </p>
+
+                            <div class="bg-stone-100/80 p-6 rounded-xl border-l-4 border-amber-500">
+                                <div class="text-amber-600 font-bold uppercase text-xs tracking-widest mb-1">Highlights</div>
+                                <p class="text-stone-600 italic font-serif text-sm leading-relaxed">
+                                    ${tour.highlights}
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                    } else {
+                        // ITINERARY DAY VIEW
+                        const day = tour.itinerary[activeDayIndex];
+                        tourBgImage.src = tour.image;
+
+                        mainContent = `
+                        <div class="space-y-8 h-full flex flex-col justify-center animate-slide-up">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="px-4 py-2 rounded-full bg-amber-100 text-amber-700 border border-amber-200 text-sm font-mono uppercase tracking-wider font-bold">
+                                    ${day.day}
+                                </span>
+                                <div class="h-px flex-1 bg-stone-200"></div>
+                            </div>
+
+                            <h3 class="text-3xl md:text-5xl font-serif text-black leading-tight" style="color: black !important;">
+                                ${day.title}
+                            </h3>
+
+                            <p class="text-xl md:text-2xl text-stone-600 leading-relaxed font-light">
+                                ${day.desc}
+                            </p>
+                        </div>
+                    `;
+                    }
+
+                    // Navigation Controls
+                    // Added Explore Button here
+                    let exploreBtn = '';
+                    if (activeDayIndex === -1) {
+                        exploreBtn = `
+                            <button onclick="openFullscreenMode()" class="bg-white border border-stone-200 text-stone-700 hover:bg-stone-50 hover:text-amber-600 px-6 py-3 rounded-full font-medium transition-all shadow-sm flex items-center gap-2 group">
+                                <i class="fas fa-expand-arrows-alt text-amber-500 group-hover:scale-110 transition-transform"></i>
+                                <span>Explore Journey</span>
+                            </button>
+                         `;
+                    }
+
+                    navControls = `
+                    <div class="pt-8 border-t border-stone-200 flex gap-4 items-center justify-between">
+                        <div class="flex gap-2">
+                            <button onclick="prevDay()" class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:bg-stone-100 hover:text-amber-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed" ${activeDayIndex === -1 ? 'disabled' : ''}>
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button onclick="nextDay()" class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:bg-stone-100 hover:text-amber-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed" ${activeDayIndex === tour.itinerary.length - 1 ? 'disabled' : ''}>
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="flex gap-3 flex-1 justify-end">
+                             ${exploreBtn}
+                             <button onclick="openInquiry('${tour.title}')" class="bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-orange-500/30 flex items-center gap-2 transform hover:-translate-y-1">
+                                <span>Book Now</span>
+                                <i class="fas fa-paper-plane text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                    tourContent.innerHTML = mainContent + navControls;
+
+                    // Fade in
+                    tourContent.style.opacity = '1';
+                    tourBgImage.style.transform = 'scale(1)';
+                }, 300);
+            }
+
+            function openInquiry(tourName) {
+                const popup = document.getElementById('tour-popup');
+                const title = document.getElementById('tour-title');
+
+                if (popup) {
+                    popup.classList.add('active');
+                    if (title) title.textContent = `Inquire: ${tourName}`;
+                    const form = popup.querySelector('form');
+                    let hiddenInput = form.querySelector('input[name="Tour"]');
+                    if (!hiddenInput) {
+                        hiddenInput = document.createElement('input');
+                        hiddenInput.type = 'hidden';
+                        hiddenInput.name = 'Tour';
+                        form.appendChild(hiddenInput);
+                    }
+                    hiddenInput.value = tourName;
+                }
+            }
+
+            // --- Full Screen Logic ---
+
+            function openFullscreenMode() {
+                const tour = tours[activeIndex];
+                fsActiveDayIndex = 0;
+                fsTourTitle.textContent = tour.title;
+                fsTotalSteps.textContent = String(tour.itinerary.length).padStart(2, '0');
+
+                updateFsContent();
+
+                fsModal.classList.remove('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+                // Add keyboard listeners
+                document.addEventListener('keydown', handleFsKeydown);
+            }
+
+            function closeFullscreenMode() {
+                fsModal.classList.add('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = ''; // Restore scrolling
+                document.removeEventListener('keydown', handleFsKeydown);
+            }
+
+            function handleFsKeydown(e) {
+                if (e.key === 'ArrowRight') nextFsDay();
+                if (e.key === 'ArrowLeft') prevFsDay();
+                if (e.key === 'Escape') closeFullscreenMode();
+            }
+
+            function nextFsDay() {
+                const tour = tours[activeIndex];
+                if (fsActiveDayIndex < tour.itinerary.length - 1) {
+                    fsActiveDayIndex++;
+                    updateFsContent();
+                }
+            }
+
+            function prevFsDay() {
+                if (fsActiveDayIndex > 0) {
+                    fsActiveDayIndex--;
+                    updateFsContent();
+                }
+            }
+
+            function updateFsContent() {
+                const tour = tours[activeIndex];
+                const day = tour.itinerary[fsActiveDayIndex];
+
+                // Animate Content Out
+                fsContent.classList.add('opacity-0', 'translate-y-10');
+                fsBgImage.classList.add('scale-110'); // Zoom effect
+
+                setTimeout(() => {
+                    // Update Data
+                    fsBgImage.src = day.image;
+                    fsDayBadge.textContent = day.day;
+                    fsDayTitle.textContent = day.title;
+                    fsDayDesc.textContent = day.desc;
+                    fsCurrentStep.textContent = String(fsActiveDayIndex + 1).padStart(2, '0');
+
+                    // Update Progress Bar
+                    const progress = ((fsActiveDayIndex + 1) / tour.itinerary.length) * 100;
+                    fsProgress.style.width = `${progress}%`;
+
+                    // Animate Content In
+                    fsContent.classList.remove('opacity-0', 'translate-y-10');
+                    fsBgImage.classList.remove('scale-110');
+                }, 500);
+            }
+
+            // Initialize
+            renderList();
+            updateContent(tours[0]);
+        </script>
+        </script>
     </section>
-
-    <script>
-        // Tab Switching
-        const tabs = document.querySelectorAll('.tour-tab');
-        const packages = document.querySelectorAll('.tour-package');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.removeAttribute('data-active'));
-                tab.setAttribute('data-active', '');
-                packages.forEach(p => p.classList.add('hidden'));
-                document.querySelector(`.tour-package[data-package="${tab.dataset.tab}"]`).classList.remove('hidden');
-            });
-        });
-        tabs[0].click();
-
-        // Expand Brochure
-        document.querySelectorAll('.expand-package-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const pkg = btn.dataset.package;
-                const brochure = document.querySelector(`.tour-package[data-package="${pkg}"] .brochure-container`);
-                brochure.classList.toggle('hidden');
-            });
-        });
-    </script>
-
-
-
-    <!-- Cultural Highlights Section with Parallax -->
     <section id="cultural-highlights" class="py-24 bg-white text-white parallax">
 
         <div class="container mx-auto px-6">
@@ -962,39 +1477,49 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Esala Perahera</h3>
-                    <p class="text-gray-100 mb-4" style="color:white">Witness the grand Kandy festival, where elephants parade with sacred relics in a vibrant spectacle.</p>
+                    <p class="text-gray-100 mb-4" style="color:white">Witness the grand Kandy festival, where elephants
+                        parade with sacred relics in a vibrant spectacle.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Ayurvedic Wellness</h3>
-                    <p class="text-gray-100 mb-4" style="color:white"> awaken Rejuvenate with ancient healing practices at wellness retreats across the island.</p>
+                    <p class="text-gray-100 mb-4" style="color:white"> awaken Rejuvenate with ancient healing practices
+                        at wellness retreats across the island.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Traditional Crafts</h3>
-                    <p class="text-gray-100 mb-4" style="color:white">Learn batik, mask-making, or pottery from skilled artisans in rural villages.</p>
+                    <p class="text-gray-100 mb-4" style="color:white">Learn batik, mask-making, or pottery from skilled
+                        artisans in rural villages.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Sri Lankan Cuisine</h3>
-                    <p class="text-gray-100 mb-4" style="color:white">Savor spicy curries, string hoppers, and kottu roti in bustling local eateries.</p>
+                    <p class="text-gray-100 mb-4" style="color:white">Savor spicy curries, string hoppers, and kottu
+                        roti in bustling local eateries.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Kandyan Dance</h3>
-                    <p class="text-gray-100 mb-4">Marvel at traditional dance performances rich in rhythm and ritual attire.</p>
+                    <p class="text-gray-100 mb-4">Marvel at traditional dance performances rich in rhythm and ritual
+                        attire.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-bold mb-3">Temple Architecture</h3>
-                    <h5 class="text-gray-100 mb-4" style="color:white">Explore ancient dagobas and rock-carved temples that echo timeless devotion.</h5>
+                    <h5 class="text-gray-100 mb-4" style="color:white">Explore ancient dagobas and rock-carved temples
+                        that echo timeless devotion.</h5>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-3">Vesak Festival</h3>
-                    <p class="text-gray-100 mb-4" style="color:white">Celebrate the island-wide Buddhist festival with illuminated pandals and acts of generosity.</p>
+                    <p class="text-gray-100 mb-4" style="color:white">Celebrate the island-wide Buddhist festival with
+                        illuminated pandals and acts of generosity.</p>
                 </div>
                 <div class="culture-card snap-center min-w-[300px] bg-gray-800 rounded-lg shadow-lg p-6">
                     <h3 class="text-xl font-bold mb-3">Gem Crafting</h3>
-                    <p class="text-gray-100 mb-4" style="color:white">Discover the art of gem-cutting and jewelry-making in Ratnapura’s gem markets.</p>
+                    <p class="text-gray-100 mb-4" style="color:white">Discover the art of gem-cutting and jewelry-making
+                        in Ratnapura’s gem markets.</p>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <button id="explore-culture-btn" class="ripple bg-amber-500 text-white px-10 py-4 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Explore Culture</button>
+                <button id="explore-culture-btn"
+                    class="ripple bg-amber-500 text-white px-10 py-4 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Explore
+                    Culture</button>
             </div>
         </div>
     </section>
@@ -1003,7 +1528,8 @@
     <section id="map-section" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-16">Journey Across Sri Lanka</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore our interactive map to discover iconic landmarks and hidden gems.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore our interactive map to discover
+                iconic landmarks and hidden gems.</p>
             <div id="map"></div>
         </div>
     </section>
@@ -1016,24 +1542,29 @@
             <div class="testimonial-slider">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"Climbing Sigiriya was a dream come true. The guides brought history to life!"</p>
+                        <p class="text-gray-600 italic mb-4">"Climbing Sigiriya was a dream come true. The guides
+                            brought history to life!"</p>
                         <p class="text-gray-800 font-semibold">– Sarah Lim, Explorer</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"Mirissa’s beaches were paradise. The tour was perfectly planned!</p>
+                        <p class="text-gray-600 italic mb-4">"Mirissa’s beaches were paradise. The tour was perfectly
+                            planned!</p>
                         <p class="text-gray-800 font-semibold">"– David Patel, Traveler</p>
                         </p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"Seeing leopards in Yala was unforgettable. Highly recommend!</p>
+                        <p class="text-gray-600 italic mb-4">"Seeing leopards in Yala was unforgettable. Highly
+                            recommend!</p>
                         <p class="text-gray-800 font-semibold">– Amara Wijesinghe, Adventurer</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"The tea estates in Nuwara Eliya were serene and insightful."</p>
+                        <p class="text-gray-600 italic mb-4">"The tea estates in Nuwara Eliya were serene and
+                            insightful."</p>
                         <p class="text-gray-800 font-semibold">– Liam Chen, Wanderer</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"Kandy’s festival was a cultural immersion like no other."</p>
+                        <p class="text-gray-600 italic mb-4">"Kandy’s festival was a cultural immersion like no other."
+                        </p>
                         <p class="text-gray-800 font-semibold">– Priya Fernando, Culture Enthusiast</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
@@ -1041,11 +1572,13 @@
                         <p class="text-gray-800 font-semibold">– Emma Rodriguez, Foodie</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"The rafting in Kitulgala was exhilarating and well-organized."</p>
+                        <p class="text-gray-600 italic mb-4">"The rafting in Kitulgala was exhilarating and
+                            well-organized."</p>
                         <p class="text-gray-800 font-semibold">– Omar Hassan, Thrill-Seeker</p>
                     </div>
                     <div class="testimonial-card bg-gray-50 rounded-lg shadow-lg p-6">
-                        <p class="text-gray-600 italic mb-4">"The train journey through Ella was like a moving painting."</p>
+                        <p class="text-gray-600 italic mb-4">"The train journey through Ella was like a moving
+                            painting."</p>
                         <p class="text-gray-800 font-semibold">– Isabella Cruz, Scenic Traveler</p>
                     </div>
                 </div>
@@ -1057,8 +1590,11 @@
     <section id="cta" class="py-24 bg-gray-100 text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Embark on Your Adventure</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black !important">Let Crown Global Services guide you through Sri Lanka’s timeless wonders.</p>
-            <a href="contact.html" class="cta-button ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Book Now</a>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black !important">Let Crown Global Services guide
+                you through Sri Lanka’s timeless wonders.</p>
+            <a href="contact.html"
+                class="cta-button ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Book
+                Now</a>
         </div>
     </section>
 
@@ -1069,7 +1605,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and excellence.</p>
+                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
+                        excellence.</p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Explore</h3>
@@ -1081,14 +1618,18 @@
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte, Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250 5108</a></p>
+                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
+                        Sri Lanka</p>
+                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
+                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
+                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
+                            5108</a></p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476" class="text-gray-400 hover:text-amber-400">Facebook</a>
+                        <a href="https://www.facebook.com/profile.php?id=100088716497476"
+                            class="text-gray-400 hover:text-amber-400">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
@@ -1125,11 +1666,13 @@
                 <label for="journey-travel-date">Preferred Travel Date</label>
                 <input type="date" id="journey-travel-date" name="Travel Date">
                 <label for="journey-group-size">Group Size</label>
-                <input type="number" id="journey-group-size" name="Group Size" min="1" placeholder="Number of travelers">
+                <input type="number" id="journey-group-size" name="Group Size" min="1"
+                    placeholder="Number of travelers">
                 <label for="journey-budget">Estimated Budget (USD)</label>
                 <input type="number" id="journey-budget" name="Budget" min="0" placeholder="Your budget per person">
                 <label for="journey-additional-info">Additional Information</label>
-                <textarea id="journey-additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="journey-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -1154,7 +1697,8 @@
                 <label for="group-size">Group Size</label>
                 <input type="number" id="group-size" name="Group Size" min="1" placeholder="Number of travelers">
                 <label for="additional-info">Additional Information</label>
-                <textarea id="additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -1187,9 +1731,11 @@
                 <label for="culture-travel-date">Preferred Travel Date</label>
                 <input type="date" id="culture-travel-date" name="Travel Date">
                 <label for="culture-group-size">Group Size</label>
-                <input type="number" id="culture-group-size" name="Group Size" min="1" placeholder="Number of travelers">
+                <input type="number" id="culture-group-size" name="Group Size" min="1"
+                    placeholder="Number of travelers">
                 <label for="culture-additional-info">Additional Information</label>
-                <textarea id="culture-additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="culture-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -1214,7 +1760,8 @@
                 <label for="map-group-size">Group Size</label>
                 <input type="number" id="map-group-size" name="Group Size" min="1" placeholder="Number of travelers">
                 <label for="map-additional-info">Additional Information</label>
-                <textarea id="map-additional-info" name="Additional Information" rows="4" placeholder="Any special requests or questions?"></textarea>
+                <textarea id="map-additional-info" name="Additional Information" rows="4"
+                    placeholder="Any special requests or questions?"></textarea>
                 <button type="submit">Submit Inquiry</button>
             </form>
         </div>
@@ -1490,4 +2037,5 @@
         });
     </script>
 </body>
+
 </html>
