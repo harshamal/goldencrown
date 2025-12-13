@@ -80,12 +80,12 @@
             perspective: 100px;
         }
 
-        .job-card:hover,
-        .step-card:hover,
-        .testimonial-card:hover {
-            transform: translateY(-12px) rotateY(5deg);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
+            .job-card:hover,
+            .step-card:hover,
+            .testimonial-card:hover {
+                transform: translateY(-12px) rotateY(5deg) scale(1.1);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
 
         .job-card-overlay {
             position: absolute;
@@ -223,7 +223,7 @@
         .testimonial-card {
             background: white;
             border-left: 4px solid #f59e0b;
-            min-height: 200px;
+            min-height: 250px;
         }
 
         .swiper-button-prev,
@@ -284,25 +284,25 @@
             <div>
                 <a href="index.html">
                     <img class="logo nav-link text-white hover:text-amber-800"
-                        src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
-                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
+                         src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                         alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
                 </a>
             </div>
             <nav class="hidden md:flex items-center space-x-8 nav">
                 <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size:small !important" id="nav-home">Home</a>
+                   style="font-size:small !important" id="nav-home">Home</a>
                 <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-tours">Tours</a>
+                   style="font-size: small !important" id="nav-tours">Tours</a>
                 <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
+                   style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
                 <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod  active-link"
-                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
+                   style="font-size: small !important" id="nav-recruitment">Recruitment</a>
                 <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-education">Education</a>
+                   style="font-size: small !important" id="nav-education">Education</a>
                 <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-about">About Us</a>
+                   style="font-size: small !important" id="nav-about">About Us</a>
                 <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-contact">Contact</a>
+                   style="font-size: small !important" id="nav-contact">Contact</a>
 
             </nav>
             <div class="hidden md:flex flex-col text-sm mail space-y-4">
@@ -320,7 +320,7 @@
                 <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                              d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
@@ -336,17 +336,17 @@
             </div>
             <nav class="flex flex-col space-y-6 px-6 py-4">
                 <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
-                    id="mobile-nav-home">Home</a>
+                   id="mobile-nav-home">Home</a>
                 <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
                 <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
                 <a href="recruitment.html"
-                    class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Recruitment</a>
+                   class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Recruitment</a>
                 <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Education</a>
                 <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
                 <a href="contact.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Contact</a>
                 <div class="flex flex-col text-sm text-gray-800">
                     <a href="mailto:info@crownglobalservices.com"
-                        class="hover:text-amber-500">info@crownglobalservices.com</a>
+                       class="hover:text-amber-500">info@crownglobalservices.com</a>
                     <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
                 </div>
             </nav>
@@ -358,17 +358,59 @@
     <section class="hero-section">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="https://hdblob1.blob.core.windows.net/crownglobal/Untitled%20design%20(6).mp4"
-                type="video/mp4">
+                    type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="text-5xl md:text-8xl font-bold mb-6 text-white">Launch Your Global Career</h1>
-            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white font-bold">Partner with our SLBFE-licensed
-                agency for trusted, end-to-end recruitment services worldwide.</p>
+            <p class="text-xl md:text-3xl mb-10 max-w-4xl mx-auto text-white font-bold">
+                Partner with our SLBFE-licensed
+                agency for trusted, end-to-end recruitment services worldwide.
+            </p>
             <button id="apply-now-btn"
-                class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">Apply
-                Now</button>
+                    class="ripple bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-medium hover:bg-amber-600 transition-transform transform hover:scale-110 glow">
+                Apply
+                Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Slider) -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Success Stories</h2>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">
+                Hear from those who’ve launched their
+                global careers with us.
+            </p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg  mx-4">
+                            <img src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(2).jpg" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg  mx-4">
+                            <img src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(1).jpg" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg  mx-4">
+                            <img src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(4).jpg" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card rounded-xl shadow-lg  mx-4">
+                            <img src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(3).jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
 
@@ -376,170 +418,191 @@
     <section id="job-openings" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Current Job Openings</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Explore exciting career opportunities
-                abroad with Crown Global Services.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">
+                Explore exciting career opportunities
+                abroad with Crown Global Services.
+            </p>
             <!-- Filters -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white active"
-                    data-filter="all">All</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="kuwait">Kuwait</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="kyrgyzstan">Kyrgyzstan</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="uae">UAE</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="israel">Israel</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="japan">Japan</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="korea">Korea</button>
-                <button
-                    class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
-                    data-filter="domestic">Domestic</button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white active"
+                        data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="kuwait">
+                    Kuwait
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="kyrgyzstan">
+                    Kyrgyzstan
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="uae">
+                    UAE
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="israel">
+                    Israel
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="japan">
+                    Japan
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="korea">
+                    Korea
+                </button>
+                <button class="filter-btn bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-amber-500 hover:text-white"
+                        data-filter="domestic">
+                    Domestic
+                </button>
             </div>
 
             <!-- Job Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-6 bg-gray-50">
                 <!-- Kuwait Jobs -->
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-200"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">House Boy</h3>
                         <p class="text-gray-600 mb-4">Join as a house boy in Kuwait with domestic support roles.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="House Boy - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="House Boy - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-300"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">House Cook - Male</h3>
                         <p class="text-gray-600 mb-4">Work as a male cook in Kuwait households.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="House Cook - Male - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="House Cook - Male - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-400"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">House Driver - Gulf Licensed</h3>
                         <p class="text-gray-600 mb-4">Drive in Kuwait with a Gulf license.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="House Driver - Gulf Licensed - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="House Driver - Gulf Licensed - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-500"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">House Driver - Kuwait Licensed</h3>
                         <p class="text-gray-600 mb-4">Drive in Kuwait with a local license.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="House Driver - Kuwait Licensed - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="House Driver - Kuwait Licensed - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-600"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">House Driver - S/L Licensed</h3>
                         <p class="text-gray-600 mb-4">Drive in Kuwait with a Sri Lankan license.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="House Driver - S/L Licensed - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="House Driver - S/L Licensed - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-700"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Domestic Worker - Female (21-45)</h3>
                         <p class="text-gray-600 mb-4">Work as a domestic worker in Kuwait (age 21-45).</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Domestic Worker - Female 21-45 - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Domestic Worker - Female 21-45 - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-800"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Domestic Worker - Female (46-49)</h3>
                         <p class="text-gray-600 mb-4">Work as a domestic worker in Kuwait (age 46-49).</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Domestic Worker - Female 46-49 - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Domestic Worker - Female 46-49 - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kuwait domestic">
+                     data-category="kuwait domestic">
                     <div class="h-4 bg-gray-900"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Domestic Worker - Female (50-55)</h3>
                         <p class="text-gray-600 mb-4">Work as a domestic worker in Kuwait (age 50-55).</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Domestic Worker - Female 50-55 - Kuwait">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Domestic Worker - Female 50-55 - Kuwait">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <!-- Kyrgyzstan Jobs -->
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kyrgyzstan domestic">
+                     data-category="kyrgyzstan domestic">
                     <div class="h-4 bg-blue-200"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Helper - Garment</h3>
                         <p class="text-gray-600 mb-4">Assist in garment production in Kyrgyzstan.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Helper - Garment - Kyrgyzstan">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Helper - Garment - Kyrgyzstan">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="kyrgyzstan domestic">
+                     data-category="kyrgyzstan domestic">
                     <div class="h-4 bg-blue-300"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Operator - Sewing Machine</h3>
                         <p class="text-gray-600 mb-4">Operate sewing machines in Kyrgyzstan.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Operator - Sewing Machine - Kyrgyzstan">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Operator - Sewing Machine - Kyrgyzstan">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <!-- UAE Jobs -->
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="uae sales">
+                     data-category="uae sales">
                     <div class="h-4 bg-blue-200"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Sales Executive</h3>
                         <p class="text-gray-600 mb-4">Join sales teams in the UAE with competitive incentives.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Sales Executive - UAE">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Sales Executive - UAE">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
@@ -547,28 +610,32 @@
                 <!-- No specific jobs listed for Israel in your input, so none added -->
                 <!-- Japan Jobs -->
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="japan domestic">
+                     data-category="japan domestic">
                     <div class="h-4 bg-amber-400"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Food Factory Worker</h3>
-                        <p class="text-gray-600 mb-4">Work in a food factory in Japan with N4 level qualification, age
-                            below 40, 5-year visa.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Food Factory Worker - Japan">Apply Now</button>
+                        <p class="text-gray-600 mb-4">
+                            Work in a food factory in Japan with N4 level qualification, age
+                            below 40, 5-year visa.
+                        </p>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Food Factory Worker - Japan">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
 
                 <!-- Korea Jobs -->
                 <div class="job-card bg-white rounded-2xl shadow-2xl transition transform hover:-translate-y-2 hover:shadow-yellow-300/50 duration-300"
-                    data-category="korea domestic">
+                     data-category="korea domestic">
                     <div class="h-4 bg-blue-200"></div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Factory Worker</h3>
                         <p class="text-gray-600 mb-4">Work in manufacturing units in Korea with training support.</p>
-                        <button
-                            class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
-                            data-job="Factory Worker - Korea">Apply Now</button>
+                        <button class="apply-btn w-full bg-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition duration-300"
+                                data-job="Factory Worker - Korea">
+                            Apply Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -579,8 +646,10 @@
     <section id="step-by-step" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Our Step-by-Step Support</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">From job assessment to post-arrival
-                support, we guide you every step of the way.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">
+                From job assessment to post-arrival
+                support, we guide you every step of the way.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="step-card bg-white rounded-xl shadow-lg p-8 relative">
                     <div class="step-number">1</div>
@@ -615,8 +684,10 @@
     <section id="why-choose" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">Why Choose Crown</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Trusted expertise for your global
-                career journey.</p>
+            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">
+                Trusted expertise for your global
+                career journey.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="bg-gray-50 rounded-xl shadow-lg p-6">
                     <i class="fas fa-certificate text-4xl text-amber-500 mb-4"></i>
@@ -652,71 +723,21 @@
         </div>
     </section>
 
-    <!-- Testimonials Section (Slider) -->
-    <section id="testimonials" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center text-gray-800 mb-8">What Our Clients Say</h2>
-            <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Hear from those who’ve launched their
-                global careers with us.</p>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Crown Global Services secured my nursing job in the
-                                UAE. Exceptional support throughout!"</p>
-                            <h4 class="text-lg font-bold text-gray-800">Saman Perera</h4>
-                            <p class="text-sm text-gray-500">Nurse, UAE</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Their pre-departure training made my move to the
-                                Maldives seamless. Highly recommend!"</p>
-                            <h4 class="text-lg font-bold text-gray-800">Nimali Fernando</h4>
-                            <p class="text-sm text-gray-500">Resort Staff, Maldives</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg mx-8 p-4">
-                            <p class="text-gray-600 italic mb-4">"I landed a construction role in Israel thanks to
-                                Crown’s thorough screening."</p>
-                            <h4 class="text-lg font-bold text-gray-800">Kumara Silva</h4>
-                            <p class="text-sm text-gray-500">Construction Worker, Israel</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Crown’s seamless process helped me become a chef in
-                                the Maldives!"</p>
-                            <h4 class="text-lg font-bold text-gray-800">Anil Wijesinghe</h4>
-                            <p class="text-sm text-gray-500">Chef, Maldives</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Crown guided me to a medical technician role in the
-                                UAE. Outstanding service!"</p>
-                            <h4 class="text-lg font-bold text-gray-800">Priya Sharma</h4>
-                            <p class="text-sm text-gray-500">Medical Technician, UAE</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- CTA Section -->
     <section id="cta" class="py-24 bg-white text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-5xl font-bold mb-6">Ready to Launch Your Global Career?</h2>
-            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black !important">Let Crown Global Services guide
-                you to your dream job.</p>
+            <p class="text-2xl mb-10 max-w-xl mx-auto" style="color:black !important">
+                Let Crown Global Services guide
+                you to your dream job.
+            </p>
             <button id="cta-btn"
-                class="ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">Get
-                Started</button>
+                    class="ripple bg-blue-600 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-700 transition-transform transform hover:scale-110 glow">
+                Get
+                Started
+            </button>
         </div>
     </section>
 
@@ -727,8 +748,10 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
-                        excellence.</p>
+                    <p class="text-gray-400">
+                        Empowering global journeys, careers, and education with trust and
+                        excellence.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Explore</h3>
@@ -740,18 +763,26 @@
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
-                        Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
-                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
-                            5108</a></p>
+                    <p class="text-gray-400">
+                        Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
+                        Sri Lanka
+                    </p>
+                    <p class="text-gray-400 mt-2">
+                        Email: <a href="mailto:info@crownglobalservices.com"
+                                  class="hover:text-amber-400">info@crownglobalservices.com</a>
+                    </p>
+                    <p class="text-gray-400">
+                        Phone: <a href="tel:+94112505108" class="hover:text-amber-400">
+                            +94 11 250
+                            5108
+                        </a>
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/profile.php?id=100088716497476"
-                            class="text-gray-400 hover:text-amber-400">Facebook</a>
+                           class="text-gray-400 hover:text-amber-400">Facebook</a>
                         <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
                     </div>
                 </div>
@@ -786,12 +817,12 @@
                 </select>
                 <label for="job-position">Preferred Job Position</label>
                 <input type="text" id="job-position" name="Job Position"
-                    placeholder="E.g., House Boy, Food Factory Worker">
+                       placeholder="E.g., House Boy, Food Factory Worker">
                 <label for="job-experience">Years of Experience</label>
                 <input type="number" id="job-experience" name="Experience" min="0" placeholder="Years of experience">
                 <label for="job-additional-info">Additional Information</label>
                 <textarea id="job-additional-info" name="Additional Information" rows="4"
-                    placeholder="Summarize your qualifications or add questions"></textarea>
+                          placeholder="Summarize your qualifications or add questions"></textarea>
                 <button type="submit">Submit Application</button>
             </form>
         </div>
@@ -905,7 +936,7 @@
             spaceBetween: 20,
             loop: true,
             autoplay: {
-                delay: 1000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             pagination: {
