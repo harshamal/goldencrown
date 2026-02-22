@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -172,81 +173,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-900">
-    <!-- Header -->
-    <header class="header z-50">
-        <div class="flex justify-between items-center px-6 py-4">
-            <div>
-                <a href="index.html">
-                    <img class="logo nav-link text-white hover:text-amber-800"
-                        src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
-                        alt="Crown Global Services logo" class="hover:scale-105 transition-transform duration-300">
-                </a>
-            </div>
-            <nav class="hidden md:flex items-center space-x-8 nav">
-                <a href="index.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size:small !important" id="nav-home">Home</a>
-                <a href="tours.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-tours">Tours</a>
-                <a href="tourssl.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-tourssl">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-recruitment">Recruitment</a>
-                <a href="education.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-education">Education</a>
-                <a href="about.html" class="nav-link text-black hover:text-darkgoldenrod"
-                    style="font-size: small !important" id="nav-about">About Us</a>
-                <a href="contact.html" class="nav-link text-black hover:text-darkgoldenrod active-link"
-                    style="font-size: small !important" id="nav-contact">Contact</a>
-
-            </nav>
-            <div class="hidden md:flex flex-col text-sm mail space-y-4">
-                <a href="mailto:info@crownglobalservices.com" class="hover:text-amber-800 flex items-center space-x-4">
-                    <i class="fas fa-envelope text-yellow-800"></i>
-                    <span>info@crownglobalservices.com</span>
-                </a>
-                <a href="tel:+94112505108" class="hover:text-darkgoldenrod flex items-center space-x-4">
-                    <i class="fas fa-phone-alt text-yellow-500"></i>
-                    <span>+94 11 250 5108</span>
-                </a>
-            </div>
-
-            <div class="flex items-center">
-                <button id="mobile-menu-btn" class="mobile md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-80 h-screen hidden">
-            <div class="flex justify-end p-4">
-                <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col space-y-6 px-6 py-4">
-                <a href="index.html" class="mobile-nav-link text-gray-800 hover:text-amber-500"
-                    id="mobile-nav-home">Home</a>
-                <a href="tours.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Tours</a>
-                <a href="tourssl.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Explore Sri Lanka</a>
-                <a href="recruitment.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Recruitment</a>
-                <a href="education.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">Education</a>
-                <a href="about.html" class="mobile-nav-link text-gray-800 hover:text-amber-500">About Us</a>
-                <a href="contact.html"
-                    class="mobile-nav-link text-gray-800 hover:text-amber-500 active-link">Contact</a>
-                <div class="flex flex-col text-sm text-gray-800">
-                    <a href="mailto:info@crownglobalservices.com"
-                        class="hover:text-amber-500">info@crownglobalservices.com</a>
-                    <a href="tel:+94112505108" class="hover:text-amber-500">+94 11 250 5108</a>
-                </div>
-            </nav>
-        </div>
-        <div class="tail"></div>
-    </header>
+    
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -505,56 +432,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            mobileMenu.classList.add('hidden');
-        });
-
-        // Header Scroll Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('header-scrolled');
-                header.classList.remove('header');
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('text-white');
-                    link.classList.remove('text-gray-800');
-                    link.classList.add('text-black');
-                });
-                document.querySelectorAll('.logo').forEach(link => {
-                    link.classList.remove('w-42');
-                    link.classList.add('w-24');
-                    link.classList.remove('h-42');
-                    link.classList.add('h-24');
-                });
-            } else {
-                header.classList.remove('header-scrolled');
-                header.classList.add('header');
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.add('text-black');
-                    link.classList.remove('text-white');
-                    link.classList.remove('text-gray-800');
-                });
-                document.querySelectorAll('.logo').forEach(link => {
-                    link.classList.remove('w-24');
-                    link.classList.add('w-42');
-                    link.classList.remove('h-24');
-                    link.classList.add('h-42');
-
-                });
-            }
-        });
-
         // Animations
         gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.5, ease: 'back.out(1.7)' });
 
@@ -631,6 +508,7 @@
             ease: 'power1.inOut'
         });
     </script>
+    <script src="load_header.js"></script>
 </body>
 
 </html>

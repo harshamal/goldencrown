@@ -1,0 +1,495 @@
+/* =====================================================
+   CROWN GLOBAL SERVICES — HEADER STYLES
+   header.css  (loaded on every page)
+===================================================== */
+
+/* ---- Variables ---- */
+:root {
+    --hdr-h: 130px;
+    --hdr-pill-h: 90px;
+    --gold: #c49a1a;
+    --gold-light: #e8c04a;
+    --navy: #1e3a5f;
+    --text-on-dark: rgba(255, 255, 255, 0.92);
+    --pill-radius: 100px;
+    /* Slow spring for positional/size changes */
+    --transition: 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Faster for colour/opacity */
+    --transition-fast: 0.35s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+/* ---- Base <header> — UN-SCROLLED MASTERPIECE ---- */
+header.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--hdr-h);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+
+    /*
+     * Cinematic 4-stop gradient:
+     * Rich deep-navy at top → fades completely by 100%
+     * Creates a natural, immersive dark frame for the hero
+     */
+    background:
+        linear-gradient(180deg,
+            rgba(4, 10, 30, 0.88) 0%,
+            rgba(6, 14, 40, 0.72) 30%,
+            rgba(6, 14, 40, 0.30) 65%,
+            transparent 100%);
+
+    /* Slide-in animation on first load */
+    animation: headerEntrance 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+    /* GPU hint — promotes header to its own compositor layer */
+    will-change: transform, width, border-radius, background;
+
+    /*
+     * left/right/width intentionally NOT transitioned —
+     * they cause sideways drift as the pill repositions.
+     * pillDropIn handles the entrance visually (vertical drop only).
+     */
+    transition:
+        transform var(--transition),
+        top var(--transition),
+        height var(--transition),
+        border-radius var(--transition),
+        background var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+
+/* Page load slide-in */
+@keyframes headerEntrance {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ---- Scrolled pill — CLEAN PREMIUM WHITE ---- */
+header.header.header-scrolled {
+    top: 16px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(94%, 1300px);
+    height: var(--hdr-pill-h);
+    border-radius: var(--pill-radius);
+
+    /*
+     * Clean, fully opaque white — the premium, timeless choice.
+     * A barely-warm cream tint (not cold #fff) adds luxury feel.
+     */
+    background: #fffef9;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /*
+     * Layered shadow stack — makes it feel like it's floating:
+     * 1. Hair-thin underline (contact)
+     * 2. Soft mid glow
+     * 3. Wide ambient lift
+     * 4. Top inner highlight — catches the light like a physical object
+     */
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        0 6px 20px rgba(0, 0, 0, 0.09),
+        0 20px 56px rgba(0, 0, 0, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+
+    /* Thin gold accent border — ties to the brand */
+    border: 1px solid rgba(196, 154, 26, 0.22);
+
+    padding: 0 24px;
+    animation: pillDropIn 0.65s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+@keyframes pillDropIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ---- Inner wrapper ---- */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 28px;
+    gap: 20px;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+.header-logo-link {
+    flex-shrink: 0;
+    display: block;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.header-logo-link:hover {
+    transform: scale(1.06);
+}
+
+.logo {
+    display: block;
+    width: auto;
+    max-width: 220px;
+    max-height: calc(var(--hdr-h) - 14px);
+    object-fit: contain;
+    /*
+     * mix-blend-mode: multiply makes white pixels disappear on the dark
+     * header gradient — the logo looks like a transparent PNG.
+     * Blues and golds render true and vivid against the dark background.
+     */
+    mix-blend-mode: multiply;
+    filter: saturate(1.6) contrast(1.10) brightness(1.0);
+    transition: filter 0.35s ease, transform 0.35s ease;
+}
+
+/* Hover: colours intensify */
+.header-logo-link:hover .logo {
+    filter: saturate(2.0) contrast(1.15) brightness(1.05);
+}
+
+/* Scrolled pill has a LIGHT background — multiply would darken it.
+   Switch back to normal blend + gentle saturate. */
+header.header.header-scrolled .logo {
+    max-width: 160px;
+    max-height: calc(var(--hdr-pill-h) - 12px);
+    mix-blend-mode: normal;
+    filter: saturate(1.4) contrast(1.08) brightness(1.0);
+    animation: none;
+}
+
+header.header.header-scrolled .header-logo-link:hover .logo {
+    filter: saturate(1.7) contrast(1.12) brightness(1.02);
+}
+
+/* =====================================================
+   DESKTOP NAV
+===================================================== */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 2px;
+    /* tighter — spacing comes from link padding */
+}
+
+@media (min-width: 900px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+/* Regular link */
+.nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.88);
+    border-radius: 6px;
+    /* Crisp text legibility against any hero */
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Premium gold underline — centered grow */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: calc(100% - 24px);
+    height: 1.5px;
+    border-radius: 2px;
+    background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.36, 1);
+    transform-origin: center;
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(220, 180, 50, 0.70), 0 1px 6px rgba(0, 0, 0, 0.40);
+}
+
+.nav-link.active-link {
+    color: var(--gold-light);
+    text-shadow: 0 0 16px rgba(220, 180, 50, 0.60), 0 1px 4px rgba(0, 0, 0, 0.40);
+}
+
+/* Scrolled pill — links go dark */
+header.header-scrolled .nav-link {
+    color: var(--navy);
+    text-shadow: none;
+    letter-spacing: 1.1px;
+}
+
+header.header-scrolled .nav-link::after {
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+header.header-scrolled .nav-link:hover {
+    color: var(--gold);
+    text-shadow: none;
+}
+
+header.header-scrolled .nav-link.active-link {
+    color: var(--navy);
+    font-weight: 800;
+    text-shadow: none;
+}
+
+/* ---- Contact CTA button ---- */
+.nav-link.nav-cta {
+    margin-left: 8px;
+    padding: 9px 20px;
+    background: linear-gradient(135deg, var(--gold) 0%, #b8891a 100%);
+    color: #fff !important;
+    border-radius: 50px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 16px rgba(196, 154, 26, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.nav-link.nav-cta::after {
+    display: none;
+}
+
+/* no underline on CTA */
+
+.nav-link.nav-cta:hover {
+    background: linear-gradient(135deg, #dbb03a 0%, #c49a1a 100%);
+    box-shadow: 0 6px 24px rgba(196, 154, 26, 0.65);
+    transform: translateY(-2px);
+    color: #fff !important;
+}
+
+header.header-scrolled .nav-link.nav-cta {
+    background: linear-gradient(135deg, var(--gold) 0%, #b8891a 100%);
+    color: #fff !important;
+}
+
+/* =====================================================
+   HAMBURGER BUTTON
+===================================================== */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+@media (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+header.header-scrolled .hamburger {
+    background: rgba(30, 58, 95, 0.08);
+    border-color: rgba(30, 58, 95, 0.18);
+}
+
+header.header-scrolled .hamburger span {
+    background: var(--navy);
+}
+
+.hamburger:hover {
+    background: rgba(196, 154, 26, 0.25);
+}
+
+/* =====================================================
+   MOBILE OVERLAY (darkens background)
+===================================================== */
+#mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    z-index: 950;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+#mobile-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* =====================================================
+   MOBILE DRAWER — always fixed, always on top
+===================================================== */
+#mobile-menu {
+    position: fixed;
+    /* KEY: ignore scroll position */
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    max-height: 100dvh;
+    /* dynamic viewport height */
+    z-index: 1000;
+    /* above overlay */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+    box-shadow: -12px 0 48px rgba(0, 0, 0, 0.18);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Drawer top bar */
+.drawer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-shrink: 0;
+}
+
+.drawer-logo {
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+}
+
+.drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #64748b;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.drawer-close:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* Drawer links */
+.drawer-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: #334155;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active-link {
+    background: linear-gradient(to right, #fefce8, transparent);
+    border-left-color: var(--gold);
+    color: var(--navy);
+    padding-left: 32px;
+}
+
+/* Drawer CTA */
+.drawer-cta {
+    padding: 20px 20px 28px;
+    flex-shrink: 0;
+    border-top: 1px solid #f1f5f9;
+}
+
+.drawer-cta-btn {
+    display: block;
+    text-align: center;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #c49a1a 0%, #9c7a10 100%);
+    box-shadow: 0 4px 20px rgba(196, 154, 26, 0.4);
+    transition: all 0.3s ease;
+}
+
+.drawer-cta-btn:hover {
+    background: linear-gradient(135deg, #dbb03a 0%, #c49a1a 100%);
+    box-shadow: 0 6px 28px rgba(196, 154, 26, 0.6);
+    transform: translateY(-2px);
+}
