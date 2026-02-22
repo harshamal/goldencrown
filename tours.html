@@ -574,7 +574,6 @@
                         { day: 'Day 4', title: 'Departure', desc: 'Leisure morning and airport transfer.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
                     ]
                 },
-
                 {
                     id: 'myanmar',
                     title: 'Myanmar Tour',
@@ -582,7 +581,7 @@
                     price: 'From $300 USD',
                     description: 'A short cultural immersion to Yangon, Bago and the mystical Golden Rock — includes visa & airfare options.',
                     highlights: 'Shwedagon Pagoda, Golden Rock, Bago heritage sites, Kyaukhtatgyi reclining Buddha',
-                    image: 'https://images.pexels.com/photos/2258814/pexels-photo-2258814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    image: 'https://asiantrails.b-cdn.net/wp-content/uploads/2020/06/bagan-zone-temple-view.jpg',
                     itinerary: [
                         { day: 'Day 1', title: 'Yangon Arrival & City Tour', desc: 'Explore Sule Pagoda, Mahabandoola Park and visit Shwedagon Pagoda at sunset.', image: 'https://images.pexels.com/photos/3889814/pexels-photo-3889814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
                         { day: 'Day 2', title: 'Bago & Golden Rock Base', desc: 'Drive to Bago then continue to Kyaiktiyo (Golden Rock) basecamp. Overnight near Golden Rock.', image: 'https://images.pexels.com/photos/14104273/pexels-photo-14104273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -598,7 +597,7 @@
                     price: 'From $350 USD',
                     description: 'Island hopping through Mahé, Praslin and La Digue. Relaxed pace, nature, and beaches with half-board stays.',
                     highlights: 'Vallée de Mai, Anse Source d’Argent, island ferries, national botanical garden',
-                    image: 'https://images.pexels.com/photos/3208759/pexels-photo-3208759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fb/42/seychelles.jpg?w=1400&h=1400&s=1',
                     itinerary: [
                         { day: 'Day 1', title: 'Arrival Mahé & Relax', desc: 'Transfer to hotel and chill; optional evening beach stroll.', image: 'https://images.pexels.com/photos/3601445/pexels-photo-3601445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
                         { day: 'Day 2', title: 'Mahé Island Tour', desc: 'Victoria market, botanical gardens and scenic viewpoints.', image: 'https://images.pexels.com/photos/3303666/pexels-photo-3303666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -650,7 +649,7 @@
                     price: '$1000 USD',
                     description: 'Modern marvels and desert adventures: Burj Khalifa, desert safari, Palm Jumeirah and Sheikh Zayed Mosque.',
                     highlights: 'Burj Khalifa, Desert Safari, Palm Jumeirah, Sheikh Zayed Mosque',
-                    image: 'https://images.pexels.com/photos/3762284/pexels-photo-3762284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    image: 'https://justglobetrotting.com/wp-content/uploads/2016/04/Dubai-1080x675.jpg',
                     itinerary: [
                         { day: 'Day 1', title: 'Arrive Dubai', desc: 'Transfer and relax, visit Dubai Mall & Burj Khalifa at sunset.', image: 'https://images.pexels.com/photos/3287154/pexels-photo-3287154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
                         { day: 'Day 2', title: 'Old Dubai & Desert Safari', desc: 'Explore Al Fahidi, Creek and afternoon desert safari with BBQ & entertainment.', image: 'https://images.pexels.com/photos/3762284/pexels-photo-3762284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -958,21 +957,25 @@
             <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Create a bespoke travel experience with
                 our group or solo customization options.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white rounded-xl shadow-lg p-8"
-                    style="background: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Group Adventures</h3>
-                    <p class="text-white mb-6">Plan a memorable trip for your family, friends, or team with our
+                <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden"
+                    style="background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('https://rezkit-tour-images.b-cdn.net/01h7ywwd7at70t98wdj69emng5/images/01JGNTGFEYV0ERRA4XZQXH7MAE.jpg?width=9000&height=4200&crop_gravity=center&aspect_ratio=9000%3A4200') center/cover no-repeat ">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4 relative z-10">Group Adventures</h3>
+                    <p class="text-gray-900 font-medium mb-6 relative z-10">Plan a memorable trip for your family,
+                        friends, or team with our
                         tailored group itineraries.</p>
-                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                    <button
+                        class="customize-btn relative z-10 bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
                         data-type="Group">Customize Now</button>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-8"
-                    style="background: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                <div class="bg-white rounded-xl shadow-lg p-8 relative overflow-hidden"
+                    style="background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat ">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4 relative z-10">
                         Solo Journeys</h3>
-                    <p class="text-white mb-6">Embark on a personal adventure designed just for you, with flexibility
+                    <p class="text-gray-900 font-medium mb-6 relative z-10">Embark on a personal adventure designed just
+                        for you, with flexibility
                         and expert guidance.</p>
-                    <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
+                    <button
+                        class="customize-btn relative z-10 bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
                         data-type="Solo">Customize Now</button>
                 </div>
             </div>
