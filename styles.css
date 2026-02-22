@@ -1,16 +1,26 @@
 ﻿:root {
-    --primary: #2a6eb9; /* Logo Blue */
-    --accent-amber: #d4a017; /* Logo Amber/Gold */
-    --accent-green: #047857; /* Emerald Green */
-    --white: #ffffff; /* White */
-    --light-gray: #e5e7eb; /* Light Gray */
-    --dark: #1e1e1e; /* Near Black */
-    --dark-amber: #d97706; /* Dark Amber */
-    --light-blue: #60a5fa; /* Light Blue */
+    --primary: #2a6eb9;
+    /* Logo Blue */
+    --accent-amber: #d4a017;
+    /* Logo Amber/Gold */
+    --accent-green: #047857;
+    /* Emerald Green */
+    --white: #ffffff;
+    /* White */
+    --light-gray: #e5e7eb;
+    /* Light Gray */
+    --dark: #1e1e1e;
+    /* Near Black */
+    --dark-amber: #d97706;
+    /* Dark Amber */
+    --light-blue: #60a5fa;
+    /* Light Blue */
 }
-body{
-    overflow-x:hidden;
+
+body {
+    overflow-x: hidden;
 }
+
 .header {
     position: fixed;
     top: 0px;
@@ -19,7 +29,7 @@ body{
     width: 100%;
     transition: all 0.4s ease;
     z-index: 50;
-    height: 170px;
+    height: 150px;
     padding: 0px;
     font-size: 1.5rem;
     letter-spacing: 2px;
@@ -34,27 +44,31 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 .logo {
     transition: all 0.4s ease-in-out;
     object-fit: contain;
     width: 170px;
     height: auto;
 }
+
 .mobile {
     background-color: #1e435e;
     margin-left: 20px;
 }
+
 .header-scrolled .logo {
     width: 110px;
     height: auto;
 }
+
 .header-scrolled {
     position: fixed;
     top: 4%;
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    height: 110px;
+    height: 90px;
     background: linear-gradient(120deg, #ffffff, #ffffff, #ffffff);
     background-size: 300% 300%;
     border-radius: 20px;
@@ -69,17 +83,22 @@ body{
     font-size: 1.0rem;
     letter-spacing: 2px;
     font-weight: 900;
-    padding:0px !important;
+    padding: 0px !important;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: Arial, Helvetica, sans-serif;
     color: #1e435e;
 }
+
 .bg-emerald-600 {
     --tw-bg-opacity: 1;
     background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
 }
+
 /* Smooth gradient motion */
 @keyframes gradientMove {
     0% {
@@ -94,6 +113,7 @@ h1, h2, h3, h4 {
         background-position: 0% 50%;
     }
 }
+
 /* Existing fly-in */
 @keyframes flyIn {
     0% {
@@ -148,11 +168,12 @@ h1, h2, h3, h4 {
 /* Optional: Add hover or scroll effect */
 .header-scrolled:hover {
     backdrop-filter: blur(12px);
-    background: linear-gradient(135deg, rgba(255,255,255,1), rgba(230,230,255,0.8));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(230, 230, 255, 0.8));
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .mail {
+    display: none;
     color: #1e3a8a;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -169,40 +190,40 @@ h1, h2, h3, h4 {
     overflow: hidden;
 }
 
-    /* Subtle animated underline */
-    .mail::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 2px;
-        background: linear-gradient(90deg, #2563eb, #60a5fa);
-        border-radius: 2px;
-        transition: width 0.4s ease;
-    }
+/* Subtle animated underline */
+.mail::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
 
-    /* Hover interaction */
-    .mail:hover {
-        color: #0f172a !important;
-        background: rgba(224, 242, 254, 0.7);
-        transform: translateY(-2px);
-    }
+/* Hover interaction */
+.mail:hover {
+    color: #0f172a !important;
+    background: rgba(224, 242, 254, 0.7);
+    transform: translateY(-2px);
+}
 
-        .mail:hover::after {
-            width: 100%;
-        }
+.mail:hover::after {
+    width: 100%;
+}
 
-    /* Optional: Add subtle icon pulse for phone/mail icons */
-    .mail i {
-        font-size: 1.2rem;
-        color: darkgoldenrod;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
+/* Optional: Add subtle icon pulse for phone/mail icons */
+.mail i {
+    font-size: 1.2rem;
+    color: darkgoldenrod;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-    .mail:hover i {
-        transform: scale(1.2);
-    }
+.mail:hover i {
+    transform: scale(1.2);
+}
 
 
 
@@ -219,41 +240,42 @@ h1, h2, h3, h4 {
     font-size: 5.95rem !important;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #0f2c6cf7 !important; /* close to your logo blue */
+    color: #0f2c6cf7 !important;
+    /* close to your logo blue */
 }
 
-    .nav-link:hover::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #f59e0b;
-        transform: scaleX(1);
-    }
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f59e0b;
+    transform: scaleX(1);
+}
 
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #f59e0b;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f59e0b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
 
 .active-link {
     color: steelblue;
     font-weight: 600;
 }
 
-    .active-link::after {
-        transform: scaleX(1) !important;
-        background-color: darkgoldenrod !important;
-    }
+.active-link::after {
+    transform: scaleX(1) !important;
+    background-color: darkgoldenrod !important;
+}
 
 #mobile-menu {
     transform: translateX(100%);
@@ -262,19 +284,19 @@ h1, h2, h3, h4 {
     backdrop-filter: blur(12px);
 }
 
-    #mobile-menu.open {
-        transform: translateX(0);
-    }
+#mobile-menu.open {
+    transform: translateX(0);
+}
 
 .mobile-nav-link {
     transition: all 0.3s ease;
     font-size: 1.1rem;
 }
 
-    .mobile-nav-link:hover {
-        transform: translateX(10px);
-        color: #f59e0b;
-    }
+.mobile-nav-link:hover {
+    transform: translateX(10px);
+    color: #f59e0b;
+}
 
 
 
@@ -328,14 +350,20 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 55%; /* only covers upper part */
-    background: linear-gradient( to bottom, rgba(255, 255, 255, 0.85) 0%, /* soft white tint at top */
-    rgba(255, 255, 255, 0.25) 60%, /* subtle fade */
-    rgba(255, 255, 255, 0) 100% /* fully transparent below */
-    );
-    backdrop-filter: blur(0px); /* adds subtle glass effect */
+    height: 55%;
+    /* only covers upper part */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%,
+            /* soft white tint at top */
+            rgba(255, 255, 255, 0.25) 60%,
+            /* subtle fade */
+            rgba(255, 255, 255, 0) 100%
+            /* fully transparent below */
+        );
+    backdrop-filter: blur(0px);
+    /* adds subtle glass effect */
     z-index: 3;
-    pointer-events: none; /* ensures overlay doesn't block clicks */
+    pointer-events: none;
+    /* ensures overlay doesn't block clicks */
     transition: all 0.4s ease-in-out;
 }
 
@@ -362,6 +390,7 @@ h1, h2, h3, h4 {
 .service-card:hover .service-card-overlay {
     opacity: 1;
 }
+
 .card-overlay {
     pointer-events: none;
 }

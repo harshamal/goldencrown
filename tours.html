@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -319,6 +319,637 @@
     </section>
 
 
+    <!-- Foreign Tour Packages Section -->
+    <section id="foreign-packages" class="relative min-h-screen bg-stone-50 text-stone-800 py-24 overflow-hidden">
+        <style>
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.05);
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(217, 119, 6, 0.3);
+                border-radius: 10px;
+            }
+
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(216, 165, 32, 0.6);
+            }
+
+            .tour-item.active {
+                background: rgba(255, 255, 255, 0.9);
+                border-color: rgba(217, 119, 6, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            }
+
+            .tour-item.active .tour-index {
+                color: goldenrod;
+            }
+
+            .tour-item.active .tour-title {
+                color: #1c1917;
+                font-weight: 600;
+            }
+
+            /* simple enter animation used on content blocks */
+            .animate-slide-up {
+                animation: slideUp .6s ease both;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(12px);
+                    opacity: 0
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1
+                }
+            }
+        </style>
+
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+            </div>
+            <div class="absolute -right-32 -top-32 w-96 h-96 bg-amber-200/30 rounded-full blur-[100px]"></div>
+            <div class="absolute -left-32 bottom-0 w-96 h-96 bg-orange-100/40 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 h-full">
+            <div class="flex flex-col lg:flex-row gap-12 h-full items-stretch">
+
+                <!-- Left Side: List -->
+                <div class="lg:w-1/3 flex flex-col h-[80vh]">
+                    <div class="mb-8 shrink-0">
+                        <div class="flex items-center gap-3 text-amber-800 mb-2">
+                            <div class="h-px w-8 bg-amber-800"></div>
+                            <span class="uppercase tracking-[0.3em] text-xs font-bold">Foreign Escapes</span>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-serif leading-none text-stone-900">
+                            Explore <br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-amber-800">Worldwide</span>
+                        </h2>
+                    </div>
+
+                    <div class="flex-1 overflow-y-auto pr-4 space-y-3 custom-scrollbar" id="tour-list">
+                        <!-- injected -->
+                    </div>
+                </div>
+
+                <!-- Right Side: Details -->
+                <div class="lg:w-2/3 relative h-[80vh] bg-white/80 backdrop-blur-xl border border-stone-200/50 rounded-[2rem] overflow-hidden p-8 md:p-12 flex flex-col shadow-2xl shadow-stone-200/50"
+                    id="tour-detail-card">
+                    <div id="tour-content"
+                        class="relative z-10 h-full flex flex-col justify-between opacity-0 transition-opacity duration-500">
+                        <!-- injected -->
+                    </div>
+
+                    <!-- Background Image for Card -->
+                    <div class="absolute inset-0 z-0">
+                        <img id="tour-bg-image" src=""
+                            class="w-full h-full object-cover opacity-50 transition-transform duration-700 transform">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Screen Tour Modal -->
+        <div id="tour-fullscreen-modal"
+            class="fixed inset-0 z-50 bg-black text-white opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col">
+            <!-- Background Image Layer -->
+            <div class="absolute inset-0 z-0">
+                <img id="fs-bg-image" src=""
+                    class="w-full h-full object-cover transition-transform duration-1000 transform scale-105"
+                    alt="Day Background">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+            </div>
+
+            <!-- Top Bar -->
+            <div class="relative z-20 flex justify-between items-center p-6 md:p-8">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-xl font-serif">
+                        CGS</div>
+                    <div class="hidden md:block">
+                        <div class="text-amber-500 text-xs uppercase tracking-[0.3em] font-bold">Crown Global Services
+                        </div>
+                        <div id="fs-tour-title" class="text-white text-lg font-serif">Tour Title</div>
+                    </div>
+                </div>
+                <button id="fs-close-btn"
+                    class="w-12 h-12 rounded-full border border-white/20 hover:bg-white/10 flex items-center justify-center text-white transition-colors group"
+                    aria-label="Close fullscreen">
+                    <!-- fallback: use an X -->
+                    <span class="text-xl font-bold">×</span>
+                </button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-24 max-w-7xl mx-auto w-full">
+                <div id="fs-content"
+                    class="space-y-6 md:space-y-8 transform translate-y-10 opacity-0 transition-all duration-700">
+                    <div class="flex items-center gap-4">
+                        <span id="fs-day-badge"
+                            class="px-5 py-2 rounded-full bg-amber-500 text-black font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(245,158,11,0.4)]">Day
+                            01</span>
+                        <div class="h-px w-24 bg-gradient-to-r from-amber-500 to-transparent"></div>
+                    </div>
+
+                    <h2 id="fs-day-title"
+                        class="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg">The
+                        Awakening</h2>
+
+                    <p id="fs-day-desc"
+                        class="text-xl md:text-2xl text-stone-200 font-light leading-relaxed max-w-3xl drop-shadow-md border-l-4 border-amber-500 pl-6">
+                        Your journey begins...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="relative z-20 p-6 md:p-12 flex items-end justify-between">
+                <!-- Progress Bar -->
+                <div class="absolute bottom-0 left-0 h-1 bg-white/10 w-full">
+                    <div id="fs-progress" class="h-full bg-amber-500 transition-all duration-500" style="width: 0%">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 text-stone-400 text-sm font-mono">
+                    <span id="fs-current-step">01</span>
+                    <span class="w-12 h-px bg-white/20"></span>
+                    <span id="fs-total-steps">06</span>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="fs-prev"
+                        class="w-14 h-14 rounded-full border border-white/20 hover:bg-amber-500 hover:border-amber-500 hover:text-black flex items-center justify-center text-white transition-all duration-300 group"
+                        aria-label="Previous day">‹</button>
+                    <button id="fs-next"
+                        class="w-14 h-14 rounded-full border border-white/20 hover:bg-amber-500 hover:border-amber-500 hover:text-black flex items-center justify-center text-white transition-all duration-300 group"
+                        aria-label="Next day">›</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            /* Foreign tours data (extracted from your PDF) */
+            const tours = [
+                {
+                    id: 'bangkok',
+                    title: 'Bangkok Tour',
+                    duration: '5 Days / 4 Nights',
+                    price: '$850 USD',
+                    description: 'From a Chao Phraya dinner cruise to iconic temples and theme parks — a compact Bangkok experience with culture and fun.',
+                    highlights: 'Chao Phraya dinner cruise, Wat Pho, Wat Traimit, DreamWorld, Floating Market',
+                    image: 'https://vpt-en.b-cdn.net/wp-content/uploads/b/42/Bangkok-venice.jpg.webp',
+                    itinerary: [
+                        {
+                            day: 'Day 1', title: 'Arrival & River Cruise', desc: 'Arrival, transfer to hotel and Chao Phraya dinner cruise with views of Wat Arun & Grand Palace.',
+                            image: 'https://www.orientalescape.com/images/attraction/bkk-cruise-wonderfulpearl-24.webp'
+                        },
+                        {
+                            day: 'Day 2', title: 'City & Temple Tour', desc: 'Half-day temple tour visiting Wat Traimit, Wat Pho & a pass-by Grand Palace area; afternoon for shopping.',
+                            image: 'https://media.tacdn.com/media/attractions-splice-spp-674x446/07/00/a3/3d.jpg'
+                        },
+                        {
+                            day: 'Day 3', title: 'DreamWorld', desc: 'Full day theme park outing at DreamWorld; fun rides and shows (lunch included at park).',
+                            image: 'https://i.ytimg.com/vi/XzkSjIg0Bn4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAEZxxqfdEkcviOw1T84R6-kEVrHQ'
+                        },
+                        {
+                            day: 'Day 4', title: 'Floating Market & Safari World', desc: 'Early morning floating market visit; afternoon Safari World and Marine Park with shows.',
+                            image: 'https://media1.thrillophilia.com/filestore/gii8zxtnibyzp1cqevhqessan58h_shutterstock_287322869.jpg'
+                        },
+                        {
+                            day: 'Day 5', title: 'Departure',
+                            desc: `Leisure morning and transfer to airport for departure.
+                                <div class="mt-4 text-base grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <strong class="block mb-2 font-bold text-amber-600">Inclusions:</strong>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>4 Nights accommodation with daily breakfast</li>
+                                            <li>Airport transfers (private or SIC basis)</li>
+                                            <li>Bangkok city & temple tour</li>
+                                            <li>Dream World with entrance & lunch</li>
+                                            <li>Damnoen Saduak Floating Market tour</li>
+                                            <li>Safari World & Marine Park with lunch</li>
+                                            <li>Chao Phraya dinner cruise</li>
+                                            <li>English-speaking guide</li>
+                                            <li>All taxes & parking fees</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <strong class="block mb-2 font-bold text-amber-600">Exclusions:</strong>
+                                        <ul class="list-disc pl-5 space-y-1">
+                                            <li>Airfare & Visa</li>
+                                            <li>Personal expenses, tips</li>
+                                            <li>Meals not mentioned</li>
+                                            <li>Optional tours/shows</li>
+                                        </ul>
+                                    </div>
+                                </div>`,
+                            image: ''
+                        }
+                    ]
+                },
+
+                {
+                    id: 'malaysia',
+                    title: 'Malaysia Tour',
+                    duration: '4 Nights',
+                    price: '$300 USD',
+                    description: 'A concise Kuala Lumpur + Genting experience: towers, temples, cable cars and an amusement park day.',
+                    highlights: 'Kuala Lumpur city tour, Batu Caves, Genting Highlands, Sunway Lagoon',
+                    image: 'https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Arrival & KL Sights', desc: 'Arrive Kuala Lumpur, city tour including photo stop at Petronas Twin Towers and local shopping.', image: 'https://images.pexels.com/photos/3782924/pexels-photo-3782924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Genting Highlands & Batu Caves', desc: 'Cable car to Genting Highlands and Batu Caves visit on the way back.', image: 'https://images.pexels.com/photos/10121731/pexels-photo-10121731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Sunway Lagoon', desc: 'Full day at Sunway Lagoon with access to 6 parks.', image: 'https://images.pexels.com/photos/1769399/pexels-photo-1769399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Departure', desc: 'Leisure morning and airport transfer.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'myanmar',
+                    title: 'Myanmar Tour',
+                    duration: '3 Nights / 4 Days',
+                    price: 'From $300 USD',
+                    description: 'A short cultural immersion to Yangon, Bago and the mystical Golden Rock — includes visa & airfare options.',
+                    highlights: 'Shwedagon Pagoda, Golden Rock, Bago heritage sites, Kyaukhtatgyi reclining Buddha',
+                    image: 'https://images.pexels.com/photos/2258814/pexels-photo-2258814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Yangon Arrival & City Tour', desc: 'Explore Sule Pagoda, Mahabandoola Park and visit Shwedagon Pagoda at sunset.', image: 'https://images.pexels.com/photos/3889814/pexels-photo-3889814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Bago & Golden Rock Base', desc: 'Drive to Bago then continue to Kyaiktiyo (Golden Rock) basecamp. Overnight near Golden Rock.', image: 'https://images.pexels.com/photos/14104273/pexels-photo-14104273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Golden Rock & Bago Return', desc: 'Visit Golden Rock, Shwe Maw Daw Pagoda and Kanbawzathardi Palace; return to Yangon.', image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/c1/57/caption.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Departure', desc: 'Transfer to airport after breakfast.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'seychelles',
+                    title: 'Seychelles Holiday',
+                    duration: '5 Days / 4 Nights',
+                    price: 'From $350 USD',
+                    description: 'Island hopping through Mahé, Praslin and La Digue. Relaxed pace, nature, and beaches with half-board stays.',
+                    highlights: 'Vallée de Mai, Anse Source d’Argent, island ferries, national botanical garden',
+                    image: 'https://images.pexels.com/photos/3208759/pexels-photo-3208759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Arrival Mahé & Relax', desc: 'Transfer to hotel and chill; optional evening beach stroll.', image: 'https://images.pexels.com/photos/3601445/pexels-photo-3601445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Mahé Island Tour', desc: 'Victoria market, botanical gardens and scenic viewpoints.', image: 'https://images.pexels.com/photos/3303666/pexels-photo-3303666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Praslin & Vallée de Mai', desc: 'Ferry to Praslin; visit Vallée de Mai and Anse Volbert.', image: 'https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'La Digue Day Trip', desc: 'Cycle La Digue, visit Anse Source d’Argent and L’Union Estate.', image: 'https://images.pexels.com/photos/1574880/pexels-photo-1574880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5', title: 'Departure', desc: 'Return ferry/transfer to airport and depart.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'maldives',
+                    title: 'Maldives Getaway',
+                    duration: '4 Nights / 5 Days',
+                    price: 'From $300 USD',
+                    description: 'Resort paradise — overwater villas, seaplane transfers, snorkeling and spa experiences.',
+                    highlights: 'Speedboat/seaplane transfers, island resort, watersports, couple’s dining',
+                    image: 'https://images.pexels.com/photos/1483053/pexels-photo-1483053.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Arrival & Island Transfer', desc: 'Seaplane or speedboat transfer to your island resort. Welcome drinks and check-in.', image: 'https://images.pexels.com/photos/3608051/pexels-photo-3608051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Water Adventures', desc: 'Snorkelling, optional diving or spa treatment. Romantic dinner by the sea.', image: 'https://images.pexels.com/photos/3046638/pexels-photo-3046638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Island Relax', desc: 'Sun, pool, watersports or island hopping.', image: 'https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Leisure & Spa', desc: 'Couple’s spa or extra excursions.', image: 'https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5', title: 'Departure', desc: 'Transfer back to airport for departure.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'singapore-malaysia',
+                    title: 'Singapore + Malaysia Combo',
+                    duration: '5 Nights / 6 Days',
+                    price: '$1200 USD',
+                    description: 'City culture, night safari and Sentosa in Singapore followed by KL highlights and Genting in Malaysia.',
+                    highlights: 'Singapore Night Safari, Sentosa, KL City Tour, Genting Highlands',
+                    image: 'https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Arrive Singapore & Night Safari', desc: 'Transfer, check-in and Night Safari at the Singapore zoo.', image: 'https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'City + Sentosa', desc: 'City sights and Sentosa island attractions (cable car optional).', image: 'https://images.pexels.com/photos/1592750/pexels-photo-1592750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Travel to KL', desc: 'Coach transfer to Kuala Lumpur; evening free for shopping.', image: 'https://images.pexels.com/photos/3782924/pexels-photo-3782924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'KL City Tour', desc: 'Petronas, Batu Caves and local markets.', image: 'https://images.pexels.com/photos/10121731/pexels-photo-10121731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5', title: 'Genting Highlands', desc: 'Cable car up to Genting and leisure at the resort/casino complex.', image: 'https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 6', title: 'Departure', desc: 'Return to KL and airport transfer.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'uae',
+                    title: 'UAE – Dubai & Abu Dhabi',
+                    duration: '5 Days / 4 Nights',
+                    price: '$1000 USD',
+                    description: 'Modern marvels and desert adventures: Burj Khalifa, desert safari, Palm Jumeirah and Sheikh Zayed Mosque.',
+                    highlights: 'Burj Khalifa, Desert Safari, Palm Jumeirah, Sheikh Zayed Mosque',
+                    image: 'https://images.pexels.com/photos/3762284/pexels-photo-3762284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Arrive Dubai', desc: 'Transfer and relax, visit Dubai Mall & Burj Khalifa at sunset.', image: 'https://images.pexels.com/photos/3287154/pexels-photo-3287154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Old Dubai & Desert Safari', desc: 'Explore Al Fahidi, Creek and afternoon desert safari with BBQ & entertainment.', image: 'https://images.pexels.com/photos/3762284/pexels-photo-3762284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Palm & Modern Sights', desc: 'Visit Palm Jumeirah, Atlantis (optional Aquaventure) and Dubai Marina.', image: 'https://images.pexels.com/photos/17036612/pexels-photo-17036612/free-photo-of-buildings-in-the-distance-by-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Abu Dhabi Day Trip', desc: 'Sheikh Zayed Grand Mosque, Louvre Abu Dhabi and Corniche.', image: 'https://images.pexels.com/photos/3722818/pexels-photo-3722818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5', title: 'Departure', desc: 'Leisure & transfer to airport.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'japan',
+                    title: 'Japan – 14 Days',
+                    duration: '14 Days',
+                    price: '$2500 USD',
+                    description: 'A deep dive into Japan: Tokyo, Hakone, Nagoya, Kyoto, Osaka, Nara, Hiroshima and Miyajima with bullet-train travel.',
+                    highlights: 'Tokyo, Kyoto, Osaka, Shinkansen bullet trains, Mt. Fuji & Hiroshima',
+                    image: 'https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Fly to Tokyo', desc: 'Overnight flight and arrival in Tokyo.', image: 'https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Tokyo City', desc: 'Senso-ji, Shibuya crossing, Skytree and evening in Shinjuku.', image: 'https://images.pexels.com/photos/1727658/pexels-photo-1727658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Hakone & Mt. Fuji', desc: 'Day trip to Hakone with Lake Ashi cruise and Mt. Fuji views.', image: 'https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Nagoya', desc: 'Bullet train to Nagoya; city highlights.', image: 'https://images.pexels.com/photos/1510595/pexels-photo-1510595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5-8', title: 'Kyoto & Nara', desc: 'Historic temples, Gion district, Nara day trip with deer park.', image: 'https://images.pexels.com/photos/3120155/pexels-photo-3120155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 9-10', title: 'Osaka & Universal (optional)', desc: 'Osaka castle, Dotonbori and optional theme park day.', image: 'https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 11-12', title: 'Hiroshima & Miyajima', desc: 'Peace park, Itsukushima shrine and island visit.', image: 'https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 13-14', title: 'Return to Tokyo & Depart', desc: 'Free time and flight home.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                },
+
+                {
+                    id: 'china',
+                    title: 'China – 10 Days',
+                    duration: '10 Days',
+                    price: '$1500 USD',
+                    description: 'Highlights of China: Beijing, Xi’an and Shanghai with the Great Wall, Terracotta Army and vibrant Shanghai modernity.',
+                    highlights: 'Beijing (Forbidden City, Great Wall), Xi’an Terracotta Army, Shanghai Bund',
+                    image: 'https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                    itinerary: [
+                        { day: 'Day 1', title: 'Fly to Beijing', desc: 'Arrive Beijing and settle in.', image: 'https://images.pexels.com/photos/2361008/pexels-photo-2361008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 2', title: 'Forbidden City & Tiananmen', desc: 'Explore palace grounds and Tiananmen Square.', image: 'https://images.pexels.com/photos/2033055/pexels-photo-2033055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 3', title: 'Great Wall Excursion', desc: 'Day trip to Mutianyu section of the Great Wall (cable car optional).', image: 'https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 4', title: 'Beijing to Xi’an (Train)', desc: 'Travel to Xi’an by high-speed train; evening in historic district.', image: 'https://images.pexels.com/photos/2903140/pexels-photo-2903140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 5', title: 'Terracotta Army', desc: 'Visit the world-famous Terracotta Warriors and local attractions.', image: 'https://images.pexels.com/photos/1434914/pexels-photo-1434914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 6-8', title: 'Shanghai via Flight', desc: 'Shanghai city tour, Bund riverfront and optional nearby Suzhou/Hangzhou trip.', image: 'https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
+                        { day: 'Day 9-10', title: 'Shopping & Departure', desc: 'Final shopping, leisure and airport transfer.', image: 'https://images.pexels.com/photos/2031713/pexels-photo-2031713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+                    ]
+                }
+            ];
+
+            /* DOM refs */
+            const tourList = document.getElementById('tour-list');
+            const tourContent = document.getElementById('tour-content');
+            const tourBgImage = document.getElementById('tour-bg-image');
+
+            // Full Screen Elements
+            const fsModal = document.getElementById('tour-fullscreen-modal');
+            const fsBgImage = document.getElementById('fs-bg-image');
+            const fsTourTitle = document.getElementById('fs-tour-title');
+            const fsDayBadge = document.getElementById('fs-day-badge');
+            const fsDayTitle = document.getElementById('fs-day-title');
+            const fsDayDesc = document.getElementById('fs-day-desc');
+            const fsCurrentStep = document.getElementById('fs-current-step');
+            const fsTotalSteps = document.getElementById('fs-total-steps');
+            const fsProgress = document.getElementById('fs-progress');
+            const fsContent = document.getElementById('fs-content');
+            const fsCloseBtn = document.getElementById('fs-close-btn');
+            const fsPrev = document.getElementById('fs-prev');
+            const fsNext = document.getElementById('fs-next');
+
+            let activeIndex = 0;
+            let activeDayIndex = -1; // -1 = overview
+            let fsActiveDayIndex = 0;
+
+            function renderList() {
+                tourList.innerHTML = '';
+                tours.forEach((tour, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = `tour-item w-full text-left p-4 rounded-xl transition-all duration-300 flex items-center justify-between border border-transparent hover:bg-white/50 hover:border-amber-500/30 ${index === activeIndex ? 'active' : ''}`;
+                    btn.onclick = () => setActiveTour(index);
+                    btn.innerHTML = `
+          <div class="flex items-center gap-4">
+            <span class="tour-index text-sm font-mono transition-colors ${index === activeIndex ? 'text-amber-600 font-bold' : 'text-stone-400'}">${String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <div class="tour-title text-lg font-serif ${index === activeIndex ? 'text-black' : 'text-black'}">${tour.title}</div>
+              <div class="text-stone-400 text-sm">${tour.duration} • ${tour.price}</div>
+            </div>
+          </div>
+          ${index === activeIndex ? '<span class="text-amber-500">›</span>' : ''}
+        `;
+                    tourList.appendChild(btn);
+                });
+            }
+
+            function setActiveTour(index) {
+                activeIndex = index;
+                activeDayIndex = -1;
+                renderList();
+                updateContent(tours[index]);
+            }
+
+            function nextDay() {
+                const tour = tours[activeIndex];
+                if (activeDayIndex < tour.itinerary.length - 1) {
+                    activeDayIndex++;
+                    updateContent(tour);
+                }
+            }
+
+            function prevDay() {
+                if (activeDayIndex > -1) {
+                    activeDayIndex--;
+                    updateContent(tours[activeIndex]);
+                }
+            }
+
+            function updateContent(tour) {
+                tourContent.style.opacity = '0';
+                tourBgImage.style.transform = 'scale(1.08)';
+
+                setTimeout(() => {
+                    let mainContent = '';
+
+                    if (activeDayIndex === -1) {
+                        // OVERVIEW
+                        tourBgImage.src = tour.image;
+                        mainContent = `
+            <div class="space-y-6 animate-slide-up">
+              <div class="flex items-start justify-between">
+                <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-50 border border-amber-200 text-amber-700 shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.382V6.618a2 2 0 011.553-1.894L9 2m0 18l6-3V5.382a2 2 0 011.553-1.894L21 2" /></svg>
+                </div>
+                <div class="text-right">
+                  <div class="text-stone-500 text-xs uppercase tracking-widest mb-1">Duration</div>
+                  <div class="text-amber-600 font-mono text-lg font-bold">${tour.duration}</div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-4xl md:text-5xl font-serif text-black mb-2">${tour.title}</h3>
+                <p class="text-stone-500 uppercase tracking-widest text-sm font-medium">Starting from <span class="text-amber-600 font-bold">${tour.price}</span></p>
+              </div>
+
+              <div class="text-xl text-stone-600 leading-relaxed font-light">${tour.description}</div>
+
+              <div class="bg-stone-100/80 p-6 rounded-xl border-l-4 border-amber-500">
+                <div class="text-amber-600 font-bold uppercase text-xs tracking-widest mb-1">Highlights</div>
+                <p class="text-stone-600 italic font-serif text-sm leading-relaxed">${tour.highlights}</p>
+              </div>
+            </div>
+          `;
+                    } else {
+                        const day = tour.itinerary[activeDayIndex];
+                        tourBgImage.src = day.image || tour.image;
+                        mainContent = `
+            <div class="space-y-8 h-full flex flex-col justify-center animate-slide-up">
+              <div class="flex items-center gap-4 mb-4">
+                <span class="px-4 py-2 rounded-full bg-amber-100 text-amber-700 border border-amber-200 text-sm font-mono uppercase tracking-wider font-bold">${day.day}</span>
+                <div class="h-px flex-1 bg-stone-200"></div>
+              </div>
+
+              <h3 class="text-3xl md:text-5xl font-serif text-black leading-tight">${day.title}</h3>
+
+              <div class="text-xl md:text-2xl text-stone-600 leading-relaxed font-light">${day.desc}</div>
+            </div>
+          `;
+                    }
+
+                    // nav / actions
+                    let exploreBtn = '';
+                    if (activeDayIndex === -1) {
+                        exploreBtn = `<button id="open-fs" class="bg-white border border-stone-200 text-stone-700 hover:bg-stone-50 hover:text-amber-600 px-6 py-3 rounded-full font-medium transition-all shadow-sm flex items-center gap-2">Explore Journey</button>`;
+                    }
+
+                    const navControls = `
+          <div class="pt-8 border-t border-stone-200 flex gap-4 items-center justify-between">
+            <div class="flex gap-2">
+              <button id="prev-btn" class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:bg-stone-100 hover:text-amber-600 transition-colors ${activeDayIndex === -1 ? 'opacity-30 cursor-not-allowed' : ''}">‹</button>
+              <button id="next-btn" class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-600 hover:bg-stone-100 hover:text-amber-600 transition-colors ${activeDayIndex === tour.itinerary.length - 1 ? 'opacity-30 cursor-not-allowed' : ''}">›</button>
+            </div>
+
+            <div class="flex gap-3 flex-1 justify-end">
+              ${exploreBtn}
+              <button id="book-btn" class="bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-600 hover:to-orange-700 text-white px-8 py-3 rounded-full font-medium shadow-lg shadow-orange-500/30">Book Now</button>
+            </div>
+          </div>
+        `;
+
+                    tourContent.innerHTML = mainContent + navControls;
+
+                    // after inject: attach small handlers to inner buttons
+                    setTimeout(() => {
+                        // fade in
+                        tourContent.style.opacity = '1';
+                        tourBgImage.style.transform = 'scale(1)';
+
+                        const prevBtn = document.getElementById('prev-btn');
+                        const nextBtn = document.getElementById('next-btn');
+                        const openFs = document.getElementById('open-fs');
+                        const bookBtn = document.getElementById('book-btn');
+
+                        if (prevBtn) prevBtn.onclick = prevDay;
+                        if (nextBtn) nextBtn.onclick = nextDay;
+                        if (openFs) openFs.onclick = openFullscreenMode;
+                        if (bookBtn) bookBtn.onclick = () => openInquiry(tour.title);
+                    }, 50);
+                }, 280);
+            }
+
+            function openInquiry(tourName) {
+                const popup = document.getElementById('tour-popup');
+                const title = document.getElementById('tour-title');
+
+                if (popup) {
+                    popup.classList.add('active');
+                    if (title) title.textContent = `Inquire: ${tourName}`;
+                    const form = popup.querySelector('form');
+                    let hiddenInput = form.querySelector('input[name="Tour"]');
+                    if (!hiddenInput) {
+                        hiddenInput = document.createElement('input');
+                        hiddenInput.type = 'hidden';
+                        hiddenInput.name = 'Tour';
+                        form.appendChild(hiddenInput);
+                    }
+                    hiddenInput.value = tourName;
+                }
+            }
+
+            /* Fullscreen logic */
+            function openFullscreenMode() {
+                const tour = tours[activeIndex];
+                fsActiveDayIndex = 0;
+                fsTourTitle.textContent = tour.title;
+                fsTotalSteps.textContent = String(tour.itinerary.length).padStart(2, '0');
+                updateFsContent();
+                fsModal.classList.remove('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = 'hidden';
+                document.addEventListener('keydown', handleFsKeydown);
+            }
+
+            function closeFullscreenMode() {
+                fsModal.classList.add('pointer-events-none', 'opacity-0');
+                document.body.style.overflow = '';
+                document.removeEventListener('keydown', handleFsKeydown);
+            }
+
+            function handleFsKeydown(e) {
+                if (e.key === 'ArrowRight') nextFsDay();
+                if (e.key === 'ArrowLeft') prevFsDay();
+                if (e.key === 'Escape') closeFullscreenMode();
+            }
+
+            function nextFsDay() {
+                const tour = tours[activeIndex];
+                if (fsActiveDayIndex < tour.itinerary.length - 1) {
+                    fsActiveDayIndex++;
+                    updateFsContent();
+                }
+            }
+
+            function prevFsDay() {
+                if (fsActiveDayIndex > 0) {
+                    fsActiveDayIndex--;
+                    updateFsContent();
+                }
+            }
+
+            function updateFsContent() {
+                const tour = tours[activeIndex];
+                const day = tour.itinerary[fsActiveDayIndex];
+
+                fsContent.classList.add('opacity-0', 'translate-y-10');
+                fsBgImage.classList.add('scale-110');
+
+                setTimeout(() => {
+                    fsBgImage.src = day.image || tour.image;
+                    fsDayBadge.textContent = day.day;
+                    fsDayTitle.textContent = day.title;
+                    fsDayDesc.innerHTML = day.desc;
+                    fsCurrentStep.textContent = String(fsActiveDayIndex + 1).padStart(2, '0');
+                    const progress = ((fsActiveDayIndex + 1) / tour.itinerary.length) * 100;
+                    fsProgress.style.width = `${progress}%`;
+
+                    fsContent.classList.remove('opacity-0', 'translate-y-10');
+                    fsBgImage.classList.remove('scale-110');
+                }, 320);
+            }
+
+            // attach fullscreen nav handlers
+            fsCloseBtn.onclick = closeFullscreenMode;
+            fsPrev.onclick = prevFsDay;
+            fsNext.onclick = nextFsDay;
+
+            // init
+            renderList();
+            updateContent(tours[0]);
+        </script>
+    </section>
+
+
 
     <!-- Customized Trips Section -->
     <section id="customized-trips" class="py-24 bg-gray-100">
@@ -327,16 +958,19 @@
             <p class="text-center text-gray-600 text-xl max-w-4xl mx-auto mb-12">Create a bespoke travel experience with
                 our group or solo customization options.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="bg-white rounded-xl shadow-lg p-8"
+                    style="background: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat">
                     <h3 class="text-3xl font-bold text-gray-800 mb-4">Group Adventures</h3>
-                    <p class="text-gray-600 mb-6">Plan a memorable trip for your family, friends, or team with our
+                    <p class="text-white mb-6">Plan a memorable trip for your family, friends, or team with our
                         tailored group itineraries.</p>
                     <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
                         data-type="Group">Customize Now</button>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Solo Journeys</h3>
-                    <p class="text-gray-600 mb-6">Embark on a personal adventure designed just for you, with flexibility
+                <div class="bg-white rounded-xl shadow-lg p-8"
+                    style="background: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                        Solo Journeys</h3>
+                    <p class="text-white mb-6">Embark on a personal adventure designed just for you, with flexibility
                         and expert guidance.</p>
                     <button class="customize-btn bg-amber-500 text-white px-8 py-3 rounded-full hover:bg-amber-600"
                         data-type="Solo">Customize Now</button>
@@ -488,7 +1122,7 @@
     </div>
 
     <!-- Tour Inquiry Popup -->
-    <div id="tour-inquiry-popup" class="popup-overlay">
+    <div id="tour-popup" class="popup-overlay">
         <div class="popup-content">
             <button class="popup-close">x</button>
             <h3 id="tour-title" class="text-2xl font-bold">Tour Inquiry</h3>
