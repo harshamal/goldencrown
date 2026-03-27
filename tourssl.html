@@ -241,13 +241,154 @@
             height: 100%;
         }
 
-        .culture-card {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        /* Enhance section background */
+        #cultural-highlights {
+            position: relative;
+            background: linear-gradient(#fdfdff, #d2d1da 100%);
         }
 
+        #cultural-highlights::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Enhance heading */
+        #cultural-highlights h2 {
+            background: linear-gradient(#d69b07);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            padding-bottom: 1%;
+        }
+
+        /* Card enhancements - keeping all original classes */
+        .culture-card {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            overflow: hidden;
+        }
+
+        /* Beautiful gradient overlay for all cards */
+        .culture-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.55) 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(156, 150, 150, 0.65) 100%);
+            z-index: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        /* Different gradient for first card to maintain its backdrop style */
+        .culture-card:first-child::before {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.5) 0%,
+                rgba(0, 0, 0, 0.35) 50%,
+                rgba(145, 136, 136, 0.6) 100%);
+        }
+
+        /* Ensure content is above overlay */
+        .culture-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Fix for the first card's background to be consistent */
+        .bg-white\/10 {
+            background: transparent !important;
+        }
+
+        .backdrop-blur-lg {
+            backdrop-filter: none;
+        }
+
+        .border {
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* Card hover effects */
         .culture-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            border-color: rgba(245, 158, 11, 0.5) !important;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+
+        .culture-card:hover::before {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.45) 0%,
+                rgba(0, 0, 0, 0.3) 50%,
+                rgba(0, 0, 0, 0.55) 100%);
+        }
+
+        /* Card title enhancements */
+        .culture-card h3 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .culture-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            border-radius: 2px;
+        }
+
+        /* Text enhancements */
+        .culture-card p,
+        .culture-card h5 {
+            line-height: 1.5;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(17, 17, 17, 0.2);
+        }
+
+        /* Card background images - adds visual richness without removing any existing styling */
+        .culture-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Assign unique background images to each card */
+        .culture-card:nth-child(1) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenH2dckqXWtM6mfKP0MxSMJJgUuZaDu6nfg&s');
+        }
+        .culture-card:nth-child(2) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://images.pexels.com/photos/7034447/pexels-photo-7034447.jpeg?auto=compress&cs=tinysrgb&w=600');
+        }
+        .culture-card:nth-child(3) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://www.ceylonexpeditions.com/medias/media/big/623/mask-industry-sri-lanka-3.jpg');
+        }
+        .culture-card:nth-child(4) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://static.sliit.lk/wp-content/uploads/2024/06/12055348/rice-and-curry.jpg');
+        }
+        .culture-card:nth-child(5) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://siba.edu.lk/adminImages/facultySlider/652ea3a1d64c0-traditionalDance.jpg');
+        }
+        .culture-card:nth-child(6) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://destinationlesstravel.com/wp-content/uploads/2019/05/DSC_0428.jpg.webp');
+        }
+        .culture-card:nth-child(7) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://www.tourslanka.com/wp-content/uploads/2018/06/Vesak-Poya-Banner.jpg');
+        }
+        .culture-card:nth-child(8) {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('https://lankasara.com/wp-content/uploads/2025/01/gem.jpg');
         }
 
         /* Popup Styles */
