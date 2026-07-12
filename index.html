@@ -1,1060 +1,279 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Primary SEO Meta Tags -->
     <title>Crown Global Services | Licensed Travel, Recruitment & Education Consultancy in Sri Lanka</title>
     <meta name="description"
-        content="Crown Global Services is an SLBFE-licensed agency in Sri Lanka, specializing in travel, recruitment, and overseas education consultancy. Start your global journey with confidence.">
+        content="Crown Global Services is an SLBFE licensed agency in Sri Lanka specializing in travel, recruitment and overseas education consultancy. Start your global journey with confidence.">
     <meta name="keywords"
         content="Crown Global Services, recruitment agency Sri Lanka, travel agency Sri Lanka, SLBFE licensed agency, study abroad Sri Lanka, education consultancy Sri Lanka, Pitakotte agency, overseas recruitment, global opportunities, foreign employment Sri Lanka">
     <meta name="author" content="Crown Global Services">
-    <link rel="canonical" href="https://crownglobalservices.com">
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://crownglobalservices.com/">
+    <meta property="og:locale" content="en_US">
+    <meta name="theme-color" content="#131530">
     <meta property="og:title" content="Crown Global Services | Licensed Travel, Recruitment & Education Consultancy">
     <meta property="og:description"
-        content="Crown Global Services helps you explore global opportunities in travel, recruitment, and education. Based in Pitakotte, Sri Lanka, we are SLBFE licensed and trusted.">
-    <meta property="og:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
-    <meta property="og:url" content="https://crownglobalservices.com">
+        content="Crown Global Services helps you explore global opportunities in travel, recruitment and education. Based in Pitakotte, Sri Lanka, we are SLBFE licensed and trusted.">
+    <meta property="og:image" content="https://crownglobalservices.com/public/mainhero.png">
+    <meta property="og:url" content="https://crownglobalservices.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Crown Global Services">
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Crown Global Services | Travel, Recruitment & Education Consultancy">
     <meta name="twitter:description"
-        content="Trusted SLBFE-licensed agency in Sri Lanka for travel, recruitment, and education consultancy. Start your journey with Crown Global Services.">
-    <meta name="twitter:image" content="https://crownglobal.blob.core.windows.net/meta/crownlogo.jpg">
-    <!-- Additional SEO Tags -->
+        content="Trusted SLBFE licensed agency in Sri Lanka for travel, recruitment and education consultancy.">
+    <meta name="twitter:image" content="https://crownglobalservices.com/public/mainhero.png">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="language" content="en">
-    <meta name="rating" content="General">
-    <meta name="distribution" content="Global">
-    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://hdblob1.blob.core.windows.net" crossorigin>
+    <link rel="preconnect" href="https://crownglobal.blob.core.windows.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+    <link rel="dns-prefetch" href="https://us.lakpura.com">
+    <link rel="dns-prefetch" href="https://lakpura.com">
+    <link rel="dns-prefetch" href="https://www.andbeyond.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            margin: 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Playfair Display', serif;
-        }
-
-
-        .animate-slide-up {
-            animation: slideUp 1.2s ease-out;
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(60px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .glow {
-            box-shadow: 0 0 25px rgba(249, 158, 11, 0.6);
-        }
-
-        .service-card,
-        .value-card,
-        .testimonial-card,
-        .team-card,
-        .destination-card {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            perspective: 1000px;
-            background: #1e435e;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .service-card:hover,
-        .value-card:hover,
-        .testimonial-card:hover,
-        .team-card:hover,
-        .destination-card:hover {
-            transform: translateY(-12px) rotateY(3deg) scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .popup-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .popup-content {
-            background: white;
-            border-radius: 12px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            padding: 2rem;
-            position: relative;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-        }
-
-        .popup-overlay.active .popup-content {
-            transform: scale(1);
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #333;
-        }
-
-        .popup-close:hover {
-            color: #f59e0b;
-        }
-
-        .popup-content form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .popup-content input,
-        .popup-content select,
-        .popup-content textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .popup-content input:focus,
-        .popup-content select:focus,
-        .popup-content textarea:focus {
-            border-color: #047857;
-            outline: none;
-        }
-
-        .popup-content button[type="submit"] {
-            background: #047857;
-            color: white;
-            padding: 0.75rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .popup-content button[type="submit"]:hover {
-            background: #f59e0b;
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #047857;
-            transition: color 0.3s ease;
-        }
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            color: #f59e0b;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #047857;
-        }
-
-        .testimonial-card {
-            background: white;
-            border-left: 4px solid #f59e0b;
-            min-height: 200px;
-        }
-
-        .journey-path {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 50px;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .journey-path svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #047857;
-        }
-
-        .map-container {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .map-container svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .map-container path {
-            fill: #e5e7eb;
-            stroke: #d1d5db;
-            stroke-width: 1;
-            transition: fill 0.3s ease;
-        }
-
-        .map-container path:hover,
-        .map-container path.active {
-            fill: #047857;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #e5e7eb;
-            padding: 1rem 0;
-        }
-
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .faq-answer {
-            display: none;
-            padding: 1rem 0;
-            color: #4b5563;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .section-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(4, 120, 87, 0.2));
-            z-index: 1;
-        }
-
-        .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
-    </style>
-    <!-- Schema Markup -->
-    <script type="application/ld+json" class="yoast-schema-graph">
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebPage",
-              "@id": "https://crowngs.lk/",
-              "url": "https://crowngs.lk/",
-              "name": "Home - Crown Global Service",
-              "isPartOf": {
-                "@id": "https://crowngs.lk/#website"
-              },
-              "datePublished": "2020-10-15T08:03:05+00:00",
-              "dateModified": "2025-08-19T14:11:00+05:30",
-              "breadcrumb": {
-                "@id": "https://crowngs.lk/#breadcrumb"
-              },
-              "inLanguage": "en-US",
-              "potentialAction": [
-                {
-                  "@type": "ReadAction",
-                  "target": ["https://crowngs.lk/"]
-                }
-              ]
-            },
-            {
-              "@type": "BreadcrumbList",
-              "@id": "https://crowngs.lk/#breadcrumb",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://crowngs.lk/"
-                }
-              ]
-            },
-            {
-              "@type": "WebSite",
-              "@id": "https://crowngs.lk/#website",
-              "url": "https://crowngs.lk/",
-              "name": "Crown Global Service",
-              "description": "We are a trusted private company in Sri Lanka who believes in providing quality and reliable services to our clients and agents in Sri Lanka and across the globe. Our portfolio encompasses Man Power and HR Consultancy, Air Ticketing, Inbound and Outbound Travel. Established in year 2014, over a short span of time we are recognized for our quality services and dedicated customized assistance to our clients who are in the lookout for their travel needs.",
-              "potentialAction": [
-                {
-                  "@type": "SearchAction",
-                  "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://crowngs.lk/?s={search_term_string}"
-                  },
-                  "query-input": {
-                    "@type": "PropertyValueSpecification",
-                    "valueRequired": true,
-                    "valueName": "search_term_string"
-                  }
-                }
-              ],
-              "inLanguage": "en-US"
-            },
-            {
-              "@type": "Organization",
-              "name": "Crown Global Services",
-              "url": "https://www.crownglobalservices.com",
-              "logo": "https://crownglobalservices.com/favicon.ico",
-              "description": "Crown Global Services, an SLBFE-licensed agency in Sri Lanka, offers tailored travel experiences, global recruitment solutions, and education services since 2014.",
-              "sameAs": [
-                "https://www.facebook.com/crownglobalservices",
-                "https://www.linkedin.com/company/crownglobalservices",
-                "https://twitter.com/crownglobal"
-              ],
-              "foundingDate": "2014-01-01",
-              "founder": {
-                "@type": "Person",
-                "name": "Founder Name" // Replace with actual founder's name if applicable
-              },
-              "email": "info@crownglobalservices.com",
-              "telephone": "+94112505108",
-              "legalName": "Crown Global Services Pvt Ltd",
-              "taxID": "SLBFE-XXXXX" // Replace with actual SLBFE license number
-            },
-            {
-              "@type": "LocalBusiness",
-              "name": "Crown Global Services",
-              "url": "https://www.crownglobalservices.com",
-              "logo": "https://crownglobalservices.com/favicon.ico",
-              "image": "https://crownglobal.blob.core.windows.net/meta/office-image.jpg", // Replace with office image URL
-              "description": "SLBFE-licensed agency providing travel, recruitment, and education services from Pitakotte, Sri Lanka.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "155 B, 1/1, Pagoda Road",
-                "addressLocality": "Pitakotte",
-                "addressRegion": "Western Province",
-                "postalCode": "10100",
-                "addressCountry": "LK"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 6.8811,
-                "longitude": 79.9046
-              },
-              "telephone": "+94112505108",
-              "contactPoint": [
-                {
-                  "@type": "ContactPoint",
-                  "telephone": "+94112505108",
-                  "contactType": "Customer Service",
-                  "email": "info@crownglobalservices.com",
-                  "availableLanguage": ["English", "Sinhala"],
-                  "contactOption": "TollFree",
-                  "areaServed": "LK"
-                },
-                {
-                  "@type": "ContactPoint",
-                  "telephone": "+94767653944",
-                  "contactType": "Sales",
-                  "email": "sales@crownglobalservices.com",
-                  "availableLanguage": ["English"],
-                  "contactOption": "HearingImpairedSupported",
-                  "areaServed": ["LK", "IN", "AU"]
-                }
-              ],
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                  ],
-                  "opens": "09:00",
-                  "closes": "17:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "09:00",
-                  "closes": "13:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Sunday",
-                  "opens": "00:00",
-                  "closes": "00:00",
-                  "validFrom": "2025-12-25",
-                  "validThrough": "2025-12-25"
-                }
-              ],
-              "priceRange": "$$",
-              "currenciesAccepted": "LKR, USD",
-              "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"]
-            },
-            {
-              "@type": "Service",
-              "serviceType": "Travel Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Crown Global Services"
-              },
-              "description": "Curated travel tours across Sri Lanka, featuring cultural heritage, coastal escapes, and wildlife safaris.",
-              "areaServed": {
-                "@type": "Country",
-                "name": "Sri Lanka"
-              },
-              "offers": {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "500.00",
-                  "priceCurrency": "USD",
-                  "validFrom": "2025-08-19T14:11:00+05:30"
-                },
-                "availability": "https://schema.org/InStock"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "150"
-              }
-            },
-            {
-              "@type": "Service",
-              "serviceType": "Recruitment Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Crown Global Services"
-              },
-              "description": "Global recruitment and job placement services for skilled professionals.",
-              "areaServed": ["LK", "IN", "AU", "SG"],
-              "offers": {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "200.00",
-                  "priceCurrency": "USD",
-                  "validFrom": "2025-08-19T14:11:00+05:30"
-                },
-                "availability": "https://schema.org/InStock"
-              }
-            },
-            {
-              "@type": "Service",
-              "serviceType": "Education Services",
-              "provider": {
-                "@type": "Organization",
-                "name": "Crown Global Services"
-              },
-              "description": "Support for international education, visa assistance, and student placements.",
-              "areaServed": ["LK", "UK", "US", "CA"],
-              "offers": {
-                "@type": "Offer",
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "price": "300.00",
-                  "priceCurrency": "USD",
-                  "validFrom": "2025-08-19T14:11:00+05:30"
-                },
-                "availability": "https://schema.org/InStock"
-              }
-            }
-          ]
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <noscript><style>.reveal,.reveal-stagger>*,.hero-anim{opacity:1!important;transform:none!important}#preloader{display:none!important}</style></noscript>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["TravelAgency","EmploymentAgency","Organization"],"@id":"https://crownglobalservices.com/#organization","name":"Crown Global Services","alternateName":"Crown Global Services Pvt Ltd","url":"https://crownglobalservices.com/","logo":{"@type":"ImageObject","url":"https://crownglobal.blob.core.windows.net/meta/crownlogo.png"},"image":"https://crownglobalservices.com/public/mainhero.png","description":"Crown Global Services is an SLBFE licensed agency in Sri Lanka (License No 3065) offering tailored travel experiences, ethical overseas recruitment and study abroad consultancy since 2014.","foundingDate":"2014","telephone":"+94112505108","email":"info@crownglobalservices.com","address":{"@type":"PostalAddress","streetAddress":"155 B, 1/1, Pagoda Road","addressLocality":"Pitakotte","addressRegion":"Western Province","addressCountry":"LK"},"geo":{"@type":"GeoCoordinates","latitude":6.8905,"longitude":79.9075},"areaServed":"Worldwide","knowsAbout":["Tour packages","Air ticketing","Hotel booking","Corporate travel","Overseas employment","Foreign job placement","Study abroad consultancy","Student visa support"],"hasCredential":{"@type":"EducationalOccupationalCredential","name":"SLBFE License No 3065","credentialCategory":"license"},"sameAs":["https://www.facebook.com/crownglobalservices","https://www.linkedin.com/company/crownglobalservices"]},{"@type":"WebSite","@id":"https://crownglobalservices.com/#website","url":"https://crownglobalservices.com/","name":"Crown Global Services","publisher":{"@id":"https://crownglobalservices.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://crownglobalservices.com/#webpage","url":"https://crownglobalservices.com/","name":"Crown Global Services | Licensed Travel, Recruitment & Education Consultancy in Sri Lanka","description":"SLBFE licensed agency in Sri Lanka for curated tours, global recruitment and study abroad consultancy since 2014.","isPartOf":{"@id":"https://crownglobalservices.com/#website"},"about":{"@id":"https://crownglobalservices.com/#organization"},"inLanguage":"en"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I book a tour with Crown Global Services?","acceptedAnswer":{"@type":"Answer","text":"Contact us via the inquiry form on our website or call +94 11 250 5108 to customize your tour package. Our team will guide you through every option."}},{"@type":"Question","name":"What documents are needed for overseas recruitment?","acceptedAnswer":{"@type":"Answer","text":"Typically a passport, CV and relevant certificates are required. Crown Global Services guides you through the entire process from start to finish."}},{"@type":"Question","name":"Which countries offer study abroad programs through Crown Global Services?","acceptedAnswer":{"@type":"Answer","text":"We partner with institutions in Australia, Canada, the UK, USA, New Zealand, Europe and more. Contact us for a tailored list of options."}}]}]}</script>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-    <a href="https://wa.me/94777141468" target="_blank"
-        class="fixed bottom-4 right-20 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2 z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white" viewBox="0 0 24 24">
-            <path
-                d="M20.52 3.48A11.89 11.89 0 0012 0C5.38 0 0 5.38 0 12a11.88 11.88 0 001.62 6L0 24l6.3-1.65A11.93 11.93 0 0012 24c6.62 0 12-5.38 12-12 0-3.2-1.24-6.21-3.48-8.52zM12 22a9.93 9.93 0 01-5.3-1.5l-.38-.22L3 21l1.28-3.33-.23-.38A10 10 0 1122 12c0 5.52-4.48 10-10 10zm5.1-7.35c-.3-.15-1.75-.87-2.02-.97-.27-.1-.47-.15-.67.15s-.77.97-.95 1.17c-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37 0-.52-.05-.15-.67-1.6-.92-2.2-.24-.6-.49-.52-.67-.52h-.57c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.13 3.3 5.15 4.62.72.3 1.28.48 1.7.61.72.23 1.38.2 1.9.12.58-.1 1.75-.7 2-1.36.25-.65.25-1.2.17-1.35-.08-.15-.27-.23-.57-.38z" />
-        </svg>
-        <span>Chat on WhatsApp</span>
-    </a>
-    
+<body>
+    <!-- Preloader / Splash Screen -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png" alt="Crown Global"
+                class="preloader-logo">
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div id="particles-hero" class="particles"></div>
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://hdblob1.blob.core.windows.net/crownglobal/cgsvid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="/">
+                <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                    alt="Crown Global Services">
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/tours/">Tours</a>
+                <a href="/tourssl/">Sri Lanka</a>
+                <a href="/recruitment/">Recruitment</a>
+                <a href="/education/">Education</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+            <a class="nav-cta" href="/contact/">Plan a Journey</a>
+            <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="drawer">
+        <button class="drawer-close" aria-label="Close menu">&times;</button>
+        <a href="/">Home</a>
+        <a href="/tours/">Tours</a>
+        <a href="/tourssl/">Explore Sri Lanka</a>
+        <a href="/recruitment/">Recruitment</a>
+        <a href="/education/">Education</a>
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact Us</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <img decoding="async" fetchpriority="high" class="hero-img" src="public/mainhero.png" alt="Crown Global Services Background">
+        <div class="scrim"></div>
+        <div class="hero-content">
+            <h1>The World Is Closer Than You Think</h1>
+            <p class="hero-sub">Curated journeys, global careers and world class education. Crown Global Services opens
+                doors across the globe with trust, expertise and personal care.</p>
+            <div class="hero-actions">
+                <a href="/tours/" class="btn btn-gold">Explore Tours</a>
+                <a href="/contact/" class="btn btn-ghost">Talk to Our Team</a>
+            </div>
+        </div>
+        <!-- Hero Stats Overlay -->
+        <div class="hero-stats-band">
+            <div class="container">
+                <div class="stats-grid reveal-stagger">
+                    <div class="stat">
+                        <div class="stat-number" data-target="1200" data-suffix="+">0</div>
+                        <div class="stat-label">Tours Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="12000" data-suffix="+">0</div>
+                        <div class="stat-label">Global Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="500" data-suffix="+">0</div>
+                        <div class="stat-label">Student Placements</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="10" data-suffix="+">0</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Global opportunities full-bleed video -->
+    <section class="opp-section bg-sand" aria-label="Global opportunities">
+        <video preload="metadata" class="opp-video parallax-video" autoplay muted loop playsinline
+            poster="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1600">
+            <source src="https://crownglobal.blob.core.windows.net/meta/infovid.mp4" type="video/mp4">
         </video>
-        <div class="hero-overlay"></div>
-        <div class="px-6 hero-content" style="margin-top:300px;">
-            <button id="explore-btn"
-                class="bg-amber-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-amber-600 transition-transform transform hover:scale-110 glow delay-400">Explore
-                Now</button>
+    </section>
+    <!-- Three pillars -->
+    <section class="section bg-majestic">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="eyebrow">What We Do</span>
+                <h2>Three Doors to the World</h2>
+                <p class="lead">Whether you dream of travelling, working or studying abroad, we walk beside you at every
+                    step of the journey.</p>
+            </div>
+            <div class="pillars-editorial">
+                <article class="pillar-row reveal">
+                    <div class="pillar-visual">
+                        <span class="pillar-index">01</span>
+                        <div class="pillar-media">
+                            <img decoding="async" src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Travel and tours" loading="lazy">
+                            <span class="media-badge"><i class="fa-solid fa-plane"></i> Curated Trips</span>
+                        </div>
+                    </div>
+                    <div class="pillar-copy">
+                        <span class="door-kicker"><i class="fa-solid fa-compass"></i> Travel</span>
+                        <h3>Tours &amp; Travel</h3>
+                        <p>Tailored journeys across Asia, Europe and beyond. Flights, hotels, visas and corporate travel
+                            handled by one dedicated team.</p>
+                        <a href="/tours/" class="door-link">Discover Tours <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="pillar-row reveal">
+                    <div class="pillar-visual">
+                        <span class="pillar-index">02</span>
+                        <div class="pillar-media">
+                            <div class="card-slideshow" data-slideshow>
+                                <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(2).jpg"
+                                    alt="Placement success story" class="active" loading="lazy">
+                                <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(1).jpg"
+                                    alt="Placement success story" loading="lazy">
+                                <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(4).jpg"
+                                    alt="Placement success story" loading="lazy">
+                                <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/recruitment%20(3).jpg"
+                                    alt="Placement success story" loading="lazy">
+                            </div>
+                            <span class="media-badge"><i class="fa-solid fa-images"></i> Success Stories</span>
+                        </div>
+                    </div>
+                    <div class="pillar-copy">
+                        <span class="door-kicker"><i class="fa-solid fa-briefcase"></i> Careers</span>
+                        <h3>Global Recruitment</h3>
+                        <p>Ethical, fully licensed placements in Kuwait, the UAE, Japan, Korea and more, with support
+                            from interview to arrival.</p>
+                        <a href="/recruitment/" class="door-link">See Success Stories <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="pillar-row reveal">
+                    <div class="pillar-visual">
+                        <span class="pillar-index">03</span>
+                        <div class="pillar-media">
+                            <video class="card-video" autoplay muted loop playsinline preload="metadata"
+                                poster="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                <source src="https://hdblob1.blob.core.windows.net/crownglobal/studentvid%20(1).mp4"
+                                    type="video/mp4">
+                            </video>
+                            <span class="media-badge"><i class="fa-solid fa-circle-play"></i> Student Stories</span>
+                        </div>
+                    </div>
+                    <div class="pillar-copy">
+                        <span class="door-kicker"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                        <h3>Study Abroad</h3>
+                        <p>Expert counselling, university applications and visa support for study destinations across
+                            fourteen countries.</p>
+                        <a href="/education/" class="door-link">Watch Student Journeys <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
-    <!-- Travel Adventures Section -->
-    <section id="travel-adventures" class="py-32 bg-white relative">
-        <div id="particles-travel" class="particles"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-16">Travel Adventures</h2>
-            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Explore the world and Sri
-                Lanka’s wonders with our curated experiences.</p>
-            <!-- Vision Content -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
-                <div class="bg-gradient-to-r from-darkgoldenrod-100 to-darkgoldenrod-50 p-8 text-center">
-                    <div class="text-5xl font-extrabold text-gray-600 counter" data-target="1200">0</div>
-                    <p class="mt-3 text-lg font-medium text-gray-700"><i class="fa-solid fa-plane-circle-check"></i>
-                        Tours Completed</p>
-                </div>
-                <div class="bg-gradient-to-r from-darkgoldenrod-100 to-darkgoldenrod-50 p-8 text-center">
-                    <div class="counter text-5xl font-bold text-gray-600" data-target="12000">0</div>
-                    <p class="mt-3 text-lg font-medium text-gray-700"><i class="fa-solid fa-globe"></i> Global Clients
-                    </p>
-                </div>
-                <div class="bg-gradient-to-r from-darkgoldenrod-100 to-darkgoldenrod-50 p-8 text-center">
-                    <div class="counter text-5xl font-bold text-gray-600" data-target="500">0</div>
-                    <p class="mt-3 text-lg font-medium text-gray-700"><i class="fa-solid fa-graduation-cap"></i> Student
-                        Placements</p>
-                </div>
+    <!-- Destinations scroller -->
+    <section class="section bg-sand">
+        <div class="container container-wide">
+            <div class="section-head reveal">
+                <span class="eyebrow">Signature Journeys</span>
+                <h2>Where Will You Go Next?</h2>
             </div>
-            <div class="flex justify-center mb-16">
-                <video autoplay muted loop playsinline class="w-full max-w-4xl rounded-xl shadow-lg">
-                    <source src="https://crownglobal.blob.core.windows.net/meta/infovid.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <!-- Tabs Container -->
-            <div class="w-full max-w-6xl mx-auto mt-16 mb-24">
-                <!-- Tab Buttons -->
-                <div class="flex justify-center mb-10">
-                    <button id="toursTab"
-                        class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white active-tab">
-                        Unforgettable Tours
-                    </button>
-                    <button id="exploreSriLankaTab"
-                        class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white">
-                        Explore Sri Lanka
-                    </button>
+            <div class="scroller-wrap reveal">
+                <div class="scroller-nav">
+                    <button class="scroll-prev" aria-label="Scroll back"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="scroll-next" aria-label="Scroll forward"><i
+                            class="fa-solid fa-arrow-right"></i></button>
                 </div>
-                <!-- Tours Tab Content -->
-                <div id="toursContent" class="tab-content">
-                    <div class="grid md:grid-cols-3 gap-10">
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="Europe Adventure" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">Europe Adventure</h4>
-                                <p class="text-gray-200 mb-4">Explore the charm of Europe</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tours.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover
-                                    Tour</a>
-                            </div>
+                <div class="scroller">
+                    <a class="dest-card" href="/tours/">
+                        <img decoding="async" src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Europe" loading="lazy">
+                        <div class="dest-info">
+                            <h3>Europe Adventure</h3>
+                            <p>Explore the charm of historic cities and timeless landscapes.</p>
                         </div>
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="Maldives Getaway" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">Maldives Getaway</h4>
-                                <p class="text-gray-200 mb-4">Relax in paradise with turquoise waters.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tours.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover
-                                    Tour</a>
-                            </div>
+                    </a>
+                    <a class="dest-card" href="/tours/">
+                        <img decoding="async" src="https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?cs=srgb&dl=pexels-asadphoto-1268855.jpg&fm=jpg"
+                            alt="Maldives" loading="lazy">
+                        <div class="dest-info">
+                            <h3>Maldives Getaway</h3>
+                            <p>Relax in paradise surrounded by turquoise waters.</p>
                         </div>
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://images.pexels.com/photos/32367449/pexels-photo-32367449/free-photo-of-leopard-resting-in-a-tree-in-south-africa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="African Safari" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">African Safari</h4>
-                                <p class="text-gray-200 mb-4">Witness wildlife in their natural habitat.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tours.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Discover
-                                    Tour</a>
-                            </div>
+                    </a>
+                    <a class="dest-card" href="/tourssl/">
+                        <img decoding="async" src="https://images.pexels.com/photos/32367449/pexels-photo-32367449/free-photo-of-leopard-resting-in-a-tree-in-south-africa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Wildlife safari" loading="lazy">
+                        <div class="dest-info">
+                            <h3>Wildlife Safari</h3>
+                            <p>Witness leopards, elephants and exotic wildlife in their natural habitat.</p>
                         </div>
-                    </div>
-                </div>
-                <!-- Explore Sri Lanka Tab Content -->
-                <div id="exploreSriLankaContent" class="tab-content hidden">
-                    <div class="grid md:grid-cols-3 gap-10">
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://i.pinimg.com/736x/a8/2a/12/a82a12f5b5c99b4c5d915d0e506b9360.jpg"
-                                alt="Cultural Heritage" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">Cultural Heritage</h4>
-                                <p class="text-gray-200 mb-4">Visit ancient temples and historical sites.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tourssl.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore
-                                    Now</a>
-                            </div>
+                    </a>
+                    <a class="dest-card" href="/tourssl/">
+                        <img decoding="async" src="https://images.pexels.com/photos/13391116/pexels-photo-13391116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Cultural heritage" loading="lazy">
+                        <div class="dest-info">
+                            <h3>Cultural Heritage</h3>
+                            <p>Visit ancient temples, royal cities and sacred historical sites.</p>
                         </div>
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://www.travelandleisure.com/thmb/AlmNfYpwT68VLQs85CGmWoY1krc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-surfing-hiriketiya-sri-lanka-SURFSRILANKA0225-d53a7360601d415bbf9dfa1bd52a17bc.jpg"
-                                alt="Beach Retreat" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">Beach Retreat</h4>
-                                <p class="text-gray-200 mb-4">Relax on pristine beaches like Mirissa.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tourssl.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore
-                                    Now</a>
-                            </div>
+                    </a>
+                    <a class="dest-card" href="/tourssl/">
+                        <img decoding="async" src="https://media.timeout.com/images/106252539/image.jpg" alt="Beach retreat"
+                            loading="lazy">
+                        <div class="dest-info">
+                            <h3>Beach Retreat</h3>
+                            <p>Unwind on pristine southern shores like Mirissa and Bentota.</p>
                         </div>
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <div class="card-overlay"></div>
-                            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/4a/3f/a7.jpg"
-                                alt="Hill Country" class="w-full h-64 object-cover" loading="lazy">
-                            <div class="p-6 relative z-10">
-                                <h4 class="text-xl font-bold text-white mb-2">Hill Country</h4>
-                                <p class="text-gray-200 mb-4">Experience the scenic beauty of Ella.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="tourssl.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">Explore
-                                    Now</a>
-                            </div>
+                    </a>
+                    <a class="dest-card" href="/tourssl/">
+                        <img decoding="async" src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840"
+                            alt="Hill country" loading="lazy">
+                        <div class="dest-info">
+                            <h3>Hill Country</h3>
+                            <p>Ride the scenic rails through misty tea country and Ella.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            // Tab Switching Logic
-            const toursTab = document.getElementById('toursTab');
-            const exploreSriLankaTab = document.getElementById('exploreSriLankaTab');
-            const toursContent = document.getElementById('toursContent');
-            const exploreSriLankaContent = document.getElementById('exploreSriLankaContent');
-
-            toursTab.addEventListener('click', () => {
-                toursTab.classList.add('bg-blue-700', 'text-white');
-                exploreSriLankaTab.classList.remove('bg-blue-700', 'text-white');
-                toursContent.classList.remove('hidden');
-                exploreSriLankaContent.classList.add('hidden');
-            });
-
-            exploreSriLankaTab.addEventListener('click', () => {
-                exploreSriLankaTab.classList.add('bg-blue-700', 'text-white');
-                toursTab.classList.remove('bg-blue-700', 'text-white');
-                exploreSriLankaContent.classList.remove('hidden');
-                toursContent.classList.add('hidden');
-            });
-        </script>
-    </section>
-
-
-    <!-- Global Opportunities Section -->
-    <section id="global-opportunities" class="relative py-32 overflow-hidden text-white bg-gray-100 relative">
-        <div id="particles-global" class="particles"></div>
-        <div class="relative z-10 container mx-auto px-6">
-            <!-- Header -->
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900" style="color:black">
-                    Global Opportunities</h2>
-                <p class="text-xl md:text-2xl text-gray-900 max-w-3xl mx-auto ">
-                    Explore careers and education abroad, Connect with opportunities worldwide.
-                </p>
-            </div>
-
-            <div class="flex justify-center mb-16">
-                <video autoplay muted loop playsinline class="w-full max-w-4xl rounded-xl shadow-lg">
-                    <source src="https://hdblob1.blob.core.windows.net/crownglobal/CrownGlobal.pptx%20(2).mp4"
-                        type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <!-- Tailwind CDN -->
-            <script src="https://cdn.tailwindcss.com"></script>
-
-            <!-- Tabs Container -->
-            <div class="w-full max-w-6xl mx-auto mt-16 mb-24">
-                <!-- Tab Buttons -->
-                <div class="flex justify-center mb-10">
-                    <button id="careersTab"
-                        class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white active-tab">
-                        Global Careers
-                    </button>
-                    <button id="educationTab"
-                        class="px-6 py-3 mx-2 text-lg font-semibold text-gray-600 bg-gray-100 rounded-full shadow-sm transition-all duration-300 hover:bg-blue-600 hover:text-white">
-                        Study Abroad
-                    </button>
-                </div>
-
-                <!-- Tab Content -->
-                <div id="careersContent" class="">
-                    <div class="grid md:grid-cols-3 gap-10">
-                        <!-- Card -->
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg"
-                                alt="Engineering Roles" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Engineering Roles</h4>
-                                <p class="text-white mb-4">High-demand positions.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="recruitment.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Apply
-                                    Now
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Healthcare Jobs" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Healthcare Jobs</h4>
-                                <p class="text-white mb-4">Nursing and medical roles.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="recruitment.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Apply
-                                    Now
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Construction" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Skilled Labor</h4>
-                                <p class="text-white mb-4">Skilled labor opportunities.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="recruitment.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Apply
-                                    Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education Tab -->
-                <div id="educationContent" class="hidden">
-                    <div class="grid md:grid-cols-3 gap-10">
-
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Undergraduate Programs" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Undergraduate Programs</h4>
-                                <p class="text-white mb-4">Top universities in Australia and UK.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="education.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Explore
-                                    Programs
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://plus.unsplash.com/premium_photo-1713229182244-d617b76349d2?q=80&w=870&auto=format&fit=crop"
-                                alt="Postgraduate Studies" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Postgraduate Studies</h4>
-                                <p class="text-white mb-4">Master’s and PhD programs worldwide.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="education.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Explore
-                                    Programs
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="service-card rounded-xl shadow-lg overflow-hidden relative">
-                            <img src="https://images.pexels.com/photos/159581/dictionary-reference-book-learning-meaning-159581.jpeg"
-                                alt="Scholarships" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h4 class="text-xl font-semibold mb-2 text-white">Scholarships</h4>
-                                <p class="text-white mb-4">Financial aid for international students.</p>
-                            </div>
-                            <div class="service-card-overlay">
-                                <a href="education.html"
-                                    class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                                    Explore
-                                    Options
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                const careersTab = document.getElementById('careersTab');
-                const educationTab = document.getElementById('educationTab');
-                const careersContent = document.getElementById('careersContent');
-                const educationContent = document.getElementById('educationContent');
-
-                careersTab.addEventListener('click', () => {
-                    careersTab.classList.add('bg-blue-700', 'text-white');
-                    educationTab.classList.remove('bg-blue-700', 'text-white');
-                    careersContent.classList.remove('hidden');
-                    educationContent.classList.add('hidden');
-                });
-
-                educationTab.addEventListener('click', () => {
-                    educationTab.classList.add('bg-blue-700', 'text-white');
-                    careersTab.classList.remove('bg-blue-700', 'text-white');
-                    educationContent.classList.remove('hidden');
-                    careersContent.classList.add('hidden');
-                });
-            </script>
-        </div>
-    </section>
-
-    <!-- Styling -->
-    <style>
-        /* Smooth spin for globe */
-        @keyframes slow-spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .animate-slow-spin {
-            animation: slow-spin 120s linear infinite;
-        }
-
-        /* Card design */
-        .card {
-            background: #1e435e;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(12px);
-            transition: all 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: .5rem;
-            color: #fff;
-        }
-
-        .card-text {
-            color: #bbb;
-            margin-bottom: 1rem;
-        }
-
-        .card-btn {
-            display: inline-block;
-            padding: 0.6rem 1.4rem;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            border-radius: 9999px;
-            font-weight: 500;
-            color: #fff;
-            transition: background 0.3s;
-        }
-
-        .card-btn:hover {
-            background: linear-gradient(135deg, #d97706, #b45309);
-        }
-    </style>
-
-
-
-
-    <!-- About & Connect Section -->
-    <section id="about-connect" class="py-32 bg-gradient-to-br from-gray-50 to-gray-100 relative">
-        <div class="container mx-auto px-6 relative z-10">
-            <!-- About Us -->
-            <div class="text-center max-w-4xl mx-auto mb-20">
-                <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">About Us</h2>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-                    At <span class="font-semibold text-amber-600">Crown Global Services</span>, we empower individuals
-                    and businesses with
-                    <span class="font-semibold">trust, excellence, and personalized support</span>. Since 2014, our
-                    mission has been
-                    to transform lives by creating global opportunities in <span
-                        class="text-gray-800 font-medium">Travel, Recruitment, and Education</span>.
-                </p>
-            </div>
-
-            <!-- About Highlights -->
-            <div class="grid md:grid-cols-3 gap-8 mb-24">
-                <div class="rounded-2xl overflow-hidden shadow-xl group relative bg-white">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Our Mission"
-                        class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="p-6">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-2">Our Mission</h4>
-                        <p class="text-gray-600">Empowering global opportunities with integrity and care.</p>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl overflow-hidden shadow-xl group relative bg-white">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Our Values" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="p-6">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-2">Our Values</h4>
-                        <p class="text-gray-600">Trust, personalization, and unmatched excellence.</p>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl overflow-hidden shadow-xl group relative bg-white">
-                    <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Our Impact" class="h-56 w-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="p-6">
-                        <h4 class="text-2xl font-semibold text-gray-800 mb-2">Our Impact</h4>
-                        <p class="text-gray-600">Transforming lives and careers since 2014.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Us -->
-            <div class="text-center max-w-3xl mx-auto">
-                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Get in Touch</h3>
-                <p class="text-lg md:text-xl text-gray-600 mb-12">
-                    Have questions? We're here to help. Reach out to our team for personalized support.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Contact Support</h4>
-                        <p class="text-gray-600 mb-4">Our team is available 24/7 to assist you.</p>
-                        <a href="contact.html" class="text-amber-600 font-semibold hover:text-amber-700">Contact Us
-                            →</a>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Visit Us</h4>
-                        <p class="text-gray-600 mb-4">Drop by our office in Pitakotte, Sri Lanka.</p>
-                        <a href="contact.html" class="text-amber-600 font-semibold hover:text-amber-700">Get Directions
-                            →</a>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
-                        <h4 class="text-xl font-bold text-gray-800 mb-2">Schedule a Call</h4>
-                        <p class="text-gray-600 mb-4">Book a consultation with our experts.</p>
-                        <a href="contact.html" class="text-amber-600 font-semibold hover:text-amber-700">Schedule Now
-                            →</a>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1062,580 +281,307 @@
 
 
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-32 bg-white relative">
-        <div id="particles-testimonials" class="particles"></div>
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Voices of Our Travelers</h2>
-            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Hear from those who’ve
-                transformed their lives with us.</p>
-            <div class="swiper-container testimonials-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Crown Global’s tour planning made my European
-                                adventure seamless and magical!"</p>
-                            <h4 class="text-lg font-bold text-gray-800">Amara Fernando</h4>
-                            <p class="text-sm text-gray-500">Traveler, UK</p>
-                        </div>
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="eyebrow">Voices of Our Travelers</span>
+                <h2>Stories That Travel With Us</h2>
+            </div>
+            <div class="spotlight reveal">
+                <div class="spotlight-panel">
+                    <span class="spotlight-mark">&ldquo;</span>
+                    <span class="spotlight-tag" id="sp-tag"></span>
+                    <div class="spotlight-stars" aria-hidden="true">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"I landed my dream job in Dubai thanks to their expert
-                                recruitment support."</p>
-                            <h4 class="text-lg font-bold text-gray-800">Ravi Gunawardena</h4>
-                            <p class="text-sm text-gray-500">Engineer, UAE</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Studying in Canada was effortless with Crown’s
-                                guidance."</p>
-                            <h4 class="text-lg font-bold text-gray-800">Nethmi Silva</h4>
-                            <p class="text-sm text-gray-500">Student, Canada</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card rounded-xl shadow-lg p-8 mx-4">
-                            <p class="text-gray-600 italic mb-4">"Their personalized care made my Sri Lanka tour
-                                unforgettable."</p>
-                            <h4 class="text-lg font-bold text-gray-800">Lakshan Perera</h4>
-                            <p class="text-sm text-gray-500">Traveler, Australia</p>
-                        </div>
+                    <blockquote class="spotlight-quote" id="sp-quote"></blockquote>
+                    <div class="spotlight-person">
+                        <span class="spotlight-avatar" id="sp-avatar"></span>
+                        <span class="spotlight-meta">
+                            <strong class="spotlight-name" id="sp-name"></strong>
+                            <span class="spotlight-role" id="sp-role"></span>
+                        </span>
                     </div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
+                <div class="spotlight-nav">
+                    <button class="sp-arrow" id="sp-prev" aria-label="Previous testimonial"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                    <div class="sp-dots" id="sp-dots"></div>
+                    <button class="sp-arrow" id="sp-next" aria-label="Next testimonial"><i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Insights & Support Section (Blog Teaser + FAQ) -->
-    <section id="insights-support" class="py-32 bg-gray-100 relative">
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-800 mb-8">Insights & Support</h2>
-            <p class="text-center text-gray-600 text-xl md:text-2xl max-w-4xl mx-auto mb-12">Stay informed and find
-                answers to your questions.</p>
-            <!-- Blog Teaser Content -->
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Travel Tips & Insights</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h4 class="text-xl font-bold text-white mb-2">Top 10 Travel Destinations for 2025</h4>
-                    <p class="text-white mb-4">Discover the must-visit places this year.</p>
-                    <div class="service-card-overlay">
-                        <a href="blog.html"
-                            class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                            Read More
-                        </a>
+    <!-- About teaser -->
+    <section class="section bg-about-teaser">
+        <div class="container">
+            <div class="split">
+                <div class="reveal">
+                    <span class="eyebrow">About Crown Global</span>
+                    <h2>A Decade of Opening Doors</h2>
+                    <p>Since 2014 we have empowered individuals and businesses with trust, excellence and personalized
+                        support. Our mission is simple. We transform lives by creating global opportunities in travel,
+                        recruitment and education.</p>
+                    <div class="license-chip"><i class="fa-solid fa-shield-halved"></i> SLBFE License No 3065</div>
+                    <div style="margin-top:36px">
+                        <a href="/about/" class="btn btn-gold">Our Story</a>
                     </div>
                 </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h4 class="text-xl font-bold text-white mb-2">How to Choose the Right Study Abroad Program</h4>
-                    <p class="text-white mb-4">Tips for finding your perfect academic path.</p>
-                    <div class="service-card-overlay">
-                        <a href="blog.html"
-                            class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                            Read More
-                        </a>
+                <div class="card-grid reveal-stagger" style="gap:20px">
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fa-solid fa-compass"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>Empowering global opportunities with integrity and care.</p>
                     </div>
-                </div>
-                <div class="service-card rounded-xl shadow-lg p-6">
-                    <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                        alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl mb-4" loading="lazy">
-                    <h4 class="text-xl font-bold text-white mb-2">Navigating Global Job Markets</h4>
-                    <p class="text-white mb-4">Expert advice for landing international roles.</p>
-                    <div class="service-card-overlay">
-                        <a href="blog.html"
-                            class="text-white font-medium text-xl bg-amber-500 px-8 py-3 rounded-full hover:bg-amber-600">
-                            Read More
-                        </a>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Our Values</h3>
+                        <p>Trust, personalization and unmatched excellence in everything we do.</p>
                     </div>
-                </div>
-            </div>
-            <!-- FAQ Content -->
-            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8 py-8">Frequently Asked Questions</h3>
-            <div class="max-w-3xl mx-auto">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How do I book a tour?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Contact us via our inquiry form or call +94 11 250 5108 to customize your tour package.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What documents are needed for recruitment?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Typically, a passport, CV, and relevant certificates are required. We guide you through the
-                            process.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Which countries offer study abroad programs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We partner with institutions in Australia, Canada, UK, and more. Contact us for details.</p>
+                    <div class="feature">
+                        <div class="feature-icon"><i class="fa-solid fa-earth-asia"></i></div>
+                        <h3>Our Impact</h3>
+                        <p>Transforming lives and careers across the globe since 2014.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Stay Connected & Start Now Section (Newsletter + CTA) -->
-    <section id="stay-connected" class="py-32 bg-darkgoldenrod text-white relative">
-        <div id="particles-newsletter" class="particles"></div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <h2 class="text-5xl md:text-6xl font-bold mb-6" style="color:black">Stay Connected & Start Now</h2>
-            <p class="text-2xl md:text-3xl mb-10 max-w-xl mx-auto" style="color:black">Subscribe for updates and begin
-                your global journey today.</p>
-            <!-- Newsletter Content -->
-            <form action="https://formspree.io/f/mjkrkjya" method="POST" class="max-w-md mx-auto flex gap-4 mb-16">
-                <input type="email" name="Email" placeholder="Enter your email"
-                    class="w-full p-4 rounded-full text-gray-900" required>
-                <button type="submit"
-                    class="bg-blue-500 text-white px-8 py-4 rounded-full hover:bg-blue-700">Subscribe</button>
-            </form>
-            <!-- CTA Content -->
-            <button id="cta-btn"
-                class="bg-blue-500 text-white px-12 py-5 rounded-full text-xl font-semibold hover:bg-blue-600 transition-transform transform hover:scale-110 glow">Start
-                Now</button>
+
+    <!-- Insights + FAQ -->
+    <section class="section bg-sand">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Insights &amp; Support</span>
+                <h2>Stay Informed, Travel Smarter</h2>
+            </div>
+            <div class="card-grid cols-3 reveal-stagger" style="margin-bottom:80px">
+                <article class="card">
+                    <div class="card-media">
+                        <img decoding="async" src="https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Travel destinations" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Top 10 Travel Destinations for 2025</h3>
+                        <p>Discover the must visit places this year, from Bali to Patagonia.</p>
+                        <a href="/blog/" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-media">
+                        <img decoding="async" src="https://www.uni-konstanz.de/fileadmin/_processed_/9/0/csm_Lehre_Hoersaele_09_6741e4ce2d.jpg"
+                            alt="Study abroad programs" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>How to Choose the Right Study Abroad Program</h3>
+                        <p>Tips for finding your perfect academic path overseas.</p>
+                        <a href="/blog/" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-media">
+                        <img decoding="async" src="https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Global job markets" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <h3>Navigating Global Job Markets</h3>
+                        <p>Expert advice for landing international roles with confidence.</p>
+                        <a href="/blog/" class="text-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-head center reveal">
+                <h2 style="font-size:clamp(1.6rem,2.6vw,2.2rem)">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal">
+                <details class="faq-item">
+                    <summary>How do I book a tour?</summary>
+                    <div class="faq-body">Contact us via our inquiry form or call +94 11 250 5108 to customize your tour
+                        package. Our team will guide you through every option.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What documents are needed for recruitment?</summary>
+                    <div class="faq-body">Typically a passport, CV and relevant certificates are required. We guide you
+                        through the entire process from start to finish.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Which countries offer study abroad programs?</summary>
+                    <div class="faq-body">We partner with institutions in Australia, Canada, the UK and many more
+                        destinations. Contact us for a tailored list of options.</div>
+                </details>
+            </div>
         </div>
     </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <img decoding="async" class="cta-bg"
+            src="https://us.lakpura.com/cdn/shop/files/demodara-nine-arch-bridge-ella-sri-lanka-scaled-1_77c0b1eb-4170-472a-b6df-950903726734.jpg?v=1654085052&width=3840"
+            alt="" loading="lazy">
+        <div class="scrim"></div>
+        <div class="cta-content reveal">
+            <span class="eyebrow" style="justify-content:center">Begin Today</span>
+            <h2>Your Global Journey Starts With a Conversation</h2>
+            <p>Tell us where you want to go and we will handle the rest. Travel, careers or education, we are ready when
+                you are.</p>
+            <button class="btn btn-gold" data-modal="inquiry-modal">Start Your Journey</button>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <h3 class="text-3xl font-bold mb-6">Crown Global Services</h3>
-                    <p class="text-gray-400">Empowering global journeys, careers, and education with trust and
-                        excellence.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img decoding="async" src="https://hdblob1.blob.core.windows.net/crownglobal/cgsnew%20-%20Edited.png"
+                        alt="Crown Global Services">
+                    <p>Empowering global journeys, careers and education with trust and excellence.</p>
+                    <div class="license-chip"><i class="fa-solid fa-shield-halved"></i> SLBFE License No 3065</div>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-6">Explore</h3>
-                    <ul class="space-y-2">
-                        <li><a href="tours.html" class="text-gray-400 hover:text-amber-400">Tours</a></li>
-                        <li><a href="tourssl.html" class="text-gray-400 hover:text-amber-400">Explore Sri Lanka</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-amber-400">About Us</a></li>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/tours/">Tours</a></li>
+                        <li><a href="/tourssl/">Explore Sri Lanka</a></li>
+                        <li><a href="/recruitment/">Recruitment</a></li>
+                        <li><a href="/education/">Education</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
-                    <p class="text-gray-400">Crown Global Services Pvt. Ltd.<br>155 B, 1/1, Pagoda Road,<br>Pitakotte,
-                        Sri Lanka</p>
-                    <p class="text-gray-400 mt-2">Email: <a href="mailto:info@crownglobalservices.com"
-                            class="hover:text-amber-400">info@crownglobalservices.com</a></p>
-                    <p class="text-gray-400">Phone: <a href="tel:+94112505108" class="hover:text-amber-400">+94 11 250
-                            5108</a></p>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 class="text-3xl font-bold mb-6">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=100088716497476"
-                            class="text-gray-400 hover:text-amber-400">Facebook</a>
-                        <a href="#" class="text-gray-400 hover:text-amber-400">LinkedIn</a>
-                    </div>
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i><span>Crown Global Services Pvt. Ltd.<br>155 B, 1/1,
+                                Pagoda Road, Pitakotte, Sri Lanka</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><a
+                                href="mailto:info@crownglobalservices.com">info@crownglobalservices.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:+94112505108">+94 11 250 5108</a></li>
+                    </ul>
                 </div>
             </div>
-            <p class="text-center text-gray-400 mt-12">© 2025 Crown Global Services. All rights reserved.</p>
+            <div class="footer-bottom">
+                <span>&copy; 2025 Crown Global Services. All rights reserved.</span>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/crownglobalservices" aria-label="Facebook" target="_blank"
+                        rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/crownglobalservices" aria-label="LinkedIn" target="_blank"
+                        rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/94777141468" aria-label="WhatsApp" target="_blank" rel="noopener"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-    <!-- Inquiry Popup -->
-    <div id="inquiry-popup" class="popup-overlay">
-        <div class="popup-content">
-            <button class="popup-close">×</button>
-            <h3 class="text-2xl font-bold">Begin Your Journey</h3>
-            <p>Let us help you explore travel, career, or education opportunities.</p>
-            <form action="https://formspree.io/f/mjkrkjya" method="POST">
-                <label for="inquiry-name">Full Name</label>
-                <input type="text" id="inquiry-name" name="Name" placeholder="Enter your name" required>
-                <label for="inquiry-email">Email</label>
-                <input type="email" id="inquiry-email" name="Email" placeholder="Enter your email" required>
-                <label for="inquiry-service">Service Interest</label>
-                <select id="inquiry-service" name="Service" required>
-                    <option value="">Select a service</option>
-                    <option value="Tours">Tours</option>
-                    <option value="Explore Sri Lanka">Explore Sri Lanka</option>
-                    <option value="Recruitment">Recruitment</option>
-                    <option value="Education">Education</option>
-                </select>
-                <label for="inquiry-message">Message</label>
-                <textarea id="inquiry-message" name="Message" rows="4" placeholder="How can we assist you?"
-                    required></textarea>
-                <button type="submit">Submit Inquiry</button>
+
+    <a class="wa-float" href="https://wa.me/94777141468" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Inquiry modal -->
+    <div class="modal-overlay" id="inquiry-modal">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h3>Begin Your Journey</h3>
+            <p class="form-note">Let us help you explore travel, career or education opportunities.</p>
+            <form action="https://formspree.io/f/mjkrkjya" method="POST" data-async>
+                <input type="hidden" name="form" value="Home Inquiry">
+                <div class="form-grid">
+                    <div class="field"><label>Full Name</label><input type="text" name="name" required></div>
+                    <div class="field"><label>Email</label><input type="email" name="email" required></div>
+                    <div class="field"><label>Phone Number</label><input type="tel" name="phone"></div>
+                    <div class="field">
+                        <label>Service Interest</label>
+                        <select name="service" required>
+                            <option value="">Select a service</option>
+                            <option>Tours</option>
+                            <option>Explore Sri Lanka</option>
+                            <option>Recruitment</option>
+                            <option>Education</option>
+                        </select>
+                    </div>
+                    <div class="field full"><label>Message</label><textarea name="message" required></textarea></div>
+                </div>
+                <div style="margin-top:22px"><button type="submit" class="btn btn-solid">Submit Inquiry</button></div>
+                <div class="form-status"></div>
             </form>
         </div>
     </div>
+
+    <script src="/js/site.js"></script>
     <script>
-        // Counter animation
-        document.addEventListener("DOMContentLoaded", function () {
-            const counters = document.querySelectorAll('.counter');
-            const animateCount = (el, target) => {
-                const duration = 1800;
-                const start = 0;
-                const startTime = performance.now();
-                const step = (now) => {
-                    const progress = Math.min((now - startTime) / duration, 1);
-                    el.textContent = Math.floor(progress * target).toLocaleString();
-                    if (progress < 1) requestAnimationFrame(step);
-                };
-                requestAnimationFrame(step);
-            };
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const target = +el.getAttribute('data-target');
-                        animateCount(el, target);
-                        observer.unobserve(el);
-                    }
-                });
-            }, { threshold: 0.5 });
-            counters.forEach(counter => observer.observe(counter));
-        });
-        // Animations
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from('.header img', { opacity: 0, scale: 0.5, duration: 1.0, ease: 'back.out(1.7)' });
-        document.addEventListener('DOMContentLoaded', () => {
-            // Hero Animations
-            gsap.from('.hero-content h1', { opacity: 0, y: 120, duration: 1.8, ease: 'power4.out' });
-            gsap.from('.hero-content p', { opacity: 0, y: 100, duration: 1.8, delay: 0.3, ease: 'power4.out' });
-            gsap.from('.hero-content button', { opacity: 0, y: 100, duration: 1.8, delay: 0.6, ease: 'power4.out' });
-            // Journey Path Animation
-            gsap.from('.journey-path path', { drawSVG: 0, duration: 3, ease: 'power2.out', scrollTrigger: { trigger: '.hero-section', start: 'top top' } });
-            gsap.from('.milestone', { scale: 0, duration: 0.5, stagger: 0.3, ease: 'back.out(1.7)', scrollTrigger: { trigger: '.hero-section', start: 'top top' } });
-            // Parallax Effect
-            gsap.to('.layer-1', { y: 100, scrollTrigger: { trigger: '.hero-section', start: 'top top', end: 'bottom top', scrub: true } });
-            gsap.to('.layer-2', { y: 50, scrollTrigger: { trigger: '.hero-section', start: 'top top', end: 'bottom top', scrub: true } });
-            // Travel Adventures Animations
-            gsap.from('#travel-adventures .counter', {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'back.out(1.7)',
-                scrollTrigger: { trigger: '#travel-adventures', start: 'top 80%' }
-            });
-            gsap.from('#travel-adventures .tours-swiper .swiper-slide', {
-                opacity: 0,
-                scale: 0.9,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#travel-adventures .tours-swiper', start: 'top 80%' }
-            });
-            gsap.from('#travel-adventures .explore-sri-lanka-swiper .swiper-slide', {
-                opacity: 0,
-                scale: 0.9,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#travel-adventures .explore-sri-lanka-swiper', start: 'top 80%' }
-            });
-            // Global Opportunities Animations
-            gsap.from('#global-opportunities .recruitment-swiper .swiper-slide', {
-                x: -100,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#global-opportunities .recruitment-swiper', start: 'top 80%' }
-            });
-            gsap.from('#global-opportunities .education-swiper .swiper-slide', {
-                x: 100,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#global-opportunities .education-swiper', start: 'top 80%' }
-            });
-            // About & Connect Animations
-            gsap.from('#about-connect .about-swiper .swiper-slide', {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'elastic.out(1, 0.5)',
-                scrollTrigger: { trigger: '#about-connect .about-swiper', start: 'top 80%' }
-            });
-            gsap.from('#about-connect .contact-swiper .swiper-slide', {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'elastic.out(1, 0.5)',
-                scrollTrigger: { trigger: '#about-connect .contact-swiper', start: 'top 80%' }
-            });
-            // Testimonials Animations
-            gsap.from('#testimonials .testimonial-card', {
-                opacity: 0,
-                rotateY: 15,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#testimonials', start: 'top 80%' }
-            });
-            // Insights & Support Animations
-            gsap.from('#insights-support .service-card', {
-                y: 50,
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#insights-support .grid', start: 'top 80%' }
-            });
-            gsap.from('#insights-support .faq-item', {
-                opacity: 0,
-                duration: 1.0,
-                stagger: 0.2,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#insights-support .faq-item', start: 'top 80%' }
-            });
-            // Stay Connected & Start Now Animations
-            gsap.from('#stay-connected form', {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1.0,
-                ease: 'power3.out',
-                scrollTrigger: { trigger: '#stay-connected', start: 'top 80%' }
-            });
-            gsap.from('#stay-connected #cta-btn', {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1.0,
-                ease: 'power3.out',
-                repeat: -1,
-                yoyo: true,
-                scrollTrigger: { trigger: '#stay-connected', start: 'top 80%' }
-            });
-        });
-        // Swiper Sliders
-        const toursSwiper = new Swiper('.tours-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const exploreSriLankaSwiper = new Swiper('.explore-sri-lanka-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay:
-                    5000, disableOnInteraction: false
-            },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const recruitmentSwiper = new Swiper('.recruitment-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const educationSwiper = new Swiper('.education-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const aboutSwiper = new Swiper('.about-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const contactSwiper = new Swiper('.contact-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        const testimonialsSwiper = new Swiper('.testimonials-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-        // Particles.js Initialization
-        particlesJS('particles-hero', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#f59e0b' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: '#f59e0b', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 3 }
-            },
-            interactivity: {
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
-            }
-        });
-        particlesJS('particles-travel', {
-            particles: {
-                number: { value: 70, density: { enable: true, value_area: 800 } },
-                color: { value: '#047857' },
-                shape: { type: 'circle' },
-                opacity: { value: 0.6, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 120, color: '#047857', opacity: 0.3, width: 1 },
-                move: { enable: true, speed: 4 }
-            },
-            interactivity: {
-                events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } }
-            }
-        });
-        particlesJS('particles-global', {
-            particles: {
-                number: { value: 8, density: { enable: true, value_area: 1000 } }, // fewer, more distinct planes
-                color: { value: '#ffffff' },
-                shape: {
-                    type: 'image',
-                    image: {
-                        src: 'https://img.icons8.com/papercut/60/airplane-mode-on.png', // plane icon
-                        width: 100,
-                        height: 50
-                    }
-                },
-                opacity: { value: 0.1, random: true },
-                size: { value: 12, random: false },
-                line_linked: { enable: true }, // no connecting lines
-                move: {
-                    enable: true,
-                    speed: 2, // faster movement
-                    direction: 'right',
-                    random: true,
-                    straight: false, // allows curves
-                    out_mode: 'out', // fly out of screen and re-enter
-                    bounce: false,
-                    attract: { enable: false }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: { enable: true, mode: 'grab' }, // move away from cursor
-                    onclick: { enable: true, mode: 'push' },
-                    resize: true
-                },
-                modes: {
-                    repulse: { distance: 100, duration: 0.4 },
-                    push: { particles_nb: 2 }
-                }
-            },
-            retina_detect: true
+        document.querySelectorAll('[data-slideshow]').forEach(show => {
+            const slides = show.querySelectorAll('img');
+            if (slides.length < 2) return;
+            let i = 0;
+            setInterval(() => {
+                slides[i].classList.remove('active');
+                i = (i + 1) % slides.length;
+                slides[i].classList.add('active');
+            }, 2800);
         });
 
-        particlesJS('particles-testimonials', {
-            particles: {
-                number: { value: 60, density: { enable: true, value_area: 800 } },
-                color: { value: '#047857' },
-                shape: { type: 'triangle' },
-                opacity: { value: 0.5, random: true },
-                size: { value: 4, random: true },
-                line_linked: { enable: false },
-                move: { enable: true, speed: 2 }
-            },
-            interactivity: {
-                events: { onhover: { enable: true, mode: 'bubble' }, onclick: { enable: true, mode: 'repulse' } }
+        /* Testimonial spotlight */
+        (function () {
+            const data = [
+                { q: "Crown Global's tour planning made my European adventure seamless and magical.", n: "Amara Fernando", r: "Traveller · United Kingdom", t: "Tours", i: "AF" },
+                { q: "I landed my dream job in Dubai thanks to their expert recruitment support.", n: "Ravi Gunawardena", r: "Engineer · United Arab Emirates", t: "Recruitment", i: "RG" },
+                { q: "Studying in Canada was effortless with Crown's guidance every step of the way.", n: "Nethmi Silva", r: "Student · Canada", t: "Education", i: "NS" },
+                { q: "Their personalized care made my Sri Lanka tour absolutely unforgettable.", n: "Lakshan Perera", r: "Traveller · Australia", t: "Explore Sri Lanka", i: "LP" },
+                { q: "Their recruitment support was exceptional, landing me a rewarding job in the UAE.", n: "Saman Perera", r: "Nurse · United Arab Emirates", t: "Recruitment", i: "SP" }
+            ];
+            const panel = document.querySelector('.spotlight-panel');
+            const dotsWrap = document.getElementById('sp-dots');
+            const prev = document.getElementById('sp-prev');
+            const next = document.getElementById('sp-next');
+            const els = {
+                q: document.getElementById('sp-quote'), n: document.getElementById('sp-name'),
+                r: document.getElementById('sp-role'), a: document.getElementById('sp-avatar'), t: document.getElementById('sp-tag')
+            };
+            if (!panel || !dotsWrap) return;
+
+            dotsWrap.innerHTML = data.map((d, k) => `<button class="sp-dot${k === 0 ? ' active' : ''}" data-i="${k}" aria-label="Go to testimonial ${k + 1}"></button>`).join('');
+            const dots = dotsWrap.querySelectorAll('.sp-dot');
+            let cur = 0, timer;
+
+            function show(k) {
+                cur = (k + data.length) % data.length;
+                panel.classList.add('is-fading');
+                setTimeout(() => {
+                    const d = data[cur];
+                    els.q.textContent = d.q;
+                    els.n.textContent = d.n;
+                    els.r.textContent = d.r;
+                    els.a.textContent = d.i;
+                    els.t.textContent = d.t;
+                    dots.forEach((dot, j) => dot.classList.toggle('active', j === cur));
+                    panel.classList.remove('is-fading');
+                }, 280);
             }
-        });
-        particlesJS('particles-newsletter', {
-            particles: {
-                number: { value: 100, density: { enable: true, value_area: 800 } },
-                color: { value: '#1e435e' },
-                shape: { type: 'star' },
-                opacity: { value: 0.7, random: true },
-                size: { value: 2, random: true },
-                line_linked: { enable: true, distance: 100, color: '#1e435e', opacity: 0.3, width: 1 },
-                move: { enable: true, speed: 4 }
-            },
-            interactivity: {
-                events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' } }
-            }
-        });
-        // Inquiry Popup
-        const exploreBtn = document.getElementById('explore-btn');
-        const ctaBtn = document.getElementById('cta-btn');
-        const inquiryPopup = document.getElementById('inquiry-popup');
-        const popupClose = document.querySelector('.popup-close');
-        exploreBtn.addEventListener('click', () => {
-            inquiryPopup.classList.add('active');
-        });
-        ctaBtn.addEventListener('click', () => {
-            inquiryPopup.classList.add('active');
-        });
-        popupClose.addEventListener('click', () => {
-            inquiryPopup.classList.remove('active');
-        });
-        inquiryPopup.addEventListener('click', (e) => {
-            if (e.target === inquiryPopup) {
-                inquiryPopup.classList.remove('active');
-            }
-        });
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const answer = item.nextElementSibling;
-                answer.classList.toggle('active');
-                const icon = item.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "QY2-v3NFVQ8UsVZS5FeNZ"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+            function advance(step) { stop(); show(cur + step); start(); }
+            function start() { timer = setInterval(() => show(cur + 1), 5500); }
+            function stop() { clearInterval(timer); }
+
+            prev.addEventListener('click', () => advance(-1));
+            next.addEventListener('click', () => advance(1));
+            dots.forEach(dot => dot.addEventListener('click', () => { stop(); show(+dot.dataset.i); start(); }));
+            panel.addEventListener('mouseenter', stop);
+            panel.addEventListener('mouseleave', start);
+
+            show(0);
+            start();
+        })();
     </script>
-    <script src="load_header.js"></script>
 </body>
 
 </html>

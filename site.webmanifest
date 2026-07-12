@@ -1,6 +1,8 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Crown Global Services",
+  "short_name": "Crown Global",
+  "description": "SLBFE licensed travel, recruitment and education consultancy in Sri Lanka.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +17,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#131530",
+  "background_color": "#faf7f1",
   "display": "standalone"
 }

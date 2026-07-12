@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "crownglobal-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "C:/Users/Harshamal/source/websites/goldencrown", "-p", "8132", "-c-1"],
+      "port": 8132
+    }
+  ]
+}
