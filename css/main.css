@@ -4087,8 +4087,11 @@ section {
         width: 30%;
     }
 }
+
 /* ---------- Tours hero: image stage that blends into next section ---------- */
-.hero-video { position: relative; }
+.hero-video {
+    position: relative;
+}
 
 .hero-video-stage {
     position: absolute;
@@ -4122,8 +4125,13 @@ section {
     background: linear-gradient(to bottom, rgba(250, 247, 241, 0) 0%, rgba(250, 247, 241, 0.35) 55%, var(--ivory) 100%);
 }
 
-.page-hero.hero-video .hero-content { z-index: 5; }
-.page-hero.hero-video .scroll-cue { z-index: 6; }
+.page-hero.hero-video .hero-content {
+    z-index: 5;
+}
+
+.page-hero.hero-video .scroll-cue {
+    z-index: 6;
+}
 
 /* Staggered entrance animation for hero copy */
 .hero-anim {
@@ -4131,17 +4139,36 @@ section {
     transform: translateY(26px);
     animation: heroRise 1s var(--ease) forwards;
 }
-.hero-anim:nth-child(1) { animation-delay: 0.15s; }
-.hero-anim:nth-child(2) { animation-delay: 0.32s; }
-.hero-anim:nth-child(3) { animation-delay: 0.49s; }
-.hero-anim:nth-child(4) { animation-delay: 0.66s; }
+
+.hero-anim:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.hero-anim:nth-child(2) {
+    animation-delay: 0.32s;
+}
+
+.hero-anim:nth-child(3) {
+    animation-delay: 0.49s;
+}
+
+.hero-anim:nth-child(4) {
+    animation-delay: 0.66s;
+}
 
 @keyframes heroRise {
-    to { opacity: 1; transform: none; }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-anim { opacity: 1; transform: none; animation: none; }
+    .hero-anim {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
 }
 
 /* ---------- Hero copy centering (site-wide) ---------- */
