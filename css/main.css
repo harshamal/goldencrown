@@ -4152,3 +4152,26 @@ section {
     .hero-bg-video { animation: none; }
     .hero-anim { opacity: 1; transform: none; animation: none; }
 }
+
+/* ---------- Hero copy centering (site-wide) ---------- */
+.hero .hero-content,
+.page-hero .hero-content {
+    text-align: center;
+}
+
+.hero h1,
+.page-hero h1,
+.hero .hero-sub,
+.page-hero .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    justify-content: center;
+}
+
+.hero .hero-content .eyebrow,
+.page-hero .hero-content .eyebrow {
+    justify-content: center;
+}
