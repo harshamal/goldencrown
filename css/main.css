@@ -4103,14 +4103,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.04);
-    animation: heroKenBurns 22s ease-in-out infinite alternate;
-    will-change: transform;
-}
-
-@keyframes heroKenBurns {
-    0%   { transform: scale(1.04); }
-    100% { transform: scale(1.15); }
 }
 
 .hero-video .scrim {
@@ -4149,7 +4141,6 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-bg-video { animation: none; }
     .hero-anim { opacity: 1; transform: none; animation: none; }
 }
 
