@@ -1564,10 +1564,8 @@ section {
 .opp-section {
     position: relative;
     overflow: hidden;
-    height: clamp(360px, 62vh, 640px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: clamp(400px, 72vh, 720px);
+    background: #0d0e26;
 }
 
 .opp-video,
@@ -4087,11 +4085,8 @@ section {
         width: 30%;
     }
 }
-
 /* ---------- Tours hero: image stage that blends into next section ---------- */
-.hero-video {
-    position: relative;
-}
+.hero-video { position: relative; }
 
 .hero-video-stage {
     position: absolute;
@@ -4125,13 +4120,8 @@ section {
     background: linear-gradient(to bottom, rgba(250, 247, 241, 0) 0%, rgba(250, 247, 241, 0.35) 55%, var(--ivory) 100%);
 }
 
-.page-hero.hero-video .hero-content {
-    z-index: 5;
-}
-
-.page-hero.hero-video .scroll-cue {
-    z-index: 6;
-}
+.page-hero.hero-video .hero-content { z-index: 5; }
+.page-hero.hero-video .scroll-cue { z-index: 6; }
 
 /* Staggered entrance animation for hero copy */
 .hero-anim {
@@ -4139,36 +4129,17 @@ section {
     transform: translateY(26px);
     animation: heroRise 1s var(--ease) forwards;
 }
-
-.hero-anim:nth-child(1) {
-    animation-delay: 0.15s;
-}
-
-.hero-anim:nth-child(2) {
-    animation-delay: 0.32s;
-}
-
-.hero-anim:nth-child(3) {
-    animation-delay: 0.49s;
-}
-
-.hero-anim:nth-child(4) {
-    animation-delay: 0.66s;
-}
+.hero-anim:nth-child(1) { animation-delay: 0.15s; }
+.hero-anim:nth-child(2) { animation-delay: 0.32s; }
+.hero-anim:nth-child(3) { animation-delay: 0.49s; }
+.hero-anim:nth-child(4) { animation-delay: 0.66s; }
 
 @keyframes heroRise {
-    to {
-        opacity: 1;
-        transform: none;
-    }
+    to { opacity: 1; transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-anim {
-        opacity: 1;
-        transform: none;
-        animation: none;
-    }
+    .hero-anim { opacity: 1; transform: none; animation: none; }
 }
 
 /* ---------- Hero copy centering (site-wide) ---------- */
@@ -4193,3 +4164,64 @@ section {
 .page-hero .hero-content .eyebrow {
     justify-content: center;
 }
+
+/* ---------- Cinematic video band overlays (home) ---------- */
+.opp-video {
+    filter: saturate(1.08) contrast(1.04) brightness(0.96);
+}
+
+.opp-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(115% 90% at 50% 50%, rgba(13, 14, 38, 0) 52%, rgba(13, 14, 38, 0.55) 100%);
+}
+
+.opp-blend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.opp-blend-top {
+    top: -1px;
+    height: clamp(90px, 24vh, 220px);
+    background: linear-gradient(to bottom, rgb(13, 14, 38) 0%, rgba(13, 14, 38, 0.55) 45%, rgba(13, 14, 38, 0) 100%);
+}
+
+.opp-blend-bottom {
+    bottom: -1px;
+    height: clamp(110px, 28vh, 260px);
+    background: linear-gradient(to top, rgb(14, 15, 36) 0%, rgba(14, 15, 36, 0.6) 45%, rgba(14, 15, 36, 0) 100%);
+}
+
+/* Delicate gold ornament marking the passage into the next chapter */
+.opp-ornament {
+    position: absolute;
+    left: 50%;
+    bottom: 34px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 3;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid var(--gold-bright);
+    box-shadow: 0 0 18px rgba(212, 175, 78, 0.5);
+    pointer-events: none;
+}
+
+.opp-ornament::before,
+.opp-ornament::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 54px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(212, 175, 78, 0), rgba(212, 175, 78, 0.7));
+}
+
+.opp-ornament::before { right: 16px; transform: rotate(-45deg) translateY(-50%); transform-origin: right center; }
+.opp-ornament::after { left: 16px; transform: rotate(-45deg) translateY(-50%); transform-origin: left center; background: linear-gradient(to left, rgba(212, 175, 78, 0), rgba(212, 175, 78, 0.7)); }
