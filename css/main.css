@@ -1564,7 +1564,7 @@ section {
 .opp-section {
     position: relative;
     overflow: hidden;
-    height: clamp(400px, 72vh, 720px);
+    height: clamp(560px, 96vh, 980px);
     background: #0d0e26;
 }
 
