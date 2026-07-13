@@ -4259,3 +4259,30 @@ section {
     /* WhatsApp float slightly smaller so it covers less content */
     .wa-float { width: 52px; height: 52px; font-size: 1.5rem; right: 18px; bottom: 18px; }
 }
+
+/* Mobile: size the cinematic band to the video's 16:9 frame so the
+   footage is never cropped to a narrow center sliver */
+@media (max-width: 768px) {
+    .opp-section {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        min-height: 230px;
+    }
+
+    .opp-video,
+    .parallax-video {
+        top: 0;
+        height: 100%;
+        transform: none !important;
+    }
+
+    .opp-blend-top { height: 56px; }
+    .opp-blend-bottom { height: 64px; }
+
+    .opp-ornament {
+        bottom: 14px;
+        width: 8px;
+        height: 8px;
+    }
+    .opp-ornament::before, .opp-ornament::after { width: 34px; }
+}
