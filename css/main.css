@@ -4225,3 +4225,37 @@ section {
 
 .opp-ornament::before { right: 16px; transform: rotate(-45deg) translateY(-50%); transform-origin: right center; }
 .opp-ornament::after { left: 16px; transform: rotate(-45deg) translateY(-50%); transform-origin: left center; background: linear-gradient(to left, rgba(212, 175, 78, 0), rgba(212, 175, 78, 0.7)); }
+
+/* ---------- Mobile hardening ---------- */
+
+/* iOS Safari does not support background-attachment: fixed — it renders
+   zoomed/broken. Fall back to scroll on touch and small screens. */
+@media (max-width: 1024px), (hover: none) {
+    .bg-majestic,
+    .bg-about-teaser,
+    .bg-recruitment-steps,
+    [class*="bg-"] {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Inputs below 16px make iOS auto-zoom the page on focus */
+@media (max-width: 640px) {
+    .field input,
+    .field select,
+    .field textarea {
+        font-size: 16px;
+    }
+
+    /* trim the oversized logo and header on phones */
+    .site-header .header-inner { height: 76px; }
+    .site-header .logo img { height: 60px; }
+    .site-header.scrolled .header-inner { height: 66px; }
+    .site-header.scrolled .logo img { height: 50px; }
+
+    /* comfortable edge spacing for modals on small screens */
+    .modal-overlay { padding: 14px; }
+
+    /* WhatsApp float slightly smaller so it covers less content */
+    .wa-float { width: 52px; height: 52px; font-size: 1.5rem; right: 18px; bottom: 18px; }
+}
